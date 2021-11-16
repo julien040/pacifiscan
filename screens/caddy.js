@@ -80,7 +80,6 @@ function Caddy({ route, navigation }) {
       setItems(data);
       if (route.params.id !== null) {
         const { id } = route.params;
-        setItems(data);
         const { co2, name, quantity, score, image, details } = await getItemInfo(id);
         setSheetContent({
           co2,
@@ -133,7 +132,7 @@ function Caddy({ route, navigation }) {
     bottomSheetRef.current.close();
   }
   async function saveCaddy() {
-    await addToArray("all_caddy", {date: new Date(), items: Items});
+    await addToArray("all_caddy", {date: Date.now(), items: Items});
     setItems(await clearArray("caddy"));
   }
   return (

@@ -14,9 +14,13 @@ import { useNavigation } from "@react-navigation/core";
 
   Pour déterminer la variante, on utilise un switch
  */
-const PacifiScanHeader = (props) => {
+/**
+ * Prend en argument soit "back" ou "settings"
+ * @param  {string} {variant}
+ */
+const PacifiScanHeader = ({variant}) => {
   const navigation = useNavigation();
-  switch (props.variant) {
+  switch (variant) {
     case "back":
       return (
         <SafeAreaView>
@@ -32,7 +36,6 @@ const PacifiScanHeader = (props) => {
                 height={17}
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                {...props}
               >
                 <Path
                   d="M19 7.5H4.414l5.293-5.293L8.293.793.586 8.5l7.707 7.707 1.414-1.414L4.414 9.5H19v-2z"
@@ -78,7 +81,6 @@ const PacifiScanHeader = (props) => {
                 height={17}
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                {...props}
               >
                 <Path
                   d="M19 7.5H4.414l5.293-5.293L8.293.793.586 8.5l7.707 7.707 1.414-1.414L4.414 9.5H19v-2z"

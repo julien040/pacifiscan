@@ -6,25 +6,47 @@ import {
   Inter_500Medium,
   Inter_600SemiBold,
 } from "@expo-google-fonts/inter";
-import { RootSiblingParent } from 'react-native-root-siblings';
+import { RootSiblingParent } from "react-native-root-siblings";
 import { NativeBaseProvider, extendTheme } from "native-base";
 import pacifiScanTheme from "./src/custom_theme/theme";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import * as Amplitude from "expo-analytics-amplitude";
 import {
   Accueil,
   Historique,
   Item,
   Parametre,
-  Recherche,
   Scan,
   Stat,
   Succe,
-  Caddy
+  Caddy,
+  Permission,
 } from "./screens/index.js";
+import { useEffect } from "react";
+import * as Sentry from 'sentry-expo';
 const Stack = createNativeStackNavigator();
 
 export default function App() {
+  useEffect(() => {
+    (async () => {
+      await Amplitude.initializeAsync("50cca50a5ab93a1c1ffaf17cb5330ed").catch( e => {console.error(e)})
+      await Amplitude.setTrackingOptionsAsync({
+        disableAdid: true,
+        disableCarrier: true,
+        disableIPAddress: true,
+        disableLatLng: true,
+      });
+      await Amplitude.logEventAsync("App_Start");
+      console.log(Amplitude);
+      Sentry.init({
+        dsn: 'https://89ec4ca9d7e14540b52f4146f4c2118f@o403969.ingest.sentry.io/6065620',
+        enableInExpoDevelopment: true,
+        debug: true,
+      });
+    })();
+  }, []);
+
   const theme = extendTheme(pacifiScanTheme);
   let [fontsLoaded] = useFonts({
     Inter: Inter_400Regular,
@@ -33,59 +55,60 @@ export default function App() {
     Urbanist_semi: require("./assets/fonts/Urbanist-SemiBold.ttf"),
     Urbanist_bold: require("./assets/fonts/Urbanist-Bold.ttf"),
   });
+
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
     return (
       <NativeBaseProvider theme={theme}>
         <RootSiblingParent>
-        <NavigationContainer>
-          <Stack.Navigator
-            screenOptions={{ headerShown: false }}
-            initialRouteName="Accueil"
-          >
-            <Stack.Screen
-              name="Accueil"
-              component={Accueil} /* L'accueil tout simplement */
-            />
-            <Stack.Screen
-              name="Recherche"
-              component={Recherche} /* A voir pour l'usage */
-            />
-            <Stack.Screen
-              name="Scan"
-              component={Scan} /* L'interface pour scan un objet */
-            />
-            <Stack.Screen
-              name="Historique"
-              component={Historique} /* Historique des déchets collectés */
-            />
-            <Stack.Screen
-              name="Infos"
-              component={Succe}
-              /* Composé des infos des déchets ainsi que des news de pacifiscan  */
-            />
-            <Stack.Screen
-              name="Stat"
-              component={Stat} /* Stats de l'utilisateur */
-            />
-            <Stack.Screen
-              name="Item"
-              component={Item}
-              /* La fiche info d'un item. Doit être appelé avec des arguments */
-            />
-            <Stack.Screen
-              name="Parametre"
-              component={Parametre}
-              /* Pour désactiver les outils de collection de données ainsi que voir l'id d'utilisateur */
-            />
-            <Stack.Screen
-              name="Caddy"
-              component={Caddy}
-              /* Le mode caddy de l'application */
-            />
-          </Stack.Navigator>
-        </NavigationContainer>
+          <NavigationContainer>
+            <Stack.Navigator
+              screenOptions={{ headerShown: false }}
+              initialRouteName="Permission"
+            >
+              <Stack.Screen
+                name="Permission"
+                component={Permission} /* Check si les permissions sont là */
+              />
+              <Stack.Screen
+                name="Accueil"
+                component={Accueil} /* L'accueil tout simplement */
+              />
+              <Stack.Screen
+                name="Scan"
+                component={Scan} /* L'interface pour scan un objet */
+              />
+              <Stack.Screen
+                name="Historique"
+                component={Historique} /* Historique des déchets collectés */
+              />
+              <Stack.Screen
+                name="Infos"
+                component={Succe}
+                /* Composé des infos des déchets ainsi que des news de pacifiscan  */
+              />
+              <Stack.Screen
+                name="Stat"
+                component={Stat} /* Stats de l'utilisateur */
+              />
+              <Stack.Screen
+                name="Item"
+                component={Item}
+                /* La fiche info d'un item. Doit être appelé avec des arguments */
+              />
+              <Stack.Screen
+                name="Parametre"
+                component={Parametre}
+                /* Pour désactiver les outils de collection de données ainsi que voir l'id d'utilisateur */
+              />
+              <Stack.Screen
+                name="Caddy"
+                component={Caddy}
+                /* Le mode caddy de l'application */
+              />
+            </Stack.Navigator>
+          </NavigationContainer>
         </RootSiblingParent>
       </NativeBaseProvider>
     );

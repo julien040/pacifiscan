@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Flex, Heading, Button, Spinner, Text } from "native-base";
+import {Vibration} from 'react-native';
 import { Camera } from "expo-camera";
 import * as Location from "expo-location";
 import AppLoading from "expo-app-loading";
@@ -9,6 +10,8 @@ import { useIsFocused } from "@react-navigation/native";
 import Toast from "react-native-root-toast";
 import { DetectLabel } from "../src/scan";
 import { addToArray } from "../src/database/array";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import {logEventAsync} from "expo-analytics-amplitude";
 
 function Scan({ route, navigation }) {
   const isFocused = useIsFocused();
@@ -57,14 +60,17 @@ function Scan({ route, navigation }) {
         }
       );
       const { latitude, longitude } = coords;
+      const id = await AsyncStorage.getItem("id")
       setLoadingContent("Envoi de l'image...");
-      const label = await DetectLabel(base64, [latitude, longitude]);
+      const label = await DetectLabel(base64, [longitude, latitude], id);
       const Item = associationApi[label];
       setLoadingContent(`Image analysée !`);
+      Vibration.vibrate(100);
+      logEventAsync("ScanDechet")
       await addToArray("Scanned", {
         type: label,
         coord: [latitude, longitude],
-        timestamp: new Date().getTime(),
+        timestamp: Date.now(),
       });
       setClicked(false);
       Toast.show(`Nous avons détecté le label : ${label}`);
@@ -77,8 +83,10 @@ function Scan({ route, navigation }) {
   }
   function handleScanned({ data }) {
     if (Scanned === false) {
-      navigation.push("Caddy", { id: data });
+      Vibration.vibrate(100);
       setScanned(true);
+      navigation.push("Caddy", { id: data });
+      setScanned(false);
     }
   }
   if (hasPermission === false || GeoPermission === false) {
@@ -179,9 +187,12 @@ function Scan({ route, navigation }) {
                 Pour un <Text fontWeight={700}>produit</Text>, mettez le code
                 barre en face de la caméra
               </Text>
+              <Text>
+                En appuyant sur le bouton, vous acceptez que la photo soit sauvegardée sur les serveurs de PacifiScan
+              </Text>
             </Flex>
             <Button
-              onPress={() => HandleButton(refCamera, navigation, setClicked)}
+              onPress={() => HandleButton()}
               opacity={80}
             >
               Prendre un déchet en photo
@@ -189,7 +200,7 @@ function Scan({ route, navigation }) {
           </Camera>
         </Flex>
 
-        <PacifiScanFooter />
+        <PacifiScanFooter active="Scan" />
       </Flex>
     );
   }

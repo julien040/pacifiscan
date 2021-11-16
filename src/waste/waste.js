@@ -7,28 +7,28 @@
 const points = {
   decheterieGadji: {
     name: "Déchetterie Gadji",
-    location: [48.858, 2.35],
+    location: "Route du Quai de Gadji",
     phone: "010203",
     description: "La déchetterie Gadji est située ... Elle dispose d'un espace de stockage de déchets et d'un espace de compostage",
     icon:require("../../assets/wasteImage/can.png"),
   },
   decheterieDucos: {
-    name: "Déchetterie Ducos",
-    location: [48.858, 2.35],
+    name: "Déchetterie de Ducos",
+    location: "11, rue Pélatan, ZI Ducos",
     phone: "010203",
     description: "Adipisicing Lorem cupidatat duis deserunt enim ex veniam veniam in.",
     icon:require("../../assets/wasteImage/can.png"),
   },
-  decheterie2: {
-    name: "Laborum commodo ",
-    location: [48.858, 2.35],
+  decheterieMagenta: {
+    name: "Déchetterie de Magenta",
+    location: "177 voie de dégagement est",
     phone: "010203",
     description: "Sint laboris ut excepteur occaecat ipsum nostrud.e",
     icon:require("../../assets/wasteImage/can.png"),
   },
   decheterie4: {
-    name: "Laborum comodo ",
-    location: [48.858, 2.35],
+    name: "Déchetterie du 6ème km",
+    location: "Rue Jacques-Iékawé",
     phone: "010203",
     description: "Sint laboris ut excepteur occaecat ipsum nostrud.e",
     icon:require("../../assets/wasteImage/can.png"),
@@ -54,7 +54,7 @@ export const wastesType = {
     impactSmiley: require("../../assets/emoji/love.png"),
     poids: 0.5,
     anneeDecomposition: 2000,
-    endroit:[points.decheterieGadji, points.decheterieDucos, points.decheterie2, points.decheterie4],
+    endroit:[points.decheterieGadji, points.decheterieDucos],
     sources: "Réserves XXl, Wikipédia",
     
   },

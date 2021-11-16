@@ -1,7 +1,4 @@
-export const DetectLabel = async (base64, geolocation) => {
-    console.log(typeof base64);
-    console.log(!base64);
-    console.log(!geolocation);
+export const DetectLabel = async (base64, geolocation, id) => {
     /* if (!base64 || typeof base64 !== 'string' || !geolocation) {
         throw new Error("Les arguments sont invalides. Cela peut venir du fait que l'image est invalide ou que les paramètres de géolocalisation sont invalides");
     } */
@@ -11,7 +8,7 @@ export const DetectLabel = async (base64, geolocation) => {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({image:base64, geo:geolocation}),
+        body: JSON.stringify({image:base64, geo:geolocation, id:id}),
     }).catch(err => {
         console.log(err);
         throw new Error("Erreur lors de la requête");

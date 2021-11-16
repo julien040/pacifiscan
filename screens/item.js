@@ -1,11 +1,9 @@
 import React, { useRef } from "react";
 import { wastesType } from "../src/waste/waste";
-import { Flex, ScrollView, Heading, Text, Image, Button, FlatList } from "native-base";
+import { Flex, ScrollView, Heading, Text, Image, Button } from "native-base";
 import { PacifiScanHeader } from "../components/index";
 import BottomSheet, {BottomSheetFlatList} from "@gorhom/bottom-sheet";
-import { getDistance } from 'geolib';
-import * as Location from "expo-location";
-
+import * as Linking from 'expo-linking';
 /* 
     
 
@@ -84,7 +82,7 @@ function Item({ route, navigation }) {
           {/* Comment éviter ce déchet fin */}
           <Heading color="brand.iris80" marginTop={8} fontSize={18}>
             En moyenne, cet objet pèse {data.poids} kg et met 
-            {data.anneeDecomposition} ans pour se décomposer
+            {" "}{data.anneeDecomposition} ans pour se décomposer
           </Heading>
         </Flex>
         <Text
@@ -117,28 +115,23 @@ function Item({ route, navigation }) {
  */
 const BottomSheetComponent = ({ data }) => {
   return (
-/*     <Flex p={4}>
-      <Heading fontSize={28} >Où jeter {data.nom} ?</Heading>
-      <Heading padding={8} m="auto" fontSize={18}>
-        Il faudra rajouter une carte
-      </Heading>
-      <Heading marginBottom={4} color="brand.iris100" >Point de dépose :</Heading> */
       <BottomSheetFlatList
       data={data.endroit}
       renderItem={SinglePoint}
       keyExtractor={(item) => item.name}
         />
-/*     </Flex> */
   );
 };
 
 const SinglePoint = ({ item }) => {
   return (
-    <Flex m={3} p={4} borderRadius={10} backgroundColor="brand.p45" >
-      <Heading fontSize={18}>{item.name}</Heading>
-      <Text fontSize={13} >{item.description}</Text>
-      <Text color="brand.iris80" fontSize={13} width="100%" textAlign="right" >Téléphone : {item.phone}</Text>
-      <Text color="brand.iris80" fontSize={13} width="100%" textAlign="right" >GPS : {item.location[0]}, {item.location[1]}</Text>
+    <Flex marginTop={4} p={4} borderRadius={10} backgroundColor="brand.p45" >
+      <Heading fontSize={18}>{item.name || null}</Heading>
+      <Text fontSize={13} >{item.description || null}</Text>
+      <Flex marginTop={4} align="center" width="100%" direction="row" >
+      <Button onPress={() => {Linking.openURL(`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(item.location)}`)}} backgroundColor="brand.primary" >S'y rendre</Button>
+      <Text onPress={() => {Linking.openURL(`tel:${item.phone}`)}} flex={1} color="brand.iris80" fontSize={13} width="100%" textAlign="right" >Téléphone : {item.phone || "Inconnu"}</Text>
+      </Flex>
     </Flex>
   )
 }

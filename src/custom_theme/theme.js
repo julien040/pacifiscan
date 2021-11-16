@@ -18,6 +18,9 @@ const pacifiScanTheme = {
         600: {
           normal: "Inter_600SemiBold",
         },
+        700: {
+          normal: "Inter_600SemiBold",
+        }
       },
     },
   },
