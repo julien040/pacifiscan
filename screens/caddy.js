@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import { Flex, Heading, Button, Box, FlatList, Modal } from "native-base";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
-import Toast from 'react-native-root-toast';
 import {
   addToArray,
   getArray,
@@ -57,7 +56,7 @@ function Caddy({ route, navigation }) {
     const response = await fetch(
       `https://fr.openfoodfacts.org/api/v0/product/${id}.json`
     ).catch((err) => {
-      Toast.show("😔 Nous n'arrivons pas à nous connecter au serveur", {duration:Toast.durations.LONG}); //Dans le cas où la requête ne fonctionne pas, on affiche un message d'erreur
+       //Dans le cas où la requête ne fonctionne pas, on affiche un message d'erreur
     });
     const data = await response.json(); //On récupère les données en format json
     return { //Si la donnée n'existe pas (par exemple l'item n'est pas trouvé), on renvoie un objet vide. Ainsi l'application affiche rien

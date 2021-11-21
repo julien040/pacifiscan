@@ -7,7 +7,6 @@ import AppLoading from "expo-app-loading";
 import { associationApi } from "../src/waste/waste";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { useIsFocused } from "@react-navigation/native";
-import Toast from "react-native-root-toast";
 import { DetectLabel } from "../src/scan";
 import { addToArray } from "../src/database/array";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -48,15 +47,7 @@ function Scan({ route, navigation }) {
       setLoadingContent("Récupération de la position...");
       const { coords } = await Location.getCurrentPositionAsync({}).catch(
         (e) => {
-          Toast.show("Impossible de récupérer votre position", {
-            duration: Toast.durations.LONG,
-            position: Toast.positions.CENTER,
-            shadow: true,
-            animation: true,
-            hideOnPress: true,
-            delay: 0,
-            backgroundColor: "red",
-          });
+          
         }
       );
       const { latitude, longitude } = coords;
@@ -73,11 +64,9 @@ function Scan({ route, navigation }) {
         timestamp: Date.now(),
       });
       setClicked(false);
-      Toast.show(`Nous avons détecté le label : ${label}`);
       navigation.navigate("Item", { id: Item });
     } catch (error) {
       console.log(error);
-      Toast.show(JSON.stringify(error), { duration: 5000 });
       setClicked(false);
     }
   }

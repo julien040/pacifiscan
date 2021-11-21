@@ -47,8 +47,6 @@ function Historique() {
 
 const Item = ({ item, index, refresh }) => {
   const t = new Date(item.timestamp * 1000);
-  const time = t.toTimeString().split(" ")[0];
-  const date = t.toDateString().split(" ").slice(0, 3).join(" ");
   return (
     <Flex
       direction="row"

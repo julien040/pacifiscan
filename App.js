@@ -6,7 +6,6 @@ import {
   Inter_500Medium,
   Inter_600SemiBold,
 } from "@expo-google-fonts/inter";
-import { RootSiblingParent } from "react-native-root-siblings";
 import { NativeBaseProvider, extendTheme } from "native-base";
 import pacifiScanTheme from "./src/custom_theme/theme";
 import { NavigationContainer } from "@react-navigation/native";
@@ -38,7 +37,6 @@ export default function App() {
         disableLatLng: true,
       });
       await Amplitude.logEventAsync("App_Start");
-      console.log(Amplitude);
       Sentry.init({
         dsn: 'https://89ec4ca9d7e14540b52f4146f4c2118f@o403969.ingest.sentry.io/6065620',
         enableInExpoDevelopment: true,
@@ -61,7 +59,6 @@ export default function App() {
   } else {
     return (
       <NativeBaseProvider theme={theme}>
-        <RootSiblingParent>
           <NavigationContainer>
             <Stack.Navigator
               screenOptions={{ headerShown: false }}
@@ -109,7 +106,6 @@ export default function App() {
               />
             </Stack.Navigator>
           </NavigationContainer>
-        </RootSiblingParent>
       </NativeBaseProvider>
     );
   }

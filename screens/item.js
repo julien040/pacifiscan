@@ -40,7 +40,7 @@ function Item({ route, navigation }) {
       </Heading>
       <ScrollView>
         <Flex align="center">
-          <Image size={120} margin="auto" alt={data.nom} source={data.image} />
+          <Image size={120} margin="auto" alt="L'image" source={data.image} />
           <Text color="brand.iris80">{data.description} </Text>
         </Flex>
         <Flex>
@@ -49,7 +49,7 @@ function Item({ route, navigation }) {
             <Image
               marginRight={2}
               size={10}
-              alt={data.nom}
+              alt={id}
               source={data.quefaireSmiley}
             />
             <Heading color="brand.iris100">Qu'en faire ?</Heading>
@@ -61,7 +61,7 @@ function Item({ route, navigation }) {
             <Image
               marginRight={2}
               size={10}
-              alt={data.nom}
+              alt="A smiley"
               source={data.impactSmiley}
             />
             <Heading color="brand.iris100">Quel est son impact ?</Heading>
@@ -73,7 +73,7 @@ function Item({ route, navigation }) {
             <Image
               marginRight={2}
               size={10}
-              alt={data.nom}
+              alt="A smiley"
               source={data.eviterSmiley}
             />
             <Heading color="brand.iris100">Comment l'éviter ?</Heading>
@@ -122,8 +122,9 @@ const BottomSheetComponent = ({ data }) => {
         />
   );
 };
-
+import { points } from "../src/waste/waste";
 const SinglePoint = ({ item }) => {
+  item = points[item];
   return (
     <Flex marginTop={4} p={4} borderRadius={10} backgroundColor="brand.p45" >
       <Heading fontSize={18}>{item.name || null}</Heading>

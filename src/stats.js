@@ -34,7 +34,7 @@ export const getWeightCount = (w) => {
         const element = w[index];
         weight = weight + wastesType[associationApi[element.type]].poids;  
     }
-    return weight;
+    return weight.toFixed(2);
 };
 /** Cette fonction prend en argument un tableau donné par la base de données et retourne le temps total de décomposition des déchets ramassés par l'utilisateur
  * @param  {scanArray} w 
@@ -46,7 +46,7 @@ export const getTimeCount = (w) => {
         time = time + wastesType[associationApi[element.type]].anneeDecomposition
 
     }
-    return time;
+    return time.toFixed();
 };
 
 /** Cette fonction prend en argument un tableau donné par la base de données et retourne quel est le déchet le plus ramassé par l'utilisateur

@@ -34,7 +34,7 @@ function Succe({ route, navigation }) {
             <SmallSucce
               key={key}
               intern={key}
-              title={wastesType[key].nom}
+              title={key}
               image={wastesType[key].image}
               description={wastesType[key].smallText}
               isBlocked={wastesType[key].blocked}

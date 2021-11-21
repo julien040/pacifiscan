@@ -40,13 +40,15 @@ function Permission({ navigation }) {
   useEffect(() => {
     if (Location === "granted" && Camera === "granted") {
       navigation.navigate("Accueil");
+      
     }
   }, [Location, Camera]);
 
   if (Location === null || Camera === null) {
     return <AppLoading />;
      } else if (Location === "granted" && Camera === "granted") {
-    return <AppLoading />;
+      navigation.navigate("Accueil");
+      return <AppLoading />;
   } else if (Location === "denied" || Camera === "denied") {
     return (
       <SafeAreaView style={{ flex: 1 }}>
