@@ -28,7 +28,7 @@ function Parametre({ navigation }) {
         <Text marginTop={2} >Nous ne pouvons malheureusement pas révoquer les permissions de l'application. Si vous n'êtes plus consentant, nous vous invitons à la désinstaller et contacter le support pour une suppression de données</Text>
       </Flex>
       <Flex justify="space-between" direction="row" >
-      <Button width="48%" onPress={() => navigation.navigate("Permission")} >Permission</Button>
+      <Button width="48%" onPress={() => navigation.push("Permission")} >Permission</Button>
       <Button width="48%" borderColor="brand.primary" borderWidth={2} backgroundColor="brand.appColor" onPress={() => Linking.openURL("https://bleuclair.nc")}>En savoir plus</Button>
       </Flex>
     </Flex>

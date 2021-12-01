@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Flex, Heading, Button, Box, FlatList, Modal } from "native-base";
+import { Flex, Heading, Button, Box, FlatList, Modal, useToast } from "native-base";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import {
   addToArray,
@@ -7,6 +7,7 @@ import {
   deleteFromArray,
   clearArray,
 } from "../src/database/array";
+import { logEventWithPropertiesAsync } from "expo-analytics-amplitude";
 import { Erreur } from "../components/erreur";
 import {
   CaddyStats,
@@ -15,6 +16,7 @@ import {
 } from "../components/caddyComponents";
 import BottomSheet from "@gorhom/bottom-sheet";
 function Caddy({ route, navigation }) {
+  const toast = useToast();
   const [ModalVisible, setModalVisible] = useState(false);
   const [Stats, setStats] = useState([0, 0]);
   const bottomSheetRef = useRef(null); //Pour le bottom sheet afin de le contrôler à distance
@@ -28,17 +30,26 @@ function Caddy({ route, navigation }) {
     id: "",
     image: "",
     buttonInvisible: false,
-    details:{adjustments:{origins_of_ingredients:{epi_value:0}, packaging:{value:0}, production_system:{value:0}}, agribalyse:{value:0}},
+    details: {
+      adjustments: {
+        origins_of_ingredients: { epi_value: 0 },
+        packaging: { value: 0 },
+        production_system: { value: 0 },
+      },
+      agribalyse: { value: 0 },
+    },
+    loading: true,
   });
 
-  useEffect(() => { //Puisque Items est passé en argument dans le tableau, à chaque fois qu'Items changera, use Effect sera appelé et le composant sera re-rendu
+  useEffect(() => {
+    //Puisque Items est passé en argument dans le tableau, à chaque fois qu'Items changera, use Effect sera appelé et le composant sera re-rendu
     let notes = [];
     for (let index = 0; index < Items.length; index++) {
       const element = Items[index];
       if (element.score !== null) {
         notes.push(element.score);
       }
-    }// Cette boucle met toutes les notes dans un tableau pour pouvoir faire la moyenne par la suite
+    } // Cette boucle met toutes les notes dans un tableau pour pouvoir faire la moyenne par la suite
     const average = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length; //Calcul de la moyenne
     let moyenne = average(notes).toFixed(1); //Pour avoir un nombre à virgule à la 1ere décimale
     let co2 = 0;
@@ -56,10 +67,16 @@ function Caddy({ route, navigation }) {
     const response = await fetch(
       `https://fr.openfoodfacts.org/api/v0/product/${id}.json`
     ).catch((err) => {
-       //Dans le cas où la requête ne fonctionne pas, on affiche un message d'erreur
+      //Dans le cas où la requête ne fonctionne pas, on affiche un message d'erreur
+      toast.show({title: "Erreur de connexion", description: "Impossible de se connecter à un internet", duration: 3000, type: "danger"});
     });
     const data = await response.json(); //On récupère les données en format json
-    return { //Si la donnée n'existe pas (par exemple l'item n'est pas trouvé), on renvoie un objet vide. Ainsi l'application affiche rien
+    if (data.status === 0) {
+      toast.show({title:"Erreur" , description: "Produit introuvable", duration: 3000, type: "danger"});
+      throw new Error("Produit introuvable");
+    }
+    return {
+      //Si la donnée n'existe pas (par exemple l'item n'est pas trouvé), on renvoie un objet vide. Ainsi l'application affiche rien
       id: id,
       name:
         data.product.product_name ||
@@ -78,8 +95,10 @@ function Caddy({ route, navigation }) {
       const data = await getArray("caddy");
       setItems(data);
       if (route.params.id !== null) {
+        setSheetContent({ loading: true });
         const { id } = route.params;
-        const { co2, name, quantity, score, image, details } = await getItemInfo(id);
+        const { co2, name, quantity, score, image, details } =
+          await getItemInfo(id);
         setSheetContent({
           co2,
           id,
@@ -89,16 +108,23 @@ function Caddy({ route, navigation }) {
           image,
           details,
           buttonInvisible: false,
+          loading: false,
         });
-        bottomSheetRef.current.expand();
       }
     })();
   }, []);
+
+  useEffect(() => { //A chaque fois que le contenu du bottom sheet change, il est ouvert
+      bottomSheetRef.current.snapToIndex(0);
+  }, [SheetContent]);
   /**
    * @param  {string} id
    */
   async function openBottomSheet(id) {
-    const { co2, name, quantity, score, image, details } = await getItemInfo(id);
+    setSheetContent({ loading: true });
+    const { co2, name, quantity, score, image, details } = await getItemInfo(
+      id
+    );
     setSheetContent({
       co2,
       id,
@@ -109,7 +135,6 @@ function Caddy({ route, navigation }) {
       details,
       buttonInvisible: true,
     });
-    bottomSheetRef.current.expand();
   }
   async function clearCaddy() {
     const data = await clearArray("caddy");
@@ -128,10 +153,19 @@ function Caddy({ route, navigation }) {
       idBarCode,
     });
     setItems(data);
+    logEventWithPropertiesAsync("add_to_caddy", {
+      name,
+      quantity,
+      co2,
+      idBarCode,
+      score,
+      date: Date.now(),
+    });
+
     bottomSheetRef.current.close();
   }
   async function saveCaddy() {
-    await addToArray("all_caddy", {date: Date.now(), items: Items});
+    await addToArray("all_caddy", { date: Date.now(), items: Items });
     setItems(await clearArray("caddy"));
   }
   return (
@@ -144,12 +178,15 @@ function Caddy({ route, navigation }) {
       <PacifiScanHeader />
       <Flex marginBottom={3} marginTop={3} flex={1}>
         <Heading>Statistiques</Heading>
-        <Box flex={1}>
           <CaddyStats firstStat={Stats[0]} secondStat={Stats[1]} />
-        </Box>
         <Flex justify="space-between" align="center" direction="row">
           <Heading>Mon caddy</Heading>
-          <Button onPress={() => {setModalVisible(!ModalVisible)}} backgroundColor="brand.danger">
+          <Button
+            onPress={() => {
+              setModalVisible(!ModalVisible);
+            }}
+            backgroundColor="brand.danger"
+          >
             Vider
           </Button>
         </Flex>
@@ -186,7 +223,11 @@ function Caddy({ route, navigation }) {
           direction="row"
           justify="space-between"
         >
-          <Button onPress={saveCaddy} backgroundColor="brand.paccentuation" width="48%">
+          <Button
+            onPress={saveCaddy}
+            backgroundColor="brand.paccentuation"
+            width="48%"
+          >
             J'ai fini
           </Button>
           <Button
@@ -205,7 +246,7 @@ function Caddy({ route, navigation }) {
         backgroundStyle={{ backgroundColor: "#e9e7fe" }}
         ref={bottomSheetRef}
         index={-1}
-        snapPoints={["60%"]}
+        snapPoints={["70%"]}
         enablePanDownToClose={true}
       >
         <BottomSheetItem
@@ -218,18 +259,42 @@ function Caddy({ route, navigation }) {
           name={SheetContent.name}
           buttonInvisible={false || SheetContent.buttonInvisible}
           details={SheetContent.details}
+          loading={SheetContent.loading}
         />
       </BottomSheet>
       <Modal onClose={setModalVisible} isOpen={ModalVisible}>
         <Modal.Content maxH="212">
           <Modal.CloseButton />
           <Modal.Body p={5} backgroundColor="brand.p45">
-            <Heading color="brand.iris100" >Voulez-vous vraiment vider votre caddy ?</Heading>
-            <Flex marginTop={2} justify="space-between" align="center" direction="row">
-              <Button width="48%" onPress={() => {setModalVisible(!ModalVisible)}} backgroundColor="brand.pbackground">Non</Button>
-              <Button width="48%" onPress={() => {clearCaddy();setModalVisible(!ModalVisible)}} backgroundColor="brand.danger">Oui</Button>
+            <Heading color="brand.iris100">
+              Voulez-vous vraiment vider votre caddy ?
+            </Heading>
+            <Flex
+              marginTop={2}
+              justify="space-between"
+              align="center"
+              direction="row"
+            >
+              <Button
+                width="48%"
+                onPress={() => {
+                  setModalVisible(!ModalVisible);
+                }}
+                backgroundColor="brand.pbackground"
+              >
+                Non
+              </Button>
+              <Button
+                width="48%"
+                onPress={() => {
+                  clearCaddy();
+                  setModalVisible(!ModalVisible);
+                }}
+                backgroundColor="brand.danger"
+              >
+                Oui
+              </Button>
             </Flex>
-
           </Modal.Body>
         </Modal.Content>
       </Modal>

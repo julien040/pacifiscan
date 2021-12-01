@@ -3,14 +3,13 @@ import { Flex, Heading, Button, Spinner, Text } from "native-base";
 import {Vibration} from 'react-native';
 import { Camera } from "expo-camera";
 import * as Location from "expo-location";
-import AppLoading from "expo-app-loading";
 import { associationApi } from "../src/waste/waste";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { useIsFocused } from "@react-navigation/native";
 import { DetectLabel } from "../src/scan";
 import { addToArray } from "../src/database/array";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import {logEventAsync} from "expo-analytics-amplitude";
+import {logEventWithPropertiesAsync, logEventAsync} from "expo-analytics-amplitude";
 
 function Scan({ route, navigation }) {
   const isFocused = useIsFocused();
@@ -52,6 +51,7 @@ function Scan({ route, navigation }) {
       );
       const { latitude, longitude } = coords;
       const id = await AsyncStorage.getItem("id")
+      logEventAsync("ScanRequest")
       setLoadingContent("Envoi de l'image...");
       const label = await DetectLabel(base64, [longitude, latitude], id);
       const Item = associationApi[label];
@@ -63,6 +63,7 @@ function Scan({ route, navigation }) {
         coord: [latitude, longitude],
         timestamp: Date.now(),
       });
+      AsyncStorage.setItem(Item, JSON.stringify(true));
       setClicked(false);
       navigation.navigate("Item", { id: Item });
     } catch (error) {
@@ -74,6 +75,7 @@ function Scan({ route, navigation }) {
     if (Scanned === false) {
       Vibration.vibrate(100);
       setScanned(true);
+      logEventWithPropertiesAsync("ItemScanned", {id:data, date: Date.now()})
       navigation.push("Caddy", { id: data });
       setScanned(false);
     }
@@ -115,7 +117,6 @@ function Scan({ route, navigation }) {
         justify="space-between"
       >
         <PacifiScanHeader />
-        <AppLoading />
         <PacifiScanFooter />
       </Flex>
     );

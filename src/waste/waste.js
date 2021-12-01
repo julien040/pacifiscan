@@ -874,3 +874,8 @@ export const associationApi = {
   "Porcelain tableware": "Vaisselle",
   Clothes: "Vêtements",
 };
+
+export const getKeys = () => {
+  return Object.keys(wastesType)
+};
+

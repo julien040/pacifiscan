@@ -15,7 +15,8 @@ function Historique() {
   const [isRefreshing, setisRefreshing] = useState(false);
 
   async function refreshData() {
-    setData(await getArray("Scanned"));
+    const data = await getArray("Scanned")
+    setData(data.reverse());
     setisRefreshing(false);
   }
   return (

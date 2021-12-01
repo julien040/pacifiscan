@@ -2,6 +2,7 @@ import React from "react";
 import { Flex, Image, Text, Pressable } from "native-base";
 import blocked from "./../assets/icons/notDeblocked.png";
 import { useNavigation } from "@react-navigation/core";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 /* 
     Small Item Component
     
@@ -16,6 +17,7 @@ import { useNavigation } from "@react-navigation/core";
     Identique à en haut sauf qu'il est sur la page succès
  */
 export const SmallItem = (props) => {
+  const data = AsyncStorage.getItem(props.title);
   const navigation = useNavigation();
   return (
     <Pressable
@@ -43,11 +45,12 @@ export const SmallItem = (props) => {
   );
 };
 export const SmallSucce = (props) => {
-  const navigation = useNavigation();
+  const navigation = /* useNavigation(); */ props.navigation;
+  console.log(Date.now());
   return (
     <Pressable
       width="47%"
-      onPress={() => navigation.navigate("Item", { id: props.intern })}
+      onPress={() => navigation.navigate("Item", { id: props.title })}
     >
       <Flex
         /* width="47%" */

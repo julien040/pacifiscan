@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react";
-import { Flex, Text, Heading, Image } from "native-base";
+import { Flex, Text, Heading, Image, ScrollView, View } from "native-base";
 import { useNavigation } from "@react-navigation/core";
 import { getArray } from "../src/database/array";
 import { getWeightCount, getTimeCount} from "../src/stats";
@@ -18,7 +18,8 @@ export const StatAccueil = ({}) => {
       }, []);
     const navigation = useNavigation();
     return (
-        <Flex justify="space-between" wrap="wrap" flex={1} p={4} backgroundColor="brand.pbackground" borderRadius={10} > 
+        <View flex={1} >
+        <ScrollView p={4} wrap="wrap" flex={1} backgroundColor="brand.pbackground" borderRadius={10} > 
             <Flex direction="row" justify="space-between" >
             <Flex  align="flex-start" width="45%">
                 <Image marginBottom={4} size={20} alt="Une poubelle" source={require("../assets/stats/trash.png")} />
@@ -34,7 +35,9 @@ export const StatAccueil = ({}) => {
                 - 10 000T de déchets ne finiraient pas dans l'océan {"\n"}
                 - 100 000 poissons ne périraient pas
             </Text>
-            <Text width="100%" textAlign="right" color="brand.iris80" onPress={() => navigation.navigate("Stat")} >Voir mes stats {">"}</Text>
-        </Flex>
+            
+        </ScrollView>
+        <Text marginBottom={1} marginTop={4} width="100%" textAlign="right" color="brand.iris80" onPress={() => navigation.navigate("Stat")} >Voir mes stats {">"}</Text>
+        </View>
     )
 };
