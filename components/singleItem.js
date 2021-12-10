@@ -46,7 +46,6 @@ export const SmallItem = (props) => {
 };
 export const SmallSucce = (props) => {
   const navigation = /* useNavigation(); */ props.navigation;
-  console.log(Date.now());
   return (
     <Pressable
       width="47%"

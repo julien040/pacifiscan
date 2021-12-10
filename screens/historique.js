@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Text, Button, Flex, FlatList, Heading, Image } from "native-base";
+import { Text, Pressable, Flex, FlatList, Heading, Image } from "native-base";
 import { PacifiScanHeader, PacifiScanFooter } from "../components";
 import { getArray } from "../src/database/array";
 import { associationApi, wastesType } from "../src/waste/waste";
 import  dayjs from "dayjs";
 
-function Historique() {
+function Historique({ navigation }) {
   const [Data, setData] = useState([]);
   useEffect(() => {
     (async () => {
@@ -38,7 +38,7 @@ function Historique() {
         }}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item, index }) => (
-          <Item refresh={refreshData} item={item} index={index} />
+          <Item navigation={navigation} refresh={refreshData} item={item} index={index} />
         )}
       />
       <PacifiScanFooter active="Rewind" />
@@ -46,9 +46,9 @@ function Historique() {
   );
 }
 
-const Item = ({ item, index, refresh }) => {
-  const t = new Date(item.timestamp * 1000);
+const Item = ({ item, index, refresh, navigation }) => {
   return (
+    <Pressable onPress={() => navigation.navigate("Item", { id: associationApi[item.type] })} >
     <Flex
       direction="row"
       borderRadius={10}
@@ -72,6 +72,7 @@ const Item = ({ item, index, refresh }) => {
         {dayjs(item.timestamp).format("DD/MM/YYYY à hh:mm")} UTC
       </Text>
     </Flex>
+    </Pressable>
   );
 };
 

@@ -24,6 +24,7 @@ import {
 } from "./screens/index.js";
 import { useEffect } from "react";
 import * as Sentry from 'sentry-expo';
+import * as SystemUI from 'expo-system-ui';
 const Stack = createNativeStackNavigator();
 Amplitude.initializeAsync("50cca50a5ab93a1c1ffaf17cb5330ed7").catch( e => {console.error(e)})
 Amplitude.setTrackingOptionsAsync({
@@ -53,6 +54,7 @@ export default function App() {
   }, []);
 
   const theme = extendTheme(pacifiScanTheme);
+  SystemUI.setBackgroundColorAsync("#EFF0FF")
   let [fontsLoaded] = useFonts({
     Inter: Inter_400Regular,
     Inter_500Medium,
@@ -99,11 +101,14 @@ export default function App() {
               <Stack.Screen
                 name="Item"
                 component={Item}
+
+                options={{presentation:"modal", animation:"fade_from_bottom"} }
                 /* La fiche info d'un item. Doit être appelé avec des arguments */
               />
               <Stack.Screen
                 name="Parametre"
                 component={Parametre}
+                options={{presentation:"modal", animation:"slide_from_bottom"} }
                 /* Pour désactiver les outils de collection de données ainsi que voir l'id d'utilisateur */
               />
               <Stack.Screen

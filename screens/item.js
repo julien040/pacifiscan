@@ -10,7 +10,7 @@ import * as Linking from 'expo-linking';
  */
 function Item({ route, navigation }) {
   const { id } = route.params; //On récupère les arguments donnés par le composant qui a appelé cette page
-  /** @type {wastesType["electromenager"]}
+  /** @type {wastesType["Ampoule"]}
    */
   const data = wastesType[id];
   const bottomSheetRef = useRef();

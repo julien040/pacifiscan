@@ -43,12 +43,13 @@ const PacifiScanFooter = (props) => {
       borderRadius={10}
       p={1}
       marginTop={2}
+      height={"12"}
       /* backgroundColor={colors.brand.p45} */ direction="row"
       justify="space-around" 
     > 
       {items.map((item) => (
         
-          <Pressable key={item.icon} style={{display:"flex", justifyContent:"center", alignContent:"center", alignItems:"center"}}  onPress={() => navigation.navigate(item.name)}  >
+          <Pressable key={item.icon} style={{display:"flex", justifyContent:"center", alignContent:"center", alignItems:"center", height:"100%"}}  onPress={() => navigation.navigate(item.name)}  >
           <Icone isActive={props.active == item.icon} icon={item.icon} />
           <Text fontSize={12} fontWeight={700}>
             {item.name}
