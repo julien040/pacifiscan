@@ -1,23 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { Flex, Heading, Button, Spinner, Text } from "native-base";
-import {Vibration} from 'react-native';
+import { Vibration } from "react-native";
 import { Camera } from "expo-camera";
-import * as Location from "expo-location";
 import { associationApi } from "../src/waste/waste";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { useIsFocused } from "@react-navigation/native";
 import { DetectLabel } from "../src/scan";
 import { addToArray } from "../src/database/array";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import {logEventWithPropertiesAsync, logEventAsync} from "expo-analytics-amplitude";
+import {
+  logEventWithPropertiesAsync,
+  logEventAsync,
+} from "expo-analytics-amplitude";
 
 function Scan({ route, navigation }) {
   const isFocused = useIsFocused();
   const [hasPermission, setHasPermission] = useState(null);
-  /** @type [string|null, function]
-   */
   const [LoadingContent, setLoadingContent] = useState("Chargement...");
-  const [GeoPermission, setGeoPermission] = useState(null);
   const [Scanned, setScanned] = useState(false);
   const [Clicked, setClicked] = useState(false);
   var alreadyClicked = false;
@@ -26,8 +25,6 @@ function Scan({ route, navigation }) {
     (async () => {
       const { status } = await Camera.requestCameraPermissionsAsync();
       setHasPermission(status);
-      let loc = await Location.requestForegroundPermissionsAsync();
-      setGeoPermission(loc.status);
     })();
   }, []);
   async function HandleButton() {
@@ -40,27 +37,20 @@ function Scan({ route, navigation }) {
       const { base64 } = await refCamera.takePictureAsync({
         base64: true,
         exif: false,
-        quality: 0.1,
+        quality: 0.05,
       });
       setClicked(true);
       setLoadingContent("Récupération de la position...");
-      const { coords } = await Location.getCurrentPositionAsync({}).catch(
-        (e) => {
-          
-        }
-      );
-      const { latitude, longitude } = coords;
-      const id = await AsyncStorage.getItem("id")
-      logEventAsync("ScanRequest")
+      const id = await AsyncStorage.getItem("id");
+      logEventAsync("ScanRequest");
       setLoadingContent("Envoi de l'image...");
-      const label = await DetectLabel(base64, [longitude, latitude], id);
+      const label = await DetectLabel(base64, id);
       const Item = associationApi[label];
       setLoadingContent(`Image analysée !`);
       Vibration.vibrate(100);
-      logEventAsync("ScanDechet")
+      logEventAsync("ScanDechet");
       await addToArray("Scanned", {
         type: label,
-        coord: [latitude, longitude],
         timestamp: Date.now(),
       });
       AsyncStorage.setItem(Item, JSON.stringify(true));
@@ -75,12 +65,15 @@ function Scan({ route, navigation }) {
     if (Scanned === false) {
       Vibration.vibrate(100);
       setScanned(true);
-      logEventWithPropertiesAsync("ItemScanned", {id:data, date: Date.now()})
+      logEventWithPropertiesAsync("ItemScanned", {
+        id: data,
+        date: Date.now(),
+      });
       navigation.push("Caddy", { id: data });
       setScanned(false);
     }
   }
-  if (hasPermission === false || GeoPermission === false) {
+  if (hasPermission === false) {
     return (
       <Flex
         backgroundColor="brand.appColor"
@@ -90,13 +83,11 @@ function Scan({ route, navigation }) {
       >
         <PacifiScanHeader />
         <Heading textAlign="center">
-          Nous avons besoin de la permission photo et géolocation pour scanner
-          des objets
+          Nous avons besoin de la permission photo pour scanner des objets
         </Heading>
         <Button
           onPress={() => {
             Camera.requestCameraPermissionsAsync();
-            Location.requestForegroundPermissionsAsync();
           }}
         >
           Autoriser l'appli
@@ -104,22 +95,8 @@ function Scan({ route, navigation }) {
         <PacifiScanFooter active="Scan" />
       </Flex>
     );
-  } else if (
-    hasPermission === null ||
-    isFocused === false ||
-    GeoPermission === null
-  ) {
-    return (
-      <Flex
-        backgroundColor="brand.appColor"
-        p={3}
-        flex={1}
-        justify="space-between"
-      >
-        <PacifiScanHeader />
-        <PacifiScanFooter />
-      </Flex>
-    );
+  } else if (hasPermission === null || isFocused === false) {
+    return null;
   } else if (Clicked) {
     return (
       <Flex
@@ -171,20 +148,18 @@ function Scan({ route, navigation }) {
             >
               <Text>
                 Pour un <Text fontWeight={700}>déchet,</Text> appuyez sur le
-                bouton{" "}
+                bouton
               </Text>
               <Text>
                 Pour un <Text fontWeight={700}>produit</Text>, mettez le code
                 barre en face de la caméra
               </Text>
               <Text>
-                En appuyant sur le bouton, vous acceptez que la photo soit sauvegardée sur les serveurs de PacifiScan
+                En appuyant sur le bouton, vous acceptez que la photo soit
+                sauvegardée sur les serveurs de PacifiScan
               </Text>
             </Flex>
-            <Button
-              onPress={() => HandleButton()}
-              opacity={80}
-            >
+            <Button onPress={() => HandleButton()} opacity={80}>
               Prendre un déchet en photo
             </Button>
           </Camera>

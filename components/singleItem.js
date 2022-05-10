@@ -17,7 +17,6 @@ import AsyncStorage from "@react-native-async-storage/async-storage";
     Identique à en haut sauf qu'il est sur la page succès
  */
 export const SmallItem = (props) => {
-  const data = AsyncStorage.getItem(props.title);
   const navigation = useNavigation();
   return (
     <Pressable
@@ -62,7 +61,7 @@ export const SmallSucce = (props) => {
           width={100}
           height={100}
           alt="L'objet"
-          source={props.isBlocked ? blocked : props.image}
+          /* source={props.isBlocked ? blocked : props.image} */
         />
         <Text fontWeight={700} fontSize={16}>
           {props.title}
