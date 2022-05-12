@@ -2,32 +2,38 @@ import customButton from "./button";
 const pacifiScanTheme = {
   fontConfig: {
     Urbanist: {
+      400: {
+        normal: "Urbanist_semi",
+      },
+      500: {
+        normal: "Urbanist_semi",
+      },
       600: {
         normal: "Urbanist_semi",
       },
       700: {
         normal: "Urbanist_bold",
       },
+    },
     Inter: {
-        400: {
-          normal: "Inter_400Regular",
-        },
-        500: {
-          normal: "Inter_500Medium",
-        },
-        600: {
-          normal: "Inter_600SemiBold",
-        },
-        700: {
-          normal: "Inter_600SemiBold",
-        }
+      400: {
+        normal: "Inter_400Regular",
+      },
+      500: {
+        normal: "Inter_500Medium",
+      },
+      600: {
+        normal: "Inter_600SemiBold",
+      },
+      700: {
+        normal: "Inter_600SemiBold",
       },
     },
   },
 
   fonts: {
     heading: "Urbanist",
-    body: "Inter",
+    body: "Urbanist",
   },
   colors: {
     test: {
@@ -56,7 +62,7 @@ const pacifiScanTheme = {
       p45: "#dddafe",
       pdark: "#cfcafd",
       paccentuation: "#dbebfe",
-      appColor:"#EFF0FF"
+      appColor: "#EFF0FF",
     },
   },
   components: {

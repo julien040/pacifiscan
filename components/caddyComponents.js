@@ -183,7 +183,7 @@ export const BottomSheetItem = ({
           </Alert>
         </Flex>
         <Flex
-          opacity={buttonInvisible ? 0 : 100}
+          display={buttonInvisible ? "none" : "flex"}
           justify="space-between"
           width="100%"
           direction="row"

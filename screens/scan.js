@@ -37,7 +37,7 @@ function Scan({ route, navigation }) {
       const { base64 } = await refCamera.takePictureAsync({
         base64: true,
         exif: false,
-        quality: 0.05,
+        quality: 0.4,
       });
       setClicked(true);
       setLoadingContent("Récupération de la position...");
@@ -136,8 +136,10 @@ function Scan({ route, navigation }) {
               alignContent: "center",
             }}
             onBarCodeScanned={(scanned) => {
+              console.log(scanned);
               handleScanned(scanned);
             }}
+            ratio="16:9"
           >
             <Flex
               marginBottom={2}

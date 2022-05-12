@@ -1,5 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
-import { Flex, Heading, Button, Box, FlatList, Modal, useToast } from "native-base";
+import {
+  Flex,
+  Heading,
+  Button,
+  Box,
+  FlatList,
+  Modal,
+  useToast,
+} from "native-base";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import {
   addToArray,
@@ -68,11 +76,21 @@ function Caddy({ route, navigation }) {
       `https://fr.openfoodfacts.org/api/v0/product/${id}.json`
     ).catch((err) => {
       //Dans le cas où la requête ne fonctionne pas, on affiche un message d'erreur
-      toast.show({title: "Erreur de connexion", description: "Impossible de se connecter à un internet", duration: 3000, type: "danger"});
+      toast.show({
+        title: "Erreur de connexion",
+        description: "Impossible de se connecter à un internet",
+        duration: 3000,
+        type: "danger",
+      });
     });
     const data = await response.json(); //On récupère les données en format json
     if (data.status === 0) {
-      toast.show({title:"Erreur" , description: "Produit introuvable", duration: 3000, type: "danger"});
+      toast.show({
+        title: "Erreur",
+        description: "Produit introuvable",
+        duration: 3000,
+        type: "danger",
+      });
       throw new Error("Produit introuvable");
     }
     return {
@@ -114,8 +132,9 @@ function Caddy({ route, navigation }) {
     })();
   }, []);
 
-  useEffect(() => { //A chaque fois que le contenu du bottom sheet change, il est ouvert
-      bottomSheetRef.current.snapToIndex(0);
+  useEffect(() => {
+    //A chaque fois que le contenu du bottom sheet change, il est ouvert
+    bottomSheetRef.current.snapToIndex(0);
   }, [SheetContent]);
   /**
    * @param  {string} id
@@ -178,7 +197,7 @@ function Caddy({ route, navigation }) {
       <PacifiScanHeader />
       <Flex marginBottom={3} marginTop={3} flex={1}>
         <Heading>Statistiques</Heading>
-          <CaddyStats firstStat={Stats[0]} secondStat={Stats[1]} />
+        <CaddyStats firstStat={Stats[0]} secondStat={Stats[1]} />
         <Flex justify="space-between" align="center" direction="row">
           <Heading>Mon caddy</Heading>
           <Button
@@ -202,8 +221,7 @@ function Caddy({ route, navigation }) {
                 borderRadius={10}
                 backgroundColor="brand.p45"
               >
-                {" "}
-                Votre liste est vide{" "}
+                Votre liste est vide
               </Flex>
             }
             renderItem={({ item, index }) => (

@@ -8,11 +8,17 @@ import Parametre from "./parametre";
 import Recherche from "./recherche";
 import Scan from "./scan";
 import Stat from "./stat";
-import Succe from "./succe"; 
+import Succe from "./succe";
 import Caddy from "./caddy";
-import Permission from "./permission";
 
- export { Accueil, Historique, Item, Parametre, Recherche, Scan, Stat, Succe, Caddy, Permission };
-/* 
-export * from "./accueil";
-export * from "./historique" */
+export {
+  Accueil,
+  Historique,
+  Item,
+  Parametre,
+  Recherche,
+  Scan,
+  Stat,
+  Succe,
+  Caddy,
+};

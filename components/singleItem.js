@@ -33,7 +33,7 @@ export const SmallItem = (props) => {
         p={3}
       >
         <Image width={70} height={70} alt="L'objet" source={props.image} />
-        <Text fontWeight={700} fontSize={16}>
+        <Text fontWeight={700} fontSize={16} fontFamily="Urbanist">
           {props.title}
         </Text>
         <Text fontSize={12} color="brand.iris80">

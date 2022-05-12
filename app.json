@@ -12,11 +12,11 @@
       "resizeMode": "contain",
       "backgroundColor": "#EFF0FF"
     },
-    "jsEngine": "hermes",
     "updates": {
-      "fallbackToCacheTimeout": 0
+      "fallbackToCacheTimeout": 0,
+      "url": "https://app-update-cdn.pacifiscan.org"
     },
-    "assetBundlePatterns": ["assets/**/*"],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": false,
       "bundleIdentifier": "app.pacifiscan.org"

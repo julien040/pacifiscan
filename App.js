@@ -6,6 +6,10 @@ import {
   Inter_500Medium,
   Inter_600SemiBold,
 } from "@expo-google-fonts/inter";
+import {
+  Urbanist_600SemiBold,
+  Urbanist_700Bold,
+} from "@expo-google-fonts/urbanist";
 import { NativeBaseProvider, extendTheme } from "native-base";
 import pacifiScanTheme from "./src/custom_theme/theme";
 import { NavigationContainer } from "@react-navigation/native";
@@ -47,13 +51,9 @@ export default function App() {
         disableAdid: true,
         disableCarrier: true,
         disableIPAddress: true,
-        disableLatLng: true,
       });
       Sentry.init({
         dsn: "https://89ec4ca9d7e14540b52f4146f4c2118f@o403969.ingest.sentry.io/6065620",
-        enableInExpoDevelopment: true,
-        debug: true,
-        enableNativeCrashHandling: true,
       });
     })();
   }, []);
@@ -64,8 +64,8 @@ export default function App() {
     Inter: Inter_400Regular,
     Inter_500Medium,
     Inter_600SemiBold,
-    Urbanist_semi: require("./assets/fonts/Urbanist-SemiBold.ttf"),
-    Urbanist_bold: require("./assets/fonts/Urbanist-Bold.ttf"),
+    Urbanist_semi: Urbanist_600SemiBold,
+    Urbanist_bold: Urbanist_700Bold,
   });
 
   if (!fontsLoaded) {
@@ -106,7 +106,10 @@ export default function App() {
             <Stack.Screen
               name="Item"
               component={Item}
-              options={{ presentation: "modal", animation: "fade_from_bottom" }}
+              options={{
+                presentation: "modal",
+                animation: "fade_from_bottom",
+              }}
               /* La fiche info d'un item. Doit être appelé avec des arguments */
             />
             <Stack.Screen
@@ -114,7 +117,6 @@ export default function App() {
               component={Parametre}
               options={{
                 presentation: "modal",
-                animation: "slide_from_bottom",
               }}
               /* Pour désactiver les outils de collection de données ainsi que voir l'id d'utilisateur */
             />
