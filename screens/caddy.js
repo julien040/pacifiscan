@@ -7,7 +7,9 @@ import {
   FlatList,
   Modal,
   useToast,
+  Text,
 } from "native-base";
+import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import {
   addToArray,
@@ -16,7 +18,6 @@ import {
   clearArray,
 } from "../src/database/array";
 import { logEventWithPropertiesAsync } from "expo-analytics-amplitude";
-import { Erreur } from "../components/erreur";
 import {
   CaddyStats,
   SingleProductCaddy,
@@ -112,7 +113,10 @@ function Caddy({ route, navigation }) {
     (async () => {
       const data = await getArray("caddy");
       setItems(data);
-      if (route.params.id !== null) {
+      if (route.params === undefined) {
+        return;
+      }
+      if (route?.params?.id !== null) {
         setSheetContent({ loading: true });
         const { id } = route.params;
         const { co2, name, quantity, score, image, details } =
@@ -188,135 +192,147 @@ function Caddy({ route, navigation }) {
     setItems(await clearArray("caddy"));
   }
   return (
-    <Flex
-      backgroundColor="brand.appColor"
-      p={3}
-      flex={1}
-      justify="space-between"
-    >
-      <PacifiScanHeader />
-      <Flex marginBottom={3} marginTop={3} flex={1}>
-        <Heading>Statistiques</Heading>
-        <CaddyStats firstStat={Stats[0]} secondStat={Stats[1]} />
-        <Flex justify="space-between" align="center" direction="row">
-          <Heading>Mon caddy</Heading>
-          <Button
-            onPress={() => {
-              setModalVisible(!ModalVisible);
-            }}
-            backgroundColor="brand.danger"
-          >
-            Vider
-          </Button>
-        </Flex>
-        <Box marginTop={5} flex={3}>
-          <FlatList
-            data={Items}
-            keyExtractor={(item, index) => index.toString()}
-            ListEmptyComponent={
-              <Flex
-                p={4}
-                justify="center"
-                align="center"
-                borderRadius={10}
-                backgroundColor="brand.p45"
-              >
-                Votre liste est vide
-              </Flex>
-            }
-            renderItem={({ item, index }) => (
-              <SingleProductCaddy
-                idBarCode={item.idBarCode}
-                text={item.name}
-                score={item.score}
-                toDelete={toDelete}
-                openBottomSheet={openBottomSheet}
-              />
-            )}
-          ></FlatList>
-        </Box>
-        <Flex
-          marginTop={3}
-          width="100%"
-          direction="row"
-          justify="space-between"
-        >
-          <Button
-            onPress={saveCaddy}
-            backgroundColor="brand.paccentuation"
-            width="48%"
-          >
-            J'ai fini
-          </Button>
-          <Button
-            onPress={() => {
-              navigation.push("Scan");
-            }}
-            backgroundColor="brand.p45"
-            width="48%"
-          >
-            J'ajoute
-          </Button>
-        </Flex>
-      </Flex>
-      <PacifiScanFooter active="Search" />
-      <BottomSheet
-        backgroundStyle={{ backgroundColor: "#e9e7fe" }}
-        ref={bottomSheetRef}
-        index={-1}
-        snapPoints={["70%"]}
-        enablePanDownToClose={true}
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Flex
+        backgroundColor="brand.appColor"
+        p={3}
+        flex={1}
+        justify="space-between"
       >
-        <BottomSheetItem
-          addItems={addItem}
-          idBarCode={SheetContent.id}
-          preview={SheetContent.image}
-          quantity={SheetContent.quantity}
-          score={SheetContent.score}
-          co2={SheetContent.co2}
-          name={SheetContent.name}
-          buttonInvisible={false || SheetContent.buttonInvisible}
-          details={SheetContent.details}
-          loading={SheetContent.loading}
-        />
-      </BottomSheet>
-      <Modal onClose={setModalVisible} isOpen={ModalVisible}>
-        <Modal.Content maxH="212">
-          <Modal.CloseButton />
-          <Modal.Body p={5} backgroundColor="brand.p45">
-            <Heading color="brand.iris100">
-              Voulez-vous vraiment vider votre caddy ?
-            </Heading>
-            <Flex
-              marginTop={2}
-              justify="space-between"
-              align="center"
-              direction="row"
+        <PacifiScanHeader />
+        <Flex marginBottom={3} marginTop={3} flex={1}>
+          <Heading>Statistiques</Heading>
+          <CaddyStats firstStat={Stats[0]} secondStat={Stats[1]} />
+          <Flex justify="space-between" align="center" direction="row">
+            <Heading>Mon caddy</Heading>
+            <Button
+              onPress={() => {
+                setModalVisible(!ModalVisible);
+              }}
+              backgroundColor="brand.danger"
             >
-              <Button
-                width="48%"
-                onPress={() => {
-                  setModalVisible(!ModalVisible);
-                }}
-                backgroundColor="brand.pbackground"
+              Vider
+            </Button>
+          </Flex>
+          <Text mt={2} fontFamily={"Inter"} fontSize={12} color="gray.500">
+            Accès anticipé : des bugs peuvent apparaître. Les données sont non
+            contractuelles.
+          </Text>
+          <Box marginTop={4} flex={3}>
+            <FlatList
+              data={Items}
+              initialNumToRender={8}
+              keyExtractor={(item, index) => index.toString()}
+              ListEmptyComponent={
+                <Flex
+                  p={4}
+                  justify="center"
+                  align="center"
+                  borderRadius={10}
+                  backgroundColor="brand.p45"
+                >
+                  Votre liste est vide
+                </Flex>
+              }
+              renderItem={({ item, index }) => (
+                <SingleProductCaddy
+                  idBarCode={item.idBarCode}
+                  text={item.name}
+                  score={item.score}
+                  toDelete={toDelete}
+                  openBottomSheet={openBottomSheet}
+                />
+              )}
+            ></FlatList>
+          </Box>
+          <Flex
+            marginTop={3}
+            width="100%"
+            direction="row"
+            justify="space-between"
+          >
+            <Button
+              onPress={saveCaddy}
+              backgroundColor="brand.paccentuation"
+              width="48%"
+            >
+              J'ai fini
+            </Button>
+            <Button
+              onPress={() => {
+                navigation.push("ScanCaddy");
+              }}
+              backgroundColor="brand.p45"
+              width="48%"
+            >
+              J'ajoute
+            </Button>
+          </Flex>
+        </Flex>
+        <PacifiScanFooter active="Search" />
+        <BottomSheet
+          backgroundStyle={{ backgroundColor: "#e9e7fe" }}
+          ref={bottomSheetRef}
+          index={-1}
+          snapPoints={["70%", "100%"]}
+          enablePanDownToClose={true}
+        >
+          <BottomSheetItem
+            addItems={addItem}
+            idBarCode={SheetContent.id}
+            preview={SheetContent.image}
+            quantity={SheetContent.quantity}
+            score={SheetContent.score}
+            co2={SheetContent.co2}
+            name={SheetContent.name}
+            buttonInvisible={false || SheetContent.buttonInvisible}
+            details={SheetContent.details}
+            loading={SheetContent.loading}
+          />
+        </BottomSheet>
+        <Modal onClose={() => setModalVisible(false)} isOpen={ModalVisible}>
+          <Modal.Content>
+            <Modal.CloseButton />
+            <Modal.Header bgColor={"brand.pbackground"}>
+              Vider le caddy ?
+            </Modal.Header>
+            <Modal.Body p={3} backgroundColor="brand.pbackground">
+              <Text fontFamily="Inter" fontSize={13} color="gray.600">
+                Vous allez perdre tous les produits de votre caddy. Êtes-vous
+                sûr de vouloir continuer ? (Vous pouvez sauvegarder votre caddy
+                si vous avez fini)
+              </Text>
+              <Flex
+                marginTop={6}
+                justify="space-between"
+                align="center"
+                direction="row"
               >
-                Non
-              </Button>
-              <Button
-                width="48%"
-                onPress={() => {
-                  clearCaddy();
-                  setModalVisible(!ModalVisible);
-                }}
-                backgroundColor="brand.danger"
-              >
-                Oui
-              </Button>
-            </Flex>
-          </Modal.Body>
-        </Modal.Content>
-      </Modal>
-    </Flex>
+                <Button
+                  width="48%"
+                  onPress={() => {
+                    setModalVisible(!ModalVisible);
+                  }}
+                  backgroundColor="brand.pbackground"
+                >
+                  Non
+                </Button>
+                <Button
+                  width="48%"
+                  onPress={() => {
+                    clearCaddy();
+                    setModalVisible(!ModalVisible);
+                  }}
+                  backgroundColor="brand.danger"
+                >
+                  Oui
+                </Button>
+              </Flex>
+            </Modal.Body>
+          </Modal.Content>
+        </Modal>
+      </Flex>
+    </GestureHandlerRootView>
   );
 }
 

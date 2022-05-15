@@ -1,11 +1,25 @@
 import React from "react";
-import { Flex, Image, Text, ScrollView } from "native-base";
+import { FlatList, Spinner } from "native-base";
 import { SmallItem } from "./singleItem";
 import { wastesType } from "../src/waste/waste";
 
 export const HomeSucces = (props) => {
   return (
-    <ScrollView horizontal>
+    <FlatList
+      horizontal={true}
+      initialNumToRender={3}
+      ListEmptyComponent={() => <Spinner size={40} color="brand.iris80" />}
+      data={Object.keys(wastesType)}
+      renderItem={({ item, index }) => (
+        <SmallItem title={item} image={wastesType[item].image} />
+      )}
+    />
+  );
+};
+export default HomeSucces;
+
+{
+  /* <ScrollView horizontal>
       {Object.keys(wastesType).map((key) => (
         <SmallItem
           key={key}
@@ -15,6 +29,5 @@ export const HomeSucces = (props) => {
           description={wastesType[key].smallText}
         />
       ))}
-    </ScrollView>
-  );
-};
+    </ScrollView> */
+}

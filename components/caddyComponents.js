@@ -9,6 +9,7 @@ import {
   Spinner,
   Pressable,
 } from "native-base";
+import { openURL } from "expo-linking";
 import Svg, { Path } from "react-native-svg";
 import { useBottomSheet } from "@gorhom/bottom-sheet";
 import { logEventWithPropertiesAsync } from "expo-analytics-amplitude";
@@ -35,9 +36,9 @@ export const CaddyStats = ({ firstStat, secondStat, kg }) => {
     >
       <View flex={1}>
         <Heading color={firstStat < 50 ? "red.400" : "green.600"} fontSize={36}>
-          {firstStat}
+          {isNaN(firstStat) ? "-" : firstStat}
         </Heading>
-        <Heading fontSize={14}>
+        <Heading fontFamily="Inter" fontSize={14}>
           {kg ? "Eco Score (sur 100)" : "Note moyenne"}
         </Heading>
       </View>
@@ -45,7 +46,9 @@ export const CaddyStats = ({ firstStat, secondStat, kg }) => {
         <Heading color="brand.iris100" fontSize={36}>
           {secondStat}
         </Heading>
-        <Heading fontSize={14}> Kg de CO2 créé(s) </Heading>
+        <Heading fontFamily="Inter" fontSize={14}>
+          Kg de CO2 créé(s)
+        </Heading>
       </View>
     </Flex>
   );
@@ -132,9 +135,9 @@ export const BottomSheetItem = ({
   const { close } = useBottomSheet();
   if (loading === true) {
     return (
-      <Flex justify="center" align="center">
+      <Flex my={16} justify="center" align="center">
         <Heading color="brand.iris100">Chargement...</Heading>
-        <Spinner size={100} color="test" />
+        <Spinner marginTop={4} size={50} color="test" />
       </Flex>
     );
   } else {
@@ -146,10 +149,19 @@ export const BottomSheetItem = ({
         p={3}
       >
         <Heading>{name}</Heading>
-        <Text marginTop={4} style={{ textAlign: "right" }} color="brand.iris80">
-          Voir comment ce chiffre est calculé {" >"}
+        <Text
+          onPress={() =>
+            openURL(
+              "https://docs.score-environnemental.com/methodologie-recette/fonctionnement-general-recette"
+            )
+          }
+          marginTop={4}
+          style={{ textAlign: "right" }}
+          color="brand.iris80"
+        >
+          Voir comment ce chiffre est calculé{" >"}
         </Text>
-        <Flex marginTop={2} marginBottom={2} justify="flex-start" flex={1}>
+        <Flex marginTop={2} marginBottom={2} justify="flex-start">
           <CaddyStats
             kg
             firstStat={!score ? "Inconnu" : score}
@@ -177,8 +189,9 @@ export const BottomSheetItem = ({
                 Le saviez-vous ?
               </Heading>
             </Flex>
-            <Text marginTop={2} width="100%">
-              {infoRandom[Math.floor(Math.random() * infoRandom.length)]}
+            <Text fontFamily="Inter" marginTop={2} width="100%">
+              {infoRandom[Math.floor(Math.random() * infoRandom.length)]}{" "}
+              {/* Trouve une information aléatoirement dans la liste */}
             </Text>
           </Alert>
         </Flex>
@@ -187,6 +200,7 @@ export const BottomSheetItem = ({
           justify="space-between"
           width="100%"
           direction="row"
+          marginTop={2}
         >
           <Button
             onPress={() => {

@@ -57,6 +57,7 @@ const PacifiScanHeader = ({ variant }) => {
         </SafeAreaView>
       );
     case "settings":
+    case "modal":
       return (
         <SafeAreaView>
           <Flex
@@ -65,19 +66,11 @@ const PacifiScanHeader = ({ variant }) => {
             justify="space-between"
             align="center"
           >
-            <Pressable onPress={() => navigation.goBack()}>
-              <Svg
-                width={19}
-                height={17}
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <Path
-                  d="M19 7.5H4.414l5.293-5.293L8.293.793.586 8.5l7.707 7.707 1.414-1.414L4.414 9.5H19v-2z"
-                  fill="#222"
-                />
-              </Svg>
-            </Pressable>
+            <IconButton
+              icon={GoBack}
+              onPress={() => navigation.goBack()}
+              _pressed={{ backgroundColor: "brand.p45", borderRadius: 6 }}
+            />
             <Heading fontSize={36} color="brand.logo">
               Pacifiscan
             </Heading>

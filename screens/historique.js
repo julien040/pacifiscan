@@ -3,7 +3,7 @@ import { Text, Pressable, Flex, FlatList, Heading, Image } from "native-base";
 import { PacifiScanHeader, PacifiScanFooter } from "../components";
 import { getArray } from "../src/database/array";
 import { associationApi, wastesType } from "../src/waste/waste";
-import  dayjs from "dayjs";
+import dayjs from "dayjs";
 
 function Historique({ navigation }) {
   const [Data, setData] = useState([]);
@@ -15,7 +15,7 @@ function Historique({ navigation }) {
   const [isRefreshing, setisRefreshing] = useState(false);
 
   async function refreshData() {
-    const data = await getArray("Scanned")
+    const data = await getArray("Scanned");
     setData(data.reverse());
     setisRefreshing(false);
   }
@@ -32,13 +32,26 @@ function Historique({ navigation }) {
         marginTop={2}
         flex={1}
         data={Data}
+        initialNumToRender={10}
+        ListEmptyComponent={
+          <Flex mt={4} flex={1} align="center" justify={"center"}>
+            <Text fontFamily="Inter">
+              Vous n'avez pas encore scanné de déchet
+            </Text>
+          </Flex>
+        }
         refreshing={isRefreshing}
         onRefresh={async () => {
           await refreshData();
         }}
         keyExtractor={(item, index) => index.toString()}
         renderItem={({ item, index }) => (
-          <Item navigation={navigation} refresh={refreshData} item={item} index={index} />
+          <Item
+            navigation={navigation}
+            refresh={refreshData}
+            item={item}
+            index={index}
+          />
         )}
       />
       <PacifiScanFooter active="Rewind" />
@@ -48,30 +61,35 @@ function Historique({ navigation }) {
 
 const Item = ({ item, index, refresh, navigation }) => {
   return (
-    <Pressable onPress={() => navigation.navigate("Item", { id: associationApi[item.type] })} >
-    <Flex
-      direction="row"
-      borderRadius={10}
-      p={3}
-      backgroundColor="brand.pbackground"
-      m={1}
-      flex={1}
+    <Pressable
+      onPress={() =>
+        navigation.navigate("Item", { id: associationApi[item.type] })
+      }
     >
-      <Image
-        marginRight={2}
-        alt={item.type}
-        source={wastesType[associationApi[item.type]].image}
-        width={10}
-        height={10}
-      />
-      <Text flex={1}>
-        Vous avez scanné{" "}
-        <Text fontWeight={700} color="brand.iris80">
-          {associationApi[item.type]}
-        </Text>{" "}
-        {dayjs(item.timestamp).format("DD/MM/YYYY à hh:mm")} UTC
-      </Text>
-    </Flex>
+      <Flex
+        direction="row"
+        borderRadius={10}
+        p={3}
+        backgroundColor="brand.pbackground"
+        m={1}
+        flex={1}
+      >
+        <Image
+          marginRight={2}
+          alt={item.type}
+          source={{ uri: wastesType[associationApi[item.type]].image }}
+          width={10}
+          height={10}
+        />
+        <Text fontFamily="Inter" flex={1}>
+          Vous avez scanné{" "}
+          <Text fontWeight={700} color="brand.iris80">
+            {associationApi[item.type]}
+          </Text>
+          {" le "}
+          {dayjs(item.timestamp).format("DD/MM/YYYY à hh:mm")} UTC
+        </Text>
+      </Flex>
     </Pressable>
   );
 };

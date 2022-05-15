@@ -26,11 +26,14 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "package": "nc.bleuclair.pacifiscan"
+      "package": "app.pacifiscan.org"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-system-ui"]
+    "plugins": ["expo-system-ui"],
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    }
   }
 }

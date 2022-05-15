@@ -1,8 +1,6 @@
 import React from "react";
 import { Flex, Image, Text, Pressable } from "native-base";
-import blocked from "./../assets/icons/notDeblocked.png";
 import { useNavigation } from "@react-navigation/core";
-import AsyncStorage from "@react-native-async-storage/async-storage";
 /* 
     Small Item Component
     
@@ -20,34 +18,36 @@ export const SmallItem = (props) => {
   const navigation = useNavigation();
   return (
     <Pressable
-      onPress={() => navigation.navigate("Item", { id: props.intern })}
+      onPress={() => navigation.navigate("Item", { id: props.title })}
       maxHeight={170}
       minWidth={120}
       marginRight={2}
       marginLeft={2}
     >
       <Flex
-        flex={1}
         borderRadius={10}
         backgroundColor={props.isBlocked ? "brand.pbackground" : "brand.p45"}
         p={3}
       >
-        <Image width={70} height={70} alt="L'objet" source={props.image} />
-        <Text fontWeight={700} fontSize={16} fontFamily="Urbanist">
+        <Image
+          width="56px"
+          height="56px"
+          alt={"Une image de " + props.title}
+          source={{ uri: props.image }}
+        />
+        <Text fontWeight={700} fontSize={14} fontFamily="Inter">
           {props.title}
-        </Text>
-        <Text fontSize={12} color="brand.iris80">
-          {props.description}
         </Text>
       </Flex>
     </Pressable>
   );
 };
-export const SmallSucce = (props) => {
-  const navigation = /* useNavigation(); */ props.navigation;
+
+export const Item = (props) => {
+  const navigation = useNavigation();
   return (
     <Pressable
-      width="47%"
+      width="48%"
       onPress={() => navigation.navigate("Item", { id: props.title })}
     >
       <Flex
@@ -55,24 +55,22 @@ export const SmallSucce = (props) => {
         borderRadius={10}
         marginBottom={3}
         backgroundColor={props.isBlocked ? "dark.700" : "brand.p45"}
-        p={3}
+        p={4}
       >
         <Image
           width={100}
           height={100}
           alt="L'objet"
-          /* source={props.isBlocked ? blocked : props.image} */
+          source={{ uri: props.image }}
         />
         <Text fontWeight={700} fontSize={16}>
           {props.title}
-        </Text>
-        <Text
-          fontSize={12}
-          color={props.isBlocked ? "dark.50" : "brand.iris80"}
-        >
-          {props.isBlocked ? "A débloquer" : props.description}
         </Text>
       </Flex>
     </Pressable>
   );
 };
+
+const SmallSucce = React.memo((props) => <Item {...props} />);
+
+export { SmallSucce };

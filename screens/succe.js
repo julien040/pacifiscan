@@ -1,7 +1,7 @@
 import React from "react";
 import { SmallSucce } from "../components/singleItem";
 import { wastesType } from "../src/waste/waste";
-import { Flex, Heading, FlatList } from "native-base";
+import { Flex, Heading, FlatList, Spinner } from "native-base";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { getKeys } from "../src/waste/waste";
 /* 
@@ -33,11 +33,10 @@ function Succe({ route, navigation }) {
             title={item}
             navigation={navigation}
             image={wastesType[item].image}
-            description={wastesType[item].smallText}
           />
         )}
-        initialNumToRender={12}
-        keyExtractor={(item) => item}
+        ListEmptyComponent={() => <Spinner color="brand.iris80" />}
+        initialNumToRender={1}
         columnWrapperStyle={{ justifyContent: "space-between" }}
         numColumns={2}
       />

@@ -3,16 +3,16 @@ const pacifiScanTheme = {
   fontConfig: {
     Urbanist: {
       400: {
-        normal: "Urbanist_semi",
+        normal: "Urbanist_600SemiBold",
       },
       500: {
-        normal: "Urbanist_semi",
+        normal: "Urbanist_600SemiBold",
       },
       600: {
-        normal: "Urbanist_semi",
+        normal: "Urbanist_600SemiBold",
       },
       700: {
-        normal: "Urbanist_bold",
+        normal: "Urbanist_700Bold",
       },
     },
     Inter: {

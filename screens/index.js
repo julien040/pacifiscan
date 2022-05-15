@@ -9,6 +9,7 @@ import Recherche from "./recherche";
 import Scan from "./scan";
 import Stat from "./stat";
 import Succe from "./succe";
+import ScanCaddy from "./scanCaddy";
 import Caddy from "./caddy";
 
 export {
@@ -20,5 +21,6 @@ export {
   Scan,
   Stat,
   Succe,
+  ScanCaddy,
   Caddy,
 };

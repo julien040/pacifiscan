@@ -1,8 +1,9 @@
 import React from "react";
-import { Flex, Button, Heading, ScrollView, Text } from "native-base";
+import { Flex, Heading, Text } from "native-base";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { HomeSucces } from "../components/homeScrollSucces";
-import { StatAccueil } from "../components/statAccueil";
+import AccueilHistorique from "../components/accueilHistorique";
+import AccueilStories from "../components/accueilStories";
 
 function Accueil({ route, navigation }) {
   return (
@@ -13,29 +14,62 @@ function Accueil({ route, navigation }) {
       justify="space-between"
     >
       <PacifiScanHeader />
-      <Flex justify="flex-start" flex={2}>
-        <Heading color="black" marginTop={3} marginBottom={3} p={0}>
-          Succès
-        </Heading>
+      <Flex justify="flex-start">
+        <Flex align={"center"} direction="row" justify={"space-between"}>
+          <Heading color="black" marginTop={3} marginBottom={3} p={0}>
+            Déchets
+          </Heading>
+          <Text
+            style={{ textAlign: "right" }}
+            onPress={() => {
+              navigation.navigate("Infos");
+            }}
+            color="brand.iris80"
+            p={1}
+          >
+            Voir les déchets {">"}
+          </Text>
+        </Flex>
+
         <HomeSucces />
-        <Text
-          style={{ textAlign: "right" }}
-          width="100%"
-          onPress={() => {
-            navigation.navigate("Infos");
-          }}
-          color="brand.iris80"
-          p={1}
-        >
-          Voir les succès {">"}
-        </Text>
       </Flex>
-      <Flex overflow="hidden" marginBottom={3} flex={3}>
-        <Heading color="black" marginBottom={3} p={0}>
-          Grâce à vous
-        </Heading>
-        <StatAccueil />
+      <Flex overflow="hidden">
+        <Flex align={"center"} direction="row" justify={"space-between"}>
+          <Heading color="black" marginTop={3} marginBottom={3}>
+            Historique
+          </Heading>
+          <Text
+            style={{ textAlign: "right" }}
+            onPress={() => {
+              navigation.navigate("Historique");
+            }}
+            color="brand.iris80"
+            p={1}
+          >
+            Voir l'historique {">"}
+          </Text>
+        </Flex>
+        <AccueilHistorique />
       </Flex>
+      <Flex overflow="hidden" my={3} flex={1}>
+        <Flex align={"center"} direction="row" justify={"space-between"}>
+          <Heading color="black" marginTop={3} marginBottom={3} p={0}>
+            Stories
+          </Heading>
+          <Text
+            style={{ textAlign: "right" }}
+            onPress={() => {
+              navigation.navigate("Infos");
+            }}
+            color="brand.iris80"
+            p={1}
+          >
+            Voir toutes les stories {">"}
+          </Text>
+        </Flex>
+        <AccueilStories />
+      </Flex>
+
       <PacifiScanFooter active="Home" />
     </Flex>
   );

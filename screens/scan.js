@@ -3,6 +3,7 @@ import { Flex, Heading, Button, Spinner, Text } from "native-base";
 import { Vibration } from "react-native";
 import { Camera } from "expo-camera";
 import { associationApi } from "../src/waste/waste";
+import { BarCodeScanner } from "expo-barcode-scanner";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { useIsFocused } from "@react-navigation/native";
 import { DetectLabel } from "../src/scan";
@@ -57,20 +58,7 @@ function Scan({ route, navigation }) {
       setClicked(false);
       navigation.navigate("Item", { id: Item });
     } catch (error) {
-      console.log(error);
       setClicked(false);
-    }
-  }
-  function handleScanned({ data }) {
-    if (Scanned === false) {
-      Vibration.vibrate(100);
-      setScanned(true);
-      logEventWithPropertiesAsync("ItemScanned", {
-        id: data,
-        date: Date.now(),
-      });
-      navigation.push("Caddy", { id: data });
-      setScanned(false);
     }
   }
   if (hasPermission === false) {
@@ -96,7 +84,17 @@ function Scan({ route, navigation }) {
       </Flex>
     );
   } else if (hasPermission === null || isFocused === false) {
-    return null;
+    return (
+      <Flex backgroundColor="brand.appColor" p={3} flex={1} direction="column">
+        <PacifiScanHeader />
+        <Flex justify="center" align={"center"} flex={1}>
+          <Spinner size={80} color="brand.iris80" />
+          <Heading marginTop={6}>Chargement de la caméra...</Heading>
+        </Flex>
+
+        <PacifiScanFooter active="Scan" />
+      </Flex>
+    );
   } else if (Clicked) {
     return (
       <Flex
@@ -135,33 +133,13 @@ function Scan({ route, navigation }) {
               padding: 15,
               alignContent: "center",
             }}
-            onBarCodeScanned={(scanned) => {
-              console.log(scanned);
-              handleScanned(scanned);
-            }}
             ratio="16:9"
           >
-            <Flex
-              marginBottom={2}
-              opacity={80}
-              p={2}
-              borderRadius={10}
-              backgroundColor="brand.p45"
+            <Button
+              marginTop={"auto"}
+              onPress={() => HandleButton()}
+              opacity={70}
             >
-              <Text>
-                Pour un <Text fontWeight={700}>déchet,</Text> appuyez sur le
-                bouton
-              </Text>
-              <Text>
-                Pour un <Text fontWeight={700}>produit</Text>, mettez le code
-                barre en face de la caméra
-              </Text>
-              <Text>
-                En appuyant sur le bouton, vous acceptez que la photo soit
-                sauvegardée sur les serveurs de PacifiScan
-              </Text>
-            </Flex>
-            <Button onPress={() => HandleButton()} opacity={80}>
               Prendre un déchet en photo
             </Button>
           </Camera>

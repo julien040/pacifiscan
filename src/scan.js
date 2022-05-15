@@ -10,7 +10,6 @@ export const DetectLabel = async (base64, id) => {
     },
     body: JSON.stringify({ image: base64, id: id }),
   }).catch((err) => {
-    console.log(err);
     throw new Error("Erreur lors de la requête");
   });
   const data = await response.json();
