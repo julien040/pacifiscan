@@ -1,5 +1,11 @@
 import React from "react";
-import { loadAsync, isLoaded } from "expo-font";
+import { loadAsync } from "expo-font";
+import { Platform } from "react-native";
+import { setStatusBarStyle } from "expo-status-bar";
+import {
+  setBackgroundColorAsync,
+  setButtonStyleAsync,
+} from "expo-navigation-bar";
 import {
   Inter_400Regular,
   Inter_500Medium,
@@ -9,9 +15,10 @@ import {
   Urbanist_600SemiBold,
   Urbanist_700Bold,
 } from "@expo-google-fonts/urbanist";
+
 import { hideAsync, preventAutoHideAsync } from "expo-splash-screen";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { NativeBaseProvider, extendTheme } from "native-base";
+import { NativeBaseProvider, extendTheme, Spinner } from "native-base";
 import pacifiScanTheme from "./src/custom_theme/theme";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -27,7 +34,7 @@ import {
   ScanCaddy,
   Caddy,
 } from "./screens/index.js";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import * as Sentry from "sentry-expo";
 import * as SystemUI from "expo-system-ui";
 
@@ -42,61 +49,72 @@ Amplitude.setTrackingOptionsAsync({
   disableIPAddress: true,
   disableLatLng: true,
 });
+
 Amplitude.logEventAsync("Démarrage");
 
+Sentry.init({
+  dsn: "https://89ec4ca9d7e14540b52f4146f4c2118f@o403969.ingest.sentry.io/6065620",
+});
+
 export default function App() {
+  const [Loaded, setLoaded] = useState(false);
+  const [Theme, setTheme] = useState({});
   useEffect(() => {
     (async () => {
       await preventAutoHideAsync();
-      let id = await AsyncStorage.getItem("id");
-      if (id == null) {
-        setFirstTime(true);
-        AsyncStorage.setItem("id", Math.random().toString(36).substring(7));
-      }
       try {
         await loadAsync({
           Inter_400Regular,
           Inter_500Medium,
           Inter_600SemiBold,
-          Urbanist_600SemiBold: require("./assets/fonts/Urbanist-SemiBold.ttf"),
-          Urbanist_700Bold: require("./assets/fonts/Urbanist-Bold.ttf"),
+          Urbanist_600SemiBold,
+          Urbanist_700Bold,
         });
-        console.log("Fonts loaded");
       } catch (error) {
         console.error(error);
       } finally {
+        setTheme(pacifiScanTheme);
+        setLoaded(true);
         await hideAsync();
       }
-      await Amplitude.initializeAsync("50cca50a5ab93a1c1ffaf17cb5330ed").catch(
-        (e) => {
-          console.error(e);
-        }
-      );
-      await Amplitude.setTrackingOptionsAsync({
-        disableAdid: true,
-        disableCarrier: true,
-        disableIPAddress: true,
-      });
-      Sentry.init({
-        dsn: "https://89ec4ca9d7e14540b52f4146f4c2118f@o403969.ingest.sentry.io/6065620",
-      });
     })();
   }, []);
 
-  const theme = extendTheme(pacifiScanTheme);
+  // Create a unique identifier for the app
+  useEffect(() => {
+    (async () => {
+      let id = await AsyncStorage.getItem("id");
+      if (id == null) {
+        await AsyncStorage.setItem(
+          "id",
+          Math.random().toString(36).substring(7)
+        );
+      }
+    })();
+  }, []);
+
+  if (!Loaded) {
+    return (
+      <NativeBaseProvider>
+        <Spinner />
+      </NativeBaseProvider>
+    );
+  }
+  const theme = extendTheme(Theme);
   SystemUI.setBackgroundColorAsync("#EFF0FF");
-  console.log(isLoaded("Urbanist_700Bold"));
+  setBackgroundColorAsync("#EFF0FF");
+  setStatusBarStyle("dark");
+  if (Platform.OS === "android") {
+    setButtonStyleAsync("dark");
+  }
+
   return (
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
-          screenOptions={{ headerShown: false }}
+          screenOptions={{ headerShown: false, animation: "simple_push" }}
           initialRouteName="Accueil"
         >
-          {/* <Stack.Screen
-              name="Permission"
-              component={Permission}
-              /> */}
           <Stack.Screen
             name="Accueil"
             component={Accueil} /* L'accueil tout simplement */

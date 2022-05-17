@@ -14,6 +14,9 @@ const pacifiScanTheme = {
       700: {
         normal: "Urbanist_700Bold",
       },
+      800: {
+        normal: "Urbanist_700Bold",
+      },
     },
     Inter: {
       400: {

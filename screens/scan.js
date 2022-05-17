@@ -3,7 +3,6 @@ import { Flex, Heading, Button, Spinner, Text } from "native-base";
 import { Vibration } from "react-native";
 import { Camera } from "expo-camera";
 import { associationApi } from "../src/waste/waste";
-import { BarCodeScanner } from "expo-barcode-scanner";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { useIsFocused } from "@react-navigation/native";
 import { DetectLabel } from "../src/scan";
@@ -41,15 +40,17 @@ function Scan({ route, navigation }) {
         quality: 0.4,
       });
       setClicked(true);
-      setLoadingContent("Récupération de la position...");
       const id = await AsyncStorage.getItem("id");
       logEventAsync("ScanRequest");
       setLoadingContent("Envoi de l'image...");
       const label = await DetectLabel(base64, id);
+      console.log(label);
       const Item = associationApi[label];
       setLoadingContent(`Image analysée !`);
       Vibration.vibrate(100);
-      logEventAsync("ScanDechet");
+      logEventWithPropertiesAsync("Scan d'un déchet sur l'application", {
+        label: label,
+      });
       await addToArray("Scanned", {
         type: label,
         timestamp: Date.now(),

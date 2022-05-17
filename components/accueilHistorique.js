@@ -22,19 +22,22 @@ function AccueilHistorique() {
   }, []);
 
   return (
-    <>
-      <FlatList
-        horizontal={true}
-        refreshing={Refreshing}
-        onRefresh={refreshData}
-        data={Data}
-        initialNumToRender={1}
-        keyExtractor={(item, index) => index}
-        renderItem={({ item }) => (
-          <ListItem date={item.timestamp} type={item.type} />
-        )}
-      />
-    </>
+    <FlatList
+      horizontal={true}
+      ListEmptyComponent={
+        <Text fontFamily="Inter" color={"gray.500"} fontSize={13}>
+          Vous n'avez pas encore scanné de déchet
+        </Text>
+      }
+      refreshing={Refreshing}
+      onRefresh={refreshData}
+      data={Data}
+      initialNumToRender={1}
+      keyExtractor={(item, index) => index}
+      renderItem={({ item }) => (
+        <ListItem date={item.timestamp} type={item.type} />
+      )}
+    />
   );
 }
 

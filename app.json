@@ -13,12 +13,10 @@
       "backgroundColor": "#EFF0FF"
     },
     "updates": {
-      "fallbackToCacheTimeout": 0,
-      "url": "https://app-update-cdn.pacifiscan.org"
+      "fallbackToCacheTimeout": 0
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "supportsTablet": false,
       "bundleIdentifier": "app.pacifiscan.org"
     },
     "android": {

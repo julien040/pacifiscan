@@ -1,6 +1,7 @@
 import { FlatList, Text, Flex, Heading } from "native-base";
 import { ImageBackground } from "react-native";
 import { useState, useEffect } from "react";
+import { WebView } from "react-native-webview";
 
 /* 
 Story example : {
@@ -83,8 +84,8 @@ function ListItem({ url, title, date, image }) {
           flex={1}
         >
           <Heading
+            fontWeight={"semibold"}
             textAlign={"center"}
-            opacity={1}
             fontSize={16}
             color={"white"}
           >

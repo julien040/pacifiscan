@@ -39,7 +39,9 @@
     "sentry-expo": "^4.0.0",
     "styled-components": "^5.3.3",
     "styled-system": "^5.1.5",
-    "expo-navigation-bar": "~1.2.0"
+    "expo-navigation-bar": "~1.2.0",
+    "react-native-screens": "~3.11.1",
+    "react-native-webview": "11.18.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

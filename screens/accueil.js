@@ -25,7 +25,6 @@ function Accueil({ route, navigation }) {
               navigation.navigate("Infos");
             }}
             color="brand.iris80"
-            p={1}
           >
             Voir les déchets {">"}
           </Text>
@@ -44,7 +43,6 @@ function Accueil({ route, navigation }) {
               navigation.navigate("Historique");
             }}
             color="brand.iris80"
-            p={1}
           >
             Voir l'historique {">"}
           </Text>

@@ -1,5 +1,8 @@
 import React, { useRef } from "react";
+import { Platform } from "react-native";
 import { wastesType, worried } from "../src/waste/waste";
+import { setBackgroundColorAsync } from "expo-navigation-bar";
+import { setStatusBarBackgroundColor } from "expo-status-bar";
 import {
   Flex,
   ScrollView,
@@ -9,6 +12,8 @@ import {
   Button,
   View,
 } from "native-base";
+import pacifiScanTheme from "../src/custom_theme/theme";
+import { useEffect } from "react";
 
 import { PacifiScanHeader } from "../components/index";
 import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet";
@@ -16,6 +21,22 @@ import * as Linking from "expo-linking";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 function Item({ route, navigation }) {
+  useEffect(() => {
+    if (Platform.OS === "android") {
+      const backgroundColorModal = pacifiScanTheme.colors.brand.pbackground;
+
+      setBackgroundColorAsync(backgroundColorModal);
+      setStatusBarBackgroundColor(backgroundColorModal);
+    }
+
+    return () => {
+      if (Platform.OS === "android") {
+        const backgroundColorApp = pacifiScanTheme.colors.brand.appColor;
+        setBackgroundColorAsync(backgroundColorApp);
+        setStatusBarBackgroundColor(backgroundColorApp);
+      }
+    };
+  }, []);
   const { id } = route.params; //On récupère les arguments donnés par le composant qui a appelé cette page
   /** @type {wastesType["Ampoule"]}
    */
@@ -54,7 +75,6 @@ function Item({ route, navigation }) {
               alt="L'image"
               source={{ uri: data.image }}
             />
-            {/* <Text color="brand.iris80">{data.description} </Text> */}
           </Flex>
           <Flex>
             {/* Que faire début */}
@@ -63,7 +83,6 @@ function Item({ route, navigation }) {
               <Heading color="brand.iris100">Qu'en faire ?</Heading>
             </Flex>
             <Text fontFamily="Inter">{data.quefaireTexte}</Text>
-            {/* Que faire fin */}
             {/* Quel est son impact début */}
             <Flex marginTop={8} marginBottom={1} direction="row">
               <Image
@@ -75,7 +94,6 @@ function Item({ route, navigation }) {
               <Heading color="brand.iris100">Quel est son impact ?</Heading>
             </Flex>
             <Text fontFamily="Inter">{data.impactTexte}</Text>
-            {/* Quel est son impact fin */}
             {/* Comment éviter ce déchet début */}
             <Flex marginTop={8} marginBottom={1} direction="row">
               <Image
@@ -87,7 +105,7 @@ function Item({ route, navigation }) {
               <Heading color="brand.iris100">Comment l'éviter ?</Heading>
             </Flex>
             <Text fontFamily="Inter">{data.eviterTexte}</Text>
-            {/* Comment éviter ce déchet fin */}
+            {/* Stats */}
             <Heading color="brand.iris80" marginTop={8} fontSize={18}>
               En moyenne, cet objet pèse {data.poids} kg et met{" "}
               {data.anneeDecomposition} ans à se décomposer
@@ -107,7 +125,7 @@ function Item({ route, navigation }) {
         <Button onPress={handleBottomSheet}>Où jeter ?</Button>
       </Flex>
       <BottomSheet
-        backgroundStyle={{ backgroundColor: "#EFF0FF" }}
+        /* backgroundStyle={{ backgroundColor: "#EFF0FF" }} */
         ref={bottomSheetRef}
         snapPoints={["50%", "70%", "100%"]}
         enablePanDownToClose={true}
@@ -159,7 +177,7 @@ const SinglePoint = ({ item }) => {
       </Text>
 
       <Button
-        bgColor={"brand.pdark"}
+        /* bgColor={"brand.pdark"} */
         alignSelf="flex-end"
         size={"sm"}
         onPress={() => Linking.openURL(item.seeMore)}

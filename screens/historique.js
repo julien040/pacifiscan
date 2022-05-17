@@ -35,7 +35,7 @@ function Historique({ navigation }) {
         initialNumToRender={10}
         ListEmptyComponent={
           <Flex mt={4} flex={1} align="center" justify={"center"}>
-            <Text fontFamily="Inter">
+            <Text color={"gray.500"} fontSize={15} fontFamily="Inter">
               Vous n'avez pas encore scanné de déchet
             </Text>
           </Flex>
@@ -83,7 +83,7 @@ const Item = ({ item, index, refresh, navigation }) => {
         />
         <Text fontFamily="Inter" flex={1}>
           Vous avez scanné{" "}
-          <Text fontWeight={700} color="brand.iris80">
+          <Text fontWeight={"700"} color="brand.iris80">
             {associationApi[item.type]}
           </Text>
           {" le "}

@@ -63,9 +63,7 @@ const PacifiScanFooter = (props) => {
           /* hitSlop={{ top: 16, bottom: 16, left: 16, right: 16 }} */
         >
           <Icone isActive={props.active == item.icon} icon={item.icon} />
-          <Text fontSize={12} fontWeight={700}>
-            {item.name}
-          </Text>
+          <Text fontSize={12}>{item.name}</Text>
         </Pressable>
       ))}
     </Flex>
