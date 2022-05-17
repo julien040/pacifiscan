@@ -33,6 +33,7 @@ import {
   Succe,
   ScanCaddy,
   Caddy,
+  Story,
 } from "./screens/index.js";
 import { useEffect, useState } from "react";
 import * as Sentry from "sentry-expo";
@@ -164,6 +165,11 @@ export default function App() {
           <Stack.Screen
             name="Caddy"
             component={Caddy}
+            /* Le mode caddy de l'application */
+          />
+          <Stack.Screen
+            name="Story"
+            component={Story}
             /* Le mode caddy de l'application */
           />
         </Stack.Navigator>

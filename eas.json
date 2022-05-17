@@ -11,7 +11,9 @@
       "distribution": "internal",
       "releaseChannel": "preview"
     },
-    "production": {}
+    "production": {
+      "releaseChannel": "production"
+    }
   },
   "submit": {
     "production": {}

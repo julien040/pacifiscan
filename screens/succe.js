@@ -37,6 +37,7 @@ function Succe({ route, navigation }) {
         )}
         ListEmptyComponent={() => <Spinner color="brand.iris80" />}
         initialNumToRender={1}
+        maxToRenderPerBatch={2}
         columnWrapperStyle={{ justifyContent: "space-between" }}
         numColumns={2}
       />

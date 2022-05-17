@@ -47,8 +47,12 @@ function Caddy({ route, navigation }) {
       },
       agribalyse: { value: 0 },
     },
-    loading: true,
+    loading: false,
   });
+
+  function showBottomSheet() {
+    bottomSheetRef?.current?.snapToIndex(0);
+  }
 
   useEffect(() => {
     //Puisque Items est passé en argument dans le tableau, à chaque fois qu'Items changera, use Effect sera appelé et le composant sera re-rendu
@@ -116,30 +120,44 @@ function Caddy({ route, navigation }) {
       if (route.params === undefined) {
         return;
       }
+
       if (route?.params?.id !== null) {
-        setSheetContent({ loading: true });
-        const { id } = route.params;
-        const { co2, name, quantity, score, image, details } =
-          await getItemInfo(id);
-        setSheetContent({
-          co2,
-          id,
-          name,
-          quantity,
-          score,
-          image,
-          details,
-          buttonInvisible: false,
-          loading: false,
-        });
+        try {
+          // Set loading
+          setSheetContent({ loading: true });
+          bottomSheetRef?.current?.snapToIndex(0);
+
+          // Get barcode
+          const { id } = route.params;
+
+          //Get item info
+          const { co2, name, quantity, score, image, details } =
+            await getItemInfo(id);
+          // Set item info
+          setSheetContent({
+            co2,
+            id,
+            name,
+            quantity,
+            score,
+            image,
+            details,
+            buttonInvisible: false,
+            loading: false,
+          });
+        } catch (error) {
+          console.error(error);
+          // In case of an error, we close the bottom sheet
+          bottomSheetRef.current.snapToIndex(-1);
+        }
       }
     })();
   }, []);
 
   useEffect(() => {
-    //A chaque fois que le contenu du bottom sheet change, il est ouvert
-    bottomSheetRef.current.snapToIndex(0);
+    bottomSheetRef?.current?.snapToIndex(0);
   }, [SheetContent]);
+
   /**
    * @param  {string} id
    */

@@ -1,7 +1,7 @@
 import { FlatList, Text, Flex, Heading } from "native-base";
-import { ImageBackground } from "react-native";
+import { ImageBackground, Pressable } from "react-native";
 import { useState, useEffect } from "react";
-import { WebView } from "react-native-webview";
+import { useNavigation } from "@react-navigation/native";
 
 /* 
 Story example : {
@@ -14,12 +14,13 @@ Story example : {
 
 const fakeData = [
   {
-    id: 1,
+    id: "36cfd0ca02194378bba862af95c61e82",
     title: "Acidification de l'eau",
     date: "2020-04-12T00:00:00.000Z",
     image: "https://picsum.photos/id/440/1080/1920",
   },
   {
+    id: "36cfd0ca02194378bba862af95c61e82",
     title: "Ramassage de déchets",
     date: "2020-08-12T00:00:00.000Z",
     image: "https://picsum.photos/id/450/1080/1920",
@@ -56,44 +57,54 @@ function AccueilStories() {
   );
 }
 
-function ListItem({ url, title, date, image }) {
+function ListItem({ url, title, date, image, id }) {
+  const navigation = useNavigation();
+
   return (
-    <Flex
-      bgColor={"black"}
-      borderRadius={8}
-      style={{ aspectRatio: 9 / 16 }}
-      mx={1}
+    <Pressable
+      onPress={() =>
+        navigation.navigate("Story", {
+          id: id,
+        })
+      }
     >
-      <ImageBackground
-        style={{
-          aspectRatio: 9 / 16,
-          flex: 1,
-          borderRadius: 8,
-          backgroundColor: "black",
-          overflow: "hidden",
-        }}
-        source={{ uri: image }}
+      <Flex
+        bgColor={"black"}
+        borderRadius={8}
+        style={{ aspectRatio: 9 / 16 }}
+        mx={1}
       >
-        <Flex
-          p={2}
-          align="center"
-          justify={"center"}
-          bgColor={"gray.800"}
-          opacity={0.75}
-          borderRadius={8}
-          flex={1}
+        <ImageBackground
+          style={{
+            aspectRatio: 9 / 16,
+            flex: 1,
+            borderRadius: 8,
+            backgroundColor: "black",
+            overflow: "hidden",
+          }}
+          source={{ uri: image }}
         >
-          <Heading
-            fontWeight={"semibold"}
-            textAlign={"center"}
-            fontSize={16}
-            color={"white"}
+          <Flex
+            p={2}
+            align="center"
+            justify={"center"}
+            bgColor={"gray.800"}
+            opacity={0.75}
+            borderRadius={8}
+            flex={1}
           >
-            {title}
-          </Heading>
-        </Flex>
-      </ImageBackground>
-    </Flex>
+            <Heading
+              fontWeight={"semibold"}
+              textAlign={"center"}
+              fontSize={16}
+              color={"white"}
+            >
+              {title}
+            </Heading>
+          </Flex>
+        </ImageBackground>
+      </Flex>
+    </Pressable>
   );
 }
 export default AccueilStories;

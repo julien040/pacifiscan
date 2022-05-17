@@ -51,8 +51,22 @@ function Item({ route, navigation }) {
       </Flex>
     );
   }
+  // Button handler
   function handleBottomSheet() {
     bottomSheetRef.current.snapToIndex(0);
+  }
+
+  // Change the navigation bar color when the bottom sheet is open
+  function handleBottomSheetChange(index) {
+    if (Platform.OS === "android") {
+      if (index < 0) {
+        const backgroundColorModal = pacifiScanTheme.colors.brand.pbackground;
+        setBackgroundColorAsync(backgroundColorModal);
+      } else {
+        const backgroundColorApp = pacifiScanTheme.colors.brand.appColor;
+        setBackgroundColorAsync(backgroundColorApp);
+      }
+    }
   }
 
   return (
@@ -68,14 +82,12 @@ function Item({ route, navigation }) {
           {id}
         </Heading>
         <ScrollView flex={1}>
-          <Flex align="center">
-            <Image
-              size={120}
-              margin="auto"
-              alt="L'image"
-              source={{ uri: data.image }}
-            />
-          </Flex>
+          <Image
+            size={120}
+            margin="auto"
+            alt="L'image"
+            source={{ uri: data.image }}
+          />
           <Flex>
             {/* Que faire début */}
             <Flex marginTop={8} marginBottom={1} direction="row">
@@ -125,8 +137,9 @@ function Item({ route, navigation }) {
         <Button onPress={handleBottomSheet}>Où jeter ?</Button>
       </Flex>
       <BottomSheet
-        /* backgroundStyle={{ backgroundColor: "#EFF0FF" }} */
+        backgroundStyle={{ backgroundColor: "#EFF0FF" }}
         ref={bottomSheetRef}
+        onChange={handleBottomSheetChange}
         snapPoints={["50%", "70%", "100%"]}
         enablePanDownToClose={true}
         index={-1}
