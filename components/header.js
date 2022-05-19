@@ -34,7 +34,7 @@ const PacifiScanHeader = ({ variant }) => {
               _icon={{ as: GoBack }}
               onPress={() => navigation.goBack()}
             />
-            <Heading fontSize={28} color="brand.logo">
+            <Heading fontSize={24} color="brand.logo">
               Pacifiscan
             </Heading>
           </Flex>
@@ -51,7 +51,7 @@ const PacifiScanHeader = ({ variant }) => {
             align="center"
           >
             <IconButton icon={GoBack} onPress={() => navigation.goBack()} />
-            <Heading fontSize={28} color="brand.logo">
+            <Heading fontSize={24} color="brand.logo">
               Pacifiscan
             </Heading>
           </Flex>
@@ -66,7 +66,7 @@ const PacifiScanHeader = ({ variant }) => {
             justify="space-between" */
             align="center"
           >
-            <Heading fontSize={28} color="brand.logo">
+            <Heading fontSize={24} color="brand.logo">
               Pacifiscan
             </Heading>
             {/*             <IconButton

@@ -1,23 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { Text, Pressable, Flex, FlatList, Heading, Image } from "native-base";
 import { PacifiScanHeader, PacifiScanFooter } from "../components";
+import PagerView from "react-native-pager-view";
 import { getArray } from "../src/database/array";
+import { getWeightCount, getTimeCount } from "../src/stats";
 import { associationApi, wastesType } from "../src/waste/waste";
 import dayjs from "dayjs";
 
 function Historique({ navigation }) {
   const [Data, setData] = useState([]);
+  const [Stats, setStats] = useState([null, null, null]); // Each index corresponds to a stat
   useEffect(() => {
     (async () => {
       await refreshData();
     })();
   }, []);
+
   const [isRefreshing, setisRefreshing] = useState(false);
 
   async function refreshData() {
     const data = await getArray("Scanned");
     setData(data.reverse());
     setisRefreshing(false);
+    const weight = getWeightCount(data);
+    const time = getTimeCount(data);
+    const length = data.length;
+    setStats([weight, time, length]);
   }
   return (
     <Flex
@@ -27,7 +35,57 @@ function Historique({ navigation }) {
       justify="space-between"
     >
       <PacifiScanHeader />
-      <Heading marginTop={4}>Historique</Heading>
+      <Heading marginTop={2}>Historique</Heading>
+      <Flex
+        marginTop={2}
+        borderRadius={10}
+        justify={"space-between"}
+        p={4}
+        bgColor={"brand.pbackground"}
+        direction="row"
+      >
+        <Flex flex={1}>
+          <Heading textAlign={"center"} fontSize={20}>
+            {Stats[0]} kg
+          </Heading>
+          <Text
+            fontFamily="Inter_400Regular"
+            textAlign={"center"}
+            fontSize={12}
+            color={"gray.500"}
+          >
+            Poids total cumulé
+          </Text>
+        </Flex>
+        <Flex flex={1}>
+          <Heading textAlign={"center"} fontSize={20}>
+            {Stats[1]}
+            {Stats[1] > 1 ? " ans" : " an"}
+          </Heading>
+          <Text
+            fontFamily="Inter_400Regular"
+            textAlign={"center"}
+            fontSize={12}
+            color={"gray.500"}
+          >
+            Temps cumulé
+          </Text>
+        </Flex>
+        <Flex flex={1}>
+          <Heading textAlign={"center"} fontSize={20}>
+            {Stats[2]}
+          </Heading>
+          <Text
+            fontFamily="Inter_400Regular"
+            textAlign={"center"}
+            fontSize={12}
+            color={"gray.500"}
+          >
+            Nombre de scan
+          </Text>
+        </Flex>
+      </Flex>
+
       <FlatList
         marginTop={2}
         flex={1}

@@ -17,7 +17,8 @@
     },
     "assetBundlePatterns": ["**/*"],
     "ios": {
-      "bundleIdentifier": "app.pacifiscan.org"
+      "bundleIdentifier": "app.pacifiscan.org",
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {

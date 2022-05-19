@@ -218,7 +218,7 @@ function Caddy({ route, navigation }) {
         justify="space-between"
       >
         <PacifiScanHeader />
-        <Flex marginBottom={3} marginTop={3} flex={1}>
+        <Flex marginBottom={3} marginTop={2} flex={1}>
           <Heading>Statistiques</Heading>
           <CaddyStats firstStat={Stats[0]} secondStat={Stats[1]} />
           <Flex justify="space-between" align="center" direction="row">

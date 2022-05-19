@@ -22,7 +22,7 @@ function Succe({ route, navigation }) {
       justify="space-between"
     >
       <PacifiScanHeader />
-      <Heading marginTop={4} marginBottom={2}>
+      <Heading marginTop={2} marginBottom={2}>
         Déchets
       </Heading>
       <FlatList

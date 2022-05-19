@@ -2,7 +2,7 @@ export const DetectLabel = async (base64, id) => {
   /* if (!base64 || typeof base64 !== 'string' || !geolocation) {
         throw new Error("Les arguments sont invalides. Cela peut venir du fait que l'image est invalide ou que les paramètres de géolocalisation sont invalides");
     } */
-  const response = await fetch("https://detection-api.pacifiscan.org", {
+  const response = await fetch("https://mabel.pacifiscan.org", {
     method: "POST",
     headers: {
       Accept: "application/json",

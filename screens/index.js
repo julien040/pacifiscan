@@ -12,6 +12,7 @@ import Succe from "./succe";
 import ScanCaddy from "./scanCaddy";
 import Caddy from "./caddy";
 import Story from "./story";
+import Stories from "./stories";
 
 export {
   Accueil,
@@ -25,4 +26,5 @@ export {
   ScanCaddy,
   Caddy,
   Story,
+  Stories,
 };

@@ -61,8 +61,12 @@ function ListItem({ date, type }) {
         style={{ width: 48, height: 48, marginRight: 8 }}
       />
       <Flex>
-        <Heading fontSize={16}>{name}</Heading>
-        <Text fontSize={11}>{dayjs(date).format("DD/MM/YYYY")}</Text>
+        <Heading color={"gray.800"} fontSize={16}>
+          {name}
+        </Heading>
+        <Text color={"gray.500"} fontSize={11}>
+          {dayjs(date).format("DD/MM/YYYY")}
+        </Text>
       </Flex>
     </Flex>
   );

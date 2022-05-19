@@ -8,6 +8,7 @@ export const HomeSucces = (props) => {
     <FlatList
       horizontal={true}
       initialNumToRender={3}
+      maxToRenderPerBatch={5}
       ListEmptyComponent={() => <Spinner size={40} color="brand.iris80" />}
       data={Object.keys(wastesType)}
       renderItem={({ item, index }) => (

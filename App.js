@@ -34,6 +34,7 @@ import {
   ScanCaddy,
   Caddy,
   Story,
+  Stories,
 } from "./screens/index.js";
 import { useEffect, useState } from "react";
 import * as Sentry from "sentry-expo";
@@ -113,7 +114,10 @@ export default function App() {
     <NativeBaseProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator
-          screenOptions={{ headerShown: false, animation: "simple_push" }}
+          screenOptions={{
+            headerShown: false,
+            animation: Platform.OS === "android" ? "simple_push" : "fade",
+          }}
           initialRouteName="Accueil"
         >
           <Stack.Screen
@@ -141,7 +145,7 @@ export default function App() {
             name="Item"
             component={Item}
             options={{
-              presentation: "modal",
+              presentation: "fullScreenModal",
               animation: "fade_from_bottom",
             }}
             /* La fiche info d'un item. Doit être appelé avec des arguments */
@@ -170,8 +174,12 @@ export default function App() {
           <Stack.Screen
             name="Story"
             component={Story}
-            /* Le mode caddy de l'application */
+            options={{
+              presentation: "modal",
+              animation: "fade_from_bottom",
+            }}
           />
+          <Stack.Screen name="Stories" component={Stories} />
         </Stack.Navigator>
       </NavigationContainer>
     </NativeBaseProvider>

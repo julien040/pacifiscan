@@ -16,7 +16,7 @@ function Accueil({ route, navigation }) {
       <PacifiScanHeader />
       <Flex justify="flex-start">
         <Flex align={"center"} direction="row" justify={"space-between"}>
-          <Heading color="black" marginTop={3} marginBottom={3} p={0}>
+          <Heading color="black" marginTop={2} marginBottom={3} p={0}>
             Déchets
           </Heading>
           <Text
@@ -57,7 +57,7 @@ function Accueil({ route, navigation }) {
           <Text
             style={{ textAlign: "right" }}
             onPress={() => {
-              navigation.navigate("Infos");
+              navigation.navigate("Stories");
             }}
             color="brand.iris80"
             p={1}

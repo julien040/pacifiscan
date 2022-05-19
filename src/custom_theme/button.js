@@ -8,7 +8,12 @@ const customButton = {
   defaultProps: {
     backgroundColor: "brand.primary",
     borderRadius: "10px",
-    _text: { color: "black", fontWeight: "700", fontSize: 15 },
+    _text: {
+      color: "black",
+      fontWeight: "700",
+      fontSize: 15,
+      fontFamily: "Inter",
+    },
     /*     padding:1, */
     paddingBottom: 3,
     paddingTop: 3,

@@ -34,27 +34,42 @@ function Scan({ route, navigation }) {
       alreadyClicked = true;
     }
     try {
+      // Divide by 1000 to get the value in seconds
+      const beforePicture = Date.now() / 1000;
       const { base64 } = await refCamera.takePictureAsync({
         base64: true,
         exif: false,
         quality: 0.4,
       });
-      setClicked(true);
+
+      const timeToTakePicture = Date.now() / 1000 - beforePicture;
       const id = await AsyncStorage.getItem("id");
-      logEventAsync("ScanRequest");
+      setClicked(true);
       setLoadingContent("Envoi de l'image...");
+      const beforeScan = Date.now() / 1000;
       const label = await DetectLabel(base64, id);
-      console.log(label);
+      const timeToScan = Date.now() / 1000 - beforeScan;
+      console.log(
+        "Label:",
+        label,
+        "Time to take picture :",
+        timeToTakePicture + "s",
+        " Time to scan : ",
+        timeToScan + "s"
+      );
       const Item = associationApi[label];
       setLoadingContent(`Image analysée !`);
       Vibration.vibrate(100);
       logEventWithPropertiesAsync("Scan d'un déchet sur l'application", {
         label: label,
+        timeToTakePicture,
+        timeToScan,
       });
       await addToArray("Scanned", {
         type: label,
         timestamp: Date.now(),
       });
+      // To check if the item is already scanned
       AsyncStorage.setItem(Item, JSON.stringify(true));
       setClicked(false);
       navigation.navigate("Item", { id: Item });
@@ -98,17 +113,26 @@ function Scan({ route, navigation }) {
     );
   } else if (Clicked) {
     return (
-      <Flex
-        backgroundColor="brand.appColor"
-        p={3}
-        flex={1}
-        justify="space-between"
-      >
+      <Flex backgroundColor="brand.appColor" p={3} flex={1}>
         <PacifiScanHeader />
-        <Heading color="brand.iris100" textAlign="center">
-          {LoadingContent}
-        </Heading>
-        <Spinner size={100} color="test" />
+        <Flex flex={1} justify="center" align="center">
+          <Heading color="brand.iris100" textAlign="center">
+            {LoadingContent}
+          </Heading>
+
+          <Spinner marginTop={4} size={60} />
+          <Text
+            maxWidth={"80%"}
+            marginTop={8}
+            textAlign="center"
+            fontSize={14}
+            fontFamily="Inter_500Medium"
+            color="gray.500"
+          >
+            L'application est en phase de test. La reconnaissance de déchet est
+            plus que perfectible
+          </Text>
+        </Flex>
 
         <PacifiScanFooter active="Scan" />
       </Flex>

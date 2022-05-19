@@ -12,7 +12,10 @@
       "releaseChannel": "preview"
     },
     "production": {
-      "releaseChannel": "production"
+      "releaseChannel": "production",
+      "android": {
+        "buildType": "aab"
+      }
     }
   },
   "submit": {

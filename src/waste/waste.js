@@ -1,115 +1,140 @@
 export const points = {
   d_majenta: {
     name: "Déchetterie de Magenta",
-    description: "Lorem Ipsum",
+    description: "Située à Magenta. Est ouverte 7j/7 de 6h à 18h",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
-  },
-  d_gadji: {
-    name: "Déchetterie de Gadji",
-    description: "Lorem Ipsum",
-    type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=Dechetterie%20de%20magenta",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   d_ducos: {
     name: "Déchetterie de Ducos",
-    description: "Lorem Ipsum",
+    description: "Située à Ducos. Est ouverte 7j/7 de 6h à 18h",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=%20D%C3%A9chetterie%20de%20Ducos%20",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   d_6km: {
     name: "Déchetterie du 6e km",
-    description: "Lorem Ipsum",
+    description: "Située rue Jacques-Iékawé. Est ouverte 7j/7 de 6h à 18h",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=QF59%2B4V%20Noum%C3%A9a%2C%20Nouvelle-Cal%C3%A9donie",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
+  },
+  d_gadji: {
+    name: "Déchetterie de Gadji",
+    description: "Située à Paita. Est ouverte 7j/7 de 6h à 18h",
+    type: "Déchetterie",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=%20D%C3%89CH%C3%88TERIE%20DE%20GADJI%20",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   d_dumbea: {
     name: "Déchetterie de Dumbéa",
-    description: "Lorem Ipsum",
+    description: "Ouverte les mercredis, samedis et dimache de 7h à 17h",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=RFJ5%2BV3%20Dumb%C3%A9a%2C%20Nouvelle-Cal%C3%A9donie",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   d_pihnyip: {
     name: "Déchetterie de Pihnyip",
-    description: "Lorem Ipsum",
+    description:
+      "Ouverte lundi, mardi, jeudi, vendredi et samedi de 7h à 11h et de 13h à 16h30",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=37M7%2BH9%20W%C3%A9%2C%20Nouvelle-Cal%C3%A9donie",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   d_thio: {
     name: "Déchetterie de Thio",
-    description: "Lorem Ipsum",
+    description:
+      "Ouverte du lundi au vendredi de 8h à 11h et de 14h à 17h, le samedi de 8h à 11h et de 13h à 16h, le dimanche de 8h à 11h",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=%2021%C2%B037%2736.8%22S%20166%C2%B015%2752.6%22E%20",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   d_boulouparis: {
     name: "Déchetterie de Boulouparis",
-    description: "Lorem Ipsum",
+    description:
+      "Ouverte du lundi au vendredi de 8h à 11h et de 14h à 17h, le samedi de 8h à 11h et de 13h à 16h, le dimanche de 8h à 11h",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=-21.861174718262586%2C%20166.06235367691167",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   "d_la-foa": {
     name: "Déchetterie de La Foa",
-    description: "Lorem Ipsum",
+    description:
+      "Ouverte du lundi au vendredi de 8h à 11h et de 14h à 17h, le samedi de 8h à 11h et de 13h à 16h, le dimanche de 8h à 11h",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=7W99%2BJWM%20La%20Foa%2C%20Nouvelle-Cal%C3%A9donie",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   d_bourail: {
     name: "Déchetterie de Bourail",
-    description: "Lorem Ipsum",
+    description:
+      "Ouverte du lundi au vendredi de 8h à 11h et de 14h à 17h, le samedi de 8h à 11h et de 13h à 16h, le dimanche de 8h à 11h",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=GC7F%2B2F%2C%20Nanda%C3%AF%2C%20Nouvelle-Cal%C3%A9donie",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   "d_mont-dore": {
-    name: "Déchetterie de la coulée (Mont-dore)",
-    description: "Lorem Ipsum",
+    name: " Déchetterie de la Coulée",
+    description: "Ouverte du lundi au vendredi de 6h30 à 17h",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=2234%20route%20du%20Vallon%20Dore%2C%20La%20Coul%C3%A9e%20Mont-Dore",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   d_canala: {
     name: "Déchetterie de Canala",
-    description: "Lorem Ipsum",
+    description: "Ouverte du lundi au vendredi de 7h à 16h",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=-21.521863750375193%2C%20165.96056100863288",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   d_pouembout: {
     name: "Dépotoir de Pouembout",
-    description: "Lorem Ipsum",
+    description:
+      "Mardi, jeudi, vendredi et samedi : 8h -11h30 et 14h -17h / Dimanche : 8h -11h30 / Fermé les lundis et mercredis",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=-21.129804%2C%20164.903688",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   d_voh: {
     name: "Dépotoir de Voh",
-    description: "Lorem Ipsum",
+    description:
+      "Lundi, mercredi, vendredi et samedi : 8h -17h / Dimanche : 8h -11h30 / Fermé les mardis et jeudis",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=-20.938305%2C%20164.680622",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   d_kone: {
     name: "Dépotoir de Kone",
-    description: "Lorem Ipsum",
+    description:
+      "Lundi, mercredi, vendredi et samedi : 8h -11h30 et 14h -17h / Dimanche : 8h -11h30 / Fermés les mardis et jeudis",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=-21.053444%2C%20164.821117",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   traivaldec: {
     name: "Traivaldec",
-    description: "Lorem Ipsum",
+    description:
+      "Ouverte du lundi au jeudi de 7h à 11h et de 12h à 16h et le vendredi de 12h à 15h",
     type: "Déchetterie",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/landfill.png",
+    seeMore:
+      "https://www.google.com/maps/dir/?api=1&destination=-21.049526%2C%20164.820690",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/landfill.png",
   },
   tre_deee: {
     name: "Trecodec DEEE",
@@ -117,122 +142,130 @@ export const points = {
       "Trecodec est un organisme à but non lucratif recyclant les déchets. DEEE correspond à Déchets d'équipements électriques et électroniques",
     type: "Trecodec",
     seeMore: "https://www.trecodec.nc/wp-content/uploads/PAV-DEEE-2021.pdf",
-    icon: "https://img.icons8.com/color/64/000000/recycle-sign.png",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/recycle.png",
   },
   tre_pneu: {
     name: "Trecodec Pneu",
     description:
       "Trecodec est un organisme à but non lucratif recyclant les déchets.",
     type: "Trecodec",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/64/000000/recycle-sign.png",
+    seeMore: "https://www.trecodec.nc/wp-content/uploads/PAV-PU-2021.pdf",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/recycle.png",
   },
   tre_batterie: {
     name: "Trecodec Batterie Plomb",
     description:
       "Trecodec est un organisme à but non lucratif recyclant les déchets.",
     type: "Trecodec",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/64/000000/recycle-sign.png",
+    seeMore: "https://www.trecodec.nc/wp-content/uploads/PAV-AUP-2021.pdf",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/recycle.png",
   },
   tre_pile: {
     name: "Trecodec Pile et accumulateurs",
     description:
       "Trecodec est un organisme à but non lucratif recyclant les déchets.",
     type: "Trecodec",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/64/000000/recycle-sign.png",
-  },
-  pj_dumbea: {
-    name: "Poubelle jaune Dumbéa",
-    description: "Lorem Ipsum",
-    type: "Poubelle",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/waste--v1.png",
+    seeMore: "https://www.trecodec.nc/wp-content/uploads/PAV-PAU-2021.pdf",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/recycle.png",
   },
   pn: {
     name: "Poubelle noire",
-    description: "Lorem Ipsum",
+    description:
+      "La poubelle usuelle où vous jetez tout ce qui ne peut être recyclé",
     type: "Poubelle",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/compost-heap.png",
+    seeMore:
+      "https://agirpourlatransition.ademe.fr/particuliers/maison/dechets/6-solutions-jeter-moins-mieux",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/garbage-bag.png",
   },
   composte: {
     name: "Composte",
-    description: "Lorem Ipsum",
+    description:
+      "Le compostage est un processus de transformation des déchets en un produit semblable à du terreu",
     type: "Poubelle",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/waste--v1.png",
+    seeMore:
+      "https://www.gammvert.fr/conseils/conseils-de-jardinage/compost-pourquoi-et-comment-le-realiser",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/compost.png",
+  },
+  pj_dumbea: {
+    name: "Poubelle jaune Dumbéa",
+    description:
+      "La poubelle au couvercle jaune à Dumbéa. Elle est dédiée aux déchets recyclables",
+    type: "Poubelle",
+    seeMore: "https://www.ville-dumbea.nc/dumbea-pratique/gestion-des-dechets/",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/yellow-bin.png",
   },
   "pj_mont-dore": {
     name: "Poubelle jaune Mont-Dore",
-    description: "Lorem Ipsum",
+    description:
+      "La poubelle au couvercle jaune au Mont-Dore. Elle est dédiée aux déchets recyclables",
     type: "Poubelle",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/waste--v1.png",
+    seeMore:
+      "https://www.mont-dore.nc/index.php?option=com_content&view=article&id=118&Itemid=989",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/yellow-bin.png",
   },
   "pr_sivm-nord": {
     name: "Poubelle rouge Koumac, Poum & Kaala-Gomen",
-    description: "Lorem Ipsum",
+    description: "Dédiée aux boites en acier\net aux canettes en aluminium",
     type: "Poubelle",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/waste--v1.png",
+    seeMore: "https://www.sivmnord.nc/gestion-des-dechets",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/red-bin.png",
   },
   "pb_sivm-nord": {
     name: "Poubelle bleue Koumac, Poum & Kaala-Gomen",
-    description: "Lorem Ipsum",
+    description: "Dédiée au verre",
     type: "Poubelle",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/waste--v1.png",
+    seeMore: "https://www.sivmnord.nc/gestion-des-dechets",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/blue-bin.png",
   },
   pav_bleu: {
-    name: "Point apport volontaire papier",
-    description: "Lorem Ipsum",
+    name: "Borne d’apport volontaire papier",
+    description:
+      "33 bornes disponibles sur l’ensemble de Nouméa. Déposez-y journaux, magazines, catalogues, papier.",
     type: "Point d'apport volontaire",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/waste-separation.png",
+    seeMore:
+      "https://www.noumea.nc/sites/default/files/bat2-flyer-a5-carte-noumea-pav-oct.jpg",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/point-apport.png",
   },
   pav_jaune: {
-    name: "Point apport volontaire canette",
-    description: "Lorem Ipsum",
+    name: "Borne d’apport volontaire canette",
+    description:
+      "33 bornes disponibles sur l’ensemble de Nouméa. Mettez-y les canettes en aluminium",
     type: "Point d'apport volontaire",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/waste-separation.png",
+    seeMore:
+      "https://www.noumea.nc/sites/default/files/bat2-flyer-a5-carte-noumea-pav-oct.jpg",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/point-apport.png",
   },
   pav_vert: {
-    name: "Point apport volontaire verre",
-    description: "Lorem Ipsum",
+    name: "Borne d’apport volontaire verre",
+    description:
+      "33 bornes disponibles sur l’ensemble de Nouméa. Mettez-y vos bouteilles et bocaux",
     type: "Point d'apport volontaire",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/waste-separation.png",
+    seeMore:
+      "https://www.noumea.nc/sites/default/files/bat2-flyer-a5-carte-noumea-pav-oct.jpg",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/point-apport.png",
   },
   pav_violet: {
-    name: "Point apport volontaire vêtements",
-    description: "Lorem Ipsum",
+    name: "Borne d’apport volontaire vêtements",
+    description:
+      "4 bornes disponibles sur Nouméa. Déposez-y vos vêtements en bonne état.",
     type: "Point d'apport volontaire",
-    seeMore: "https://example.com",
-    icon: "https://img.icons8.com/color/96/000000/waste-separation.png",
+    seeMore:
+      "https://www.noumea.nc/sites/default/files/bat2-flyer-a5-carte-noumea-pav-oct.jpg",
+    icon: "https://oncle-stan.pacifiscan.org/dechetterie/point-apport.png",
   },
 };
 
-const anxious = require("../../assets/emoji/anxious.png");
-const worried = require("../../assets/emoji/worried.png");
-const love = require("../../assets/emoji/love.png");
-const logo = require("../../assets/icon.png");
-
-export { anxious, worried, love, logo };
-
 export const wastesType = {
   Ampoule: {
-    image: "https://app.pacifiscan.org/img/ampoule.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/ampoule.png",
     quefaireTexte:
       "Les ampoules sont recyclables. En Nouvelle Calédonie, Trecodec récupère les déchets électroniques et les conditionne pour le recyclage",
     impactTexte:
       "Les ampoules LED n’ont pas d’influence sur la biodiversité marine. Cependant, la pollution lumineuse est un problème pour la majorité des espèces terrestres",
     eviterTexte:
-      "Pour réduire votre impact, utiliser des ampoules avec une meilleure efficience énergétique ou avec une meilleure durée de vie.",
+      "Pour réduire votre impact, utiliser des ampoules avec une meilleure efficience énergétique ou avec une plus grande durée de vie.",
     poids: 0.08,
-    sources: "http://geo.fr/, http://ademe.fr/, trecodec.nc",
+    sources: "geo.fr, ademe, trecodec",
     anneeDecomposition: 500,
     ouJeter: [
       "d_boulouparis",
@@ -246,13 +279,13 @@ export const wastesType = {
     ],
   },
   Batterie: {
-    image: "https://app.pacifiscan.org/img/batterie.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/batterie.png",
     quefaireTexte:
-      "Vous pouvez déposer vos piles et accumulateurs dans les points de collecte Trécodec en magasin. Pour une batterie de voiture, rendez-vous en déchetterie ou dans certaines stations services",
+      "Vous pouvez déposer vos piles et accumulateurs dans les points de collecte Trécodec en magasin. Pour une batterie de voiture, rendez-vous en déchetterie ou dans certaines stations service",
     impactTexte:
       "Il est important de jeter correctement ses batteries car elles renferment des substances dangereuses pour l’environnement. De plus, leurs productions consomment énormément d’eau.",
     eviterTexte:
-      "Les batteries ont une durée de vie. Il est dès lors impossible de les garder indéfiniment. Cependant, lorsqu’il est question de piles, mieux vaut utiliser des rechargeables",
+      "Les batteries ont une durée de vie. Il est dès lors impossible de les garder indéfiniment. Cependant, elles restent préférable à des piles non rechargeables",
     poids: 0.2,
     sources: "greenly.earth, stacker.com",
     anneeDecomposition: 100,
@@ -272,7 +305,7 @@ export const wastesType = {
     ],
   },
   "Boite d'oeuf": {
-    image: "https://app.pacifiscan.org/img/boite-oeuf.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/boite-oeuf.png",
     quefaireTexte:
       "Si la boite est en carton, vous pouvez la déposer en déchetterie ou en point d’apport volontaire. Son recyclage permet de créer du papier toilette ou de l’essuie-tout. Vous pouvez aussi la mettre dans votre compost\nSi la boite est en plastique, mettez la dans votre poubelle usuelle.",
     impactTexte:
@@ -300,9 +333,9 @@ export const wastesType = {
     ],
   },
   "Boite de conserve": {
-    image: "https://app.pacifiscan.org/img/conserve.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/conserve.png",
     quefaireTexte:
-      "Si votre commune support le tri sélectif, mettez la boite dans la poubelle prévue à cet effet. Sinon, déposez la en déchetterie. ",
+      "Si votre commune supporte le tri sélectif, mettez la boite de conserve dans la poubelle prévue à cet effet. Sinon, déposez-la en déchetterie. ",
     impactTexte:
       "La production de métal consomme énormément de ressources et pollue énormément. Elle entraîne la création de CO2 qui, une fois dans l’atmosphère, acidifie l’océan. De plus, le bauxite nécessaire à la création d’aluminium ajoute des toxines à l’eau",
     eviterTexte:
@@ -323,7 +356,7 @@ export const wastesType = {
     ],
   },
   "Bombe aerosol": {
-    image: "https://app.pacifiscan.org/img/deodorant.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/deodorant.png",
     quefaireTexte:
       "Du fait du risque d’explosion, il est difficile de recycler les aérosols. Vous pouvez les jeter dans votre poubelle usuelle.",
     impactTexte:
@@ -336,9 +369,9 @@ export const wastesType = {
     ouJeter: ["pn"],
   },
   "Bouteille en plastique": {
-    image: "https://app.pacifiscan.org/img/bouteille.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/bouteille.png",
     quefaireTexte:
-      "Une fois vide, si la bouteille ne contient pas de produits dangereux, je peux la déposer en déchetterie ou au tri sélectif si ma commune le supporte. Sinon, jetez-là dans la poubelle usuelle. Faites attention, certains liquides suivent une réglementation spéciale (l’huile de voiture par exemple)",
+      "Une fois vide, si la bouteille ne contient pas de produits dangereux, déposez-la en déchetterie ou au tri sélectif si ma commune le supporte. Sinon, jetez-là dans la poubelle usuelle. Faites attention, certains liquides suivent une réglementation spéciale (l’huile de voiture par exemple)",
     impactTexte:
       "La production de la bouteille utilise du pétrole qui n’est pas renouvelable. De plus, une part non négligeable des bouteilles finissent dans l’océan une fois utilisée contribuant à tuer près de 100 000 animaux par an",
     eviterTexte:
@@ -364,7 +397,7 @@ export const wastesType = {
     ],
   },
   "Bouteille en verre": {
-    image: "https://app.pacifiscan.org/img/bouteille-verre.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/bouteille-verre.png",
     quefaireTexte:
       "Si vous l’utilisez pour de l’eau, remplissez la pour ne pas la jeter. Sinon, déposez la en déchetterie ou dans des bornes pour le verre. Elle sera recyclée pour refaire du verre.",
     impactTexte:
@@ -372,7 +405,7 @@ export const wastesType = {
     eviterTexte:
       "Privilégiez les bouteilles avec plus de contenant. Puisqu’en verre, la bouteille peut être remplie à nouveau et être réutilisée",
     poids: 0.2,
-    sources: "http://earth.org/, usi.edu",
+    sources: "earth.org, usi.edu",
     anneeDecomposition: 4000,
     ouJeter: [
       "d_6km",
@@ -392,9 +425,9 @@ export const wastesType = {
     ],
   },
   Canette: {
-    image: "https://app.pacifiscan.org/img/canette.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/canette.png",
     quefaireTexte:
-      "Si votre commune support le tri sélectif, mettez la boite dans la poubelle prévue à cet effet. Sinon, déposez la en déchetterie. ",
+      "Si votre commune supporte le tri sélectif, mettez la canette dans la poubelle prévue à cet effet. Sinon, déposez-la en déchetterie. ",
     impactTexte:
       "La production de métal consomme énormément de ressources et pollue énormément. Elle entraîne la création de CO2 qui, une fois dans l’atmosphère, acidifie l’océan. De plus, le bauxite nécessaire à la création d’aluminium ajoute des toxines à l’eau",
     eviterTexte: "Préférez les bouteilles aux canettes individuelles",
@@ -419,14 +452,14 @@ export const wastesType = {
     ],
   },
   Carton: {
-    image: "https://app.pacifiscan.org/img/carton.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/carton.png",
     quefaireTexte:
-      "S’il est en bonne état, réutilisez-le. Sinon, déposez le dans les bacs bleus ou dans le sac prévu à cet effet si votre commune le supporte. Une fois recyclé, il permettra de créer de nouveaux produits papiers et cartons",
+      "S’il est en bonne état, réutilisez-le. Sinon, déposez le dans le sac prévu à cet effet si votre commune le supporte. Une fois recyclé, il permettra de créer de nouveaux produits papiers et cartons",
     impactTexte:
       "La production de carton nécessite la coupe d’arbre. Bien qu’issue de forêts gêrées, cela perturbe tout de même les ecosystèmes. De plus, le carton libère du méthane lors de sa décomposition",
     eviterTexte: "Privilégiez les produits avec le moins de sur-emballage.",
     poids: 0.1,
-    sources: "Ademe, http://regionalrecycling.org/",
+    sources: "Ademe, regionalrecycling.org",
     anneeDecomposition: 0.04,
     ouJeter: [
       "d_6km",
@@ -443,7 +476,7 @@ export const wastesType = {
     ],
   },
   "Cartouche d'encre": {
-    image: "https://app.pacifiscan.org/img/encre.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/encre.png",
     quefaireTexte:
       "Il n’existe pas de filière de traitement en Nouvelle-Calédonie. Jetez votre cartouche dans la poubelle noire.",
     impactTexte:
@@ -456,23 +489,23 @@ export const wastesType = {
     ouJeter: ["pn"],
   },
   Cigarette: {
-    image: "https://app.pacifiscan.org/img/cigarette.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/cigarette.png",
     quefaireTexte: "Jetez le mégot dans la poubelle noire",
     impactTexte:
       "La production de tabac nécessite de grandes quantités d’eau et de pesticides. Ces produits chimiques finissent dans l’eau et pollue les espèces vivant près des zones de production",
     eviterTexte:
       "Arrêter de fumer est un moyen d’éviter de produire des mégots",
     poids: 0.005,
-    sources: "http://conserve-energy-future.com/",
+    sources: "conserve-energy-future.com",
     anneeDecomposition: 10,
     ouJeter: ["pn"],
   },
   "Déchets verts": {
-    image: "https://app.pacifiscan.org/img/dechets-verts.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/dechets-verts.png",
     quefaireTexte:
-      "Tournez vous vers la déchetterie la plus proche pour y déposer vos déchets vers. Vous pouvez aussi en faire du compost et ainsi avoir de l’engrais pour vos plantations.\nIl est déconseillé de les brûles car cela rejette du CO2 dans l’atmosphère",
+      "Tournez vous vers la déchetterie la plus proche pour y déposer vos déchets verts. Vous pouvez aussi en faire du compost et ainsi avoir de l’engrais pour vos plantations.\nIl est déconseillé de les brûler car cela rejette du CO2 dans l’atmosphère",
     impactTexte:
-      "Les déchets vers sont naturels, ils n’ont pas d’impact négatif",
+      "Les déchets verts sont naturels, ils n’ont pas d’impact négatif",
     eviterTexte: "Privilégiez des plantes à croissance lente",
     poids: 1,
     sources: "Ademe, CCI",
@@ -496,9 +529,9 @@ export const wastesType = {
     ],
   },
   Electroménager: {
-    image: "https://app.pacifiscan.org/img/electromenager.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/electromenager.png",
     quefaireTexte:
-      "Dans un premier temps, appelez un réparateur.  SI vous achetez une machine, tournez vous vers le magasin pour savois s’il propose de récupérer votre ancienne machine. Enfin, si aucune de ces solutions n’est possible, déposez la machine en déchetterie",
+      "Dans un premier temps, appelez un réparateur.  SI vous achetez une machine, tournez vous vers le magasin pour savoir s’il propose de récupérer votre ancienne machine. Enfin, si aucune de ces solutions n’est possible, déposez la machine en déchetterie",
     impactTexte:
       "Suivant la machine, les risques diffèrent. Par exemple, un réfrigérateur contient du gaz. Laissée dans la nature, l’objet peut être mettre des centaines d’années à se décomposer et ainsi perturber l’environnement durablement",
     eviterTexte:
@@ -524,9 +557,10 @@ export const wastesType = {
     ],
   },
   "Emballage plastique": {
-    image: "https://app.pacifiscan.org/img/emballage-plastique.png",
+    image:
+      "https://oncle-stan.pacifiscan.org/dechet-96/emballage-plastique.png",
     quefaireTexte:
-      "Il est dur de différencier chaque type de plastique et il n’existe pas vraiment de fillière en Nouvelle-Calédonie. Jetez les dans la poubelle noire",
+      "Il est dur de différencier chaque type de plastique et il n’existe pas vraiment de fillière en Nouvelle-Calédonie. Jetez-les dans la poubelle noire",
     impactTexte:
       "Si jetés dans la nature, le plastique risque de finir dans l’océan et ainsi être ingéré par un animal",
     eviterTexte: "Préférez les produits sans sur-emballage",
@@ -536,9 +570,9 @@ export const wastesType = {
     ouJeter: ["pn"],
   },
   "Feuille d'aluminium": {
-    image: "https://app.pacifiscan.org/img/feuille-aluminium.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/feuille-aluminium.png",
     quefaireTexte:
-      "Bien que l’aluminium puisse être totalement recyclé, actuellement le papier d’aluminium ne l’est pas. Jetez le dans la poubelle noire.",
+      "Bien que l’aluminium puisse être totalement recyclé, actuellement le papier d’aluminium ne l’est pas. Jetez-le dans la poubelle noire.",
     impactTexte:
       "L’extraction de bauxite nécéssaire à la production d’aluminium est très énergivore. De plus, elle a tendance à contaminer les eaux environnantes. Une fois produit, il n’a pas tant d’impact sur la nature à part qu’il est presque impossible à décomposer",
     eviterTexte:
@@ -549,9 +583,9 @@ export const wastesType = {
     ouJeter: ["pn"],
   },
   "Fruits et légumes": {
-    image: "https://app.pacifiscan.org/img/fruits-legumes.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/fruits-legumes.png",
     quefaireTexte:
-      "Si le fruit ou légume est abimé, faites en du compost. Sinon, jetez le dans la poubelle noire.",
+      "Si le fruit ou légume est abimé, faites-en du compost. Sinon, jetez le dans la poubelle noire.",
     impactTexte:
       "Certaines productions peuvent contaminées en l’eau en utilisant des pesticides. Privilégiez les produits bio. En outre, consommez des produits de saison : vous réduirez le rejet de CO2",
     eviterTexte:
@@ -562,7 +596,7 @@ export const wastesType = {
     ouJeter: ["composte", "pn"],
   },
   Gobelet: {
-    image: "https://app.pacifiscan.org/img/gobelet.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/gobelet.png",
     quefaireTexte:
       "S’il est en plastique, jetez le dans la poubelle noire. S’il est en carton, mettez le dans le conteneur (ou sac) réservé au carton de votre commune.",
     impactTexte:
@@ -587,9 +621,9 @@ export const wastesType = {
     ],
   },
   Masque: {
-    image: "https://app.pacifiscan.org/img/masque.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/masque.png",
     quefaireTexte:
-      "Un masque possède un risque sanitaire. Si vous êtes malade, mettez le dans un sac plastique et jetez le sac dans la poubelle noire 24h plus tard. Sinon, jetez le directement dans la poubelle noire",
+      "Un masque possède un risque sanitaire. Si vous êtes malade, mettez-le dans un sac plastique et jetez-le sac dans la poubelle noire 24h plus tard. Sinon, jetez-le directement dans la poubelle noire",
     impactTexte:
       "Si le masque n’est pas correctement jeté, il risque de finir dans l’océan puis ingéré par un animal",
     eviterTexte:
@@ -600,15 +634,15 @@ export const wastesType = {
     ouJeter: ["pn"],
   },
   Meuble: {
-    image: "https://app.pacifiscan.org/img/meuble.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/meuble.png",
     quefaireTexte:
-      "Si le meuble est encore en bonne état, vendez-le sur un site d’annonce ou faites en un don à Saint-vincent de Paul, la croix-rouge ou le secours populaire. S’il est en mauvaise état, mettez le à la déchetterie",
+      "Si le meuble est encore en bonne état, vendez-le sur un site d’annonce ou faites en un don à Saint-vincent de Paul, la croix-rouge ou le secours populaire. S’il est en mauvaise état, mettez-le à la déchetterie",
     impactTexte:
       "L’impact d’un meuble dépend de sa nature. Cependant, la plupart du temps, sa production rejette énormément de CO2 (extraction de bauxite, transport). De plus, la coupe d’arbre à des conséquences sur les écosystèmes alentours.",
     eviterTexte:
       "Impossible d’éviter d’acheter des meubles à part si vous êtes ermite.",
     poids: 30,
-    sources: "http://wedesigngreen.com/, Ademe",
+    sources: "wedesigngreen.com, Ademe",
     anneeDecomposition: 500,
     ouJeter: [
       "d_6km",
@@ -628,9 +662,9 @@ export const wastesType = {
     ],
   },
   Mouchoir: {
-    image: "https://app.pacifiscan.org/img/mouchoir.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/mouchoir.png",
     quefaireTexte:
-      "Si vous êtes atteint de la Covid 19, mettez vos mouchoirs dans le sac prévu pour les masques puis jetez le sac au bout de 24h.\nSinon, jetez le mouchoir dans la poubelle noire",
+      "Si vous êtes avez la Covid 19, mettez vos mouchoirs dans le sac prévu pour les masques puis jetez le sac au bout de 24h.\nSinon, jetez le mouchoir dans la poubelle noire",
     impactTexte:
       "La production de papier nécessite la coupe d’arbre. Bien qu’issue de forêts gêrées, cela perturbe tout de même les ecosystèmes",
     eviterTexte: "Vous pouvez utiliser des mouchoirs en tissue lavable",
@@ -640,7 +674,7 @@ export const wastesType = {
     ouJeter: ["pn"],
   },
   Papier: {
-    image: "https://app.pacifiscan.org/img/papier.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/papier.png",
     quefaireTexte:
       "S’il est imprimé qu’en recto réutilisez-le comme papier brouillon. Sinon, déposez le dans les bacs bleus ou dans le sac prévu à cet effet si votre commune le supporte. Une fois recyclé, il permettra de créer de nouveaux produits papiers.",
     impactTexte:
@@ -666,14 +700,14 @@ export const wastesType = {
     ],
   },
   Pneu: {
-    image: "https://app.pacifiscan.org/img/pneu.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/pneu.png",
     quefaireTexte:
       "Une fois abimé, déposez les dans les points d’apport volontaire Trecodec",
     impactTexte:
       "Le pneu laissé au soleil risque de libérer du méthane dans l’atmosphère. De plus, le pneu est fait à partir de gomme synthétique tirée du pétrole",
     eviterTexte: "Entretenez vos pneus pour ne pas les abimer prématurement.",
     poids: 7,
-    sources: "http://ecogreenequipment.com/, playgroundprofessionals",
+    sources: "ecogreenequipment.com, playgroundprofessionals",
     anneeDecomposition: 50,
     ouJeter: [
       "d_boulouparis",
@@ -688,7 +722,7 @@ export const wastesType = {
     ],
   },
   "Sac cabas": {
-    image: "https://app.pacifiscan.org/img/cabas.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/cabas.png",
     quefaireTexte:
       "Tournez vous vers votre magasin. Certains offrent la possibilité de l’échanger contre un neuf. Sinon, offrez le à une association ou jetez-le dans la poubelle noire.",
     impactTexte:
@@ -701,7 +735,7 @@ export const wastesType = {
     ouJeter: ["pav_violet", "pn"],
   },
   "Sachet plastique": {
-    image: "https://app.pacifiscan.org/img/sachet-plastique.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/sachet-plastique.png",
     quefaireTexte:
       "Il n’existe pas de filière en Nouvelle-Calédonie pour le recyclage des sachets plastiques. Jetez les dans la poubelle noire",
     impactTexte:
@@ -713,32 +747,32 @@ export const wastesType = {
     ouJeter: ["pn"],
   },
   Stylo: {
-    image: "https://app.pacifiscan.org/img/stylo.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/stylo.png",
     quefaireTexte:
       "Il n’existe pas de fillière de recyclage en Nouvelle-Calédonie. Jetez-le dans la poubelle noire",
     impactTexte:
       "Etant fait de plastique, les stylos ne sont pas biodégradables. Il risque de se décomposer en micro plastique dans l’océan.",
     eviterTexte: "Utilisez des stylos à encre rechargeable",
     poids: 0.4,
-    sources: "http://conserve-energy-future.com/",
+    sources: "conserve-energy-future.com",
     anneeDecomposition: 1000,
     ouJeter: ["pn"],
   },
   "Tetra pak": {
-    image: "https://app.pacifiscan.org/img/brique.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/brique.png",
     quefaireTexte:
       "Du fait de sa complexité, il n’existe pas de fillière de recyclage en Nouvelle-Calédonie. Jetez la brique dans la poubelle noire.",
     impactTexte:
-      "La plupart du temps, ces briques sont faites de matériaux recyclés et contiennent principalement du carton. Pour autant, puisqu’elles sont pas forcément recyclées, leur production rejette du CO2.",
+      "La plupart du temps, ces briques sont faites de matériaux recyclés et contiennent principalement du carton.",
     eviterTexte:
-      "Privilégiez les emballages plus denses au briques individuelles",
+      "Privilégiez les emballages plus denses aux briques individuelles",
     poids: 0.1,
-    sources: "http://drinkpathwater.com/",
+    sources: "drinkpathwater.com",
     anneeDecomposition: 5,
     ouJeter: ["pn"],
   },
   Vêtements: {
-    image: "https://app.pacifiscan.org/img/vetements.png",
+    image: "https://oncle-stan.pacifiscan.org/dechet-96/vetements.png",
     quefaireTexte:
       "Si le vêtement est encore en bonne état, donnez le à une association ou vendez-le. Sinon vous pouvez les transformer en chiffons. Dans un dernier temps, jetez-le dans la poubelle noire",
     impactTexte:

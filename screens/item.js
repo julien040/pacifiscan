@@ -78,9 +78,7 @@ function Item({ route, navigation }) {
         justify="space-between"
       >
         <PacifiScanHeader variant="back" />
-        <Heading marginTop={4} marginBottom={2}>
-          {id}
-        </Heading>
+        <Heading marginBottom={2}>{id}</Heading>
         <ScrollView flex={1}>
           <Image
             size={120}
@@ -140,7 +138,7 @@ function Item({ route, navigation }) {
         backgroundStyle={{ backgroundColor: "#EFF0FF" }}
         ref={bottomSheetRef}
         onChange={handleBottomSheetChange}
-        snapPoints={["50%", "70%", "100%"]}
+        snapPoints={["70%", "100%"]}
         enablePanDownToClose={true}
         index={-1}
       >
