@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Platform } from "react-native";
-import { wastesType, worried } from "../src/waste/waste";
+import { wastesType } from "../src/waste/waste";
+import { SafeAreaView } from "react-native-safe-area-context";
 import { setBackgroundColorAsync } from "expo-navigation-bar";
 import { setStatusBarBackgroundColor } from "expo-status-bar";
 import {
@@ -71,74 +72,76 @@ function Item({ route, navigation }) {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <Flex
-        backgroundColor="brand.pbackground"
-        p={4}
-        flex={1}
-        justify="space-between"
-      >
-        <PacifiScanHeader variant="back" />
-        <Heading marginBottom={2}>{id}</Heading>
-        <ScrollView flex={1}>
-          <Image
-            size={120}
-            margin="auto"
-            alt="L'image"
-            source={{ uri: data.image }}
-          />
-          <Flex>
-            {/* Que faire début */}
-            <Heading marginTop={8} marginBottom={1} color="brand.iris100">
-              Qu'en faire ?
-            </Heading>
-            <Text fontFamily="Inter">{data.quefaireTexte}</Text>
-            {/* Quel est son impact début */}
-            <Heading marginTop={8} marginBottom={1} color="brand.iris100">
-              Quel est son impact ?
-            </Heading>
-            <Text fontFamily="Inter">{data.impactTexte}</Text>
-            {/* Comment éviter ce déchet début */}
-            <Heading marginTop={8} marginBottom={1} color="brand.iris100">
-              Comment l'éviter ?
-            </Heading>
-            <Text fontFamily="Inter">{data.eviterTexte}</Text>
-            {/* Stats */}
-            <Heading marginTop={8} fontSize={16}>
-              En moyenne, cet objet pèse{" "}
-              {data.poids >= 1
-                ? data.poids + " kg "
-                : data.poids * 1000 + " g "}
-              et met{" "}
-              {data.anneeDecomposition >= 1
-                ? data.anneeDecomposition + " ans "
-                : (data.anneeDecomposition * 12).toFixed(0).toString() +
-                  " mois "}
-              à se décomposer
-            </Heading>
-          </Flex>
-          <Text
-            marginTop={4}
-            marginBottom={4}
-            width="100%"
-            textAlign="right"
-            color="brand.primary"
-          >
-            Sources: {data.sources}
-          </Text>
-        </ScrollView>
+      <SafeAreaView style={{ flex: 1 }}>
+        <Flex
+          backgroundColor="brand.pbackground"
+          p={4}
+          flex={1}
+          justify="space-between"
+        >
+          <PacifiScanHeader variant="back" />
+          <Heading marginBottom={2}>{id}</Heading>
+          <ScrollView flex={1}>
+            <Image
+              size={120}
+              margin="auto"
+              alt="L'image"
+              source={{ uri: data.image }}
+            />
+            <Flex>
+              {/* Que faire début */}
+              <Heading marginTop={8} marginBottom={1} color="brand.iris100">
+                Qu'en faire ?
+              </Heading>
+              <Text fontFamily="Inter">{data.quefaireTexte}</Text>
+              {/* Quel est son impact début */}
+              <Heading marginTop={8} marginBottom={1} color="brand.iris100">
+                Quel est son impact ?
+              </Heading>
+              <Text fontFamily="Inter">{data.impactTexte}</Text>
+              {/* Comment éviter ce déchet début */}
+              <Heading marginTop={8} marginBottom={1} color="brand.iris100">
+                Comment l'éviter ?
+              </Heading>
+              <Text fontFamily="Inter">{data.eviterTexte}</Text>
+              {/* Stats */}
+              <Heading marginTop={8} fontSize={16}>
+                En moyenne, cet objet pèse{" "}
+                {data.poids >= 1
+                  ? data.poids + " kg "
+                  : data.poids * 1000 + " g "}
+                et met{" "}
+                {data.anneeDecomposition >= 1
+                  ? data.anneeDecomposition + " ans "
+                  : (data.anneeDecomposition * 12).toFixed(0).toString() +
+                    " mois "}
+                à se décomposer
+              </Heading>
+            </Flex>
+            <Text
+              marginTop={4}
+              marginBottom={4}
+              width="100%"
+              textAlign="right"
+              color="brand.primary"
+            >
+              Sources: {data.sources}
+            </Text>
+          </ScrollView>
 
-        <Button onPress={handleBottomSheet}>Où jeter ?</Button>
-      </Flex>
-      <BottomSheet
-        backgroundStyle={{ backgroundColor: "#EFF0FF" }}
-        ref={bottomSheetRef}
-        onChange={handleBottomSheetChange}
-        snapPoints={["70%", "100%"]}
-        enablePanDownToClose={true}
-        index={-1}
-      >
-        <BottomSheetComponent data={data} />
-      </BottomSheet>
+          <Button onPress={handleBottomSheet}>Où jeter ?</Button>
+        </Flex>
+        <BottomSheet
+          backgroundStyle={{ backgroundColor: "#EFF0FF" }}
+          ref={bottomSheetRef}
+          onChange={handleBottomSheetChange}
+          snapPoints={["70%", "100%"]}
+          enablePanDownToClose={true}
+          index={-1}
+        >
+          <BottomSheetComponent data={data} />
+        </BottomSheet>
+      </SafeAreaView>
     </GestureHandlerRootView>
   );
 }

@@ -15,6 +15,7 @@ import {
   Urbanist_600SemiBold,
   Urbanist_700Bold,
 } from "@expo-google-fonts/urbanist";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 import { hideAsync, preventAutoHideAsync } from "expo-splash-screen";
 import AsyncStorage from "@react-native-async-storage/async-storage";
@@ -114,93 +115,94 @@ export default function App() {
 
   return (
     <NativeBaseProvider theme={theme}>
-      <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            headerShown: false,
-            animation: Platform.OS === "android" ? "simple_push" : "fade",
-          }}
-          initialRouteName="Accueil"
-        >
-          <Stack.Screen
-            name="Accueil"
-            component={Accueil} /* L'accueil tout simplement */
-          />
-          <Stack.Screen
-            name="About"
-            component={About}
-            options={{
-              presentation: "modal",
+      <SafeAreaProvider>
+        <NavigationContainer>
+          <Stack.Navigator
+            screenOptions={{
+              headerShown: false,
+              animation: Platform.OS === "android" ? "simple_push" : "fade",
             }}
-          />
-          <Stack.Screen
-            name="Scan"
-            component={Scan} /* L'interface pour scan un objet */
-          />
-          <Stack.Screen
-            name="Historique"
-            component={Historique} /* Historique des déchets collectés */
-            options={{
-              presentation: "modal",
-            }}
-          />
-          <Stack.Screen
-            name="Infos"
-            component={Succe}
-            /* Composé des infos des déchets ainsi que des news de pacifiscan  */
-          />
-          <Stack.Screen
-            name="Stat"
-            component={Stat} /* Stats de l'utilisateur */
-          />
-          <Stack.Screen
-            name="Item"
-            component={Item}
-            options={{
-              presentation: "fullScreenModal",
-              animation: "fade_from_bottom",
-            }}
-            /* La fiche info d'un item. Doit être appelé avec des arguments */
-          />
-          <Stack.Screen
-            name="Parametre"
-            component={Parametre}
-            options={{
-              presentation: "modal",
-            }}
-            /* Pour désactiver les outils de collection de données ainsi que voir l'id d'utilisateur */
-          />
-          <Stack.Screen
-            name="ScanCaddy"
-            component={ScanCaddy}
-            options={{
-              presentation: "modal",
-            }}
-          />
-          <Stack.Screen
-            name="caddyHelp"
-            component={CaddyHelp}
-            options={{
-              presentation: "modal",
-            }}
-          />
-          <Stack.Screen
-            name="Caddy"
-            component={Caddy}
-            /* Le mode caddy de l'application */
-          />
-          <Stack.Screen
-            name="Story"
-            component={Story}
-            options={{
-              presentation: "modal",
-              animation: "fade_from_bottom",
-            }}
-          />
-          <Stack.Screen name="Stories" component={Stories} />
-        </Stack.Navigator>
-      </NavigationContainer>
+            initialRouteName="Accueil"
+          >
+            <Stack.Screen
+              name="Accueil"
+              component={Accueil} /* L'accueil tout simplement */
+            />
+            <Stack.Screen
+              name="About"
+              component={About}
+              options={{
+                presentation: "modal",
+              }}
+            />
+            <Stack.Screen
+              name="Scan"
+              component={Scan} /* L'interface pour scan un objet */
+            />
+            <Stack.Screen
+              name="Historique"
+              component={Historique} /* Historique des déchets collectés */
+              options={{
+                presentation: "modal",
+              }}
+            />
+            <Stack.Screen
+              name="Infos"
+              component={Succe}
+              /* Composé des infos des déchets ainsi que des news de pacifiscan  */
+            />
+            <Stack.Screen
+              name="Stat"
+              component={Stat} /* Stats de l'utilisateur */
+            />
+            <Stack.Screen
+              name="Item"
+              component={Item}
+              options={{
+                presentation: "fullScreenModal",
+                animation: "fade_from_bottom",
+              }}
+              /* La fiche info d'un item. Doit être appelé avec des arguments */
+            />
+            <Stack.Screen
+              name="Parametre"
+              component={Parametre}
+              options={{
+                presentation: "modal",
+              }}
+              /* Pour désactiver les outils de collection de données ainsi que voir l'id d'utilisateur */
+            />
+            <Stack.Screen
+              name="ScanCaddy"
+              component={ScanCaddy}
+              options={{
+                presentation: "modal",
+              }}
+            />
+            <Stack.Screen
+              name="caddyHelp"
+              component={CaddyHelp}
+              options={{
+                presentation: "modal",
+              }}
+            />
+            <Stack.Screen
+              name="Caddy"
+              component={Caddy}
+              /* Le mode caddy de l'application */
+            />
+            <Stack.Screen
+              name="Story"
+              component={Story}
+              options={{
+                presentation: "modal",
+                animation: "fade_from_bottom",
+              }}
+            />
+            <Stack.Screen name="Stories" component={Stories} />
+          </Stack.Navigator>
+        </NavigationContainer>
+      </SafeAreaProvider>
     </NativeBaseProvider>
-    /* </GestureHandlerRootView> */
   );
 }

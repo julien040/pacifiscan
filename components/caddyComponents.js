@@ -204,7 +204,7 @@ export const BottomSheetItem = ({
         >
           <Button
             onPress={() => {
-              logEventWithPropertiesAsync("ItemRepose", {
+              logEventWithPropertiesAsync("Produit reposé", {
                 score,
                 name,
                 co2,

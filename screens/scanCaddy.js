@@ -21,7 +21,7 @@ function ScanCaddy({ route, navigation }) {
     }
     Vibration.vibrate(60);
     // Log the event to Amplitude
-    logEventWithPropertiesAsync("ItemScanned", {
+    logEventWithPropertiesAsync("Produit scanné", {
       id: data,
       date: Date.now(),
     });
@@ -53,7 +53,7 @@ function ScanCaddy({ route, navigation }) {
     return (
       <Flex
         backgroundColor="brand.appColor"
-        p={3}
+        p={4}
         flex={1}
         justify="space-between"
       >
@@ -75,7 +75,7 @@ function ScanCaddy({ route, navigation }) {
     return (
       <Flex
         backgroundColor="brand.appColor"
-        p={3}
+        p={4}
         flex={1}
         justify="space-between"
       >

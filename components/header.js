@@ -23,80 +23,74 @@ const PacifiScanHeader = ({ variant }) => {
   switch (variant) {
     case "back":
       return (
-        <SafeAreaView>
-          <Flex
-            width="100%"
-            direction="row"
-            justify="space-between"
-            align="center"
-          >
-            <IconButton
-              _icon={{ as: GoBack }}
-              onPress={() => navigation.goBack()}
-            />
-            <Heading fontSize={24} color="brand.logo">
-              Pacifiscan
-            </Heading>
-          </Flex>
-        </SafeAreaView>
+        <Flex
+          width="100%"
+          direction="row"
+          justify="space-between"
+          align="center"
+          px={1}
+        >
+          <IconButton
+            _icon={{ as: GoBack }}
+            onPress={() => navigation.goBack()}
+          />
+          <Heading fontSize={24} color="brand.logo">
+            Pacifiscan
+          </Heading>
+        </Flex>
       );
     case "settings":
     case "modal":
       return (
-        <SafeAreaView>
-          <Flex
-            width="100%"
-            direction="row"
-            justify="space-between"
-            align="center"
-          >
-            <IconButton icon={GoBack} onPress={() => navigation.goBack()} />
-            <Heading fontSize={24} color="brand.logo">
-              Pacifiscan
-            </Heading>
-          </Flex>
-        </SafeAreaView>
+        <Flex
+          width="100%"
+          direction="row"
+          justify="space-between"
+          align="center"
+          px={1}
+        >
+          <IconButton icon={GoBack} onPress={() => navigation.goBack()} />
+          <Heading fontSize={24} color="brand.logo">
+            Pacifiscan
+          </Heading>
+        </Flex>
       );
     case "home":
       return (
-        <SafeAreaView>
-          <Flex
-            direction="row"
-            justify="space-between"
-            width="100%"
-            align="center"
-          >
-            <View width={"24px"}></View>
-            <Heading fontSize={24} color="brand.logo">
-              Pacifiscan
-            </Heading>
-            <IconButton
-              icon={Info}
-              onPress={() => navigation.navigate("Parametre")}
-              _pressed={{ backgroundColor: "brand.p45", borderRadius: 6 }}
-            />
-          </Flex>
-        </SafeAreaView>
+        <Flex
+          direction="row"
+          justify="space-between"
+          width="100%"
+          align="center"
+          px={1}
+        >
+          <Heading fontSize={24} color="brand.logo">
+            Pacifiscan
+          </Heading>
+          <IconButton
+            icon={Info}
+            onPress={() => navigation.navigate("Parametre")}
+            _pressed={{ backgroundColor: "brand.p45", borderRadius: 6 }}
+          />
+        </Flex>
       );
     default:
       return (
-        <SafeAreaView>
-          <Flex
-            width="100%"
-            /*             direction="row"
+        <Flex
+          width="100%"
+          /*             direction="row"
             justify="space-between" */
-            align="center"
-          >
-            <Heading fontSize={24} color="brand.logo">
-              Pacifiscan
-            </Heading>
-            {/*             <IconButton
+          align="center"
+        >
+          <Heading fontSize={24} color="brand.logo">
+            Pacifiscan
+          </Heading>
+          {/*             <IconButton
               icon={Roue}
               onPress={() => navigation.navigate("Parametre")}
               _pressed={{ backgroundColor: "brand.p45", borderRadius: 6 }}
             /> */}
-          </Flex>
-        </SafeAreaView>
+        </Flex>
       );
   }
 };
@@ -114,8 +108,8 @@ const Info = (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
-    width={24}
-    height={24}
+    width={17}
+    height={17}
     viewBox="0 0 24 24"
   >
     <Path

@@ -14,7 +14,7 @@ const Story = ({ route, navigation }) => {
       const { id } = route.params;
       const story = await fetchOneStory(id);
       setStory(story);
-      logEventWithPropertiesAsync("Story opened", {
+      logEventWithPropertiesAsync("Story ouverte", {
         id: id,
       });
     })();

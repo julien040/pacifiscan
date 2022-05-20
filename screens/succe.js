@@ -4,6 +4,7 @@ import { wastesType } from "../src/waste/waste";
 import { Flex, Heading, FlatList, Spinner } from "native-base";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { getKeys } from "../src/waste/waste";
+import { SafeAreaView } from "react-native-safe-area-context";
 /* 
     Ceci est la page qui correspond au 5eme élément de la barre de navigation.
     Il s'appelle Infos
@@ -15,34 +16,35 @@ import { getKeys } from "../src/waste/waste";
  */
 function Succe({ route, navigation }) {
   return (
-    <Flex
-      backgroundColor="brand.appColor"
-      p={4}
-      flex={1}
-      justify="space-between"
-    >
-      <PacifiScanHeader />
-      <Heading marginTop={2} marginBottom={2}>
-        Déchets
-      </Heading>
-      <FlatList
-        data={getKeys()} //Retourne tous les noms d'éléments
-        renderItem={({ item }) => (
-          <SmallSucce
-            key={item}
-            title={item}
-            navigation={navigation}
-            image={wastesType[item].image}
-          />
-        )}
-        ListEmptyComponent={() => <Spinner color="brand.iris80" />}
-        initialNumToRender={1}
-        maxToRenderPerBatch={2}
-        columnWrapperStyle={{ justifyContent: "space-between" }}
-        numColumns={2}
-      />
+    <SafeAreaView style={{ flex: 1 }}>
+      <Flex
+        backgroundColor="brand.appColor"
+        p={4}
+        flex={1}
+        justify="space-between"
+      >
+        <PacifiScanHeader />
+        <Heading marginTop={2} marginBottom={2}>
+          Déchets
+        </Heading>
+        <FlatList
+          data={getKeys()} //Retourne tous les noms d'éléments
+          renderItem={({ item }) => (
+            <SmallSucce
+              key={item}
+              title={item}
+              navigation={navigation}
+              image={wastesType[item].image}
+            />
+          )}
+          ListEmptyComponent={() => <Spinner color="brand.iris80" />}
+          initialNumToRender={1}
+          maxToRenderPerBatch={2}
+          columnWrapperStyle={{ justifyContent: "space-between" }}
+          numColumns={2}
+        />
 
-      {/* {Object.keys(wastesType).map((key) => (
+        {/* {Object.keys(wastesType).map((key) => (
             <SmallSucce
               key={key}
               intern={key}
@@ -52,8 +54,9 @@ function Succe({ route, navigation }) {
               isBlocked={wastesType[key].blocked}
             />
           ))} */}
-      <PacifiScanFooter active="Info" />
-    </Flex>
+        <PacifiScanFooter active="Info" />
+      </Flex>
+    </SafeAreaView>
   );
 }
 

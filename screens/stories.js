@@ -5,6 +5,7 @@ import { FlatList, ImageBackground, Pressable } from "react-native";
 import { useEffect, useState } from "react";
 import { useNavigation } from "@react-navigation/native";
 import { fetchStories } from "../src/fetchStories";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 function StoriesPage({ route, navigation }) {
   const [Stories, setStories] = useState([]);
@@ -15,29 +16,31 @@ function StoriesPage({ route, navigation }) {
     })();
   }, []);
   return (
-    <Flex
-      backgroundColor="brand.appColor"
-      p={4}
-      flex={1}
-      justify="space-between"
-    >
-      <PacifiScanHeader />
-      <Heading marginBottom={4}>Stories</Heading>
-      <FlatList
-        horizontal={false}
-        numColumns={2}
-        columnWrapperStyle={{
-          justifyContent: "space-between",
-        }}
-        initialNumToRender={2}
-        maxToRenderPerBatch={3}
-        data={Stories}
-        renderItem={({ item }) => {
-          return <Story {...item} />;
-        }}
-      />
-      <PacifiScanFooter active="Story" />
-    </Flex>
+    <SafeAreaView style={{ flex: 1 }}>
+      <Flex
+        backgroundColor="brand.appColor"
+        p={4}
+        flex={1}
+        justify="space-between"
+      >
+        <PacifiScanHeader />
+        <Heading marginBottom={4}>Stories</Heading>
+        <FlatList
+          horizontal={false}
+          numColumns={2}
+          columnWrapperStyle={{
+            justifyContent: "space-between",
+          }}
+          initialNumToRender={2}
+          maxToRenderPerBatch={3}
+          data={Stories}
+          renderItem={({ item }) => {
+            return <Story {...item} />;
+          }}
+        />
+        <PacifiScanFooter active="Story" />
+      </Flex>
+    </SafeAreaView>
   );
 }
 
