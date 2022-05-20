@@ -72,7 +72,7 @@ function Item({ route, navigation }) {
 
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex
           backgroundColor="brand.pbackground"
           p={4}
@@ -93,17 +93,17 @@ function Item({ route, navigation }) {
               <Heading marginTop={8} marginBottom={1} color="brand.iris100">
                 Qu'en faire ?
               </Heading>
-              <Text fontFamily="Inter">{data.quefaireTexte}</Text>
+              <Text fontFamily="Inter_400Regular">{data.quefaireTexte}</Text>
               {/* Quel est son impact début */}
               <Heading marginTop={8} marginBottom={1} color="brand.iris100">
                 Quel est son impact ?
               </Heading>
-              <Text fontFamily="Inter">{data.impactTexte}</Text>
+              <Text fontFamily="Inter_400Regular">{data.impactTexte}</Text>
               {/* Comment éviter ce déchet début */}
               <Heading marginTop={8} marginBottom={1} color="brand.iris100">
                 Comment l'éviter ?
               </Heading>
-              <Text fontFamily="Inter">{data.eviterTexte}</Text>
+              <Text fontFamily="Inter_400Regular">{data.eviterTexte}</Text>
               {/* Stats */}
               <Heading marginTop={8} fontSize={16}>
                 En moyenne, cet objet pèse{" "}
@@ -156,7 +156,7 @@ const BottomSheetComponent = ({ data }) => {
       ListHeaderComponent={
         <View my={1}>
           <Heading fontSize={18}>Où jeter ce déchet ?</Heading>
-          <Text fontSize={13} color="gray.500" fontFamily="Inter">
+          <Text fontSize={13} color="gray.500" fontFamily="Inter_400Regular">
             Découvrez les points de collecte de votre déchet
           </Text>
         </View>
@@ -181,7 +181,7 @@ const SinglePoint = ({ item }) => {
         />
         <Heading fontSize={18}>{item.name}</Heading>
       </Flex>
-      <Text fontFamily="Inter" fontSize={13}>
+      <Text fontFamily="Inter_400Regular" fontSize={13}>
         {item.description}
       </Text>
 

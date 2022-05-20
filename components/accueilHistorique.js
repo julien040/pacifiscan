@@ -25,7 +25,7 @@ function AccueilHistorique() {
     <FlatList
       horizontal={true}
       ListEmptyComponent={
-        <Text fontFamily="Inter" color={"gray.500"} fontSize={13}>
+        <Text fontFamily="Inter_400Regular" color={"gray.500"} fontSize={13}>
           Vous n'avez pas encore scanné de déchet
         </Text>
       }

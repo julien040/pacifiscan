@@ -213,7 +213,7 @@ function Caddy({ route, navigation }) {
     setItems(await clearArray("caddy"));
   }
   return (
-    <GestureHandlerRootView style={{ flex: 1 }}>
+    <GestureHandlerRootView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
       <SafeAreaView style={{ flex: 1 }}>
         <Flex
           backgroundColor="brand.appColor"
@@ -238,7 +238,7 @@ function Caddy({ route, navigation }) {
             <Pressable onPress={() => navigation.navigate("caddyHelp")}>
               <Text
                 py={3}
-                fontFamily={"Inter"}
+                fontFamily={"Inter_400Regular"}
                 fontSize={13}
                 color="brand.iris100"
               >
@@ -324,7 +324,11 @@ function Caddy({ route, navigation }) {
                 Vider le caddy ?
               </Modal.Header>
               <Modal.Body p={3} backgroundColor="brand.pbackground">
-                <Text fontFamily="Inter" fontSize={13} color="gray.600">
+                <Text
+                  fontFamily="Inter_400Regular"
+                  fontSize={13}
+                  color="gray.600"
+                >
                   Vous allez perdre tous les produits de votre caddy. Êtes-vous
                   sûr de vouloir continuer ? (Vous pouvez sauvegarder votre
                   caddy si vous avez fini)

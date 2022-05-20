@@ -8,7 +8,7 @@ import { SafeAreaView } from "react-native-safe-area-context";
 
 function Accueil({ route, navigation }) {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
       <Flex
         backgroundColor="brand.appColor"
         p={4}

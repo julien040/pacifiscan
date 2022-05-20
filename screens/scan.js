@@ -76,7 +76,7 @@ function Scan({ route, navigation }) {
   }
   if (hasPermission === false) {
     return (
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex
           backgroundColor="brand.appColor"
           p={3}
@@ -100,7 +100,7 @@ function Scan({ route, navigation }) {
     );
   } else if (hasPermission === null || isFocused === false) {
     return (
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex
           backgroundColor="brand.appColor"
           p={3}
@@ -119,7 +119,7 @@ function Scan({ route, navigation }) {
     );
   } else if (Clicked) {
     return (
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex backgroundColor="brand.appColor" p={3} flex={1}>
           <PacifiScanHeader />
           <Flex flex={1} justify="center" align="center">
@@ -147,7 +147,7 @@ function Scan({ route, navigation }) {
     );
   } else {
     return (
-      <SafeAreaView style={{ flex: 1 }}>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex
           backgroundColor="brand.appColor"
           p={3}

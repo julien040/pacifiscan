@@ -82,7 +82,7 @@ function ScanCaddy({ route, navigation }) {
         <PacifiScanHeader variant="back" />
         <Flex flex={1} justify="center">
           <Heading>Scannez un objet pour l'ajouter à votre caddy</Heading>
-          <Text fontFamily="Inter" fontSize={12}>
+          <Text fontFamily="Inter_400Regular" fontSize={12}>
             Présentez le code barre de l'objet à scanner au milieu de l'écran
           </Text>
         </Flex>

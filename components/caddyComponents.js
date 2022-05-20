@@ -38,7 +38,7 @@ export const CaddyStats = ({ firstStat, secondStat, kg }) => {
         <Heading color={firstStat < 50 ? "red.400" : "green.600"} fontSize={36}>
           {isNaN(firstStat) ? "-" : firstStat}
         </Heading>
-        <Heading fontFamily="Inter" fontSize={14}>
+        <Heading fontFamily="Inter_400Regular" fontSize={14}>
           {kg ? "Eco Score (sur 100)" : "Note moyenne"}
         </Heading>
       </View>
@@ -46,7 +46,7 @@ export const CaddyStats = ({ firstStat, secondStat, kg }) => {
         <Heading color="brand.iris100" fontSize={36}>
           {secondStat}
         </Heading>
-        <Heading fontFamily="Inter" fontSize={14}>
+        <Heading fontFamily="Inter_400Regular" fontSize={14}>
           Kg de CO2 créé(s)
         </Heading>
       </View>
@@ -189,7 +189,7 @@ export const BottomSheetItem = ({
                 Le saviez-vous ?
               </Heading>
             </Flex>
-            <Text fontFamily="Inter" marginTop={2} width="100%">
+            <Text fontFamily="Inter_400Regular" marginTop={2} width="100%">
               {infoRandom[Math.floor(Math.random() * infoRandom.length)]}{" "}
               {/* Trouve une information aléatoirement dans la liste */}
             </Text>
