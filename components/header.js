@@ -57,6 +57,27 @@ const PacifiScanHeader = ({ variant }) => {
           </Flex>
         </SafeAreaView>
       );
+    case "home":
+      return (
+        <SafeAreaView>
+          <Flex
+            direction="row"
+            justify="space-between"
+            width="100%"
+            align="center"
+          >
+            <View width={"24px"}></View>
+            <Heading fontSize={24} color="brand.logo">
+              Pacifiscan
+            </Heading>
+            <IconButton
+              icon={Info}
+              onPress={() => navigation.navigate("Parametre")}
+              _pressed={{ backgroundColor: "brand.p45", borderRadius: 6 }}
+            />
+          </Flex>
+        </SafeAreaView>
+      );
     default:
       return (
         <SafeAreaView>
@@ -85,6 +106,21 @@ const GoBack = (
     <Path
       d="M19 7.5H4.414l5.293-5.293L8.293.793.586 8.5l7.707 7.707 1.414-1.414L4.414 9.5H19v-2z"
       fill="black"
+    />
+  </Svg>
+);
+
+const Info = (
+  <Svg
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+    width={24}
+    height={24}
+    viewBox="0 0 24 24"
+  >
+    <Path
+      fill="#3935FF"
+      d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2Zm1 14a1 1 0 0 1-2 0v-5a1 1 0 0 1 2 0Zm-1-7a1 1 0 1 1 1-1 1 1 0 0 1-1 1Z"
     />
   </Svg>
 );

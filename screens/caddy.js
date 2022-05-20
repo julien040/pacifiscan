@@ -24,6 +24,7 @@ import {
   BottomSheetItem,
 } from "../components/caddyComponents";
 import BottomSheet from "@gorhom/bottom-sheet";
+import { Pressable } from "react-native";
 function Caddy({ route, navigation }) {
   const toast = useToast();
   const [ModalVisible, setModalVisible] = useState(false);
@@ -49,10 +50,6 @@ function Caddy({ route, navigation }) {
     },
     loading: false,
   });
-
-  function showBottomSheet() {
-    bottomSheetRef?.current?.snapToIndex(0);
-  }
 
   useEffect(() => {
     //Puisque Items est passé en argument dans le tableau, à chaque fois qu'Items changera, use Effect sera appelé et le composant sera re-rendu
@@ -218,8 +215,7 @@ function Caddy({ route, navigation }) {
         justify="space-between"
       >
         <PacifiScanHeader />
-        <Flex marginBottom={3} marginTop={2} flex={1}>
-          <Heading>Statistiques</Heading>
+        <Flex marginTop={2} flex={1}>
           <CaddyStats firstStat={Stats[0]} secondStat={Stats[1]} />
           <Flex justify="space-between" align="center" direction="row">
             <Heading>Mon caddy</Heading>
@@ -232,11 +228,17 @@ function Caddy({ route, navigation }) {
               Vider
             </Button>
           </Flex>
-          <Text mt={2} fontFamily={"Inter"} fontSize={12} color="gray.500">
-            Accès anticipé : des bugs peuvent apparaître. Les données sont non
-            contractuelles.
-          </Text>
-          <Box marginTop={4} flex={3}>
+          <Pressable onPress={() => navigation.navigate("caddyHelp")}>
+            <Text
+              py={3}
+              fontFamily={"Inter"}
+              fontSize={13}
+              color="brand.iris100"
+            >
+              Voir comment marche le caddy {">"}
+            </Text>
+          </Pressable>
+          <Box flex={3}>
             <FlatList
               data={Items}
               initialNumToRender={8}
@@ -271,7 +273,7 @@ function Caddy({ route, navigation }) {
           >
             <Button
               onPress={saveCaddy}
-              backgroundColor="brand.paccentuation"
+              backgroundColor="transparent"
               width="48%"
             >
               J'ai fini

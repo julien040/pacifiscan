@@ -88,41 +88,36 @@ function Item({ route, navigation }) {
           />
           <Flex>
             {/* Que faire début */}
-            <Flex marginTop={8} marginBottom={1} direction="row">
-              <Image marginRight={2} size={10} alt={id} source={worried} />
-              <Heading color="brand.iris100">Qu'en faire ?</Heading>
-            </Flex>
+            <Heading marginTop={8} marginBottom={1} color="brand.iris100">
+              Qu'en faire ?
+            </Heading>
             <Text fontFamily="Inter">{data.quefaireTexte}</Text>
             {/* Quel est son impact début */}
-            <Flex marginTop={8} marginBottom={1} direction="row">
-              <Image
-                marginRight={2}
-                size={10}
-                alt="A smiley"
-                source={worried}
-              />
-              <Heading color="brand.iris100">Quel est son impact ?</Heading>
-            </Flex>
+            <Heading marginTop={8} marginBottom={1} color="brand.iris100">
+              Quel est son impact ?
+            </Heading>
             <Text fontFamily="Inter">{data.impactTexte}</Text>
             {/* Comment éviter ce déchet début */}
-            <Flex marginTop={8} marginBottom={1} direction="row">
-              <Image
-                marginRight={2}
-                size={10}
-                alt="A smiley"
-                source={worried}
-              />
-              <Heading color="brand.iris100">Comment l'éviter ?</Heading>
-            </Flex>
+            <Heading marginTop={8} marginBottom={1} color="brand.iris100">
+              Comment l'éviter ?
+            </Heading>
             <Text fontFamily="Inter">{data.eviterTexte}</Text>
             {/* Stats */}
-            <Heading color="brand.iris80" marginTop={8} fontSize={18}>
-              En moyenne, cet objet pèse {data.poids} kg et met{" "}
-              {data.anneeDecomposition} ans à se décomposer
+            <Heading marginTop={8} fontSize={16}>
+              En moyenne, cet objet pèse{" "}
+              {data.poids >= 1
+                ? data.poids + " kg "
+                : data.poids * 1000 + " g "}
+              et met{" "}
+              {data.anneeDecomposition >= 1
+                ? data.anneeDecomposition + " ans "
+                : (data.anneeDecomposition * 12).toFixed(0).toString() +
+                  " mois "}
+              à se décomposer
             </Heading>
           </Flex>
           <Text
-            marginTop={10}
+            marginTop={4}
             marginBottom={4}
             width="100%"
             textAlign="right"

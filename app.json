@@ -30,9 +30,6 @@
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-system-ui"],
-    "runtimeVersion": {
-      "policy": "sdkVersion"
-    }
+    "plugins": ["expo-system-ui"]
   }
 }

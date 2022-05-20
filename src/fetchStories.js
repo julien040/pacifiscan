@@ -2,7 +2,7 @@ const SERVER = "https://pacifiscan.org/stories/";
 
 /**
  * Fetches the stories from the backend. Returns the last 100 stories.
- * @returns {Promise<{images:string[], id:string, title:string, length:number, headers:string, tags:string}[]>}
+ * @returns {Promise<{images:string[], id:string, title:string, length:number, header:string, tag:string}[]>}
  */
 async function fetchStories() {
   try {

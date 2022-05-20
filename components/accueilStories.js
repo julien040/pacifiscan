@@ -14,7 +14,7 @@ function AccueilStories() {
   async function fetchData() {
     try {
       setRefreshing(true);
-      const data = await fetchStoriesSlice(10);
+      const data = await fetchStoriesSlice(6);
       setData(data);
     } catch (error) {
       console.error(error);

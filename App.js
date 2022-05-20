@@ -25,6 +25,7 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as Amplitude from "expo-analytics-amplitude";
 import {
   Accueil,
+  About,
   Historique,
   Item,
   Parametre,
@@ -33,6 +34,7 @@ import {
   Succe,
   ScanCaddy,
   Caddy,
+  CaddyHelp,
   Story,
   Stories,
 } from "./screens/index.js";
@@ -125,12 +127,22 @@ export default function App() {
             component={Accueil} /* L'accueil tout simplement */
           />
           <Stack.Screen
+            name="About"
+            component={About}
+            options={{
+              presentation: "modal",
+            }}
+          />
+          <Stack.Screen
             name="Scan"
             component={Scan} /* L'interface pour scan un objet */
           />
           <Stack.Screen
             name="Historique"
             component={Historique} /* Historique des déchets collectés */
+            options={{
+              presentation: "modal",
+            }}
           />
           <Stack.Screen
             name="Infos"
@@ -164,7 +176,13 @@ export default function App() {
             options={{
               presentation: "modal",
             }}
-            /* Le mode caddy de l'application */
+          />
+          <Stack.Screen
+            name="caddyHelp"
+            component={CaddyHelp}
+            options={{
+              presentation: "modal",
+            }}
           />
           <Stack.Screen
             name="Caddy"

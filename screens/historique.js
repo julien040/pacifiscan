@@ -34,7 +34,7 @@ function Historique({ navigation }) {
       p={4}
       justify="space-between"
     >
-      <PacifiScanHeader />
+      <PacifiScanHeader variant="back" />
       <Heading marginTop={2}>Historique</Heading>
       <Flex
         marginTop={2}
@@ -112,7 +112,6 @@ function Historique({ navigation }) {
           />
         )}
       />
-      <PacifiScanFooter active="Rewind" />
     </Flex>
   );
 }

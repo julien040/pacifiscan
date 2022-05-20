@@ -13,7 +13,7 @@ function Accueil({ route, navigation }) {
       flex={1}
       justify="space-between"
     >
-      <PacifiScanHeader />
+      <PacifiScanHeader variant="home" />
       <Flex justify="flex-start">
         <Flex align={"center"} direction="row" justify={"space-between"}>
           <Heading color="black" marginTop={2} marginBottom={3} p={0}>
