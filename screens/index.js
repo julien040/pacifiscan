@@ -15,6 +15,7 @@ import Caddy from "./caddy";
 import CaddyHelp from "./caddyHelp";
 import Story from "./story";
 import Stories from "./stories";
+import Onboard from "./onboarding";
 
 export {
   Accueil,
@@ -31,4 +32,5 @@ export {
   CaddyHelp,
   Story,
   Stories,
+  Onboard,
 };

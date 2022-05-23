@@ -1,0 +1,111 @@
+import Onboarding from "react-native-onboarding-swiper";
+import { useEffect } from "react";
+import AsyncStorage from "@react-native-async-storage/async-storage";
+import { Image, Flex, Spinner } from "native-base";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { useState } from "react";
+
+function Onboard({ route, navigation }) {
+  const [Loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    (async () => {
+      const firstTime = await AsyncStorage.getItem("Onboard");
+      if (firstTime === null) {
+        await AsyncStorage.setItem("Onboard", "true");
+        setLoading(false);
+      } else if (route?.params?.stay === true) {
+        setLoading(false);
+      } else {
+        navigation.navigate("Accueil");
+      }
+    })();
+  }, []);
+  const onDone = () => {
+    navigation.navigate("Accueil");
+    return;
+  };
+  if (Loading) {
+    return (
+      <Flex flex={1} bgColor="brand.appColor">
+        <Spinner size={50} color="brand.primary" my={"auto"} />
+      </Flex>
+    );
+  }
+  return (
+    <SafeAreaView style={{ flex: 1 }}>
+      <Onboarding
+        onDone={onDone}
+        showSkip={false}
+        nextLabel="Suivant"
+        bottomBarColor="#dddafe"
+        titleStyles={{
+          fontFamily: "Urbanist_700Bold",
+        }}
+        subTitleStyles={{
+          fontFamily: "Inter_500Medium",
+          fontSize: 14,
+        }}
+        pages={[
+          {
+            backgroundColor: "#EFF0FF",
+            image: (
+              <Image
+                source={require("../assets/illustration/thanks.png")}
+                style={{ aspectRatio: 1.12 }}
+                height={"220px"}
+                alt="Emoji"
+              />
+            ),
+            title: "Merci d'avoir installé notre application",
+            subtitle: "Découvrez comment fonctionne Pacifiscan",
+          },
+          {
+            backgroundColor: "#EFF0FF",
+            image: (
+              <Image
+                source={require("../assets/illustration/scan.png")}
+                style={{ aspectRatio: 1.78 }}
+                height={"220px"}
+                alt="logo"
+              />
+            ),
+            title: "Scanner un déchet",
+            subtitle:
+              "Lorsque vous trouvez un déchet, scannez-le et découvrez qu'en faire.",
+          },
+          {
+            backgroundColor: "#EFF0FF",
+            image: (
+              <Image
+                source={require("../assets/illustration/retail.png")}
+                style={{ aspectRatio: 1 }}
+                height={"220px"}
+                alt="logo"
+              />
+            ),
+            title: "Réduisez votre impact",
+            subtitle:
+              "Dans le magasin, scannez les codes-barre et découvrez quels produits polluent le plus.",
+          },
+          {
+            backgroundColor: "#EFF0FF",
+            image: (
+              <Image
+                source={require("../assets/illustration/stories.png")}
+                style={{ aspectRatio: 1 }}
+                height={"220px"}
+                alt="logo"
+              />
+            ),
+            title: "Stories",
+            subtitle:
+              "Apprenez à protéger la biodiversité visuellement avec nos stories",
+          },
+        ]}
+      />
+    </SafeAreaView>
+  );
+}
+
+export default Onboard;

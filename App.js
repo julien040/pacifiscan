@@ -6,6 +6,7 @@ import {
   setBackgroundColorAsync,
   setButtonStyleAsync,
 } from "expo-navigation-bar";
+
 import {
   Inter_400Regular,
   Inter_500Medium,
@@ -15,12 +16,14 @@ import {
   Urbanist_600SemiBold,
   Urbanist_700Bold,
 } from "@expo-google-fonts/urbanist";
-import { SafeAreaProvider } from "react-native-safe-area-context";
 
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import { hideAsync, preventAutoHideAsync } from "expo-splash-screen";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { NativeBaseProvider, extendTheme, Spinner } from "native-base";
+
+import { NativeBaseProvider, extendTheme, Spinner, Text } from "native-base";
 import pacifiScanTheme from "./src/custom_theme/theme";
+
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as Amplitude from "expo-analytics-amplitude";
@@ -38,6 +41,7 @@ import {
   CaddyHelp,
   Story,
   Stories,
+  Onboard,
 } from "./screens/index.js";
 import { useEffect, useState } from "react";
 import * as Sentry from "sentry-expo";
@@ -101,15 +105,24 @@ export default function App() {
   if (!Loaded) {
     return (
       <NativeBaseProvider>
-        <Spinner />
+        <Spinner marginTop={"auto"} size={50} />
+        <Text
+          marginTop={2}
+          fontSize={16}
+          textAlign="center"
+          marginBottom="auto"
+        >
+          Chargement...
+        </Text>
       </NativeBaseProvider>
     );
   }
   const theme = extendTheme(Theme);
   SystemUI.setBackgroundColorAsync("#EFF0FF");
-  setBackgroundColorAsync("#EFF0FF");
+
   setStatusBarStyle("dark");
   if (Platform.OS === "android") {
+    setBackgroundColorAsync("#EFF0FF");
     setButtonStyleAsync("dark");
   }
 
@@ -122,8 +135,9 @@ export default function App() {
               headerShown: false,
               animation: Platform.OS === "android" ? "simple_push" : "fade",
             }}
-            initialRouteName="Accueil"
+            initialRouteName="Onboard"
           >
+            <Stack.Screen name="Onboard" component={Onboard} />
             <Stack.Screen
               name="Accueil"
               component={Accueil} /* L'accueil tout simplement */
@@ -199,6 +213,7 @@ export default function App() {
                 animation: "fade_from_bottom",
               }}
             />
+
             <Stack.Screen name="Stories" component={Stories} />
           </Stack.Navigator>
         </NavigationContainer>

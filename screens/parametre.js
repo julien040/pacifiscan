@@ -52,10 +52,16 @@ function Parametre({ navigation }) {
         </Flex>
         <Flex justify="space-between" direction="row">
           <Button
-            width={"100%"}
+            width={"48%"}
             onPress={() => Linking.openURL("https://pacifiscan.org")}
           >
             Visiter notre site
+          </Button>
+          <Button
+            width={"48%"}
+            onPress={() => navigation.navigate("Onboard", { stay: true })}
+          >
+            Voir l'onboarding
           </Button>
         </Flex>
       </Flex>
