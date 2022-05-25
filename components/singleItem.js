@@ -35,7 +35,12 @@ export const SmallItem = (props) => {
           alt={"Une image de " + props.title}
           source={{ uri: props.image }}
         />
-        <Text fontWeight={700} fontSize={14} fontFamily="Inter_400Regular">
+        <Text
+          marginTop={2}
+          fontWeight={700}
+          fontSize={14}
+          fontFamily="Inter_500Medium"
+        >
           {props.title}
         </Text>
       </Flex>

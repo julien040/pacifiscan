@@ -4,7 +4,8 @@
   "scripts": {
     "start": "expo start --dev-client",
     "dev-build": "eas build --platform android --profile=development",
-    "preview": "eas build --platform android --profile=preview"
+    "preview": "eas build --platform android --profile=preview",
+    "production": "eas build -p ios --profile=production"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.0",
@@ -20,7 +21,7 @@
     "expo-barcode-scanner": "~11.3.0",
     "expo-camera": "~12.2.0",
     "expo-constants": "~13.1.1",
-    "expo-dev-client": "~0.9.5",
+    "expo-dev-client": "~0.9.6",
     "expo-font": "~10.1.0",
     "expo-linking": "~3.1.0",
     "expo-navigation-bar": "~1.2.0",
@@ -42,7 +43,7 @@
     "react-native-svg": "12.3.0",
     "react-native-web": "0.17.7",
     "react-native-webview": "11.18.1",
-    "sentry-expo": "^4.0.0",
+    "sentry-expo": "^4.2.0",
     "styled-components": "^5.3.3",
     "styled-system": "^5.1.5"
   },

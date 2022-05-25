@@ -196,6 +196,7 @@ function Caddy({ route, navigation }) {
       co2,
       idBarCode,
     });
+    console.log(data);
     setItems(data);
     logEventWithPropertiesAsync("Produit ajouté au caddy", {
       name,
@@ -248,7 +249,7 @@ function Caddy({ route, navigation }) {
             <Box flex={3}>
               <FlatList
                 data={Items}
-                initialNumToRender={8}
+                initialNumToRender={4}
                 keyExtractor={(item, index) => index.toString()}
                 ListEmptyComponent={
                   <Flex

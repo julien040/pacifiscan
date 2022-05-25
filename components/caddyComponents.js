@@ -83,6 +83,7 @@ export const SingleProductCaddy = ({
         borderRadius={8}
         backgroundColor="brand.pbackground"
         p={3}
+        my={1}
         direction="row"
       >
         <Heading color="brand.iris100" flex={1} fontSize={28}>

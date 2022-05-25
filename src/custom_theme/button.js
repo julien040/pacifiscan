@@ -12,7 +12,7 @@ const customButton = {
       color: "black",
       fontWeight: "700",
       fontSize: 15,
-      fontFamily: "Inter_400Regular",
+      fontFamily: "Inter_500Medium",
     },
     /*     padding:1, */
     paddingBottom: 3,

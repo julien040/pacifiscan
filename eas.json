@@ -13,12 +13,17 @@
     },
     "production": {
       "releaseChannel": "production",
+      "distribution": "store",
       "android": {
         "buildType": "app-bundle"
       }
     }
   },
   "submit": {
-    "production": {}
+    "production": {
+      "android": {
+        "serviceAccountKeyPath": "./google.json"
+      }
+    }
   }
 }

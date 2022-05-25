@@ -1,4 +1,4 @@
-const SERVER = "https://pacifiscan.org/stories/";
+const SERVER = "https://pacifiscan.org/";
 
 /**
  * Fetches the stories from the backend. Returns the last 100 stories.
@@ -6,7 +6,7 @@ const SERVER = "https://pacifiscan.org/stories/";
  */
 async function fetchStories() {
   try {
-    const response = await fetch(SERVER + "/api/list");
+    const response = await fetch(SERVER + "api/stories");
     const data = await response.json();
     return data;
   } catch (error) {

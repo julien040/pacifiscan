@@ -5,6 +5,7 @@ import { HomeSucces } from "../components/homeScrollSucces";
 import AccueilHistorique from "../components/accueilHistorique";
 import AccueilStories from "../components/accueilStories";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { Pressable } from "react-native";
 
 function Accueil({ route, navigation }) {
   return (
@@ -18,54 +19,68 @@ function Accueil({ route, navigation }) {
         <PacifiScanHeader variant="home" />
         <Flex justify="flex-start">
           <Flex align={"center"} direction="row" justify={"space-between"}>
-            <Heading color="black" marginTop={2} marginBottom={3} p={0}>
+            <Heading
+              fontSize={20}
+              color="black"
+              marginTop={2}
+              marginBottom={3}
+              p={0}
+            >
               Déchets
             </Heading>
-            <Text
-              style={{ textAlign: "right" }}
+            <Pressable
               onPress={() => {
                 navigation.navigate("Infos");
               }}
-              color="brand.iris80"
+              style={{ flex: 1 }}
             >
-              Voir les déchets {">"}
-            </Text>
+              <Text style={{ textAlign: "right" }} color="brand.iris80">
+                Voir les déchets {">"}
+              </Text>
+            </Pressable>
           </Flex>
 
           <HomeSucces />
         </Flex>
         <Flex overflow="hidden">
           <Flex align={"center"} direction="row" justify={"space-between"}>
-            <Heading color="black" marginTop={3} marginBottom={3}>
+            <Heading fontSize={20} color="black" marginTop={3} marginBottom={3}>
               Historique
             </Heading>
-            <Text
-              style={{ textAlign: "right" }}
+            <Pressable
               onPress={() => {
                 navigation.navigate("Historique");
               }}
-              color="brand.iris80"
+              style={{ flex: 1 }}
             >
-              Voir l'historique {">"}
-            </Text>
+              <Text style={{ textAlign: "right" }} color="brand.iris80">
+                Voir l'historique {">"}
+              </Text>
+            </Pressable>
           </Flex>
           <AccueilHistorique />
         </Flex>
         <Flex overflow="hidden" my={3} flex={1}>
           <Flex align={"center"} direction="row" justify={"space-between"}>
-            <Heading color="black" marginTop={3} marginBottom={3} p={0}>
+            <Heading
+              fontSize={20}
+              color="black"
+              marginTop={3}
+              marginBottom={3}
+              p={0}
+            >
               Stories
             </Heading>
-            <Text
-              style={{ textAlign: "right" }}
+            <Pressable
               onPress={() => {
                 navigation.navigate("Stories");
               }}
-              color="brand.iris80"
-              p={1}
+              style={{ flex: 1 }}
             >
-              Voir toutes les stories {">"}
-            </Text>
+              <Text style={{ textAlign: "right" }} color="brand.iris80" p={1}>
+                Voir toutes les stories {">"}
+              </Text>
+            </Pressable>
           </Flex>
           <AccueilStories />
         </Flex>

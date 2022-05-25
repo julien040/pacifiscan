@@ -102,6 +102,20 @@ function Onboard({ route, navigation }) {
             subtitle:
               "Apprenez à protéger la biodiversité visuellement avec nos stories",
           },
+          {
+            backgroundColor: "#EFF0FF",
+            image: (
+              <Image
+                source={require("../assets/icon.png")}
+                style={{ aspectRatio: 1 }}
+                height={"220px"}
+                alt="logo"
+              />
+            ),
+            title: "Condition d'utilisation",
+            subtitle:
+              "En continuant, vous acceptez que toutes les images que vous avez scannées soient stockées sur nos serveurs et deviennent notre propriété.",
+          },
         ]}
       />
     </SafeAreaView>

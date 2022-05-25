@@ -49,7 +49,10 @@ const PacifiScanHeader = ({ variant }) => {
           align="center"
           px={1}
         >
-          <IconButton icon={GoBack} onPress={() => navigation.goBack()} />
+          <IconButton
+            _icon={{ as: GoBack }}
+            onPress={() => navigation.goBack()}
+          />
           <Heading fontSize={24} color="brand.logo">
             Pacifiscan
           </Heading>
@@ -68,7 +71,9 @@ const PacifiScanHeader = ({ variant }) => {
             Pacifiscan
           </Heading>
           <IconButton
-            icon={Info}
+            _icon={{
+              as: Info,
+            }}
             onPress={() => navigation.navigate("Parametre")}
             _pressed={{ backgroundColor: "brand.p45", borderRadius: 6 }}
           />

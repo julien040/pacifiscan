@@ -3,7 +3,7 @@
     "name": "Pacifiscan",
     "slug": "pacifiscan",
     "description": "Découvrez l'impact de vos déchets",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "backgroundColor": "#EFF0FF",
@@ -15,21 +15,27 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": ["**/*"],
+    "assetBundlePatterns": [
+      "**/*"
+    ],
     "ios": {
       "bundleIdentifier": "app.pacifiscan.org",
-      "supportsTablet": true
+      "supportsTablet": true,
+      "buildNumber": "2"
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
+      "versionCode": 2,
       "package": "app.pacifiscan.org"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": ["expo-system-ui"]
+    "plugins": [
+      "sentry-expo"
+    ]
   }
 }

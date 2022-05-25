@@ -25,14 +25,14 @@ function Parametre({ navigation }) {
           <Heading marginTop={4} color="brand.iris100">
             ID de compte :
           </Heading>
-          <Text fontFamily="Inter_400Regular" marginTop={2}>
+          <Text fontSize={13} fontFamily="Inter_400Regular" marginTop={2}>
             En cas de contact avec le support, veuillez indiquer votre ID de
             compte : {ID}
           </Text>
           <Heading marginTop={4} color="brand.iris100">
             Permissions de l'app :
           </Heading>
-          <Text fontFamily="Inter_400Regular" marginTop={2}>
+          <Text fontSize={13} fontFamily="Inter_400Regular" marginTop={2}>
             Nous ne pouvons malheureusement pas révoquer les permissions de
             l'application. Si vous n'êtes plus consentant, nous vous invitons à
             la désinstaller et contacter le support pour une suppression de
@@ -41,7 +41,7 @@ function Parametre({ navigation }) {
           <Heading marginTop={4} color="brand.iris100">
             Donnéees collectées
           </Heading>
-          <Text fontFamily="Inter_400Regular" marginTop={2}>
+          <Text fontSize={13} fontFamily="Inter_400Regular" marginTop={2}>
             Nous ne partageons pas vos données personnelles avec des tiers.
             Cependant, nous utilisons plusieurs sous processeurs pour traiter
             ces données : Amazon Web services, Expo, OVH, Scaleway, Cloudflare,
@@ -52,16 +52,10 @@ function Parametre({ navigation }) {
         </Flex>
         <Flex justify="space-between" direction="row">
           <Button
-            width={"48%"}
+            width={"100%"}
             onPress={() => Linking.openURL("https://pacifiscan.org")}
           >
             Visiter notre site
-          </Button>
-          <Button
-            width={"48%"}
-            onPress={() => navigation.navigate("Onboard", { stay: true })}
-          >
-            Voir l'onboarding
           </Button>
         </Flex>
       </Flex>

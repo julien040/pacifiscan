@@ -78,3 +78,4 @@ dist/
 
 # Google cloud
 google.json
+credentials.json
