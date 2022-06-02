@@ -5,7 +5,7 @@
     "start": "expo start --dev-client",
     "dev-build": "eas build --platform android --profile=development",
     "preview": "eas build --platform android --profile=preview",
-    "production": "eas build -p ios --profile=production"
+    "production": "eas build -p all --profile=production"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.0",
