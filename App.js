@@ -190,7 +190,7 @@ export default function App() {
               name="ScanCaddy"
               component={ScanCaddy}
               options={{
-                presentation: "modal",
+                presentation: "fullScreenModal",
               }}
             />
             <Stack.Screen

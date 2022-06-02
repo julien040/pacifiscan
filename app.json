@@ -2,40 +2,38 @@
   "expo": {
     "name": "Pacifiscan",
     "slug": "pacifiscan",
-    "description": "Découvrez l'impact de vos déchets",
-    "version": "1.1.0",
+    "description": "Préservez la biodiversité marine",
+    "version": "1.1.2",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "backgroundColor": "#EFF0FF",
     "splash": {
       "image": "./assets/splash.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#EFF0FF"
+      "resizeMode": "contain"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "bundleIdentifier": "app.pacifiscan.org",
-      "supportsTablet": true,
-      "buildNumber": "2"
+      "supportsTablet": false,
+      "buildNumber": "4",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Cette application utilise la caméra pour scanner des déchets ou des code-barres."
+      }
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "versionCode": 2,
+      "versionCode": 3,
       "package": "app.pacifiscan.org"
     },
     "web": {
       "favicon": "./assets/favicon.png"
     },
-    "plugins": [
-      "sentry-expo"
-    ]
+    "plugins": ["sentry-expo"]
   }
 }

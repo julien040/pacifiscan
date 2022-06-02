@@ -50,7 +50,7 @@ const Story = ({ route, navigation }) => {
       <Heading fontSize={20}>{Story.title}</Heading>
       <Text color="gray.500" fontSize={14}>
         Publié le {dayjs(Story.publishedTime).format("DD/MM/YYYY")} dans la
-        catégorie {Story.tags}
+        catégorie {Story.tag}
       </Text>
       <PagerView style={{ flex: 1 }} initialPage={0}>
         {Story.images.map((image, index) => (

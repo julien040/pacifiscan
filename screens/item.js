@@ -105,12 +105,8 @@ function Item({ route, navigation }) {
               </Heading>
               <Text fontFamily="Inter_400Regular">{data.eviterTexte}</Text>
               {/* Stats */}
-              <Heading marginTop={8} fontSize={16}>
-                En moyenne, cet objet pèse{" "}
-                {data.poids >= 1
-                  ? data.poids + " kg "
-                  : data.poids * 1000 + " g "}
-                et met{" "}
+              <Heading marginTop={4} fontSize={15}>
+                En moyenne, cet objet met{" "}
                 {data.anneeDecomposition >= 1
                   ? data.anneeDecomposition + " ans "
                   : (data.anneeDecomposition * 12).toFixed(0).toString() +
@@ -119,11 +115,13 @@ function Item({ route, navigation }) {
               </Heading>
             </Flex>
             <Text
-              marginTop={4}
-              marginBottom={4}
+              marginTop={2}
+              marginBottom={2}
               width="100%"
               textAlign="right"
               color="brand.primary"
+              fontFamily="Inter_600SemiBold"
+              fontSize={12}
             >
               Sources: {data.sources}
             </Text>
@@ -162,6 +160,7 @@ const BottomSheetComponent = ({ data }) => {
         </View>
       }
       data={data.ouJeter}
+      initialNumToRender={2}
       renderItem={SinglePoint}
       keyExtractor={(item, index) => index.toString()}
     />

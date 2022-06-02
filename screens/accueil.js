@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Flex, Heading, Text } from "native-base";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { HomeSucces } from "../components/homeScrollSucces";
@@ -8,6 +8,12 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Pressable } from "react-native";
 
 function Accueil({ route, navigation }) {
+  useEffect(() => {
+    navigation.addListener("beforeRemove", (e) => {
+      e.preventDefault();
+    });
+  }, []);
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
       <Flex

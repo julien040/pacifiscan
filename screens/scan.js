@@ -79,7 +79,7 @@ function Scan({ route, navigation }) {
       <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex
           backgroundColor="brand.appColor"
-          p={3}
+          p={4}
           flex={1}
           justify="space-between"
         >
@@ -103,7 +103,7 @@ function Scan({ route, navigation }) {
       <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex
           backgroundColor="brand.appColor"
-          p={3}
+          p={4}
           flex={1}
           direction="column"
         >
@@ -120,7 +120,7 @@ function Scan({ route, navigation }) {
   } else if (Clicked) {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
-        <Flex backgroundColor="brand.appColor" p={3} flex={1}>
+        <Flex backgroundColor="brand.appColor" p={4} flex={1}>
           <PacifiScanHeader />
           <Flex flex={1} justify="center" align="center">
             <Heading color="brand.iris100" textAlign="center">
@@ -136,8 +136,8 @@ function Scan({ route, navigation }) {
               fontFamily="Inter_500Medium"
               color="gray.500"
             >
-              L'application est en phase de test. La reconnaissance de déchet
-              est plus que perfectible
+              La reconnaissance de déchet n'est pas toujours exacte.
+              Excusez-nous de la gêne occasionnée.
             </Text>
           </Flex>
 
@@ -150,7 +150,7 @@ function Scan({ route, navigation }) {
       <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex
           backgroundColor="brand.appColor"
-          p={3}
+          p={4}
           flex={1}
           justify="space-between"
         >

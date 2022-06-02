@@ -114,7 +114,7 @@ function Onboard({ route, navigation }) {
             ),
             title: "Condition d'utilisation",
             subtitle:
-              "En continuant, vous acceptez que toutes les images que vous avez scannées soient stockées sur nos serveurs et deviennent notre propriété.",
+              "En continuant, vous acceptez que les images que vous avez scannées soient sauvegardées sur nos serveurs afin d'améliorer des algorithmes de reconnaissance d'image",
           },
         ]}
       />

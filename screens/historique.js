@@ -130,7 +130,7 @@ const Item = ({ item, index, refresh, navigation }) => {
       <Flex
         direction="row"
         borderRadius={10}
-        p={3}
+        p={4}
         backgroundColor="brand.pbackground"
         m={1}
         flex={1}

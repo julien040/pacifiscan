@@ -218,7 +218,7 @@ function Caddy({ route, navigation }) {
       <SafeAreaView style={{ flex: 1 }}>
         <Flex
           backgroundColor="brand.appColor"
-          p={3}
+          p={4}
           flex={1}
           justify="space-between"
         >

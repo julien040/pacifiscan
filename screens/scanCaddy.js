@@ -37,7 +37,7 @@ function ScanCaddy({ route, navigation }) {
     return (
       <Flex
         backgroundColor="brand.appColor"
-        p={3}
+        p={4}
         flex={1}
         justify="space-between"
       >
