@@ -33,92 +33,90 @@ function Onboard({ route, navigation }) {
     );
   }
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <Onboarding
-        onDone={onDone}
-        showSkip={false}
-        nextLabel="Suivant"
-        bottomBarColor="#dddafe"
-        titleStyles={{
-          fontFamily: "Urbanist_700Bold",
-        }}
-        subTitleStyles={{
-          fontFamily: "Inter_500Medium",
-          fontSize: 14,
-        }}
-        pages={[
-          {
-            backgroundColor: "#EFF0FF",
-            image: (
-              <Image
-                source={require("../assets/illustration/thanks.png")}
-                style={{ aspectRatio: 1.12 }}
-                height={"220px"}
-                alt="Emoji"
-              />
-            ),
-            title: "Merci d'avoir installé notre application",
-            subtitle: "Découvrez comment fonctionne Pacifiscan",
-          },
-          {
-            backgroundColor: "#EFF0FF",
-            image: (
-              <Image
-                source={require("../assets/illustration/scan.png")}
-                style={{ aspectRatio: 1.78 }}
-                height={"220px"}
-                alt="logo"
-              />
-            ),
-            title: "Scanner un déchet",
-            subtitle:
-              "Lorsque vous trouvez un déchet, scannez-le et découvrez qu'en faire.",
-          },
-          {
-            backgroundColor: "#EFF0FF",
-            image: (
-              <Image
-                source={require("../assets/illustration/retail.png")}
-                style={{ aspectRatio: 1 }}
-                height={"220px"}
-                alt="logo"
-              />
-            ),
-            title: "Réduisez votre impact",
-            subtitle:
-              "Dans le magasin, scannez les codes-barre et découvrez quels produits polluent le plus.",
-          },
-          {
-            backgroundColor: "#EFF0FF",
-            image: (
-              <Image
-                source={require("../assets/illustration/stories.png")}
-                style={{ aspectRatio: 1 }}
-                height={"220px"}
-                alt="logo"
-              />
-            ),
-            title: "Stories",
-            subtitle:
-              "Apprenez à protéger la biodiversité visuellement avec nos stories",
-          },
-          {
-            backgroundColor: "#EFF0FF",
-            image: (
-              <Image
-                source={require("../assets/icon.png")}
-                style={{ aspectRatio: 1 }}
-                height={"220px"}
-                alt="logo"
-              />
-            ),
-            title: "Condition d'utilisation",
-            subtitle:
-              "En continuant, vous acceptez que les images que vous avez scannées soient sauvegardées sur nos serveurs afin d'améliorer des algorithmes de reconnaissance d'image",
-          },
-        ]}
-      />
-    </SafeAreaView>
+    <Onboarding
+      onDone={onDone}
+      showSkip={false}
+      nextLabel="Suivant"
+      bottomBarColor="#dddafe"
+      titleStyles={{
+        fontFamily: "Urbanist_700Bold",
+      }}
+      subTitleStyles={{
+        fontFamily: "Inter_500Medium",
+        fontSize: 14,
+      }}
+      pages={[
+        {
+          backgroundColor: "#EFF0FF",
+          image: (
+            <Image
+              source={require("../assets/illustration/thanks.png")}
+              style={{ aspectRatio: 1.12 }}
+              height={"220px"}
+              alt="Emoji"
+            />
+          ),
+          title: "Merci d'avoir installé notre application",
+          subtitle: "Découvrez comment fonctionne Pacifiscan",
+        },
+        {
+          backgroundColor: "#EFF0FF",
+          image: (
+            <Image
+              source={require("../assets/illustration/scan.png")}
+              style={{ aspectRatio: 1.78 }}
+              height={"220px"}
+              alt="logo"
+            />
+          ),
+          title: "Scanner un déchet",
+          subtitle:
+            "Lorsque vous trouvez un déchet, scannez-le et découvrez qu'en faire.",
+        },
+        {
+          backgroundColor: "#EFF0FF",
+          image: (
+            <Image
+              source={require("../assets/illustration/retail.png")}
+              style={{ aspectRatio: 1 }}
+              height={"220px"}
+              alt="logo"
+            />
+          ),
+          title: "Réduisez votre impact",
+          subtitle:
+            "Dans le magasin, scannez les codes-barre et découvrez quels produits polluent le plus.",
+        },
+        {
+          backgroundColor: "#EFF0FF",
+          image: (
+            <Image
+              source={require("../assets/illustration/stories.png")}
+              style={{ aspectRatio: 1 }}
+              height={"220px"}
+              alt="logo"
+            />
+          ),
+          title: "Stories",
+          subtitle:
+            "Apprenez à protéger la biodiversité visuellement avec nos stories",
+        },
+        {
+          backgroundColor: "#EFF0FF",
+          image: (
+            <Image
+              source={require("../assets/icon.png")}
+              style={{ aspectRatio: 1 }}
+              height={"220px"}
+              alt="logo"
+            />
+          ),
+          title: "Condition d'utilisation",
+          subtitle:
+            "En continuant, vous acceptez que les images que vous avez scannées soient sauvegardées sur nos serveurs afin d'améliorer des algorithmes de reconnaissance d'image",
+        },
+      ]}
+    />
   );
 }
 

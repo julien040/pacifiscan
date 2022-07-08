@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, useCallback } from "react";
 import {
   Flex,
   Heading,
@@ -76,6 +76,10 @@ function Caddy({ route, navigation }) {
     setStats([moyenne, co2.toFixed(2)]); //Pour arrondir à 2 décimale
   }, [Items]);
 
+  const closeBottomSheet = useCallback(() => {
+    bottomSheetRef.current.close();
+  }, [bottomSheetRef]);
+
   /** Récupère la fiche produit d'un objet depuis l'api openfoodfacts
    * @param  {string} id
    */
@@ -115,6 +119,7 @@ function Caddy({ route, navigation }) {
       details: data.product.ecoscore_data || null,
     };
   }
+
   useEffect(() => {
     //Voir plus bas pour l'explication de cette fonction
     (async () => {
@@ -151,11 +156,12 @@ function Caddy({ route, navigation }) {
         } catch (error) {
           console.error(error);
           // In case of an error, we close the bottom sheet
-          bottomSheetRef.current.snapToIndex(-1);
+          /* bottomSheetRef.current.snapToIndex(-1); */
+          closeBottomSheet();
         }
       }
     })();
-  }, []);
+  }, [route.params]);
 
   useEffect(() => {
     bottomSheetRef?.current?.snapToIndex(0);
@@ -302,7 +308,7 @@ function Caddy({ route, navigation }) {
             backgroundStyle={{ backgroundColor: "#e9e7fe" }}
             ref={bottomSheetRef}
             index={-1}
-            snapPoints={["70%", "100%"]}
+            snapPoints={["80%", "100%"]}
             enablePanDownToClose={true}
           >
             <BottomSheetItem

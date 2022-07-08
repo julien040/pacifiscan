@@ -18,6 +18,7 @@ import {
 } from "@expo-google-fonts/urbanist";
 
 import { SafeAreaProvider } from "react-native-safe-area-context";
+import Toast from "react-native-toast-message";
 import { hideAsync, preventAutoHideAsync } from "expo-splash-screen";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
@@ -29,16 +30,12 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import * as Amplitude from "expo-analytics-amplitude";
 import {
   Accueil,
-  About,
   Historique,
   Item,
   Parametre,
   Scan,
-  Stat,
+  ScanSelecteur,
   Succe,
-  ScanCaddy,
-  Caddy,
-  CaddyHelp,
   Story,
   Stories,
   Onboard,
@@ -143,15 +140,17 @@ export default function App() {
               component={Accueil} /* L'accueil tout simplement */
             />
             <Stack.Screen
-              name="About"
-              component={About}
+              name="Scan"
+              component={Scan} /* L'interface pour scan un objet */
+            />
+            <Stack.Screen
+              name="ScanSelecteur"
+              component={
+                ScanSelecteur
+              } /* L'interface pour choisir quel objet a été scanné */
               options={{
                 presentation: "modal",
               }}
-            />
-            <Stack.Screen
-              name="Scan"
-              component={Scan} /* L'interface pour scan un objet */
             />
             <Stack.Screen
               name="Historique"
@@ -164,10 +163,6 @@ export default function App() {
               name="Infos"
               component={Succe}
               /* Composé des infos des déchets ainsi que des news de pacifiscan  */
-            />
-            <Stack.Screen
-              name="Stat"
-              component={Stat} /* Stats de l'utilisateur */
             />
             <Stack.Screen
               name="Item"
@@ -187,25 +182,6 @@ export default function App() {
               /* Pour désactiver les outils de collection de données ainsi que voir l'id d'utilisateur */
             />
             <Stack.Screen
-              name="ScanCaddy"
-              component={ScanCaddy}
-              options={{
-                presentation: "fullScreenModal",
-              }}
-            />
-            <Stack.Screen
-              name="caddyHelp"
-              component={CaddyHelp}
-              options={{
-                presentation: "modal",
-              }}
-            />
-            <Stack.Screen
-              name="Caddy"
-              component={Caddy}
-              /* Le mode caddy de l'application */
-            />
-            <Stack.Screen
               name="Story"
               component={Story}
               options={{
@@ -217,6 +193,7 @@ export default function App() {
             <Stack.Screen name="Stories" component={Stories} />
           </Stack.Navigator>
         </NavigationContainer>
+        <Toast />
       </SafeAreaProvider>
     </NativeBaseProvider>
   );

@@ -21,7 +21,7 @@ const Story = ({ route, navigation }) => {
   }, []);
   if (Story === null) {
     return (
-      <Flex backgroundColor="brand.appColor" p={4} flex={1}>
+      <Flex paddingBottom={1} backgroundColor="brand.appColor" p={4} flex={1}>
         <PacifiScanHeader variant="back" />
         <Flex flex={1} align="center" justify="center">
           <Heading>Chargement de la story...</Heading>
@@ -33,7 +33,7 @@ const Story = ({ route, navigation }) => {
 
   if (Story === undefined) {
     return (
-      <Flex backgroundColor="brand.appColor" p={4} flex={1}>
+      <Flex backgroundColor="brand.appColor" paddingBottom={1} p={4} flex={1}>
         <PacifiScanHeader variant="back" />
         <Flex flex={1} align="center" justify="center">
           <Heading>Cette story n'existe pas</Heading>
@@ -45,7 +45,7 @@ const Story = ({ route, navigation }) => {
     );
   }
   return (
-    <Flex backgroundColor="brand.appColor" p={4} flex={1}>
+    <Flex paddingBottom={1} backgroundColor="brand.appColor" p={4} flex={1}>
       <PacifiScanHeader variant="back" />
       <Heading fontSize={20}>{Story.title}</Heading>
       <Text color="gray.500" fontSize={14}>

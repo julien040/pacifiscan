@@ -26,7 +26,7 @@ function ScanCaddy({ route, navigation }) {
       date: Date.now(),
     });
     // Navigate to the caddy screen
-    navigation.push("Caddy", { id: data });
+    navigation.navigate("Caddy", { id: data });
   }
   useEffect(() => {
     // On load, we check if the user has granted the permission

@@ -6,9 +6,21 @@ import AccueilHistorique from "../components/accueilHistorique";
 import AccueilStories from "../components/accueilStories";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Pressable } from "react-native";
+import { setStatusBarStyle } from "expo-status-bar";
+import {
+  setBackgroundColorAsync,
+  setButtonStyleAsync,
+} from "expo-navigation-bar";
+import * as SystemUI from "expo-system-ui";
 
 function Accueil({ route, navigation }) {
   useEffect(() => {
+    SystemUI.setBackgroundColorAsync("#EFF0FF");
+    setStatusBarStyle("dark");
+    if (Platform.OS === "android") {
+      setBackgroundColorAsync("#EFF0FF");
+      setButtonStyleAsync("dark");
+    }
     navigation.addListener("beforeRemove", (e) => {
       e.preventDefault();
     });
@@ -18,6 +30,7 @@ function Accueil({ route, navigation }) {
     <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
       <Flex
         backgroundColor="brand.appColor"
+        paddingBottom={1}
         p={4}
         flex={1}
         justify="space-between"
@@ -48,7 +61,7 @@ function Accueil({ route, navigation }) {
 
           <HomeSucces />
         </Flex>
-        <Flex overflow="hidden">
+        {/* <Flex overflow="hidden">
           <Flex align={"center"} direction="row" justify={"space-between"}>
             <Heading fontSize={20} color="black" marginTop={3} marginBottom={3}>
               Historique
@@ -65,7 +78,7 @@ function Accueil({ route, navigation }) {
             </Pressable>
           </Flex>
           <AccueilHistorique />
-        </Flex>
+        </Flex> */}
         <Flex overflow="hidden" my={3} flex={1}>
           <Flex align={"center"} direction="row" justify={"space-between"}>
             <Heading

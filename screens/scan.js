@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import { Flex, Heading, Button, Spinner, Text } from "native-base";
-import { Vibration } from "react-native";
+import React, { useState, useEffect, useRef } from "react";
+import { Flex, Heading, Button, Spinner, Text, useToast } from "native-base";
+import { Vibration, View } from "react-native";
 import { Camera } from "expo-camera";
 import { associationApi } from "../src/waste/waste";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
@@ -10,25 +10,33 @@ import { addToArray } from "../src/database/array";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { logEventWithPropertiesAsync } from "expo-analytics-amplitude";
+import Toast from "react-native-toast-message";
 
 function Scan({ route, navigation }) {
   const isFocused = useIsFocused();
   const [hasPermission, setHasPermission] = useState(null);
+  const [CanAskAgain, setCanAskAgain] = useState(true);
+  const [Loading, setLoading] = useState(false);
   const [LoadingContent, setLoadingContent] = useState("Chargement...");
   const [Clicked, setClicked] = useState(false);
-  var alreadyClicked = false;
-  var refCamera;
+  var refCamera = useRef(null);
+
+  async function askPermission() {
+    const { status, canAskAgain } =
+      await Camera.requestCameraPermissionsAsync();
+    setHasPermission(status === "granted");
+    setCanAskAgain(canAskAgain);
+  }
   useEffect(() => {
     (async () => {
-      const { status } = await Camera.requestCameraPermissionsAsync();
-      setHasPermission(status);
+      await askPermission();
     })();
   }, []);
   async function HandleButton() {
-    if (alreadyClicked) {
+    if (Clicked) {
       return;
     } else {
-      alreadyClicked = true;
+      setClicked(true);
     }
     try {
       // Divide by 1000 to get the value in seconds
@@ -36,41 +44,65 @@ function Scan({ route, navigation }) {
       const { base64 } = await refCamera.takePictureAsync({
         base64: true,
         exif: false,
-        quality: 0.4,
+        quality: 0.5,
       });
-
-      const timeToTakePicture = Date.now() / 1000 - beforePicture;
+      const timeToTakePicture = (Date.now() / 1000 - beforePicture).toFixed(2);
       const id = await AsyncStorage.getItem("id");
-      setClicked(true);
+      setLoading(true);
+
       setLoadingContent("Envoi de l'image...");
       const beforeScan = Date.now() / 1000;
-      const label = await DetectLabel(base64, id);
-      const timeToScan = Date.now() / 1000 - beforeScan;
-      console.log(
-        "Label:",
-        label,
-        "Time to take picture :",
-        timeToTakePicture + "s",
-        " Time to scan : ",
-        timeToScan + "s"
-      );
-      const Item = associationApi[label];
+      const { label, uuid, confidence } = await DetectLabel(base64, id);
+      const timeToScan = (Date.now() / 1000 - beforeScan).toFixed(2);
+      /* const Item = associationApi[label]; */
       setLoadingContent(`Image analysée !`);
       Vibration.vibrate(100);
       logEventWithPropertiesAsync("Scan d'un déchet sur l'application", {
         label: label,
         timeToTakePicture,
         timeToScan,
+        confidence,
       });
-      await addToArray("Scanned", {
+      await addToArray("NewScanned", {
         type: label,
         timestamp: Date.now(),
+        uuid: uuid,
       });
-      // To check if the item is already scanned
-      AsyncStorage.setItem(Item, JSON.stringify(true));
-      setClicked(false);
-      navigation.navigate("Item", { id: Item });
+      // Cas où il n'y a pas besoin de sélection
+      if (Array.isArray(Item) && Item.length === 1) {
+        navigation.navigate("Item", {
+          id: Item[0],
+        });
+      } else {
+        navigation.navigate("ScanSelecteur", {
+          label: label,
+          uuid: uuid,
+          confidence: confidence,
+        });
+      }
     } catch (error) {
+      // Display a different error message following if it's a network issue or not
+      let title = "Une erreur est survenue";
+      let message = "Veuillez réessayer ultérieurement";
+      // Because throw can throw anything, we check if it's an error
+      if (error instanceof Error) {
+        // Case when the error was catched in scan.js
+        if (error.message == "Erreur lors de la requête") {
+          title = "Impossible de contacter le serveur";
+          message = "Vérifiez votre connexion internet";
+        }
+      }
+      console.error(error);
+      Toast.show({
+        type: "error",
+        text1: title,
+        text2: message,
+        position: "top",
+        visibilityTime: 12000,
+        hideOnPress: true,
+      });
+    } finally {
+      setLoading(false);
       setClicked(false);
     }
   }
@@ -78,22 +110,35 @@ function Scan({ route, navigation }) {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex
+          justify={"space-between"}
           backgroundColor="brand.appColor"
           p={4}
           flex={1}
-          justify="space-between"
         >
           <PacifiScanHeader />
-          <Heading textAlign="center">
-            Nous avons besoin de la permission photo pour scanner des objets
-          </Heading>
-          <Button
-            onPress={() => {
-              Camera.requestCameraPermissionsAsync();
-            }}
-          >
-            Autoriser l'appli
-          </Button>
+          <View>
+            <Heading fontSize={22} paddingTop={4}>
+              Nous avons besoin d'accéder à la caméra pour scanner votre déchet.
+            </Heading>
+            {
+              // If we can still ask for permission
+              CanAskAgain && (
+                <Button marginTop={4} onPress={askPermission}>
+                  Autoriser l'appli
+                </Button>
+              )
+            }
+            {
+              // If we can't ask for permission anymore
+              !CanAskAgain && (
+                <Text marginTop={4} fontFamily="Inter_500Medium">
+                  Pour autoriser l'accès à la caméra, allez dans les paramètres
+                  de votre appareil. Ensuite, selectionnez Pacifiscan dans les
+                  applications et accordez l'accès à la caméra.
+                </Text>
+              )
+            }
+          </View>
           <PacifiScanFooter active="Scan" />
         </Flex>
       </SafeAreaView>
@@ -103,6 +148,7 @@ function Scan({ route, navigation }) {
       <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex
           backgroundColor="brand.appColor"
+          paddingBottom={1}
           p={4}
           flex={1}
           direction="column"
@@ -117,10 +163,10 @@ function Scan({ route, navigation }) {
         </Flex>
       </SafeAreaView>
     );
-  } else if (Clicked) {
+  } else if (Loading) {
     return (
       <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
-        <Flex backgroundColor="brand.appColor" p={4} flex={1}>
+        <Flex backgroundColor="brand.appColor" paddingBottom={1} p={4} flex={1}>
           <PacifiScanHeader />
           <Flex flex={1} justify="center" align="center">
             <Heading color="brand.iris100" textAlign="center">
@@ -150,6 +196,7 @@ function Scan({ route, navigation }) {
       <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex
           backgroundColor="brand.appColor"
+          paddingBottom={1}
           p={4}
           flex={1}
           justify="space-between"
@@ -174,7 +221,7 @@ function Scan({ route, navigation }) {
                 onPress={() => HandleButton()}
                 opacity={70}
               >
-                Prendre un déchet en photo
+                {Clicked ? "Chargement..." : "Prendre un déchet en photo"}
               </Button>
             </Camera>
           </Flex>

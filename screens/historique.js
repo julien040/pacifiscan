@@ -19,7 +19,7 @@ function Historique({ navigation }) {
   const [isRefreshing, setisRefreshing] = useState(false);
 
   async function refreshData() {
-    const data = await getArray("Scanned");
+    const data = await getArray("NewScanned");
     setData(data.reverse());
     setisRefreshing(false);
     const weight = getWeightCount(data);
@@ -32,6 +32,7 @@ function Historique({ navigation }) {
       flex={1}
       backgroundColor="brand.appColor"
       p={4}
+      paddingBottom={1}
       justify="space-between"
     >
       <PacifiScanHeader variant="back" />

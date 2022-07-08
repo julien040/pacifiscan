@@ -8,6 +8,7 @@ import Item from "./item";
 import Parametre from "./parametre";
 import Recherche from "./recherche";
 import Scan from "./scan";
+import ScanSelecteur from "./scanSelecteur";
 import Stat from "./stat";
 import Succe from "./succe";
 import ScanCaddy from "./scanCaddy";
@@ -19,17 +20,13 @@ import Onboard from "./onboarding";
 
 export {
   Accueil,
-  About,
   Historique,
   Item,
   Parametre,
   Recherche,
   Scan,
-  Stat,
+  ScanSelecteur,
   Succe,
-  ScanCaddy,
-  Caddy,
-  CaddyHelp,
   Story,
   Stories,
   Onboard,

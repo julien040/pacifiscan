@@ -15,6 +15,7 @@ function Parametre({ navigation }) {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
       <Flex
+        paddingBottom={1}
         p={4}
         flex={1}
         justify="space-between"

@@ -1,7 +1,7 @@
 import { Flex, Text } from "native-base";
-import React, { Fragment } from "react";
+import React from "react";
 import { Pressable } from "react-native";
-import Svg, { Path, Rect, Circle } from "react-native-svg";
+import Svg, { Path, Circle } from "react-native-svg";
 import { useTheme } from "native-base";
 import { useNavigation } from "@react-navigation/native";
 /* 
@@ -20,16 +20,8 @@ const PacifiScanFooter = (props) => {
       name: "Accueil",
     },
     {
-      icon: "Search",
-      name: "Caddy",
-    },
-    {
       icon: "Scan",
       name: "Scan",
-    },
-    {
-      icon: "Story",
-      name: "Stories",
     },
     {
       icon: "Info",
@@ -39,7 +31,6 @@ const PacifiScanFooter = (props) => {
 
   return (
     <Flex
-      borderRadius={10}
       p={1}
       maxHeight={16}
       marginTop={0}

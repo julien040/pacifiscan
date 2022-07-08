@@ -15,6 +15,7 @@ import {
 } from "native-base";
 import pacifiScanTheme from "../src/custom_theme/theme";
 import { useEffect } from "react";
+import Dechet from "../src/donnees/dechets";
 
 import { PacifiScanHeader } from "../components/index";
 import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet";
@@ -39,9 +40,9 @@ function Item({ route, navigation }) {
     };
   }, []);
   const { id } = route.params; //On récupère les arguments donnés par le composant qui a appelé cette page
-  /** @type {wastesType["Ampoule"]}
+  /** @type {Dechet["Vélo"]}
    */
-  const data = wastesType[id];
+  const data = Dechet[id];
   const bottomSheetRef = useRef();
   if (!data) {
     //Dans le cas où l'api retournerait un item qui n'existe pas dans l'application
@@ -75,6 +76,7 @@ function Item({ route, navigation }) {
       <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
         <Flex
           backgroundColor="brand.pbackground"
+          paddingBottom={1}
           p={4}
           flex={1}
           justify="space-between"
@@ -86,50 +88,19 @@ function Item({ route, navigation }) {
               size={120}
               margin="auto"
               alt="L'image"
-              source={{ uri: data.image }}
+              source={{ uri: data.icone }}
             />
             <Flex>
-              {/* Que faire début */}
               <Heading marginTop={8} marginBottom={1} color="brand.iris100">
                 Qu'en faire ?
               </Heading>
-              <Text fontFamily="Inter_400Regular">{data.quefaireTexte}</Text>
-              {/* Quel est son impact début */}
-              <Heading marginTop={8} marginBottom={1} color="brand.iris100">
-                Quel est son impact ?
-              </Heading>
-              <Text fontFamily="Inter_400Regular">{data.impactTexte}</Text>
-              {/* Comment éviter ce déchet début */}
-              <Heading marginTop={8} marginBottom={1} color="brand.iris100">
-                Comment l'éviter ?
-              </Heading>
-              <Text fontFamily="Inter_400Regular">{data.eviterTexte}</Text>
-              {/* Stats */}
-              <Heading marginTop={4} fontSize={15}>
-                En moyenne, cet objet met{" "}
-                {data.anneeDecomposition >= 1
-                  ? data.anneeDecomposition + " ans "
-                  : (data.anneeDecomposition * 12).toFixed(0).toString() +
-                    " mois "}
-                à se décomposer
-              </Heading>
+              <Text fontFamily="Inter_400Regular">{data.queFaire}</Text>
             </Flex>
-            <Text
-              marginTop={2}
-              marginBottom={2}
-              width="100%"
-              textAlign="right"
-              color="brand.primary"
-              fontFamily="Inter_600SemiBold"
-              fontSize={12}
-            >
-              Sources: {data.sources}
-            </Text>
           </ScrollView>
 
           <Button onPress={handleBottomSheet}>Où jeter ?</Button>
         </Flex>
-        <BottomSheet
+        {/*  <BottomSheet
           backgroundStyle={{ backgroundColor: "#EFF0FF" }}
           ref={bottomSheetRef}
           onChange={handleBottomSheetChange}
@@ -138,7 +109,7 @@ function Item({ route, navigation }) {
           index={-1}
         >
           <BottomSheetComponent data={data} />
-        </BottomSheet>
+        </BottomSheet> */}
       </SafeAreaView>
     </GestureHandlerRootView>
   );

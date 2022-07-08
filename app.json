@@ -3,7 +3,7 @@
     "name": "Pacifiscan",
     "slug": "pacifiscan",
     "description": "Préservez la biodiversité marine",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "backgroundColor": "#EFF0FF",
@@ -18,7 +18,7 @@
     "ios": {
       "bundleIdentifier": "app.pacifiscan.org",
       "supportsTablet": false,
-      "buildNumber": "4",
+      "buildNumber": "5",
       "infoPlist": {
         "NSCameraUsageDescription": "Cette application utilise la caméra pour scanner des déchets ou des code-barres."
       }
@@ -28,7 +28,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "versionCode": 3,
+      "versionCode": 5,
       "package": "app.pacifiscan.org"
     },
     "web": {

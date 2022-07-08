@@ -7,18 +7,18 @@ import { useState, useEffect } from "react";
 
 function AccueilHistorique() {
   const [Data, setData] = useState([]);
-  const [Refreshing, setRefreshing] = useState(false);
 
   async function refreshData() {
-    setRefreshing(true);
-    const history = await getArray("Scanned");
+    const history = await getArray("NewScanned");
     setData(history.reverse().slice(0, 8));
-    setRefreshing(false);
   }
   useEffect(() => {
-    (async () => {
-      await refreshData();
-    })();
+    refreshData();
+    // Check periodically for new data
+    const interval = setInterval(() => {
+      refreshData();
+    }, 10000);
+    return () => clearInterval(interval);
   }, []);
 
   return (
@@ -29,8 +29,6 @@ function AccueilHistorique() {
           Vous n'avez pas encore scanné de déchet
         </Text>
       }
-      refreshing={Refreshing}
-      onRefresh={refreshData}
       data={Data}
       initialNumToRender={1}
       keyExtractor={(item, index) => index}

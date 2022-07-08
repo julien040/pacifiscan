@@ -19,6 +19,7 @@ function StoriesPage({ route, navigation }) {
     <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
       <Flex
         backgroundColor="brand.appColor"
+        paddingBottom={1}
         p={4}
         flex={1}
         justify="space-between"
