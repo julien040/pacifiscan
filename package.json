@@ -34,6 +34,8 @@
     "expo-system-ui": "~1.2.0",
     "expo-updates": "~0.13.2",
     "fetch-retry": "^5.0.2",
+    "fuse.js": "^6.6.2",
+    "haversine-distance": "^1.2.1",
     "native-base": "^3.2.1",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -49,6 +51,7 @@
     "react-native-web": "0.17.7",
     "react-native-webview": "11.18.1",
     "sentry-expo": "^4.2.0",
+    "sort-by-distance": "^2.0.0",
     "styled-components": "^5.3.3",
     "styled-system": "^5.1.5"
   },

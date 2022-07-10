@@ -1,7 +1,6 @@
-import { Flex, Heading, Text, Radio } from "native-base";
+import { Text, Radio } from "native-base";
 import Collecte from "./collecte";
 import PointApport from "./pointApport";
-import SegmentedControl from "@react-native-segmented-control/segmented-control";
 import { useState } from "react";
 import dechets from "../src/donnees/dechets";
 
@@ -17,28 +16,27 @@ function OuJeter({ id }) {
   if (collecteAvailable && apportAvailable) {
     return (
       <>
-        <Flex px={3}>
-          <Radio.Group
-            marginBottom={1}
-            _radio={{
-              bgColor: "brand.p45",
-              borderWidth: 0, // Remove the border of the radio button
-              _text: {
-                fontFamily: "Inter_600SemiBold",
-                fontSize: 15,
-              },
-              _icon: { color: "brand.iris50" },
-            }}
-            direction="row"
-            onChange={(value) => setTab(value)}
-            value={Tab}
-          >
-            <Radio value="Point d'apport">Point d'apport</Radio>
-            <Radio marginLeft={4} value="Collecte">
-              Collecte
-            </Radio>
-          </Radio.Group>
-        </Flex>
+        <Radio.Group
+          px={3}
+          marginBottom={1}
+          _radio={{
+            bgColor: "brand.p45",
+            borderWidth: 0, // Remove the border of the radio button
+            _text: {
+              fontFamily: "Inter_600SemiBold",
+              fontSize: 15,
+            },
+            _icon: { color: "brand.iris50" },
+          }}
+          direction="row"
+          onChange={(value) => setTab(value)}
+          value={Tab}
+        >
+          <Radio value="Point d'apport">Point d'apport</Radio>
+          <Radio marginLeft={4} value="Collecte">
+            Collecte
+          </Radio>
+        </Radio.Group>
         {Tab === "Point d'apport" && <PointApport id={id} />}
         {Tab === "Collecte" && <Collecte id={id} />}
       </>

@@ -1,8 +1,10 @@
-import { FlatList, Text, Flex, Heading } from "native-base";
+import { FlatList, Text, Flex, Heading, Pressable } from "native-base";
 import dayjs from "dayjs";
 import { Image } from "react-native";
 import { getArray } from "../src/database/array";
-import { associationApi, wastesType } from "../src/waste/waste";
+import association from "../src/donnees/associationAnglaisFrancais";
+import dechets from "../src/donnees/dechets";
+import { useNavigation } from "@react-navigation/native";
 import { useState, useEffect } from "react";
 
 function AccueilHistorique() {
@@ -32,41 +34,40 @@ function AccueilHistorique() {
       data={Data}
       initialNumToRender={1}
       keyExtractor={(item, index) => index}
-      renderItem={({ item }) => (
-        <ListItem date={item.timestamp} type={item.type} />
-      )}
+      renderItem={({ item }) => <ListItem {...item} />}
     />
   );
 }
 
 function ListItem({ date, type }) {
-  const name = associationApi[type];
-  const data = wastesType[name];
+  const navigation = useNavigation();
+  const name = association[type][0];
+  const data = dechets[name];
   return (
-    <Flex
+    <Pressable
+      bgColor={"brand.p45"}
       flex={1}
       mx={2}
       p={3}
       borderRadius={8}
-      justify="center"
-      align={"center"}
-      bgColor={"brand.p45"}
-      direction="row"
+      onPress={() => navigation.navigate("Item", { id: name })}
     >
-      <Image
-        alt={name}
-        source={{ uri: data.image }}
-        style={{ width: 48, height: 48, marginRight: 8 }}
-      />
-      <Flex>
-        <Heading color={"gray.800"} fontSize={16}>
-          {name}
-        </Heading>
-        <Text color={"gray.500"} fontSize={11}>
-          {dayjs(date).format("DD/MM/YYYY")}
-        </Text>
+      <Flex justify="center" align={"center"} direction="row">
+        <Image
+          alt={name}
+          source={{ uri: data?.icone }}
+          style={{ width: 48, height: 48, marginRight: 8 }}
+        />
+        <Flex>
+          <Heading color={"gray.800"} fontSize={16}>
+            {name}
+          </Heading>
+          <Text color={"gray.500"} fontSize={11}>
+            {dayjs(date).format("DD/MM/YYYY")}
+          </Text>
+        </Flex>
       </Flex>
-    </Flex>
+    </Pressable>
   );
 }
 export default AccueilHistorique;

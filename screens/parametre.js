@@ -4,6 +4,7 @@ import { Flex, Heading, Text, Button } from "native-base";
 import { PacifiScanHeader } from "../components";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Linking from "expo-linking";
+import CommuneSelect from "../components/communeSelector";
 
 function Parametre({ navigation }) {
   const [ID, setID] = useState("");
@@ -30,6 +31,7 @@ function Parametre({ navigation }) {
             En cas de contact avec le support, veuillez indiquer votre ID de
             compte : {ID}
           </Text>
+          <CommuneSelect />
           <Heading marginTop={4} color="brand.iris100">
             Permissions de l'app :
           </Heading>

@@ -61,7 +61,7 @@ function Accueil({ route, navigation }) {
 
           <HomeSucces />
         </Flex>
-        {/* <Flex overflow="hidden">
+        <Flex overflow="hidden">
           <Flex align={"center"} direction="row" justify={"space-between"}>
             <Heading fontSize={20} color="black" marginTop={3} marginBottom={3}>
               Historique
@@ -78,7 +78,7 @@ function Accueil({ route, navigation }) {
             </Pressable>
           </Flex>
           <AccueilHistorique />
-        </Flex> */}
+        </Flex>
         <Flex overflow="hidden" my={3} flex={1}>
           <Flex align={"center"} direction="row" justify={"space-between"}>
             <Heading

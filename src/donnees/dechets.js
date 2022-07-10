@@ -8,7 +8,16 @@ export default {
       "Surveillez les dates de péremption des denrées alimentaires en mettant systématiquement les produits à consommer le plus rapidement devant les autres, adaptez au mieux les quantités cuisinées, conservez les restes utilisables et cuisinez-les. Composter vos aliments vous permettra d'obtenir un amendement naturel pour votre jardin ou vos plantes en pots. Tous les aliments ne sont cependant pas compostables et certains ne le sont qu'en quantités réduites.",
     icone: "https://img.icons8.com/color/96/000000/waste--v1.png",
     ouDeposer: null,
-    collecte: ["recTV8OnyMXgbNVY6", "recfH4zozLt2dY5Xc"],
+    collecte: [
+      "recTV8OnyMXgbNVY6",
+      "recfH4zozLt2dY5Xc",
+      "recTV8OnyMXgbNVY6",
+      "recfH4zozLt2dY5Xc",
+      "recTV8OnyMXgbNVY6",
+      "recfH4zozLt2dY5Xc",
+      "recTV8OnyMXgbNVY6",
+      "recfH4zozLt2dY5Xc",
+    ],
   },
   Ampoule: {
     nom: "Ampoule",

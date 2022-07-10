@@ -13,20 +13,20 @@ export default {
   },
   rechSZVCU73sg4AAe: {
     nom: "Déchetterie de Gadji",
-    latitude: 166.444404,
-    longitude: -22.279403,
+    latitude: -22.164243,
+    longitude: 166.372292,
     categorie: "Enfouissement",
   },
   recEvHKYxkV7TOOB2: {
     nom: "Déchetterie de Ducos",
-    latitude: 165,
-    longitude: -23,
+    latitude: -22.163061,
+    longitude: 166.389733,
     categorie: "Enfouissement",
   },
   recIW54qlZsgXNxbK: {
     nom: "Déchetterie de Magenta",
-    latitude: 166.2,
-    longitude: -22.8,
+    latitude: -22.274392,
+    longitude: 166.470629,
     categorie: "Enfouissement",
   },
   recDhBWSgaHBDgmOA: {

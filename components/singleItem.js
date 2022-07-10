@@ -53,22 +53,20 @@ export const Item = (props) => {
   return (
     <Pressable
       width="48%"
+      borderRadius={10}
+      p={4}
+      backgroundColor={"brand.p45"}
+      my={2}
       onPress={() => navigation.navigate("Item", { id: props.title })}
     >
-      <Flex
-        /* width="47%" */
-        borderRadius={10}
-        marginBottom={3}
-        backgroundColor={props.isBlocked ? "dark.700" : "brand.p45"}
-        p={4}
-      >
+      <Flex>
         <Image
           width="96px"
           height="96px"
           alt="L'objet"
           source={{ uri: props.image }}
         />
-        <Text fontWeight={700} fontSize={16}>
+        <Text fontFamily="Inter_600SemiBold" color="blueGray.800">
           {props.title}
         </Text>
       </Flex>

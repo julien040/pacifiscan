@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { Flex, Heading, Button, Spinner, Text, useToast } from "native-base";
 import { Vibration, View } from "react-native";
 import { Camera } from "expo-camera";
-import { associationApi } from "../src/waste/waste";
+import association from "../src/donnees/associationAnglaisFrancais";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { useIsFocused } from "@react-navigation/native";
 import { DetectLabel } from "../src/scan";
@@ -54,7 +54,7 @@ function Scan({ route, navigation }) {
       const beforeScan = Date.now() / 1000;
       const { label, uuid, confidence } = await DetectLabel(base64, id);
       const timeToScan = (Date.now() / 1000 - beforeScan).toFixed(2);
-      /* const Item = associationApi[label]; */
+      const Item = association[label];
       setLoadingContent(`Image analysée !`);
       Vibration.vibrate(100);
       logEventWithPropertiesAsync("Scan d'un déchet sur l'application", {

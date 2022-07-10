@@ -1,27 +1,16 @@
 import React, { useRef } from "react";
 import { Platform } from "react-native";
 import OuJeter from "../components/ouJeter";
-import CrossIcon from "../components/crossIcon";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { setBackgroundColorAsync } from "expo-navigation-bar";
 import { setStatusBarBackgroundColor } from "expo-status-bar";
-import {
-  Flex,
-  ScrollView,
-  Heading,
-  Text,
-  Image,
-  Button,
-  View,
-  IconButton,
-} from "native-base";
+import { Flex, ScrollView, Heading, Text, Image, Button } from "native-base";
 import pacifiScanTheme from "../src/custom_theme/theme";
 import { useEffect } from "react";
 import Dechet from "../src/donnees/dechets";
 
 import { PacifiScanHeader } from "../components/index";
-import BottomSheet, { BottomSheetFlatList } from "@gorhom/bottom-sheet";
-import * as Linking from "expo-linking";
+import BottomSheet from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 function Item({ route, navigation }) {
@@ -95,7 +84,7 @@ function Item({ route, navigation }) {
               alt="L'image"
               source={{ uri: data.icone }}
             />
-            <Heading textAlign="center" fontSize={22} marginBottom={0}>
+            <Heading textAlign="center" fontSize={22} marginBottom={4}>
               {id}
             </Heading>
             {synonyme && (
@@ -107,13 +96,13 @@ function Item({ route, navigation }) {
                 Synonyme de : {synonyme}
               </Text>
             )}
-            <Heading marginTop={4} marginBottom={1} color="brand.iris100">
+            <Heading marginTop={4} color="brand.iris100">
               Qu'en faire ?
             </Heading>
             <Text fontFamily="Inter_500Medium">{data.queFaire}</Text>
             {data.commentEviter && (
               <>
-                <Heading marginTop={4} marginBottom={1} color="brand.iris100">
+                <Heading marginTop={4} color="brand.iris100">
                   Comment l'éviter ?
                 </Heading>
                 <Text fontFamily="Inter_500Medium">{data.commentEviter}</Text>
@@ -132,23 +121,13 @@ function Item({ route, navigation }) {
           backgroundStyle={{ backgroundColor: "#EFF0FF" }}
           ref={bottomSheetRef}
           onChange={handleBottomSheetChange}
-          snapPoints={["70%", "100%"]}
+          snapPoints={["60%", "100%"]}
+          enablePanDownToClose={true}
           index={-1}
         >
-          <Flex align={"center"} justify="space-between" direction="row" px={3}>
-            <Text
-              fontSize={15}
-              color="blueGray.600"
-              fontFamily="Inter_600SemiBold"
-            >
-              Où jeter votre déchet ?
-            </Text>
-            <IconButton
-              _icon={{ as: CrossIcon }}
-              onPress={() => bottomSheetRef.current.close()}
-            />
-          </Flex>
-
+          <Text marginBottom={2} px={3} fontFamily="Inter_600SemiBold">
+            Où jeter votre déchet ?
+          </Text>
           <OuJeter id={id} />
         </BottomSheet>
       </SafeAreaView>
