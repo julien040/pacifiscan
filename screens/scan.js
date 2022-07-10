@@ -44,7 +44,7 @@ function Scan({ route, navigation }) {
       const { base64 } = await refCamera.takePictureAsync({
         base64: true,
         exif: false,
-        quality: 0.5,
+        quality: 0.4,
       });
       const timeToTakePicture = (Date.now() / 1000 - beforePicture).toFixed(2);
       const id = await AsyncStorage.getItem("id");

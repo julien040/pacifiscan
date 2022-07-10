@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Image, Flex, Spinner } from "native-base";
 import { SafeAreaView } from "react-native-safe-area-context";
+import CommuneSelect from "../components/communeSelector";
 import { useState } from "react";
 
 function Onboard({ route, navigation }) {
@@ -100,6 +101,13 @@ function Onboard({ route, navigation }) {
           title: "Stories",
           subtitle:
             "Apprenez à protéger la biodiversité visuellement avec nos stories",
+        },
+        {
+          backgroundColor: "#EFF0FF",
+          image: <CommuneSelect />,
+          title: "Votre commune",
+          subtitle:
+            "Indiquez votre commune de résidence pour obtenir des informations personnalisées.",
         },
         {
           backgroundColor: "#EFF0FF",
