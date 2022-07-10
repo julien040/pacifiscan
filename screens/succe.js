@@ -1,19 +1,12 @@
 import React from "react";
 import { SmallSucce } from "../components/singleItem";
-import { wastesType } from "../src/waste/waste";
+import dechets from "../src/donnees/dechets";
 import { Flex, Heading, FlatList, Spinner } from "native-base";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
-import { getKeys } from "../src/waste/waste";
 import { SafeAreaView } from "react-native-safe-area-context";
-/* 
-    Ceci est la page qui correspond au 5eme élément de la barre de navigation.
-    Il s'appelle Infos
-    Sur cette page, on peut voir l'ensemble des items ainsi que s'ils ont été débloqués ou non
-    Si on clique sur un, on accède à la page correspondante à l'item
 
-    **Pas encore** En bas de la page, on peut accèder à des news de l'application PacifiScan. Pour y accèder, l'application fait une requête à l'api Strapi
+const namesOfWastes = Object.keys(dechets);
 
- */
 function Succe({ route, navigation }) {
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: "#EFF0FF" }}>
@@ -29,32 +22,21 @@ function Succe({ route, navigation }) {
           Déchets
         </Heading>
         <FlatList
-          data={getKeys()} //Retourne tous les noms d'éléments
+          data={namesOfWastes}
           renderItem={({ item }) => (
             <SmallSucce
               key={item}
               title={item}
               navigation={navigation}
-              image={wastesType[item].image}
+              image={dechets[item].icone}
             />
           )}
           ListEmptyComponent={() => <Spinner color="brand.iris80" />}
           initialNumToRender={1}
-          maxToRenderPerBatch={2}
+          maxToRenderPerBatch={3}
           columnWrapperStyle={{ justifyContent: "space-between" }}
           numColumns={2}
         />
-
-        {/* {Object.keys(wastesType).map((key) => (
-            <SmallSucce
-              key={key}
-              intern={key}
-              title={key}
-              image={wastesType[key].image}
-              description={wastesType[key].smallText}
-              isBlocked={wastesType[key].blocked}
-            />
-          ))} */}
         <PacifiScanFooter active="Info" />
       </Flex>
     </SafeAreaView>

@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import { Platform } from "react-native";
-import { wastesType } from "../src/waste/waste";
+import OuJeter from "../components/ouJeter";
+import CrossIcon from "../components/crossIcon";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { setBackgroundColorAsync } from "expo-navigation-bar";
 import { setStatusBarBackgroundColor } from "expo-status-bar";
@@ -12,6 +13,7 @@ import {
   Image,
   Button,
   View,
+  IconButton,
 } from "native-base";
 import pacifiScanTheme from "../src/custom_theme/theme";
 import { useEffect } from "react";
@@ -39,7 +41,7 @@ function Item({ route, navigation }) {
       }
     };
   }, []);
-  const { id } = route.params; //On récupère les arguments donnés par le composant qui a appelé cette page
+  const { id, synonyme } = route.params; //On récupère les arguments donnés par le composant qui a appelé cette page
   /** @type {Dechet["Vélo"]}
    */
   const data = Dechet[id];
@@ -47,9 +49,12 @@ function Item({ route, navigation }) {
   if (!data) {
     //Dans le cas où l'api retournerait un item qui n'existe pas dans l'application
     return (
-      <Flex backgroundColor="brand.appColor" p={4} flex={1}>
+      <Flex backgroundColor="brand.pbackground" p={4} flex={1}>
         <PacifiScanHeader variant="back" />
-        <Heading>Cet item n'existe malheureusement pas</Heading>
+        <Text textAlign="center" my="auto">
+          Ce déchet n'existe malheureusement pas dans cette version{"\n"}
+          Veuillez mettre à jour l'application.
+        </Text>
       </Flex>
     );
   }
@@ -82,89 +87,73 @@ function Item({ route, navigation }) {
           justify="space-between"
         >
           <PacifiScanHeader variant="back" />
-          <Heading marginBottom={2}>{id}</Heading>
+
           <ScrollView flex={1}>
             <Image
-              size={120}
+              size={95}
               margin="auto"
               alt="L'image"
               source={{ uri: data.icone }}
             />
-            <Flex>
-              <Heading marginTop={8} marginBottom={1} color="brand.iris100">
-                Qu'en faire ?
-              </Heading>
-              <Text fontFamily="Inter_400Regular">{data.queFaire}</Text>
-            </Flex>
+            <Heading textAlign="center" fontSize={22} marginBottom={0}>
+              {id}
+            </Heading>
+            {synonyme && (
+              <Text
+                color="blueGray.600"
+                fontFamily="Inter_500Medium"
+                fontSize={14}
+              >
+                Synonyme de : {synonyme}
+              </Text>
+            )}
+            <Heading marginTop={4} marginBottom={1} color="brand.iris100">
+              Qu'en faire ?
+            </Heading>
+            <Text fontFamily="Inter_500Medium">{data.queFaire}</Text>
+            {data.commentEviter && (
+              <>
+                <Heading marginTop={4} marginBottom={1} color="brand.iris100">
+                  Comment l'éviter ?
+                </Heading>
+                <Text fontFamily="Inter_500Medium">{data.commentEviter}</Text>
+              </>
+            )}
           </ScrollView>
 
-          <Button onPress={handleBottomSheet}>Où jeter ?</Button>
+          {/* Case when there is no information in the DB, the "ou jeter" button must not be shown */}
+          {data.collecte === null && data.ouDeposer === null ? (
+            <Button isDisabled>Aucune donnée disponible</Button>
+          ) : (
+            <Button onPress={handleBottomSheet}>Où jeter ?</Button>
+          )}
         </Flex>
-        {/*  <BottomSheet
+        <BottomSheet
           backgroundStyle={{ backgroundColor: "#EFF0FF" }}
           ref={bottomSheetRef}
           onChange={handleBottomSheetChange}
           snapPoints={["70%", "100%"]}
-          enablePanDownToClose={true}
           index={-1}
         >
-          <BottomSheetComponent data={data} />
-        </BottomSheet> */}
+          <Flex align={"center"} justify="space-between" direction="row" px={3}>
+            <Text
+              fontSize={15}
+              color="blueGray.600"
+              fontFamily="Inter_600SemiBold"
+            >
+              Où jeter votre déchet ?
+            </Text>
+            <IconButton
+              _icon={{ as: CrossIcon }}
+              onPress={() => bottomSheetRef.current.close()}
+            />
+          </Flex>
+
+          <OuJeter id={id} />
+        </BottomSheet>
       </SafeAreaView>
     </GestureHandlerRootView>
   );
 }
-
-/**
- * @param  {wastesType["electromenager"]} {data}
- */
-const BottomSheetComponent = ({ data }) => {
-  return (
-    <BottomSheetFlatList
-      style={{ paddingLeft: 12, paddingRight: 12, paddingBottom: 12 }}
-      ListHeaderComponent={
-        <View my={1}>
-          <Heading fontSize={18}>Où jeter ce déchet ?</Heading>
-          <Text fontSize={13} color="gray.500" fontFamily="Inter_400Regular">
-            Découvrez les points de collecte de votre déchet
-          </Text>
-        </View>
-      }
-      data={data.ouJeter}
-      initialNumToRender={2}
-      renderItem={SinglePoint}
-      keyExtractor={(item, index) => index.toString()}
-    />
-  );
-};
-import { points } from "../src/waste/waste";
-const SinglePoint = ({ item }) => {
-  item = points[item];
-  return (
-    <Flex marginTop={4} p={4} borderRadius={10} backgroundColor="brand.p45">
-      <Flex direction="row">
-        <Image
-          marginRight={2}
-          size={"24px"}
-          source={{ uri: item.icon }}
-          alt="Icone"
-        />
-        <Heading fontSize={18}>{item.name}</Heading>
-      </Flex>
-      <Text fontFamily="Inter_400Regular" fontSize={13}>
-        {item.description}
-      </Text>
-
-      <Button
-        /* bgColor={"brand.pdark"} */
-        alignSelf="flex-end"
-        size={"sm"}
-        onPress={() => Linking.openURL(item.seeMore)}
-      >
-        {item.type === "Déchetterie" ? "S'y rendre" : "Voir plus"}
-      </Button>
-    </Flex>
-  );
-};
 
 export default Item;

@@ -2,7 +2,7 @@
   "name": "pacifiscan",
   "version": "1.0.0",
   "scripts": {
-    "start": "expo start --dev-client",
+    "start": "expo start --dev-client --tunnel",
     "dev-build": "eas build --platform android --profile=development",
     "preview": "eas build --platform android --profile=preview",
     "production": "eas build -p all --profile=production"

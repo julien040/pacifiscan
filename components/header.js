@@ -21,6 +21,8 @@ import { useNavigation } from "@react-navigation/core";
 const PacifiScanHeader = ({ variant }) => {
   const navigation = useNavigation();
   switch (variant) {
+    case "settings":
+    case "modal":
     case "back":
       return (
         <Flex
@@ -28,32 +30,12 @@ const PacifiScanHeader = ({ variant }) => {
           direction="row"
           justify="space-between"
           align="center"
-          px={1}
         >
           <IconButton
             _icon={{ as: GoBack }}
             onPress={() => navigation.goBack()}
           />
-          <Heading fontSize={24} color="brand.logo">
-            Pacifiscan
-          </Heading>
-        </Flex>
-      );
-    case "settings":
-    case "modal":
-      return (
-        <Flex
-          width="100%"
-          direction="row"
-          justify="space-between"
-          align="center"
-          px={1}
-        >
-          <IconButton
-            _icon={{ as: GoBack }}
-            onPress={() => navigation.goBack()}
-          />
-          <Heading fontSize={24} color="brand.logo">
+          <Heading fontSize={22} color="brand.logo">
             Pacifiscan
           </Heading>
         </Flex>
@@ -65,9 +47,8 @@ const PacifiScanHeader = ({ variant }) => {
           justify="space-between"
           width="100%"
           align="center"
-          px={1}
         >
-          <Heading fontSize={24} color="brand.logo">
+          <Heading fontSize={22} color="brand.logo">
             Pacifiscan
           </Heading>
           <IconButton
@@ -87,7 +68,7 @@ const PacifiScanHeader = ({ variant }) => {
             justify="space-between" */
           align="center"
         >
-          <Heading fontSize={24} color="brand.logo">
+          <Heading fontSize={22} color="brand.logo">
             Pacifiscan
           </Heading>
           {/*             <IconButton
