@@ -33,6 +33,7 @@ import {
   Accueil,
   Historique,
   Item,
+  Materiau,
   Parametre,
   Scan,
   ScanSelecteur,
@@ -181,6 +182,15 @@ export default function App() {
               component={Item}
               options={{
                 presentation: "fullScreenModal",
+                animation: "fade_from_bottom",
+              }}
+              /* La fiche info d'un item. Doit être appelé avec des arguments */
+            />
+            <Stack.Screen
+              name="Materiau"
+              component={Materiau}
+              options={{
+                presentation: "modal",
                 animation: "fade_from_bottom",
               }}
               /* La fiche info d'un item. Doit être appelé avec des arguments */

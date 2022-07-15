@@ -1,12 +1,8 @@
-/* 
-    Pour une meilleure syntaxe, et augmenter la visibilité du fichier principal, l'ensemble des pages sont regroupées dans ce fichier.
- */
 import Accueil from "./accueil";
-import About from "./about";
 import Historique from "./historique";
 import Item from "./item";
+import Materiau from "./materiau";
 import Parametre from "./parametre";
-import Recherche from "./recherche";
 import Scan from "./scan";
 import ScanSelecteur from "./scanSelecteur";
 import ScanInconnu from "./scanInconnu";
@@ -19,8 +15,8 @@ export {
   Accueil,
   Historique,
   Item,
+  Materiau,
   Parametre,
-  Recherche,
   Scan,
   ScanSelecteur,
   ScanInconnu,

@@ -4,18 +4,33 @@ import OuJeter from "../components/ouJeter";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { setBackgroundColorAsync } from "expo-navigation-bar";
 import { setStatusBarBackgroundColor } from "expo-status-bar";
-import { Flex, Text, Image, Button, Spinner } from "native-base";
+import {
+  Flex,
+  Text,
+  Image,
+  Button,
+  Spinner,
+  Pressable,
+  ChevronRightIcon,
+} from "native-base";
 import Spacer from "../components/spacer";
+import { SimpleSubTitle600 } from "../components/text";
 import pacifiScanTheme from "../src/custom_theme/theme";
 import { useEffect } from "react";
 import Dechet from "../src/donnees/dechets";
 import synonymes from "../src/donnees/synonymes";
+import materiaux from "../src/donnees/materiaux";
 import { SimpleText400 } from "../components/text";
-import { MediumHeading, LargeHeading } from "../components/heading";
+import {
+  MediumHeading,
+  LargeHeading,
+  SmallHeading,
+} from "../components/heading";
 
 import { PacifiScanHeader } from "../components/index";
 import BottomSheet from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/native";
 
 function Item({ route, navigation }) {
   // this state is set to true when the bottom sheet is open
@@ -86,7 +101,7 @@ function Item({ route, navigation }) {
         >
           <PacifiScanHeader variant="back" />
 
-          <ScrollView style={{ flex: 1 }}>
+          <ScrollView style={{ flex: 1, marginBottom: 4 }}>
             <Image
               size={136}
               margin="auto"
@@ -99,10 +114,20 @@ function Item({ route, navigation }) {
             <SimpleText400>{fiche.queFaire}</SimpleText400>
             {fiche.commentEviter && (
               <>
+                <Spacer />
                 <MediumHeading colored>Comment l'éviter ?</MediumHeading>
                 <SimpleText400>{fiche.commentEviter}</SimpleText400>
               </>
             )}
+            {Array.isArray(fiche.matiere) && fiche?.matiere?.length > 0 ? (
+              <>
+                <Spacer />
+                <MediumHeading colored>Matériaux</MediumHeading>
+                {fiche?.matiere?.map((mat) => (
+                  <MateriauItem key={mat} materiau={mat} />
+                ))}
+              </>
+            ) : null}
           </ScrollView>
 
           {/* Case when there is no information in the DB, the "ou jeter" button must not be shown */}
@@ -138,6 +163,31 @@ function Item({ route, navigation }) {
         </BottomSheet>
       </SafeAreaView>
     </GestureHandlerRootView>
+  );
+}
+
+function MateriauItem({ materiau }) {
+  const data = materiaux[materiau];
+  const navigation = useNavigation();
+  return (
+    <Pressable
+      borderRadius={10}
+      my={1}
+      backgroundColor="brand.p45"
+      p={2}
+      onPress={() => navigation.navigate("Materiau", { id: materiau })}
+    >
+      <Flex flex={1} direction="row" align={"center"}>
+        <Image
+          alt="Une icone représentant le déchet"
+          source={{ uri: data?.icone }}
+          size={12}
+          marginRight={2}
+        />
+        <SimpleSubTitle600>{data?.nom}</SimpleSubTitle600>
+        <ChevronRightIcon size={4} ml="auto" />
+      </Flex>
+    </Pressable>
   );
 }
 

@@ -11,6 +11,7 @@ import synonymes from "../src/donnees/synonymes";
 
 function AccueilHistorique() {
   const [Data, setData] = useState([]);
+  const navigation = useNavigation();
 
   async function refreshData() {
     const history = await getArray("NewScanned");
@@ -42,6 +43,25 @@ function AccueilHistorique() {
       initialNumToRender={1}
       keyExtractor={(item, index) => index}
       renderItem={({ item }) => <ListItem {...item} />}
+      ListFooterComponent={() =>
+        Data.length > 0 ? (
+          <Pressable
+            onPress={() => {
+              navigation.navigate("Infos");
+            }}
+            flex={1}
+          >
+            <Text
+              fontFamily="Inter_500Medium"
+              color="blueGray.500"
+              letterSpacing={-0.7}
+              my="auto"
+            >
+              Voir l'historique {">"}
+            </Text>
+          </Pressable>
+        ) : null
+      }
     />
   );
 }
@@ -58,7 +78,6 @@ function ListItem({ date, type }) {
       p={3}
       px={5}
       borderRadius={8}
-      onPress={() => navigation.navigate("Item", { id: name })}
     >
       <Flex justify="center" align={"center"} direction="row">
         <Flex>

@@ -637,7 +637,7 @@ export default {
   },
   Médicaments: {
     nom: "Médicaments",
-    matiere: ["Chimique"],
+    matiere: ["Produits chimiques"],
     queFaire: "Déposez-les dans une pharmacie.",
     commentEviter: null,
     ouDeposer: null,

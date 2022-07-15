@@ -65,9 +65,9 @@ function Parametre({ navigation }) {
         <Flex justify="space-between" direction="row">
           <Button
             width={"100%"}
-            onPress={() => Linking.openURL("https://pacifiscan.org")}
+            onPress={() => Linking.openURL("mailto:contact@pacifiscan.org")}
           >
-            Visiter notre site
+            Nous contacter
           </Button>
         </Flex>
       </Flex>

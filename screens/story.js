@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 import { fetchOneStory } from "../src/fetchStories";
 import PagerView from "react-native-pager-view";
 import { logEventWithPropertiesAsync } from "expo-analytics-amplitude";
+import { LargeHeading, MediumHeading } from "../components/heading";
 
 const Story = ({ route, navigation }) => {
   const [Story, setStory] = useState(null);
@@ -47,8 +48,13 @@ const Story = ({ route, navigation }) => {
   return (
     <Flex paddingBottom={1} backgroundColor="brand.appColor" p={4} flex={1}>
       <PacifiScanHeader variant="back" />
-      <Heading fontSize={20}>{Story.title}</Heading>
-      <Text color="gray.500" fontSize={14}>
+      <MediumHeading>{Story.title}</MediumHeading>
+      <Text
+        color="gray.500"
+        fontSize={14}
+        fontFamily="Inter_500Medium"
+        letterSpacing={-0.5}
+      >
         Publié le {dayjs(Story.publishedTime).format("DD/MM/YYYY")} dans la
         catégorie {Story.tag}
       </Text>

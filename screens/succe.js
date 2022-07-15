@@ -18,6 +18,7 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { LargeHeading } from "../components/heading";
 
 const namesOfWastes = Object.keys(synonyme);
 const searchable = Object.values(synonyme);
@@ -50,10 +51,9 @@ function Succe({ route, navigation }) {
         justify="space-between"
       >
         <PacifiScanHeader />
-        <Heading marginTop={2} marginBottom={2}>
-          Déchets
-        </Heading>
+        <LargeHeading>Déchets</LargeHeading>
         <Input
+          marginTop={2}
           bgColor={"brand.p45"}
           InputLeftElement={
             <Icon marginLeft={2} as={<SearchIcon />} size={5} />
@@ -80,8 +80,8 @@ function Succe({ route, navigation }) {
               />
             )}
             ListEmptyComponent={() => <Spinner color="brand.iris80" />}
-            initialNumToRender={2}
-            maxToRenderPerBatch={3}
+            initialNumToRender={1}
+            maxToRenderPerBatch={6}
             columnWrapperStyle={{ justifyContent: "space-between" }}
             numColumns={3}
             style={{ flex: 1 }}

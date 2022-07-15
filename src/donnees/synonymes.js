@@ -754,7 +754,7 @@ export default {
     nom: "Lampe torche",
     fiche: "Petit électroménager",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/lampe-torche.png",
-    synonyme: "",
+    synonyme: "Lumière",
   },
   "Lave-linge": {
     nom: "Lave-linge",
@@ -845,7 +845,7 @@ export default {
     nom: "Micro-ondes",
     fiche: "Petit électroménager",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/micro-ondes.png",
-    synonyme: "",
+    synonyme: "Mini-four",
   },
   Microphone: {
     nom: "Microphone",
@@ -875,26 +875,19 @@ export default {
     nom: "Moto",
     fiche: "Voiture",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/moto.png",
-    synonyme: "",
+    synonyme: "Scooter, dirt",
   },
   "Mouchoir en papier": {
     nom: "Mouchoir en papier",
     fiche: "Mouchoir en papier",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/mouchoir-en-papier.png",
-    synonyme: "",
+    synonyme: "Kleenex",
   },
   Néon: {
     nom: "Néon",
     fiche: "Ampoule",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/néon.png",
     synonyme: "Lampe",
-  },
-  "Nettoyeur haute pression": {
-    nom: "Nettoyeur haute pression",
-    fiche: "Petit électroménager",
-    icone:
-      "https://oncle-stan.pacifiscan.org/icon-v2/nettoyeur-haute-pression.png",
-    synonyme: "",
   },
   "Opercule en métal": {
     nom: "Opercule en métal",
@@ -919,7 +912,7 @@ export default {
     nom: "Ordinateur portable",
     fiche: "Informatique",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/ordinateur-portable.png",
-    synonyme: "",
+    synonyme: "PC portable",
   },
   "Palette en bois": {
     nom: "Palette en bois",
@@ -943,12 +936,6 @@ export default {
     nom: "Papier aluminium",
     fiche: "Papier aluminium",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/papier-aluminium.png",
-    synonyme: "",
-  },
-  Parpaing: {
-    nom: "Parpaing",
-    fiche: "Matériaux de construction",
-    icone: "https://oncle-stan.pacifiscan.org/icon-v2/parpaing.png",
     synonyme: "",
   },
   Peluche: {
@@ -986,12 +973,6 @@ export default {
     nom: "Placard",
     fiche: "Meuble",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/placard.png",
-    synonyme: "",
-  },
-  "Plan de travail": {
-    nom: "Plan de travail",
-    fiche: "Meuble",
-    icone: "https://oncle-stan.pacifiscan.org/icon-v2/plan-de-travail.png",
     synonyme: "",
   },
   "Plaque de cuisson": {
@@ -1052,13 +1033,7 @@ export default {
     nom: "Pull",
     fiche: "Vêtement",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/pull.png",
-    synonyme: "",
-  },
-  Raclette: {
-    nom: "Raclette",
-    fiche: "Petit électroménager",
-    icone: "https://oncle-stan.pacifiscan.org/icon-v2/raclette.png",
-    synonyme: "",
+    synonyme: "Sweat, cardign",
   },
   "Radio-réveil": {
     nom: "Radio-réveil",
@@ -1091,10 +1066,10 @@ export default {
       "https://oncle-stan.pacifiscan.org/icon-v2/résidus-de-débrousaillement.png",
     synonyme: "",
   },
-  Robot: {
-    nom: "Robot",
+  "Aspirateur Robot": {
+    nom: "Aspirateur Robot",
     fiche: "Petit électroménager",
-    icone: "https://oncle-stan.pacifiscan.org/icon-v2/robot.png",
+    icone: "https://oncle-stan.pacifiscan.org/icon-v2/aspirateur-robot.png",
     synonyme: "",
   },
   "Rouge à lèvre": {
@@ -1107,13 +1082,13 @@ export default {
     nom: "Ruban adhésif",
     fiche: "Matériel scolaire en plastique",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/ruban-adhésif.png",
-    synonyme: "",
+    synonyme: "Scotch",
   },
   "Sac cabas": {
     nom: "Sac cabas",
     fiche: "Sac de course",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/sac-cabas.png",
-    synonyme: "",
+    synonyme: "Sac de course",
   },
   "Sac en tissu": {
     nom: "Sac en tissu",
@@ -1158,12 +1133,6 @@ export default {
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/sèche-linge.png",
     synonyme: "",
   },
-  "Serviette hygiénique": {
-    nom: "Serviette hygiénique",
-    fiche: "Serviette hygiénique",
-    icone: "https://oncle-stan.pacifiscan.org/icon-v2/serviette-hygiénique.png",
-    synonyme: "",
-  },
   "Souris informatique": {
     nom: "Souris informatique",
     fiche: "Informatique",
@@ -1174,19 +1143,19 @@ export default {
     nom: "Sous-vêtement",
     fiche: "Vêtement",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/sous-vêtement.png",
-    synonyme: "",
+    synonyme: "Culotte, slip, caleçon, String, Tanga, Boxer",
   },
   Stylo: {
     nom: "Stylo",
     fiche: "Stylo",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/stylo.png",
-    synonyme: "",
+    synonyme: "Bic",
   },
   "T-shirt": {
     nom: "T-shirt",
     fiche: "Vêtement",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/t-shirt.png",
-    synonyme: "",
+    synonyme: "Débardeur",
   },
   Table: {
     nom: "Table",
@@ -1222,7 +1191,7 @@ export default {
     nom: "Tasse",
     fiche: "Vaisselle",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/tasse.png",
-    synonyme: "",
+    synonyme: "Bol",
   },
   Télécommande: {
     nom: "Télécommande",
@@ -1240,19 +1209,19 @@ export default {
     nom: "Télévision",
     fiche: "Téléviseur",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/télévision.png",
-    synonyme: "",
+    synonyme: "Téléviseur",
   },
   "Tetra pak": {
     nom: "Tetra pak",
     fiche: "Brique alimentaire",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/tetra-pak.png",
-    synonyme: "",
+    synonyme: "Jus de fruit, Brique de lait, ",
   },
   "Tonte de pelouse": {
     nom: "Tonte de pelouse",
     fiche: "Déchets verts",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/tonte-de-pelouse.png",
-    synonyme: "",
+    synonyme: "Herbe, tondeuse",
   },
   "Tube de colle": {
     nom: "Tube de colle",
@@ -1313,6 +1282,7 @@ export default {
     nom: "Voiture",
     fiche: "Voiture",
     icone: "https://oncle-stan.pacifiscan.org/icon-v2/voiture.png",
-    synonyme: "",
+    synonyme:
+      "Automobile, Break, Berline, Renault, Toyota, Ford, Peugeot, Hyunday, Peugeot, Citroen",
   },
 };

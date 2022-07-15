@@ -96,13 +96,7 @@ function Historique({ navigation }) {
 
 const Item = ({ item, index, refresh, navigation }) => {
   return (
-    <Pressable
-      onPress={() =>
-        navigation.navigate("Item", {
-          id: associationAnglaisFrancais[item.type].nom,
-        })
-      }
-    >
+    <Pressable>
       <Flex
         direction="row"
         borderRadius={10}

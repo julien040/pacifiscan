@@ -1,7 +1,11 @@
 import { Text, StyleSheet } from "react-native";
 
 export function SimpleText400(props) {
-  return <Text style={styles.regular}>{props.children}</Text>;
+  return (
+    <Text selectable={true} selectionColor="#dddafe" style={styles.regular}>
+      {props.children}
+    </Text>
+  );
 }
 
 export function SimpleSubTitle500(props) {
@@ -17,7 +21,7 @@ const styles = StyleSheet.create({
   regular: {
     fontSize: 16,
     fontFamily: "Inter_400Regular",
-    letterSpacing: -0.5,
+    letterSpacing: -0.35,
   },
   centered: {
     textAlign: "center",
