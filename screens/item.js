@@ -1,19 +1,26 @@
-import React, { useRef } from "react";
-import { Platform } from "react-native";
+import React, { useRef, useState } from "react";
+import { Platform, ScrollView } from "react-native";
 import OuJeter from "../components/ouJeter";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { setBackgroundColorAsync } from "expo-navigation-bar";
 import { setStatusBarBackgroundColor } from "expo-status-bar";
-import { Flex, ScrollView, Heading, Text, Image, Button } from "native-base";
+import { Flex, Text, Image, Button, Spinner } from "native-base";
+import Spacer from "../components/spacer";
 import pacifiScanTheme from "../src/custom_theme/theme";
 import { useEffect } from "react";
 import Dechet from "../src/donnees/dechets";
+import synonymes from "../src/donnees/synonymes";
+import { SimpleText400 } from "../components/text";
+import { MediumHeading, LargeHeading } from "../components/heading";
 
 import { PacifiScanHeader } from "../components/index";
 import BottomSheet from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 
 function Item({ route, navigation }) {
+  // this state is set to true when the bottom sheet is open
+  // It avoids loading geolocation when not requested
+  const [bottomSheetOpenedOnce, setBottomSheetOpenedOnce] = useState(false);
   useEffect(() => {
     if (Platform.OS === "android") {
       const backgroundColorModal = pacifiScanTheme.colors.brand.pbackground;
@@ -30,10 +37,11 @@ function Item({ route, navigation }) {
       }
     };
   }, []);
-  const { id, synonyme } = route.params; //On récupère les arguments donnés par le composant qui a appelé cette page
+  const { id } = route.params; //On récupère les arguments donnés par le composant qui a appelé cette page
   /** @type {Dechet["Vélo"]}
    */
-  const data = Dechet[id];
+  const data = synonymes[id];
+  const fiche = Dechet[data.fiche];
   const bottomSheetRef = useRef();
   if (!data) {
     //Dans le cas où l'api retournerait un item qui n'existe pas dans l'application
@@ -49,6 +57,7 @@ function Item({ route, navigation }) {
   }
   // Button handler
   function handleBottomSheet() {
+    setBottomSheetOpenedOnce(true);
     bottomSheetRef.current.snapToIndex(0);
   }
 
@@ -77,41 +86,27 @@ function Item({ route, navigation }) {
         >
           <PacifiScanHeader variant="back" />
 
-          <ScrollView flex={1}>
+          <ScrollView style={{ flex: 1 }}>
             <Image
-              size={95}
+              size={136}
               margin="auto"
               alt="L'image"
               source={{ uri: data.icone }}
             />
-            <Heading textAlign="center" fontSize={22} marginBottom={4}>
-              {id}
-            </Heading>
-            {synonyme && (
-              <Text
-                color="blueGray.600"
-                fontFamily="Inter_500Medium"
-                fontSize={14}
-              >
-                Synonyme de : {synonyme}
-              </Text>
-            )}
-            <Heading marginTop={4} color="brand.iris100">
-              Qu'en faire ?
-            </Heading>
-            <Text fontFamily="Inter_500Medium">{data.queFaire}</Text>
-            {data.commentEviter && (
+            <LargeHeading centered>{data.nom}</LargeHeading>
+            <Spacer />
+            <MediumHeading colored>Qu'en faire ?</MediumHeading>
+            <SimpleText400>{fiche.queFaire}</SimpleText400>
+            {fiche.commentEviter && (
               <>
-                <Heading marginTop={4} color="brand.iris100">
-                  Comment l'éviter ?
-                </Heading>
-                <Text fontFamily="Inter_500Medium">{data.commentEviter}</Text>
+                <MediumHeading colored>Comment l'éviter ?</MediumHeading>
+                <SimpleText400>{fiche.commentEviter}</SimpleText400>
               </>
             )}
           </ScrollView>
 
           {/* Case when there is no information in the DB, the "ou jeter" button must not be shown */}
-          {data.collecte === null && data.ouDeposer === null ? (
+          {fiche.collecte === null && fiche.ouDeposer === null ? (
             <Button isDisabled>Aucune donnée disponible</Button>
           ) : (
             <Button onPress={handleBottomSheet}>Où jeter ?</Button>
@@ -125,10 +120,21 @@ function Item({ route, navigation }) {
           enablePanDownToClose={true}
           index={-1}
         >
-          <Text marginBottom={2} px={3} fontFamily="Inter_600SemiBold">
-            Où jeter votre déchet ?
-          </Text>
-          <OuJeter id={id} />
+          {!bottomSheetOpenedOnce ? (
+            <Spinner size={50} color={"brand.iris80"} my={12} />
+          ) : (
+            <>
+              <Text
+                letterSpacing={-0.5}
+                marginBottom={2}
+                px={3}
+                fontFamily="Inter_600SemiBold"
+              >
+                Où jeter votre déchet ?
+              </Text>
+              <OuJeter id={data.fiche} />
+            </>
+          )}
         </BottomSheet>
       </SafeAreaView>
     </GestureHandlerRootView>

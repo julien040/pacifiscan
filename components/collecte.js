@@ -40,6 +40,7 @@ function Collecte({ id }) {
           fontFamily="Inter_500Medium"
           fontSize={14}
           color="blueGray.500"
+          letterSpacing={-0.5}
         >
           {Commune === null
             ? "Aucune commune n'est sélectionnée."
@@ -63,6 +64,7 @@ function Collecte({ id }) {
           fontFamily="Inter_500Medium"
           fontSize={14}
           color="blueGray.500"
+          letterSpacing={-0.5}
         >
           Cliquez sur un point pour en savoir plus
         </Text>
@@ -86,14 +88,18 @@ const ItemCollecteComponent = ({ nom, description, icone, enSavoirPlus }) => {
       <Flex direction="row" align="center">
         <Image height={12} width={12} alt={nom} source={{ uri: icone }} />
         <Flex marginLeft={2} flex={1}>
-          <Heading fontFamily="Inter_600SemiBold" fontSize={15}>
+          <Heading
+            fontFamily="Inter_600SemiBold"
+            fontSize={15}
+            letterSpacing={-0.5}
+          >
             {nom}
           </Heading>
           <Text
             fontSize={13}
             color="blueGray.600"
-            marginTop={1}
             fontFamily="Inter_400Regular"
+            letterSpacing={-0.5}
           >
             {description}
           </Text>

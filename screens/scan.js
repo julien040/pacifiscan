@@ -63,15 +63,23 @@ function Scan({ route, navigation }) {
         timeToScan,
         confidence,
       });
+      if (confidence < 0.5) {
+        navigation.navigate("ScanInconnu", {
+          confidence,
+        });
+        return;
+      }
+
       await addToArray("NewScanned", {
         type: label,
         timestamp: Date.now(),
         uuid: uuid,
       });
+
       // Cas où il n'y a pas besoin de sélection
-      if (Array.isArray(Item) && Item.length === 1) {
+      if (Array.isArray(Item?.dechets) && Item?.dechets?.length === 1) {
         navigation.navigate("Item", {
-          id: Item[0],
+          id: Item?.dechets[0],
         });
       } else {
         navigation.navigate("ScanSelecteur", {
@@ -131,7 +139,11 @@ function Scan({ route, navigation }) {
             {
               // If we can't ask for permission anymore
               !CanAskAgain && (
-                <Text marginTop={4} fontFamily="Inter_500Medium">
+                <Text
+                  letterSpacing={-0.5}
+                  marginTop={4}
+                  fontFamily="Inter_500Medium"
+                >
                   Pour autoriser l'accès à la caméra, allez dans les paramètres
                   de votre appareil. Ensuite, selectionnez Pacifiscan dans les
                   applications et accordez l'accès à la caméra.
@@ -181,6 +193,7 @@ function Scan({ route, navigation }) {
               fontSize={14}
               fontFamily="Inter_500Medium"
               color="gray.500"
+              letterSpacing={-0.5}
             >
               La reconnaissance de déchet n'est pas toujours exacte.
               Excusez-nous de la gêne occasionnée.

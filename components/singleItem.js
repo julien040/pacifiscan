@@ -1,6 +1,7 @@
 import React from "react";
 import { Flex, Image, Text, Pressable } from "native-base";
 import { useNavigation } from "@react-navigation/core";
+import { SimpleSubTitle600 } from "./text";
 /* 
     Small Item Component
     
@@ -34,15 +35,9 @@ export const SmallItem = (props) => {
           height="56px"
           alt={"Une image de " + props.title}
           source={{ uri: props.image }}
+          marginBottom={2}
         />
-        <Text
-          marginTop={2}
-          fontWeight={700}
-          fontSize={14}
-          fontFamily="Inter_500Medium"
-        >
-          {props.title}
-        </Text>
+        <SimpleSubTitle600>{props.title}</SimpleSubTitle600>
       </Flex>
     </Pressable>
   );
@@ -52,23 +47,21 @@ export const Item = (props) => {
   const navigation = useNavigation();
   return (
     <Pressable
-      width="48%"
+      width="32%"
       borderRadius={10}
-      p={4}
+      p={3}
       backgroundColor={"brand.p45"}
-      my={2}
+      my={1}
       onPress={() => navigation.navigate("Item", { id: props.title })}
     >
-      <Flex>
+      <Flex align={"center"} justify="center">
         <Image
-          width="96px"
-          height="96px"
+          width="72px"
+          height="72px"
           alt="L'objet"
           source={{ uri: props.image }}
         />
-        <Text fontFamily="Inter_600SemiBold" color="blueGray.800">
-          {props.title}
-        </Text>
+        <SimpleSubTitle600 centered>{props.title}</SimpleSubTitle600>
       </Flex>
     </Pressable>
   );

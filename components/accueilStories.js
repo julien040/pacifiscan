@@ -32,7 +32,11 @@ function AccueilStories() {
         onRefresh={fetchData}
         ListEmptyComponent={() => (
           <Flex flex={1} align="center" justify="center">
-            <Text fontFamily="Inter_400Regular" fontSize={16}>
+            <Text
+              letterSpacing={-0.5}
+              fontFamily="Inter_400Regular"
+              fontSize={16}
+            >
               Aucune histoire à afficher
             </Text>
           </Flex>

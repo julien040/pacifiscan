@@ -5,6 +5,8 @@ import { PacifiScanHeader } from "../components";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Linking from "expo-linking";
 import CommuneSelect from "../components/communeSelector";
+import { MediumHeading } from "../components/heading";
+import Spacer from "../components/spacer";
 
 function Parametre({ navigation }) {
   const [ID, setID] = useState("");
@@ -24,27 +26,34 @@ function Parametre({ navigation }) {
       >
         <PacifiScanHeader variant="back" />
         <Flex marginTop={4} flex={1}>
-          <Heading marginTop={4} color="brand.iris100">
-            ID de compte :
-          </Heading>
+          <MediumHeading colored>ID de compte :</MediumHeading>
           <Text fontSize={13} fontFamily="Inter_400Regular" marginTop={2}>
             En cas de contact avec le support, veuillez indiquer votre ID de
             compte : {ID}
           </Text>
+          <Spacer />
           <CommuneSelect />
-          <Heading marginTop={4} color="brand.iris100">
-            Permissions de l'app :
-          </Heading>
-          <Text fontSize={13} fontFamily="Inter_400Regular" marginTop={2}>
+          <Spacer />
+          <MediumHeading colored>Permissions de l'app :</MediumHeading>
+          <Text
+            letterSpacing={-0.5}
+            fontSize={14}
+            fontFamily="Inter_400Regular"
+            marginTop={2}
+          >
             Nous ne pouvons malheureusement pas révoquer les permissions de
             l'application. Si vous n'êtes plus consentant, nous vous invitons à
             la désinstaller et contacter le support pour une suppression de
             données
           </Text>
-          <Heading marginTop={4} color="brand.iris100">
-            Donnéees collectées
-          </Heading>
-          <Text fontSize={13} fontFamily="Inter_400Regular" marginTop={2}>
+          <Spacer />
+          <MediumHeading colored>Donnéees collectées</MediumHeading>
+          <Text
+            letterSpacing={-0.5}
+            fontSize={14}
+            fontFamily="Inter_400Regular"
+            marginTop={2}
+          >
             Nous ne partageons pas vos données personnelles avec des tiers.
             Cependant, nous utilisons plusieurs sous processeurs pour traiter
             ces données : Amazon Web services, Expo, OVH, Scaleway, Cloudflare,

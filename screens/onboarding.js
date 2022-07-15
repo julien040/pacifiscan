@@ -78,20 +78,6 @@ function Onboard({ route, navigation }) {
           backgroundColor: "#EFF0FF",
           image: (
             <Image
-              source={require("../assets/illustration/retail.png")}
-              style={{ aspectRatio: 1 }}
-              height={"220px"}
-              alt="logo"
-            />
-          ),
-          title: "Réduisez votre impact",
-          subtitle:
-            "Dans le magasin, scannez les codes-barre et découvrez quels produits polluent le plus.",
-        },
-        {
-          backgroundColor: "#EFF0FF",
-          image: (
-            <Image
               source={require("../assets/illustration/stories.png")}
               style={{ aspectRatio: 1 }}
               height={"220px"}

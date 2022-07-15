@@ -24,7 +24,8 @@ function OuJeter({ id }) {
             borderWidth: 0, // Remove the border of the radio button
             _text: {
               fontFamily: "Inter_600SemiBold",
-              fontSize: 15,
+              fontSize: 14,
+              letterSpacing: -0.5,
             },
             _icon: { color: "brand.iris50" },
           }}
@@ -49,7 +50,12 @@ function OuJeter({ id }) {
     return <PointApport id={id} />;
   } else {
     return (
-      <Text px={4}>
+      <Text
+        px={2}
+        fontFamily="Inter_600SemiBold"
+        fontSize={14}
+        letterSpacing={-0.5}
+      >
         Nous n'avons pas de point d'apport disponible pour ce déchet dans notre
         base de données.
       </Text>

@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { Text, Pressable, Flex, FlatList, Heading, Image } from "native-base";
-import { PacifiScanHeader, PacifiScanFooter } from "../components";
+import { PacifiScanHeader } from "../components";
 import { getArray } from "../src/database/array";
 import association from "../src/donnees/associationAnglaisFrancais";
 import dechets from "../src/donnees/dechets";
-import { associationApi, wastesType } from "../src/waste/waste";
 import dayjs from "dayjs";
+import synonymes from "../src/donnees/synonymes";
+import associationAnglaisFrancais from "../src/donnees/associationAnglaisFrancais";
 
 function Historique({ navigation }) {
   const [Data, setData] = useState([]);
@@ -52,6 +53,7 @@ function Historique({ navigation }) {
             textAlign={"center"}
             fontSize={12}
             color={"gray.500"}
+            letterSpacing={-0.5}
           >
             Nombre de scan
           </Text>
@@ -96,7 +98,9 @@ const Item = ({ item, index, refresh, navigation }) => {
   return (
     <Pressable
       onPress={() =>
-        navigation.navigate("Item", { id: association[item.type][0] })
+        navigation.navigate("Item", {
+          id: associationAnglaisFrancais[item.type].nom,
+        })
       }
     >
       <Flex
@@ -107,17 +111,10 @@ const Item = ({ item, index, refresh, navigation }) => {
         m={1}
         flex={1}
       >
-        <Image
-          marginRight={2}
-          alt={item.type}
-          source={{ uri: dechets[association[item.type][0]].icone }}
-          width={10}
-          height={10}
-        />
-        <Text fontFamily="Inter_400Regular" flex={1}>
+        <Text letterSpacing={-0.5} fontFamily="Inter_400Regular" flex={1}>
           Vous avez scanné{" "}
           <Text fontWeight={"700"} color="brand.iris80">
-            {association[item.type][0]}
+            {associationAnglaisFrancais[item.type]?.nom}
           </Text>
           {" le "}
           {dayjs(item.timestamp).format("DD/MM/YYYY à hh:mm")} UTC

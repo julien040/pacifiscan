@@ -6,10 +6,12 @@ import Dechet from "../src/donnees/dechets";
 import { SafeAreaView } from "react-native-safe-area-context";
 import association from "../src/donnees/associationAnglaisFrancais";
 import { useNavigation } from "@react-navigation/native";
+import synonymes from "../src/donnees/synonymes";
+import { MediumHeading } from "../components/heading";
 
 function ScanSelecteur({ route, navigation }) {
   const { label, uuid, confidence } = route.params;
-  /** @type {Dechet["Vélo"]}
+  /** @type {association["A photo of a television"]}
    */
   const Item = association[label];
   if (Item === undefined) {
@@ -35,24 +37,23 @@ function ScanSelecteur({ route, navigation }) {
         flex={1}
       >
         <PacifiScanHeader variant="back" />
-        <Flex flex={1}>
-          <Heading fontSize={22} marginTop={4}>
-            Quel est la catégorie du déchet ?
-          </Heading>
+        <Flex paddingTop={4} flex={1}>
+          <MediumHeading>Quelle est la catégorie du déchet ?</MediumHeading>
           <Text
             marginTop={1}
             color={"gray.500"}
-            fontFamily="Inter_600SemiBold"
+            fontFamily="Inter_500Medium"
             fontSize={14}
+            letterSpacing={-0.5}
           >
-            Nous sommes sûrs du résultat à {confidence.toFixed(3) * 100} % !
+            Nous sommes sûrs du résultat à {confidence.toFixed(2) * 100} % !
           </Text>
           <FlatList
             initialNumToRender={2}
             style={{ marginTop: 16 }}
-            data={Item}
+            data={Item.dechets}
             renderItem={({ item }) => {
-              const { nom, icone } = Dechet[item];
+              const { nom, icone } = synonymes[item];
               return <SelectionItem nom={nom} icone={icone} />;
             }}
             keyExtractor={(item) => item}
@@ -78,7 +79,12 @@ const SelectionItem = ({ nom, icone }) => {
     >
       <Flex direction="row" align={"center"}>
         <Image source={{ uri: icone }} style={{ width: 50, height: 50 }} />
-        <Text fontFamily="Inter_600SemiBold" fontSize={14} marginLeft={2}>
+        <Text
+          letterSpacing={-0.5}
+          fontFamily="Inter_600SemiBold"
+          fontSize={14}
+          marginLeft={2}
+        >
           {nom}
         </Text>
       </Flex>

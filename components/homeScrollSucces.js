@@ -1,9 +1,9 @@
 import React from "react";
 import { FlatList, Spinner } from "native-base";
 import { SmallItem } from "./singleItem";
-import dechets from "../src/donnees/dechets";
+import synonyme from "../src/donnees/synonymes";
 
-const names = Object.keys(dechets);
+const names = Object.keys(synonyme);
 
 export const HomeSucces = () => {
   return (
@@ -14,7 +14,7 @@ export const HomeSucces = () => {
       ListEmptyComponent={() => <Spinner size={40} color="brand.iris80" />}
       data={names}
       renderItem={({ item, index }) => (
-        <SmallItem title={item} image={dechets[item].icone} />
+        <SmallItem title={item} image={synonyme[item].icone} />
       )}
     />
   );

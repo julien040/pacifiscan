@@ -10,9 +10,9 @@ const customButton = {
     borderRadius: "10px",
     _text: {
       color: "black",
-      fontWeight: "700",
       fontSize: 15,
-      fontFamily: "Inter_500Medium",
+      fontFamily: "Inter_600SemiBold",
+      letterSpacing: -0.65,
     },
     /*     padding:1, */
     paddingBottom: 3,

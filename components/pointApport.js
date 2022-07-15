@@ -9,6 +9,7 @@ import { BottomSheetFlatList } from "@gorhom/bottom-sheet";
 import getPointApport from "../src/getPointApport";
 import { Pressable, Platform } from "react-native";
 import { openURL } from "expo-linking";
+import { LargeHeading } from "./heading";
 
 function PointApport({ id }) {
   const [Loading, setLoading] = useState(true);
@@ -57,6 +58,7 @@ function PointApport({ id }) {
           marginBottom={"auto"}
           textAlign="center"
           marginTop={2}
+          letterSpacing={-0.5}
         >
           Chargement...
         </Text>
@@ -82,6 +84,7 @@ function PointApport({ id }) {
             fontFamily="Inter_600SemiBold"
             color="blueGray.700"
             textAlign="center"
+            letterSpacing={-0.5}
           >
             Vous avez déjà refusé l'accès à votre position. Allez dans les
             paramètres de l'appareil, cherchez Pacifiscan dans Applications et
@@ -96,6 +99,17 @@ function PointApport({ id }) {
       data={Points}
       renderItem={({ item }) => <ItemPointApportComponent item={item} />}
       keyExtractor={(item, index) => index.toString()}
+      ListHeaderComponent={() => (
+        <Text
+          fontFamily="Inter_500Medium"
+          fontSize={13}
+          color="blueGray.500"
+          letterSpacing={-0.5}
+        >
+          Voici la liste des points de collecte de votre déchet triés par
+          distance par rapport à vous
+        </Text>
+      )}
       ListEmptyComponent={
         Loading ? (
           <Text
@@ -103,6 +117,7 @@ function PointApport({ id }) {
             marginTop={4}
             fontFamily="Inter_600SemiBold"
             color="blueGray.700"
+            letterSpacing={-0.5}
           >
             Chargement...
           </Text>
@@ -111,6 +126,7 @@ function PointApport({ id }) {
             textAlign="center"
             fontFamily="Inter_600SemiBold"
             color="blueGray.700"
+            letterSpacing={-0.5}
           >
             Aucun point d'apport trouvé.
           </Text>
@@ -118,7 +134,7 @@ function PointApport({ id }) {
       }
       refreshing={Loading}
       onRefresh={getData}
-      style={{ padding: 12 }}
+      style={{ padding: 12, paddingTop: 0 }}
     />
   );
 }
@@ -134,10 +150,20 @@ const ItemPointApportComponent = ({ item }) => {
   return (
     <Flex my={2} bgColor={"brand.pbackground"} px={3} py={4} borderRadius={10}>
       <Flex justify="space-between" direction="row" align="center">
-        <Text fontFamily="Inter_600SemiBold" color="blueGray.800" fontSize={14}>
+        <Text
+          letterSpacing={-0.5}
+          fontFamily="Inter_600SemiBold"
+          color="blueGray.800"
+          fontSize={14}
+        >
           {item.nom}
         </Text>
-        <Text fontFamily="Inter_600SemiBold" color="blueGray.400" fontSize={13}>
+        <Text
+          letterSpacing={-0.5}
+          fontFamily="Inter_600SemiBold"
+          color="blueGray.400"
+          fontSize={13}
+        >
           {item.distance > 1000
             ? `${(item.distance / 1000).toFixed(1)} km`
             : `${item.distance.toFixed(0)} m`}
@@ -149,7 +175,11 @@ const ItemPointApportComponent = ({ item }) => {
         direction="row"
         align="center"
       >
-        <Text fontFamily="Inter_500Medium" color="blueGray.500">
+        <Text
+          letterSpacing={-0.5}
+          fontFamily="Inter_500Medium"
+          color="blueGray.500"
+        >
           {item.categorie}
         </Text>
         <Pressable
@@ -161,6 +191,7 @@ const ItemPointApportComponent = ({ item }) => {
             color={"brand.iris80"}
             fontFamily="Inter_600SemiBold"
             fontSize={13}
+            letterSpacing={-0.5}
           >
             S'y rendre {">"}{" "}
           </Text>

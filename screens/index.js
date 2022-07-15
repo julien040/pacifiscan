@@ -9,11 +9,8 @@ import Parametre from "./parametre";
 import Recherche from "./recherche";
 import Scan from "./scan";
 import ScanSelecteur from "./scanSelecteur";
-import Stat from "./stat";
+import ScanInconnu from "./scanInconnu";
 import Succe from "./succe";
-import ScanCaddy from "./scanCaddy";
-import Caddy from "./caddy";
-import CaddyHelp from "./caddyHelp";
 import Story from "./story";
 import Stories from "./stories";
 import Onboard from "./onboarding";
@@ -26,6 +23,7 @@ export {
   Recherche,
   Scan,
   ScanSelecteur,
+  ScanInconnu,
   Succe,
   Story,
   Stories,

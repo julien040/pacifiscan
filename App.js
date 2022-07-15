@@ -11,6 +11,7 @@ import {
   Inter_400Regular,
   Inter_500Medium,
   Inter_600SemiBold,
+  Inter_700Bold,
 } from "@expo-google-fonts/inter";
 import {
   Urbanist_600SemiBold,
@@ -35,6 +36,7 @@ import {
   Parametre,
   Scan,
   ScanSelecteur,
+  ScanInconnu,
   Succe,
   Story,
   Stories,
@@ -73,6 +75,7 @@ export default function App() {
           Inter_400Regular,
           Inter_500Medium,
           Inter_600SemiBold,
+          Inter_700Bold,
           Urbanist_600SemiBold,
           Urbanist_700Bold,
         });
@@ -147,6 +150,15 @@ export default function App() {
               name="ScanSelecteur"
               component={
                 ScanSelecteur
+              } /* L'interface pour choisir quel objet a été scanné */
+              options={{
+                presentation: "modal",
+              }}
+            />
+            <Stack.Screen
+              name="ScanInconnu"
+              component={
+                ScanInconnu
               } /* L'interface pour choisir quel objet a été scanné */
               options={{
                 presentation: "modal",

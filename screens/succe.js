@@ -19,9 +19,10 @@ import { useNavigation } from "@react-navigation/native";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { SafeAreaView } from "react-native-safe-area-context";
 
-const namesOfWastes = Object.keys(dechets);
+const namesOfWastes = Object.keys(synonyme);
+const searchable = Object.values(synonyme);
 
-const fuse = new Fuzzy(synonyme, { keys: ["nom"] });
+const fuse = new Fuzzy(searchable, { keys: ["nom", "synonyme"] });
 
 function Succe({ route, navigation }) {
   const [searchResult, setSearchResult] = useState([]);
@@ -29,10 +30,13 @@ function Succe({ route, navigation }) {
 
   const onChangeText = (text) => {
     setInput(text);
-    const result = fuse.search(text, { limit: 10 });
+    const result = fuse.search(text, { limit: 15 });
     setSearchResult(
       result.map((item) => {
-        return { nom: item.item.nom, dechet: item.item.dechet };
+        return {
+          nom: item.item.nom,
+          icone: item.item.icone,
+        };
       })
     );
   };
@@ -59,6 +63,7 @@ function Succe({ route, navigation }) {
           marginBottom={4}
           fontFamily="Inter_600SemiBold"
           placeholderTextColor="brand.iris50"
+          _input={{ letterSpacing: -0.5 }}
           placeholder="Rechercher un déchet"
           value={InputSearch}
           onChangeText={onChangeText}
@@ -71,21 +76,28 @@ function Succe({ route, navigation }) {
                 key={item}
                 title={item}
                 navigation={navigation}
-                image={dechets[item].icone}
+                image={synonyme[item].icone}
               />
             )}
             ListEmptyComponent={() => <Spinner color="brand.iris80" />}
-            initialNumToRender={1}
+            initialNumToRender={2}
             maxToRenderPerBatch={3}
             columnWrapperStyle={{ justifyContent: "space-between" }}
-            numColumns={2}
+            numColumns={3}
             style={{ flex: 1 }}
           />
         )}
         {InputSearch.length > 0 && (
           <FlatList
             data={searchResult}
-            renderItem={({ item }) => <SearchResultComponent {...item} />}
+            renderItem={({ item: { icone, nom } }) => (
+              <SmallSucce
+                key={nom}
+                title={nom}
+                navigation={nom}
+                image={icone}
+              />
+            )}
             ListEmptyComponent={() => (
               <Text fontFamily="Inter_600SemiBold" color="blueGray.700">
                 Aucun résultat
@@ -93,7 +105,7 @@ function Succe({ route, navigation }) {
             )}
             initialNumToRender={4}
             maxToRenderPerBatch={3}
-            numColumns={2}
+            numColumns={3}
             columnWrapperStyle={{ justifyContent: "space-between" }}
             style={{ flex: 1 }}
           />
