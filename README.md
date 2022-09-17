@@ -2,6 +2,10 @@
 
 Bievenue sur le GitHub de Pacifiscan !
 
+## Licence
+
+L'ensemble du code est sous licence GNU sauf les fichiers présents dans le dossier `src/donnees` à cause de certains partenaires ne souhaitant pas partager publiquement leurs données. Bien que le code soit disponible publiquement, nous vous invitons à nous contacter au préalable sur [contact@pacifiscan.org](mailto:contact@pacifiscan.org) avant tout réutilisation.
+
 ## Qu'est-ce que c'est ?
 
 Pacifiscan est une application qui aide à préserver la biodiversité marine
@@ -13,7 +17,6 @@ Pacifiscan est une application qui aide à préserver la biodiversité marine
 Nous avons 3 principales fonctionnalités :
 
 - Scan
-- Caddy
 - Stories
 
 Si vous souhaitez en savoir plus, nous vous invitons à consulter ce [pdf](https://oncle-stan.pacifiscan.org/documents/presentation.pdf)
