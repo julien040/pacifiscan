@@ -1,3 +1,7 @@
+/**
+ * ⚠️ Il est interdit de réutiliser ces données. Elles ne sont pas libres de droits.
+ * @license Propriétaire Province SUD et l'Association PACIFISCAN
+ */
 export default {
   recDQolLCUGp2oMiU: {
     nom: "Mairie de boulouparis",
