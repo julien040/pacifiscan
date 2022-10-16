@@ -16,7 +16,11 @@ export const HomeSucces = () => {
       ListEmptyComponent={() => <Spinner size={40} color="brand.iris80" />}
       data={names}
       renderItem={({ item, index }) => (
-        <SmallItem title={item} image={synonyme[item].icone} />
+        <SmallItem
+          title={item}
+          image={synonyme[item].icone}
+          name={synonyme[item].nom}
+        />
       )}
       ListFooterComponent={() => (
         <Pressable
