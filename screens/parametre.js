@@ -36,7 +36,7 @@ function Parametre({ navigation }) {
           <Spacer />
           <MediumHeading colored>Permissions de l'app :</MediumHeading>
           <Text
-            letterSpacing={-0.5}
+            letterSpacing={-0.3}
             fontSize={14}
             fontFamily="Inter_400Regular"
             marginTop={2}
@@ -49,7 +49,7 @@ function Parametre({ navigation }) {
           <Spacer />
           <MediumHeading colored>Donnéees collectées</MediumHeading>
           <Text
-            letterSpacing={-0.5}
+            letterSpacing={-0.3}
             fontSize={14}
             fontFamily="Inter_400Regular"
             marginTop={2}

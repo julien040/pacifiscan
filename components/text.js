@@ -19,9 +19,9 @@ export function SimpleSubTitle600(props) {
 }
 const styles = StyleSheet.create({
   regular: {
-    fontSize: 16,
+    fontSize: 15.5,
     fontFamily: "Inter_400Regular",
-    letterSpacing: -0.35,
+    letterSpacing: -0.25,
   },
   centered: {
     textAlign: "center",

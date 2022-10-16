@@ -1,936 +1,1066 @@
 export default {
-  "Aliments compostables": {
+  fiche_aliments_compostables: {
     nom: "Aliments compostables",
-    matiere: ["Organique"],
     queFaire:
-      "Compostez-les à domicile ou jetez-les dans un bac de compostage partagé, si cette dernière solution a été mise en place à proximité de votre domicile. Vous pouvez aussi les donner comme nourriture à des animaux domestiques. Sinon, jetez-les dans la poubelle des ordures ménagères.",
+      "Compostez votre d\u00e9chet \u00e0 domicile ou jetez-le dans un bac de compostage partag\u00e9, si cette derni\u00e8re solution a \u00e9t\u00e9 mise en place \u00e0 proximit\u00e9 de votre domicile. Vous pouvez aussi donner votre d\u00e9chet comme nourriture \u00e0 des animaux domestiques. Sinon, jetez votre d\u00e9chet dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: [
+      "492de2b2-123e-486b-a6e8-d442fe6fa25a",
+      "52213dbd-9a04-46de-a25a-4871f058e4d8",
+    ],
+    matiere: ["9a8e6648-8357-4b25-b749-ee4e3a650374"],
     commentEviter:
-      "Surveillez les dates de péremption des denrées alimentaires en mettant systématiquement les produits à consommer le plus rapidement devant les autres, adaptez au mieux les quantités cuisinées, conservez les restes utilisables et cuisinez-les. Composter vos aliments vous permettra d'obtenir un amendement naturel pour votre jardin ou vos plantes en pots. Tous les aliments ne sont cependant pas compostables et certains ne le sont qu'en quantités réduites.",
-    ouDeposer: null,
-    collecte: ["recTV8OnyMXgbNVY6", "recfH4zozLt2dY5Xc"],
+      "Surveillez les dates de p\u00e9remption des denr\u00e9es alimentaires en mettant syst\u00e9matiquement les produits \u00e0 consommer le plus rapidement devant les autres, adaptez au mieux les quantit\u00e9s cuisin\u00e9es, conservez les restes utilisables et cuisinez-les. Composter vos aliments vous permettra d'obtenir un amendement naturel pour votre jardin ou vos plantes en pots. Tous les aliments ne sont cependant pas compostables et certains ne le sont qu'en quantit\u00e9s r\u00e9duites.",
   },
-  Ampoule: {
+  fiche_ampoule: {
     nom: "Ampoule",
-    matiere: ["Métal", "Plastique", "Verre"],
     queFaire:
-      'Si le symbole de la "poubelle barrée" est apposé sur la lampe (communément appelée "ampoule"), cela signifie qu\'elle doit être recyclée et qu\'il ne faut donc pas la jeter dans la poubelle classique. La lampe est alors à déposer dans les bacs de collecte d\'ampoules. \nSi le symbole de la "poubelle barrée" n\'est pas apposé sur la lampe, jetez-la dans la poubelle d\'ordure ménagère.',
-    commentEviter:
-      "Privilégiez l'achat de lampes avec le logo environnemental de l'Écolabel Européen (Écolabel Européen - sources lumineuses), qui garantit de moindres impacts environnementaux des lampes tout au long de leur cycle de vie. Notamment, l'efficacité lumineuse doit être supérieure de 10 % en lumens par Watt à la valeur définie pour la catégorie A par la réglementation sur l'étiquetage énergétique des lampes.",
-    ouDeposer: ["recgWCKfoRvgGM3HP"],
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Appareil photo numérique": {
-    nom: "Appareil photo numérique",
-    matiere: ["Electronique"],
-    queFaire:
-      "S'il est encore en bon état, remettez-le à une structure de réemploi ou revendez-le. Dans le cadre de l'achat d'un produit neuf, rapportez votre ancien appareil à votre revendeur. Sinon apportez-le en déchèterie.",
-    commentEviter:
-      "Assurez-vous à l'achat qu'il bénéficie d'une bonne garantie réparation et faites durer autant que possible vos équipements.",
-    ouDeposer: ["recjf1B2CXLdvV2ed", "recu3wPYbMluiIoyZ"],
+      "Si le symbole de la \"poubelle barr\u00e9e\" est appos\u00e9 sur le d\u00e9chet, cela signifie qu'il doit \u00eatre recycl\u00e9 et qu'il ne faut donc pas le jeter dans la poubelle classique. Le d\u00e9chet est alors \u00e0 d\u00e9poser dans les bacs de collecte d'ampoules. \nSi le symbole de la \"poubelle barr\u00e9e\" n'est pas appos\u00e9 sur le d\u00e9chet, jetez-le dans la poubelle d'ordure m\u00e9nag\u00e8re.",
     collecte: null,
+    ouDeposer: ["320922eb-064d-48ea-aebb-f17ec38cc13d"],
+    matiere: [
+      "834ed2a2-2036-473f-933b-f0211eacc1bf",
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+    ],
+    commentEviter:
+      "Privil\u00e9giez l'achat de lampes avec le logo environnemental de l'\u00c9colabel Europ\u00e9en (\u00c9colabel Europ\u00e9en - sources lumineuses), qui garantit de moindres impacts environnementaux des lampes tout au long de leur cycle de vie. Notamment, l'efficacit\u00e9 lumineuse doit \u00eatre sup\u00e9rieure de 10 % en lumens par Watt \u00e0 la valeur d\u00e9finie pour la cat\u00e9gorie A par la r\u00e9glementation sur l'\u00e9tiquetage \u00e9nerg\u00e9tique des lampes.",
   },
-  "Barquette en aluminium": {
+  fiche_appareil_photo_numerique: {
+    nom: "Appareil photo num\u00e9rique",
+    queFaire:
+      "S'il est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi ou revendez-le.\u00a0Dans le cadre de l'achat d'un produit neuf, rapportez votre ancien appareil \u00e0 votre revendeur. Sinon apportez-le en d\u00e9ch\u00e8terie.",
+    collecte: null,
+    ouDeposer: [
+      "50e7762f-4d97-439d-aad2-a224fe324cdb",
+      "823afac7-2197-4e80-b7b4-4058507a4677",
+    ],
+    matiere: ["c38e5a97-410a-4a5b-b909-73002250735a"],
+    commentEviter:
+      "Assurez-vous \u00e0 l'achat qu'il b\u00e9n\u00e9ficie d'une bonne garantie r\u00e9paration et faites durer autant que possible vos \u00e9quipements.",
+  },
+  fiche_barquette_en_aluminium: {
     nom: "Barquette en aluminium",
-    matiere: ["Métal"],
     queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible, évitez les produits vendus dans des emballages individuels ou en mini-doses. Préférez-leur les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
     ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
+    matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
+    commentEviter:
+      "Dans la mesure du possible, \u00e9vitez les produits vendus dans des emballages individuels ou en mini-doses. Pr\u00e9f\u00e9rez-leur les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
   },
-  "Barquette en plastique": {
+  fiche_barquette_en_plastique: {
     nom: "Barquette en plastique",
-    matiere: ["Plastique"],
     queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible, évitez les produits vendus dans des emballages individuels ou en mini-doses. Préférez-leur les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
     ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Dans la mesure du possible, \u00e9vitez les produits vendus dans des emballages individuels ou en mini-doses. Pr\u00e9f\u00e9rez-leur les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
   },
-  Bateau: {
+  fiche_bateau: {
     nom: "Bateau",
-    matiere: ["Electronique", "Métal", "Pétrole"],
     queFaire:
-      "Le bateau doit être apporté dans un centre agréé pour la déconstruction des bateaux de plaisance en fin de vie.",
-    commentEviter:
-      "Prolongez la vie de votre bateau en l'entretenant régulièrement.",
-    ouDeposer: ["recBMv0Ek6RGKmT2o"],
+      "Le bateau doit \u00eatre apport\u00e9 dans un centre agr\u00e9\u00e9 pour la d\u00e9construction des bateaux en fin de vie.",
     collecte: null,
+    ouDeposer: ["b749f69c-1914-4bc8-ae70-f92503314266"],
+    matiere: [
+      "c38e5a97-410a-4a5b-b909-73002250735a",
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+    ],
+    commentEviter:
+      "Prolongez la vie de votre bateau en l'entretenant r\u00e9guli\u00e8rement.",
   },
-  Batterie: {
+  fiche_batterie: {
     nom: "Batterie",
-    matiere: ["Acide"],
     queFaire: "Rapportez-les dans un point de collecte.",
-    commentEviter: null,
-    ouDeposer: ["recBHglHbDdQbzdMd"],
-    collecte: null,
+    collecte: [],
+    ouDeposer: ["8f7c10fa-81b0-454e-af27-656b00ee1446"],
+    matiere: ["20ed67a1-23fb-4b90-af94-9ffaec0a83d2"],
   },
-  "Batterie automobile": {
+  fiche_batterie_automobile: {
     nom: "Batterie automobile",
-    matiere: ["Acide"],
-    queFaire: "Rapportez-la à un point de collecte.",
-    commentEviter: null,
-    ouDeposer: ["recqnt3daqaZvf70m"],
+    queFaire: "Rapportez-la \u00e0 un point de collecte.",
     collecte: null,
+    ouDeposer: ["748021e7-ab05-4b1b-ae28-fb9cec61d061"],
+    matiere: ["20ed67a1-23fb-4b90-af94-9ffaec0a83d2"],
   },
-  "Biberon en plastique": {
+  fiche_biberon_en_plastique: {
     nom: "Biberon en plastique",
-    matiere: ["Plastique"],
-    queFaire: "Jetez-le dans la poubelle des ordures ménagères.",
-    commentEviter: null,
+    queFaire: "Jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
     ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
   },
-  "Bidon d'huile de moteur": {
+  fiche_bidon_d_huile_de_moteur: {
     nom: "Bidon d'huile de moteur",
-    matiere: ["Plastique", "Pétrole"],
-    queFaire: "Déposez-le dans un point de collecte d'huiles usagées",
-    commentEviter: null,
-    ouDeposer: ["recLC9j3UvVKgA1UO"],
+    queFaire: "D\u00e9posez-le dans un point de collecte d'huiles usag\u00e9es",
     collecte: null,
+    ouDeposer: ["8e50cf67-6523-4c66-b054-35ba1cf51169"],
+    matiere: [
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+      "4c72350d-2112-4a20-a241-6e2f967d5d66",
+    ],
   },
-  Bijou: {
+  fiche_bijou: {
     nom: "Bijou",
-    matiere: ["Métaux précieux"],
     queFaire:
-      "S'il est encore en bon état, revendez l'objet. Sinon, jetez-le dans la poubelle des ordures ménagères.",
-    commentEviter: null,
+      "S'il est encore en bon \u00e9tat, revendez l'objet. Sinon, jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
     ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
+    matiere: ["7fc97cb2-4007-4e82-9c5d-d002662c7d70"],
   },
-  "Bocal en verre": {
+  fiche_bocal_en_verre: {
     nom: "Bocal en verre",
-    matiere: ["Verre"],
     queFaire:
-      "Jetez-le dans le conteneur réservé aux emballages recyclables en verre, sans son couvercle.",
+      "Jetez-le dans le conteneur r\u00e9serv\u00e9 aux emballages recyclables en verre, sans son couvercle.",
+    collecte: ["4a9d9452-e038-4340-b33c-15c9c7a2bf5b"],
+    ouDeposer: ["506107c0-a070-433f-9473-dd026c7e50bc"],
+    matiere: ["834ed2a2-2036-473f-933b-f0211eacc1bf"],
     commentEviter:
-      "Préférez des produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: ["rec1gvENVSU9FpXse"],
-    collecte: ["reczTSgY28rX8v7yH"],
+      "Pr\u00e9f\u00e9rez des produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
   },
-  Bois: {
+  fiche_bois: {
     nom: "Bois",
-    matiere: ["Bois"],
     queFaire:
-      "Si vous n'en avez plus l'usage, vous pouvez le donner ou le vendre. Sinon, déposez-le en déchèterie ou faites-le enlever par les services de votre collectivité chargés des encombrants ou des déchets verts.",
-    commentEviter: null,
-    ouDeposer: ["reciDtQhUBJqAenKs"],
+      "Si vous n'en avez plus l'usage, vous pouvez le donner ou le vendre. Sinon, d\u00e9posez-le en d\u00e9ch\u00e8terie ou faites-le enlever par les services de votre collectivit\u00e9 charg\u00e9s des encombrants ou des d\u00e9chets verts.",
     collecte: null,
+    ouDeposer: ["38b1590b-4f1f-4f4a-9b35-8ff7566d7df7"],
+    matiere: ["705f7085-caab-4c34-bdbb-2ddcfc2c8c4e"],
   },
-  "Bombe aérosol": {
-    nom: "Bombe aérosol",
-    matiere: ["Métal", "Produits chimiques"],
-    queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères. Dû à la pression, assurez-vous que le contenu du déchet est vide",
-    commentEviter: null,
+  fiche_boite_a_fromage_en_bois: {
+    nom: "Bo\u00eete \u00e0 fromage en bois",
+    queFaire: "Jetez-la dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
     ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
+    matiere: ["705f7085-caab-4c34-bdbb-2ddcfc2c8c4e"],
+    commentEviter:
+      "Dans la mesure du possible, \u00e9vitez les produits vendus dans des emballages individuels ou en mini-doses. Pr\u00e9f\u00e9rez-leur des produits en vrac qui produisent moins de d\u00e9chets et consomment moins d'\u00e9nergie. Il est \u00e9galement plus int\u00e9ressant d'acheter les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
   },
-  "Bouchons en plastique": {
+  fiche_boite_a_oeufs_en_carton: {
+    nom: "Bo\u00eete \u00e0 oeufs en carton",
+    queFaire:
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "1046405f-b101-4ffb-a810-1127502ea973",
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: ["ae0eba7d-5b65-4692-a728-c036a96336f6"],
+    matiere: ["5e184c02-a469-416a-8874-95f58b5c52d6"],
+    commentEviter:
+      "Dans la mesure du possible, \u00e9vitez les produits vendus dans des emballages individuels ou en mini-doses. Pr\u00e9f\u00e9rez-leur des produits en vrac qui produisent moins de d\u00e9chets et consomment moins d'\u00e9nergie. Il est \u00e9galement plus int\u00e9ressant d'acheter les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
+  },
+  fiche_boite_a_oeufs_en_plastique: {
+    nom: "Bo\u00eete \u00e0 oeufs en plastique",
+    queFaire:
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: ["3c6b1856-6df9-472c-a55b-4c394b21da61"],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Dans la mesure du possible, \u00e9vitez les produits vendus dans des emballages individuels ou en mini-doses. Pr\u00e9f\u00e9rez-leur des produits en vrac qui produisent moins de d\u00e9chets et consomment moins d'\u00e9nergie. Il est \u00e9galement plus int\u00e9ressant d'acheter les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
+  },
+  fiche_boite_de_conserve: {
+    nom: "Bo\u00eete de conserve",
+    queFaire:
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+      "1046405f-b101-4ffb-a810-1127502ea973",
+    ],
+    ouDeposer: ["e066ffc1-4626-47d0-aadb-6b3510c57a1a"],
+    matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
+    commentEviter:
+      "Dans la mesure du possible, \u00e9vitez les produits vendus dans des emballages individuels ou en mini-doses. Pr\u00e9f\u00e9rez-leur des produits en vrac qui produisent moins de d\u00e9chets et consomment moins d'\u00e9nergie. Il est \u00e9galement plus int\u00e9ressant d'acheter les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
+  },
+  fiche_boite_en_metal: {
+    nom: "Bo\u00eete en m\u00e9tal",
+    queFaire:
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "d59552f3-3290-4727-b114-acea0dd026a5",
+    ],
+    ouDeposer: ["e066ffc1-4626-47d0-aadb-6b3510c57a1a"],
+    matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
+    commentEviter:
+      "Pr\u00e9f\u00e9rez des produits en grand conditionnement mais restant adapt\u00e9 \u00e0 votre consommation pour \u00e9viter le gaspillage Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
+  },
+  fiche_boite_en_plastique: {
+    nom: "Bo\u00eete en plastique",
+    queFaire:
+      "Jetez-la dans le bac, le sac ou le conteneur r\u00e9serv\u00e9 aux emballages recyclables. Exception : si dans votre commune la consigne de trier tous les emballages en plastique n\u2019est pas encore en place, jetez-la dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: ["3c6b1856-6df9-472c-a55b-4c394b21da61"],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Dans la mesure du possible, \u00e9vitez les produits vendus dans des emballages individuels ou en mini-doses. Il est \u00e9galement plus int\u00e9ressant d'acheter les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
+  },
+  fiche_bombe_aerosol: {
+    nom: "Bombe a\u00e9rosol",
+    queFaire:
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res. D\u00fb \u00e0 la pression, assurez-vous que le contenu du d\u00e9chet est vide",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: [
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+      "a26297fa-7a1d-4b70-ab36-869470ed2625",
+    ],
+  },
+  fiche_bouchons_en_plastique: {
     nom: "Bouchons en plastique",
-    matiere: ["Plastique"],
     queFaire:
-      "Enlevez le bouchon de la bouteille et déposez-le dans les bacs prévus à cet effet",
+      "Enlevez le bouchon de la bouteille et d\u00e9posez-le dans les bacs pr\u00e9vus \u00e0 cet effet",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: ["e05829fb-46e6-44e3-bcf1-912d7c856fd1"],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
     commentEviter:
-      "Préférez les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Ils vous permettront de produire moins de déchets mais également de réaliser des économies.",
-    ouDeposer: ["recgGn6Pv5nroiZy1"],
-    collecte: null,
+      "Pr\u00e9f\u00e9rez les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Ils vous permettront de produire moins de d\u00e9chets mais \u00e9galement de r\u00e9aliser des \u00e9conomies.",
   },
-  Bougie: {
+  fiche_bougie: {
     nom: "Bougie",
-    matiere: ["Pétrole"],
-    queFaire: "Jetez-la dans la poubelle des ordures ménagères.",
+    queFaire: "Jetez-la dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: [],
+    matiere: ["4c72350d-2112-4a20-a241-6e2f967d5d66"],
     commentEviter:
-      "Veillez à choisir des produits écolabellisés. L'écolabel Nordique garantit que l'emballage ne dépasse pas 5% du poids de la bougie.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
+      "Veillez \u00e0 choisir des produits \u00e9colabellis\u00e9s. L'\u00e9colabel Nordique garantit que l'emballage ne d\u00e9passe pas 5% du poids de la bougie.",
   },
-  "Bouteille de gaz": {
+  fiche_bouteille_de_gaz: {
     nom: "Bouteille de gaz",
-    matiere: ["Métal", "Gaz"],
     queFaire:
-      "Déposez-la à un point de vente qui distribue la marque de la bouteille (stations-service) pour l'échanger.",
-    commentEviter: null,
-    ouDeposer: null,
+      "D\u00e9posez-la \u00e0 un point de vente qui distribue la marque de la bouteille (stations-service) pour l'\u00e9changer.",
     collecte: null,
+    ouDeposer: null,
+    matiere: [
+      "02ee1bd2-104f-409e-98a5-82a4ece7ff7b",
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+    ],
   },
-  "Bouteille en métal": {
-    nom: "Bouteille en métal",
-    matiere: ["Métal"],
+  fiche_bouteille_en_metal: {
+    nom: "Bouteille en m\u00e9tal",
     queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: ["e066ffc1-4626-47d0-aadb-6b3510c57a1a"],
+    matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
     commentEviter:
-      "Dans la mesure du possible achetez des produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: ["recuH029OCQ4UAjTR"],
-    collecte: ["recfH4zozLt2dY5Xc", "recfQpZkt563niDFF", "recqaZuR2Sm80qY99"],
+      "Dans la mesure du possible achetez des produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
   },
-  "Bouteille en plastique": {
+  fiche_bouteille_en_plastique: {
     nom: "Bouteille en plastique",
-    matiere: ["Plastique"],
     queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: ["3c6b1856-6df9-472c-a55b-4c394b21da61"],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
     commentEviter:
-      "Dans le cas des produits d'entretien, optez pour des produits concentrés et utilisez des éco-recharges. S'il n'existe pas de produits concentrés, préférez les produits en grand conditionnement. Ils vous permettront de produire moins de déchets mais également de réaliser des économies. Pensez à respecter les doses préconisées.",
-    ouDeposer: ["recVKEY3tl3NFY3M3"],
-    collecte: ["recfH4zozLt2dY5Xc", "recqaZuR2Sm80qY99", "recfQpZkt563niDFF"],
+      "Dans le cas des produits d'entretien, optez pour des produits concentr\u00e9s et utilisez des \u00e9co-recharges. S'il n'existe pas de produits concentr\u00e9s, pr\u00e9f\u00e9rez les produits en grand conditionnement. Ils vous permettront de produire moins de d\u00e9chets mais \u00e9galement de r\u00e9aliser des \u00e9conomies. Pensez \u00e0 respecter les doses pr\u00e9conis\u00e9es.",
   },
-  "Bouteille en verre": {
+  fiche_bouteille_en_verre: {
     nom: "Bouteille en verre",
-    matiere: ["Verre"],
     queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: ["506107c0-a070-433f-9473-dd026c7e50bc"],
+    matiere: ["834ed2a2-2036-473f-933b-f0211eacc1bf"],
     commentEviter:
-      "Dans la mesure du possible, évitez les produits vendus dans des emballages individuels ou en mini-doses. Préférez-leur des produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: ["rec1gvENVSU9FpXse"],
-    collecte: ["recfH4zozLt2dY5Xc", "reczTSgY28rX8v7yH"],
+      "Dans la mesure du possible, \u00e9vitez les produits vendus dans des emballages individuels ou en mini-doses. Pr\u00e9f\u00e9rez-leur des produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
   },
-  "Boîte de conserve": {
-    nom: "Boîte de conserve",
-    matiere: ["Métal"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible, évitez les produits vendus dans des emballages individuels ou en mini-doses. Préférez-leur des produits en vrac qui produisent moins de déchets et consomment moins d'énergie. Il est également plus intéressant d'acheter les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: ["recuH029OCQ4UAjTR"],
-    collecte: [
-      "recfH4zozLt2dY5Xc",
-      "recqaZuR2Sm80qY99",
-      "recfQpZkt563niDFF",
-      "recBjXU8eZXAAYhjT",
-    ],
-  },
-  "Boîte en métal": {
-    nom: "Boîte en métal",
-    matiere: ["Métal"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter:
-      "Préférez des produits en grand conditionnement mais restant adapté à votre consommation pour éviter le gaspillage Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: ["recuH029OCQ4UAjTR"],
-    collecte: [
-      "recfH4zozLt2dY5Xc",
-      "recBjXU8eZXAAYhjT",
-      "recqaZuR2Sm80qY99",
-      "recfQpZkt563niDFF",
-    ],
-  },
-  "Boîte en plastique": {
-    nom: "Boîte en plastique",
-    matiere: ["Plastique"],
-    queFaire:
-      "Jetez-la dans le bac, le sac ou le conteneur réservé aux emballages recyclables. Exception : si dans votre commune la consigne de trier tous les emballages en plastique n’est pas encore en place, jetez-la dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible, évitez les produits vendus dans des emballages individuels ou en mini-doses. Il est également plus intéressant d'acheter les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: ["recVKEY3tl3NFY3M3"],
-    collecte: ["recfH4zozLt2dY5Xc", "recqaZuR2Sm80qY99"],
-  },
-  "Boîte à fromage en bois": {
-    nom: "Boîte à fromage en bois",
-    matiere: ["Bois"],
-    queFaire: "Jetez-la dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible, évitez les produits vendus dans des emballages individuels ou en mini-doses. Préférez-leur des produits en vrac qui produisent moins de déchets et consomment moins d'énergie. Il est également plus intéressant d'acheter les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Boîte à oeufs en carton": {
-    nom: "Boîte à oeufs en carton",
-    matiere: ["Carton"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible, évitez les produits vendus dans des emballages individuels ou en mini-doses. Préférez-leur des produits en vrac qui produisent moins de déchets et consomment moins d'énergie. Il est également plus intéressant d'acheter les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: ["recUU9CK8FgPn6qoV"],
-    collecte: ["recqaZuR2Sm80qY99", "recfQpZkt563niDFF", "recfH4zozLt2dY5Xc"],
-  },
-  "Boîte à oeufs en plastique": {
-    nom: "Boîte à oeufs en plastique",
-    matiere: ["Plastique"],
-    queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible, évitez les produits vendus dans des emballages individuels ou en mini-doses. Préférez-leur des produits en vrac qui produisent moins de déchets et consomment moins d'énergie. Il est également plus intéressant d'acheter les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: ["recVKEY3tl3NFY3M3"],
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Brique alimentaire": {
+  fiche_brique_alimentaire: {
     nom: "Brique alimentaire",
-    matiere: ["Métal", "Plastique"],
     queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible, préférez les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Ils vous permettront de produire moins de déchets mais également de réaliser des économies.",
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
     ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
+    matiere: [
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+    ],
+    commentEviter:
+      "Dans la mesure du possible, pr\u00e9f\u00e9rez les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Ils vous permettront de produire moins de d\u00e9chets mais \u00e9galement de r\u00e9aliser des \u00e9conomies.",
   },
-  Briquet: {
+  fiche_briquet: {
     nom: "Briquet",
-    matiere: ["Plastique", "Gaz"],
-    queFaire: "Jetez-le vide dans la poubelle des ordures ménagères.",
-    commentEviter: null,
+    queFaire: "Jetez-le vide dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
     ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Brosse à dents": {
-    nom: "Brosse à dents",
-    matiere: ["Plastique"],
-    queFaire: "Jetez-la dans la poubelle des ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  Cahier: {
-    nom: "Cahier",
-    matiere: ["Papier"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux déchets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter:
-      "Veillez à choisir un produit écolabellisé, qui vous garantit l'utilisation de fibres recyclées dans les feuilles et la couverture, mais aussi un produit plus facilement recyclable en fin de vie.",
-    ouDeposer: ["recUU9CK8FgPn6qoV", "rec1gvENVSU9FpXse"],
-    collecte: ["recfH4zozLt2dY5Xc", "recfQpZkt563niDFF", "recqaZuR2Sm80qY99"],
-  },
-  Canette: {
-    nom: "Canette",
-    matiere: ["Métal"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux déchets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible, préférez les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Ils vous permettront de produire moins de déchets mais également de réaliser des économies.",
-    ouDeposer: ["recuH029OCQ4UAjTR", "rec1gvENVSU9FpXse"],
-    collecte: [
-      "recqaZuR2Sm80qY99",
-      "recfQpZkt563niDFF",
-      "recBjXU8eZXAAYhjT",
-      "recfH4zozLt2dY5Xc",
+    matiere: [
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+      "02ee1bd2-104f-409e-98a5-82a4ece7ff7b",
     ],
   },
-  "Capsules de café ou de thé": {
-    nom: "Capsules de café ou de thé",
-    matiere: ["Plastique"],
+  fiche_brosse_a_dents: {
+    nom: "Brosse \u00e0 dents",
+    queFaire: "Jetez-la dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+  },
+  fiche_cahier: {
+    nom: "Cahier",
     queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères.",
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux d\u00e9chets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: [
+      "ae0eba7d-5b65-4692-a728-c036a96336f6",
+      "506107c0-a070-433f-9473-dd026c7e50bc",
+    ],
+    matiere: ["062f5089-d66a-4e9d-88db-da291cec07c4"],
     commentEviter:
-      "Dans la mesure du possible, évitez les produits vendus dans des emballages individuels ou en mini-doses. Préférez-leur des produits en vrac qui produisent moins de déchets et consomment moins d'énergie. Il est également plus intéressant d'acheter les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
+      "Veillez \u00e0 choisir un produit \u00e9colabellis\u00e9, qui vous garantit l'utilisation de fibres recycl\u00e9es dans les feuilles et la couverture, mais aussi un produit plus facilement recyclable en fin de vie.",
   },
-  "Carte à puce (bancaire, de téléphone, d'identité)": {
-    nom: "Carte à puce (bancaire, de téléphone, d'identité)",
-    matiere: ["Electronique", "Plastique"],
+  fiche_canette: {
+    nom: "Canette",
     queFaire:
-      "Remettez votre carte bancaire périmée à votre agence bancaire. Jetez les autres cartes à puce à la poubelle des ordures ménagères si elles ne contiennent pas de données personnelles.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux d\u00e9chets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "1046405f-b101-4ffb-a810-1127502ea973",
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+      "d59552f3-3290-4727-b114-acea0dd026a5",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: [
+      "e066ffc1-4626-47d0-aadb-6b3510c57a1a",
+      "506107c0-a070-433f-9473-dd026c7e50bc",
+    ],
+    matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
+    commentEviter:
+      "Dans la mesure du possible, pr\u00e9f\u00e9rez les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Ils vous permettront de produire moins de d\u00e9chets mais \u00e9galement de r\u00e9aliser des \u00e9conomies.",
   },
-  Carton: {
+  fiche_capsules_de_cafe_ou_de_the: {
+    nom: "Capsules de caf\u00e9 ou de th\u00e9",
+    queFaire:
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Dans la mesure du possible, \u00e9vitez les produits vendus dans des emballages individuels ou en mini-doses. Pr\u00e9f\u00e9rez-leur des produits en vrac qui produisent moins de d\u00e9chets et consomment moins d'\u00e9nergie. Il est \u00e9galement plus int\u00e9ressant d'acheter les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
+  },
+  fiche_carte_a_puce__bancaire__de_telephone__d_identite_: {
+    nom: "Carte \u00e0 puce (bancaire, de t\u00e9l\u00e9phone, d'identit\u00e9)",
+    queFaire:
+      "Remettez votre carte bancaire p\u00e9rim\u00e9e \u00e0 votre agence bancaire. Jetez les autres cartes \u00e0 puce \u00e0 la poubelle des ordures m\u00e9nag\u00e8res si elles ne contiennent pas de donn\u00e9es personnelles.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: [
+      "c38e5a97-410a-4a5b-b909-73002250735a",
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+    ],
+  },
+  fiche_carton: {
     nom: "Carton",
-    matiere: ["Carton"],
     queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux déchets recyclables si votre commune le supporte. Dans le cas où le carton serait trop grand, déposez-le en déchetterie",
-    commentEviter: null,
-    ouDeposer: ["recUU9CK8FgPn6qoV"],
-    collecte: ["recfH4zozLt2dY5Xc", "recqaZuR2Sm80qY99", "recfQpZkt563niDFF"],
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux d\u00e9chets recyclables si votre commune le supporte. Dans le cas o\u00f9 le carton serait trop grand, d\u00e9posez-le en d\u00e9chetterie",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: ["ae0eba7d-5b65-4692-a728-c036a96336f6"],
+    matiere: ["5e184c02-a469-416a-8874-95f58b5c52d6"],
   },
-  "Cartouche d'encre": {
+  fiche_cartouche_d_encre: {
     nom: "Cartouche d'encre",
-    matiere: ["Plastique", "Pétrole"],
     queFaire:
-      "Certaines enseignes proposent de racheter vos cartouches vides. Sinon jetez-les dans la poubelle d'ordures ménagères",
-    commentEviter:
-      "Évitez de tout imprimer : les courriels, les documents de travail en intégralité, les présentations numériques. Sélectionnez seulement ce qu'il est indispensable de conserver. ",
+      "Certaines enseignes proposent de racheter vos cartouches vides. Sinon jetez-les dans la poubelle d'ordures m\u00e9nag\u00e8res",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
     ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "CD/DVD": {
-    nom: "CD/DVD",
-    matiere: ["Plastique"],
-    queFaire:
-      "Remettez vos disques et cassettes à une structure de réemploi. S'ils ne sont plus utilisables, jetez-les dans la poubelle des ordures ménagères. Les boîtiers en plastique sont également à jeter dans la poubelle des ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: ["recOkqmNZoMeqSRgy"],
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  Chaussures: {
-    nom: "Chaussures",
-    matiere: ["Cuir", "Tissu"],
-    queFaire:
-      "Si elles sont encore en bon état, donnez-les. Sinon, jetez-les dans la poubelle d'ordures ménagères",
+    matiere: [
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+      "4c72350d-2112-4a20-a241-6e2f967d5d66",
+    ],
     commentEviter:
-      "Privilégiez des produits écolabellisés. Certains des écolabels vous garantissent un produit vendu dans un emballage majoritairement composé de matériaux recyclés (100 % pour le carton et au moins 75 % pour les plastiques) ou biodégradables ou compostables (au moins 75 % pour le plastique).",
-    ouDeposer: ["recLYksQXCMrVjUN9"],
-    collecte: ["recfH4zozLt2dY5Xc"],
+      "\u00c9vitez de tout imprimer : les courriels, les documents de travail en int\u00e9gralit\u00e9, les pr\u00e9sentations num\u00e9riques. S\u00e9lectionnez seulement ce qu'il est indispensable de conserver. ",
   },
-  "Chewing-gum": {
-    nom: "Chewing-gum",
-    matiere: ["Pétrole"],
-    queFaire: "Jetez-le dans la poubelle des ordures ménagères",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Cigarette électronique": {
-    nom: "Cigarette électronique",
-    matiere: ["Plastique"],
-    queFaire:
-      "Dans le cadre de l'achat d'un produit neuf, rapportez l'ancienne cigarette électronique à votre revendeur.",
-    commentEviter: "Faites durer autant que possible votre équipement.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Coquilles d'oeufs": {
-    nom: "Coquilles d'oeufs",
-    matiere: ["Organique"],
-    queFaire:
-      "Jetez-les en petites quantités dans le tas de compost ou le bac individuel ou partagé de compostage (si cette dernière solution a été mise en place à proximité de votre domicile). Sinon, jetez-les dans la poubelle des ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recTV8OnyMXgbNVY6", "recfH4zozLt2dY5Xc"],
-  },
-  "Cosmétique (produit et emballage)": {
-    nom: "Cosmétique (produit et emballage)",
-    matiere: ["Plastique", "Pétrole", "Produits chimiques"],
-    queFaire:
-      "L'emballage, bien vidé, est à jeter dans le bac, le sac ou le conteneur approprié au matériau composant l'emballage (voir autres déchets). S'il reste du produit dans le pot, le tube, la bouteille ou le flacon, et qu'il est périmé, jetez-le dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Veillez à choisir des produits portant un logo environnemental. Il atteste que le produit intègre des composants naturels et issus de l'agriculture biologique. Certains vous garantissent également une gestion optimisée des déchets lors de la production.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Coton-tige": {
-    nom: "Coton-tige",
-    matiere: ["Plastique", "Bois", "Coton"],
-    queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Couche-culotte": {
-    nom: "Couche-culotte",
-    matiere: ["Plastique"],
-    queFaire:
-      "Jetez les couches culottes dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Les couches lavables ne sont pas forcément une meilleure solution que les couches jetables. Elles présentent un intérêt en termes de réduction des déchets, mais génèrent des consommations d'eau et d'énergie pour leur lavage. Si vous choisissez des couches lavables, utilisez des lessives portant un logo environnemental et respectez les doses conseillées. Pour les couches jetables, préférez celles porteuses du logo \"Nordic Swan\", qui garantit une moindre production de déchets au moment de la fabrication des couches.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Tube de dentifrice": {
-    nom: "Tube de dentifrice",
-    matiere: ["Plastique"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux déchets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc", "recqaZuR2Sm80qY99", "recfQpZkt563niDFF"],
-  },
-  "Déchets verts": {
-    nom: "Déchets verts",
-    matiere: ["Organique"],
-    queFaire:
-      "Les déchets verts peuvent servir à pailler au pied de vos plantes dans le jardin. Vous pouvez aussi les intégrer à votre compost. Sinon apportez-les en déchèterie ou faites-les enlever si une collecte des biodéchets en porte à porte est proposée par votre collectivité.",
-    commentEviter:
-      "Planter des végétaux à croissance lente (arbustes, gazon) limite fortement la production de résidus. La gestion différenciée des espaces permet de réserver certaines zones à un développement plus naturel générant moins de résidus (prairie fauchée une fois l'an...). Laisser les résidus sur place (feuilles, tontes broyées avec tondeuses mulcheuses).",
-    ouDeposer: ["reciDtQhUBJqAenKs"],
-    collecte: ["recTV8OnyMXgbNVY6"],
-  },
-  "Eau de Javel (bouteille)": {
-    nom: "Eau de Javel (bouteille)",
-    matiere: ["Plastique"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux déchets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter:
-      "Optez pour des éco-recharges concentrées. Veillez à respecter les doses indiquées sur les consignes.",
-    ouDeposer: ["recVKEY3tl3NFY3M3"],
-    collecte: ["recfH4zozLt2dY5Xc", "recqaZuR2Sm80qY99", "recfQpZkt563niDFF"],
-  },
-  "Essuie-tout": {
-    nom: "Essuie-tout",
-    matiere: ["Papier"],
-    queFaire:
-      "Compostez-le à domicile ou jetez-le dans un bac de compostage partagé, si cette dernière solution a été mise en place à proximité de votre domicile. Sinon, jetez-le dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Préférez des produits portant l'Écolabel Européen. Du papier essuie-tout portant cet écolabel est composé de fibres recyclées ou issues de forêts gérées durablement.",
-    ouDeposer: null,
-    collecte: ["recTV8OnyMXgbNVY6", "recfH4zozLt2dY5Xc"],
-  },
-  "Pièce automobile": {
-    nom: "Pièce automobile",
-    matiere: ["Plastique", "Métal"],
-    queFaire:
-      "Suivant la nature de l'objet, jetez-le dans la poubelle des ordures ménagères ou apportez-le en déchèterie.\nSi la pièce fait suite à une réparation chez le garagiste, demandez-lui de conserver la pièce.",
-    commentEviter:
-      "Vous pouvez demander à votre garagiste d'utiliser des pièces d'occasion plutôt que des pièces neuves",
-    ouDeposer: ["recuH029OCQ4UAjTR"],
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Film plastique": {
-    nom: "Film plastique",
-    matiere: ["Plastique"],
-    queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Filtre à café": {
-    nom: "Filtre à café",
-    matiere: ["Papier"],
-    queFaire:
-      "Compostez-le à domicile ou jetez-le dans un bac de compostage partagé, si cette dernière solution a été mise en place à proximité de votre domicile. Sinon, jetez-le dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Comme beaucoup de résidus alimentaires, les filtres à café peuvent être valorisés par compostage. Faire votre compost vous permettra d'obtenir un amendement naturel pour votre jardin ou vos plantes en pots.",
-    ouDeposer: null,
-    collecte: ["recTV8OnyMXgbNVY6", "recfH4zozLt2dY5Xc"],
-  },
-  "Flacon en plastique": {
-    nom: "Flacon en plastique",
-    matiere: ["Plastique"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux déchets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter:
-      "Dans le cas des produits d'entretien, optez pour des produits concentrés et utilisez des éco-recharges. S'il n'existe pas de produits concentrés, préférez les produits en grand conditionnement. Ils vous permettront de produire moins de déchets mais également de réaliser des économies.<br/><br/>Pensez à respecter les doses préconisées.",
-    ouDeposer: ["recVKEY3tl3NFY3M3"],
-    collecte: ["recfH4zozLt2dY5Xc", "recqaZuR2Sm80qY99", "recfQpZkt563niDFF"],
-  },
-  "Gobelet en carton": {
-    nom: "Gobelet en carton",
-    matiere: ["Carton"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux déchets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter:
-      "Si ce n'est pas trop compliqué, privilégiez la vaisselle lavable et réutilisable (mug, tasse, verre...)",
-    ouDeposer: ["recUU9CK8FgPn6qoV"],
-    collecte: ["recqaZuR2Sm80qY99", "recfQpZkt563niDFF", "recfH4zozLt2dY5Xc"],
-  },
-  "Gobelet en plastique jetable": {
-    nom: "Gobelet en plastique jetable",
-    matiere: ["Plastique"],
-    queFaire:
-      "Jetez les gobelets en plastique dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Privilégiez la vaisselle lavable et réutilisable (mug, tasse, verre...).",
-    ouDeposer: ["recVKEY3tl3NFY3M3"],
-    collecte: ["recfH4zozLt2dY5Xc", "recqaZuR2Sm80qY99", "recfQpZkt563niDFF"],
-  },
-  "Gros électroménager": {
-    nom: "Gros électroménager",
-    matiere: ["Electronique", "Métal"],
-    queFaire:
-      "Si votre appareil est encore en bon état, remettez-le à une structure de réemploi ou revendez-le. Sinon, apportez-le en déchèterie.",
-    commentEviter:
-      "Assurez-vous à l'achat qu'il bénéficie d'une bonne garantie réparation. Privilégiez les appareils qui sont démontables pour faire face à une éventuelle panne après expiration de la garantie et entretenez régulièrement vos équipements électriques et électroniques afin de prolonger leur vie. Faites les réparer lorsque c'est possible.",
-    ouDeposer: ["recF9aJRo8K0v740b", "recSnMXSFlp0nPJtc"],
-    collecte: null,
-  },
-  "Huile de friture": {
-    nom: "Huile de friture",
-    matiere: ["Organique"],
-    queFaire:
-      "Il n'existe par de filière de collecte pour les huiles de fritures des particuliers.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: null,
-  },
-  "Jeu vidéo (cassette ou cartouche DS, PS3, Xbox...)": {
-    nom: "Jeu vidéo (cassette ou cartouche DS, PS3, Xbox...)",
-    matiere: ["Electronique", "Plastique"],
-    queFaire:
-      "S'il est encore en bon état, remettez-le à une structure de réemploi ou revendez-le. Sinon jetez-le dans la poubelle des ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: ["recOkqmNZoMeqSRgy"],
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  Journal: {
-    nom: "Journal",
-    matiere: ["Papier"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux déchets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: ["rec1gvENVSU9FpXse"],
-    collecte: ["recqaZuR2Sm80qY99", "recfQpZkt563niDFF", "recfH4zozLt2dY5Xc"],
-  },
-  Livre: {
-    nom: "Livre",
-    matiere: ["Papier"],
-    queFaire:
-      "S'il est encore en bon état, remettez-le à une structure de réemploi (association, recyclerie...) ou revendez-le. Sinon, jetez-le dans le bac ou le conteneur prévu pour le papier si votre commune le supporte.",
-    commentEviter: null,
-    ouDeposer: ["recqUQOAGGS1b1qBm", "recOkqmNZoMeqSRgy"],
-    collecte: ["recfH4zozLt2dY5Xc", "recqaZuR2Sm80qY99", "recfQpZkt563niDFF"],
-  },
-  "Fruits et légumes abîmés": {
-    nom: "Fruits et légumes abîmés",
-    matiere: ["Organique"],
-    queFaire:
-      "Compostez-les à domicile ou jetez-les dans un bac de compostage partagé, si cette dernière solution a été mise en place à proximité de votre domicile. Sinon, jetez-les dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Comme beaucoup de résidus alimentaires, les légumes abîmés peuvent être valorisés par compostage. Faire votre compost vous permettra d'obtenir un amendement naturel pour votre jardin ou vos plantes en pots.",
-    ouDeposer: null,
-    collecte: ["recTV8OnyMXgbNVY6", "recfH4zozLt2dY5Xc"],
-  },
-  "Masque à usage unique": {
-    nom: "Masque à usage unique",
-    matiere: ["Plastique", "Tissu"],
-    queFaire:
-      "Si vous n'êtes pas malade, jetez vos masques dans la poubelle des ordures ménagères. Si vous êtes malade jetez vos masques dans un sac poubelle dédié aux masques, mouchoirs en papier, lingettes désinfectantes et gants jetables, résistant, opaque et disposant d'un système de fermeture fonctionnel. Lorsque le sac est rempli, refermez-le soigneusement, placez le dans un deuxième sac du même type et conservez-le 24 heures. Puis jetez-le dans le sac poubelle des ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Matelas (en mousse, à ressorts...)": {
-    nom: "Matelas (en mousse, à ressorts...)",
-    matiere: ["Pétrole", "Tissu"],
-    queFaire:
-      "S'il est encore en bon état, remettez-le à une structure de réemploi. Sinon rapportez-le en déchèterie.",
-    commentEviter: null,
-    ouDeposer: ["rec81BUGYJYXAfLid"],
-    collecte: null,
-  },
-  "Matériaux de construction": {
-    nom: "Matériaux de construction",
-    matiere: ["Calcaire"],
-    queFaire:
-      "Faites enlever ces déchets par l'entrepreneur qui réalise vos travaux de rénovation. Il les évacuera vers des plateformes dédiées (en contrepartie d'une rémunération fixée lors du devis initial ou en fonction de la quantité évacuée). Déposez-les en déchèterie si vous réalisez des travaux vous-même et que la quantité de déchets à éliminer est limitée. Si les quantités sont trop importantes, faîtes appel à une entreprise spécialisée.",
-    commentEviter: null,
-    ouDeposer: ["recj2IuPFW4cfYwST"],
-    collecte: null,
-  },
-  Informatique: {
-    nom: "Informatique",
-    matiere: ["Electronique", "Plastique"],
-    queFaire:
-      "Si l'appareil est encore en bon état, remettez-le à une structure de réemploi ou revendez-le. Sinon, apportez-le en déchèterie.",
-    commentEviter:
-      "Assurez-vous à l'achat qu'il bénéficie d'une bonne garantie réparation et faites durer autant que possible votre équipement.",
-    ouDeposer: ["recjf1B2CXLdvV2ed", "recu3wPYbMluiIoyZ"],
-    collecte: null,
-  },
-  Jouet: {
-    nom: "Jouet",
-    matiere: ["Plastique"],
-    queFaire:
-      "S'il est encore en bonne état, donnez l'objet à une association. Sinon, déposez le en déchetterie",
-    commentEviter: null,
-    ouDeposer: ["recuH029OCQ4UAjTR", "recOkqmNZoMeqSRgy"],
-    collecte: null,
-  },
-  Meuble: {
-    nom: "Meuble",
-    matiere: ["Bois"],
-    queFaire:
-      "Si le meuble est encore en bon état, remettez-le à une structure de réemploi ou revendez-le. S'il n'est plus utilisable, rapportez-le en déchèterie.",
-    commentEviter: null,
-    ouDeposer: ["rec81BUGYJYXAfLid"],
-    collecte: null,
-  },
-  "Mouchoir en papier": {
-    nom: "Mouchoir en papier",
-    matiere: ["Papier"],
-    queFaire: "Jetez-le dans la poubelle d'ordures ménagères",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  Médicaments: {
-    nom: "Médicaments",
-    matiere: ["Produits chimiques"],
-    queFaire: "Déposez-les dans une pharmacie.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: null,
-  },
-  "Mégot de cigarette": {
-    nom: "Mégot de cigarette",
-    matiere: ["Organique", "Papier"],
-    queFaire:
-      "Jetez vos mégots dans la poubelle des ordures ménagères ou dans les poubelles présentes sur la voie publique.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Opercule en alu / métal": {
-    nom: "Opercule en alu / métal",
-    matiere: ["Métal"],
-    queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible, préférez les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Ils vous permettront de produire moins de déchets mais également de réaliser des économies.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Opercule en plastique": {
-    nom: "Opercule en plastique",
-    matiere: ["Plastique"],
-    queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible achetez les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Palette en bois": {
-    nom: "Palette en bois",
-    matiere: ["Bois"],
-    queFaire: "Déposez-la en déchèterie.",
-    commentEviter: null,
-    ouDeposer: ["rec81BUGYJYXAfLid"],
-    collecte: null,
-  },
-  Papier: {
-    nom: "Papier",
-    matiere: ["Papier"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux déchets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter:
-      "Évitez de tout imprimer : les courriels, les documents de travail en intégralité, les présentations numériques... Sélectionnez seulement ce qu'il est indispensable de conserver, ce qui nécessite d'être lu quand on n'est pas à son poste de travail. Configurez vos photocopieurs et imprimantes en mode recto verso. Imprimez les documents en 2 pages par feuille. Réutilisez comme brouillon les versos blancs des documents imprimés ou photocopiés. Veillez à choisir un produit écolabellisé qui vous garantit l'utilisation de fibres recyclées mais aussi un produit plus facilement recyclable en fin de vie.",
-    ouDeposer: ["rec1gvENVSU9FpXse"],
-    collecte: ["recfH4zozLt2dY5Xc", "recqaZuR2Sm80qY99", "recfQpZkt563niDFF"],
-  },
-  "Papier aluminium": {
-    nom: "Papier aluminium",
-    matiere: ["Métal"],
-    queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Petit électroménager": {
-    nom: "Petit électroménager",
-    matiere: ["Electronique", "Métal", "Plastique"],
-    queFaire:
-      "Si l'appareil est encore en bon état, remettez-le à une structure de réemploi ou revendez-le. Sinon, faites-le réparer apportez-le en déchèterie.",
-    commentEviter:
-      "Assurez-vous à l'achat de votre équipement qu'il bénéficie d'une bonne garantie réparation et entretenez-le régulièrement afin de prolonger sa vie. Faites enfin durer autant que possible votre équipement.",
-    ouDeposer: ["recOkqmNZoMeqSRgy", "recF9aJRo8K0v740b", "recSnMXSFlp0nPJtc"],
-    collecte: null,
-  },
-  "Pile jetable": {
-    nom: "Pile jetable",
-    matiere: ["Acide", "Métal"],
-    queFaire: "Rapportez vos piles dans un point de collecte.",
-    commentEviter:
-      "Achetez des produits sans piles quand ils existent (calculatrices à cellules solaires, jouets...) et limitez l'achat de « gadgets électroniques » non indispensables et dont la durée de vie est en général faible. Optez en priorité pour les appareils qui se branchent sur secteur (radioréveils, radios...) ou qui sont mécaniques (montres et réveils). Pour les appareils qui nécessitent obligatoirement des piles, préférez les piles rechargeables. Pour les produits peu énergivores (télécommande, horloge) pour lesquels les piles ne sont pas changées très souvent, il est préférable d'utiliser des piles jetables.",
-    ouDeposer: ["recBHglHbDdQbzdMd"],
-    collecte: null,
-  },
-  "Pile rechargeable": {
-    nom: "Pile rechargeable",
-    matiere: ["Acide", "Métal"],
-    queFaire: "Rapportez vos piles dans un point de collecte.",
-    commentEviter:
-      "Optez en priorité pour les appareils qui se branchent sur secteur (radioréveil, radios...) ou qui sont mécaniques (montres et réveils). Pour les produits peu énergivores (télécommande, horloge...), pour lesquels les piles ne sont pas changées très souvent, il est préférable d'utiliser des piles jetables.",
-    ouDeposer: ["recBHglHbDdQbzdMd"],
-    collecte: null,
-  },
-  Pneu: {
-    nom: "Pneu",
-    matiere: ["Caoutchouc"],
-    queFaire:
-      "Rapportez vos pneus prioritairement chez le distributeur, sinon en déchèterie.",
-    commentEviter:
-      "Retardez leur changement en veillant à limiter leur usure : bon gonflage des pneus, conduite souple, etc.",
-    ouDeposer: ["recK7F0gwNmIGejw1"],
-    collecte: null,
-  },
-  "Pot en plastique": {
-    nom: "Pot en plastique",
-    matiere: ["Plastique"],
-    queFaire:
-      "Jetez le déchet dans le sac ou le conteneur réservé aux déchets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures ménagères.",
-    commentEviter:
-      "Dans la mesure du possible achetez les produits en grand conditionnement mais restant adaptés à votre consommation pour éviter le gaspillage. Vous produirez moins de déchets et vous ferez en plus des économies.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc", "recqaZuR2Sm80qY99", "recfQpZkt563niDFF"],
-  },
-  Préservatif: {
-    nom: "Préservatif",
-    matiere: ["Caoutchouc"],
-    queFaire: "Jetez-le noué dans la poubelle des ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Rasoir jetable": {
-    nom: "Rasoir jetable",
-    matiere: ["Métal", "Plastique"],
-    queFaire: "Jetez-le dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Préférez les rasoirs à lame jetable, ce qui vous dispensera de jeter le manche une fois la lame émoussée.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Rouge à lèvres": {
-    nom: "Rouge à lèvres",
-    matiere: ["Plastique", "Pétrole"],
-    queFaire:
-      "Jetez-le dans la poubelle des ordures ménagères. L'emballage est le plus souvent constitué d'un mélange de plastiques et reste trop souillé pour être recyclé.",
-    commentEviter:
-      "Veillez à choisir des produits portant un logo environnemental. Il atteste que le produit intègre des composants naturels et issus de l'agriculture biologique. Certains vous garantissent également une gestion optimisée des déchets lors de la production.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Sac en coton (tissu)": {
-    nom: "Sac en coton (tissu)",
-    matiere: ["Tissu"],
-    queFaire:
-      "S'il est encore en bon état, remettez-le à une structure de réemploi. Sinon, jetez-le dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Réutilisez votre sac autant de fois que possible avant de le jeter. Veillez à choisir un produit portant un logo environnemental qui peut vous garantir l'utilisation de fibres recyclées.",
-    ouDeposer: ["recOkqmNZoMeqSRgy"],
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Sac de course": {
-    nom: "Sac de course",
-    matiere: ["Plastique", "Tissu"],
-    queFaire:
-      "Échangez-le gratuitement dans votre grande surface lorsque cette dernière propose cette solution. Sinon, jetez-le dans la poubelle des ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Sac plastique jetable": {
-    nom: "Sac plastique jetable",
-    matiere: ["Plastique"],
-    queFaire:
-      "Il n'existe pas de filière de recyclage pour ce déchet. Jetez-le dans votre poubelle d'ordures ménagères.",
-    commentEviter:
-      "Utilisez de préférence des sacs réutilisables plutôt que des sacs à usage unique. Réutilisez votre sac autant de fois que possible avant de le jeter.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Sac poubelle": {
-    nom: "Sac poubelle",
-    matiere: ["Plastique"],
-    queFaire:
-      "Jetez-le dans la poubelle correspondant aux déchets qu'il contient.",
-    commentEviter: null,
-    ouDeposer: null,
-    collecte: null,
-  },
-  "Sachet de thé": {
-    nom: "Sachet de thé",
-    matiere: ["Papier"],
-    queFaire:
-      "Compostez vos sachets de thé à domicile ou jetez-les dans un bac de compostage partagé, si cette dernière solution a été mise en place à proximité de votre domicile. Sinon, jetez-les dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Beaucoup de résidus alimentaires peuvent être valorisés par compostage : épluchures, coquilles d'oeufs, marc de café, filtres en papier, pain, laitages, croûtes de fromages, fanes de légumes, fruits et légumes abîmés, etc. Faire votre compost vous permettra d'obtenir un amendement naturel pour votre jardin ou vos plantes en pots.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc", "recTV8OnyMXgbNVY6"],
-  },
-  "Serviette hygiénique": {
-    nom: "Serviette hygiénique",
-    matiere: ["Plastique"],
-    queFaire: "Jetez-la dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Veillez à choisir des produits écolabellisés. Le logo \"Nordic Swan\" garantit ainsi une réduction des déchets générés pendant la production et l'emballage ou l'utilisation de matières premières récupérées au fil du procédé de production.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  Stylo: {
-    nom: "Stylo",
-    matiere: ["Plastique"],
-    queFaire: "Jetez-le dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Préférez des produits portant un logo environnemental. Certains logos vous garantissent l'utilisation de matière recyclée ou renouvelable dans le produit.",
-    ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  "Téléphone mobile": {
-    nom: "Téléphone mobile",
-    matiere: ["Electronique", "Plastique"],
-    queFaire:
-      "S'il est encore en bon état, remettez-le à une structure de réemploi ou revendez-le. Sinon, déposez-le dans un point d'apport.",
-    commentEviter:
-      "Assurez-vous à l'achat qu'il bénéficie d'une bonne garantie réparation et faites le durer autant que possible.",
-    ouDeposer: ["recxJXHBk7DlGUL5Z"],
-    collecte: null,
-  },
-  Téléviseur: {
-    nom: "Téléviseur",
-    matiere: ["Electronique", "Plastique"],
-    queFaire:
-      "Si l'appareil est encore en bon état, remettez-le à une structure de réemploi ou revendez-le. Sinon apportez-le en déchèterie.",
-    commentEviter:
-      "Assurez-vous à l'achat qu'il bénéficie d'une bonne garantie réparation et faites le durer autant que possible. Choisissez un appareil portant l'Écolabel Européen vous garantit ainsi un téléviseur pour lequel les éléments fixes sont plus facile à désassembler, une fois l'appareil arrivé en fin de vie, et dont les pièces en plastique sont recyclables.",
-    ouDeposer: ["reczGyktq3YJX3fbx"],
-    collecte: null,
-  },
-  Vaisselle: {
-    nom: "Vaisselle",
-    matiere: ["Céramique"],
-    queFaire:
-      "Si la vaisselle est encore en bon état, remettez-la à une structure de réemploi ou revendez-la. Sinon, jetez-la dans la poubelle des ordures ménagères.",
-    commentEviter: null,
-    ouDeposer: ["rec81BUGYJYXAfLid"],
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  Voiture: {
-    nom: "Voiture",
-    matiere: ["Métal"],
-    queFaire:
-      "Confiez votre véhicule à un professionnel agréé pour traiter les véhicules hors d'usage. Si votre véhicule est encore en état, revendez-le",
-    commentEviter:
-      "Retardez votre changement de véhicule en l'entretenant régulièrement.",
-    ouDeposer: ["recXEA0ZC4Auebocn"],
-    collecte: null,
-  },
-  Vélo: {
-    nom: "Vélo",
-    matiere: ["Caoutchouc", "Métal"],
-    queFaire:
-      "S'il est encore en bon état, remettez-le à une structure de réemploi ou revendez-le. Vous pouvez le revendre à un ferrailleur. Déposez-le en déchèterie dans la benne prévue pour le métal.",
-    commentEviter:
-      "Retardez le changement de votre vélo en l'entretenant régulièrement.",
-    ouDeposer: ["recuH029OCQ4UAjTR", "recOkqmNZoMeqSRgy"],
-    collecte: null,
-  },
-  Vêtement: {
-    nom: "Vêtement",
-    matiere: ["Tissu"],
-    queFaire:
-      "Si votre vêtement est en bon état, donnez-le, revendez-le ou déposez-le dans un point de collecte. Si votre vêtement est souillé par des produits chimiques ou abîmé, jetez-le dans la poubelle des ordures ménagères.",
-    commentEviter:
-      "Privilégiez l'achat de textile porteur de l'Écolabel européen. L'Écolabel européen permet d'identifier des produits plus respectueux de l'environnement tout au long de leur cycle de vie. Privilégiez également l'achat d'occasion : c'est une solution intéressante du point de vue environnemental puisqu'elle permet de limiter les objets mis au rebut et évite l'utilisation de matières premières, d'énergie, d'eau et de produits chimiques pour fabriquer des vêtements neufs.",
-    ouDeposer: ["recLYksQXCMrVjUN9"],
-    collecte: ["recfH4zozLt2dY5Xc"],
-  },
-  Casserole: {
+  fiche_casserole: {
     nom: "Casserole",
-    matiere: ["Métal"],
     queFaire:
-      "Il n'existe pas de fillière de recyclage pour ce déchet. Jetez le déchet à la déchetterie",
-    commentEviter: null,
-    ouDeposer: null,
+      "Il n'existe pas de filli\u00e8re de recyclage pour ce d\u00e9chet. Jetez le d\u00e9chet \u00e0 la d\u00e9chetterie",
     collecte: null,
+    ouDeposer: null,
+    matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
   },
-  Couverts: {
+  fiche_cd_dvd: {
+    nom: "CD/DVD",
+    queFaire:
+      "Remettez vos disques et cassettes \u00e0 une structure de r\u00e9emploi. S'ils ne sont plus utilisables, jetez-les dans la poubelle des ordures m\u00e9nag\u00e8res. Les bo\u00eetiers en plastique sont \u00e9galement \u00e0 jeter dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: ["b650416b-a955-4b0e-8476-a98bb52310c2"],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+  },
+  fiche_chaussures: {
+    nom: "Chaussures",
+    queFaire:
+      "Si elles sont encore en bon \u00e9tat, donnez-les. Sinon, jetez-les dans la poubelle d'ordures m\u00e9nag\u00e8res",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: ["dab61cc8-698c-4134-b459-df61da7b438a"],
+    matiere: [
+      "91a6e604-d60b-425a-89ce-61857f0de343",
+      "499dcb84-b6dd-42bb-b45a-ee3ab02f8281",
+    ],
+    commentEviter:
+      "Privil\u00e9giez des produits \u00e9colabellis\u00e9s. Certains des \u00e9colabels vous garantissent un produit vendu dans un emballage majoritairement compos\u00e9 de mat\u00e9riaux recycl\u00e9s (100 % pour le carton et au moins 75 % pour les plastiques) ou biod\u00e9gradables ou compostables (au moins 75 % pour le plastique).",
+  },
+  fiche_chewing_gum: {
+    nom: "Chewing-gum",
+    queFaire: "Jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["4c72350d-2112-4a20-a241-6e2f967d5d66"],
+  },
+  fiche_cigarette_electronique: {
+    nom: "Cigarette \u00e9lectronique",
+    queFaire:
+      "Dans le cadre de l'achat d'un produit neuf, rapportez l'ancienne cigarette \u00e9lectronique \u00e0 votre revendeur.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter: "Faites durer autant que possible votre \u00e9quipement.",
+  },
+  fiche_coquilles_d_oeufs: {
+    nom: "Coquilles d'oeufs",
+    queFaire:
+      "Jetez-les en petites quantit\u00e9s dans le tas de compost ou le bac individuel ou partag\u00e9 de compostage (si cette derni\u00e8re solution a \u00e9t\u00e9 mise en place \u00e0 proximit\u00e9 de votre domicile). Sinon, jetez-les dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "b5cd353b-f0f3-4633-9710-652c821ec94b",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: null,
+    matiere: ["9a8e6648-8357-4b25-b749-ee4e3a650374"],
+  },
+  fiche_cosmetique__produit_et_emballage_: {
+    nom: "Cosm\u00e9tique (produit et emballage)",
+    queFaire:
+      "L'emballage, bien vid\u00e9, est \u00e0 jeter dans le bac, le sac ou le conteneur appropri\u00e9 au mat\u00e9riau composant l'emballage (voir autres d\u00e9chets). S'il reste du produit dans le pot, le tube, la bouteille ou le flacon, et qu'il est p\u00e9rim\u00e9, jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: [
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+      "4c72350d-2112-4a20-a241-6e2f967d5d66",
+      "a26297fa-7a1d-4b70-ab36-869470ed2625",
+    ],
+    commentEviter:
+      "Veillez \u00e0 choisir des produits portant un logo environnemental. Il atteste que le produit int\u00e8gre des composants naturels et issus de l'agriculture biologique. Certains vous garantissent \u00e9galement une gestion optimis\u00e9e des d\u00e9chets lors de la production.",
+  },
+  fiche_coton_tige: {
+    nom: "Coton-tige",
+    queFaire:
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: [
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+      "705f7085-caab-4c34-bdbb-2ddcfc2c8c4e",
+      "8742918b-434c-4580-b78d-5fdfb62340eb",
+    ],
+  },
+  fiche_couche_culotte: {
+    nom: "Couche-culotte",
+    queFaire:
+      "Jetez les couches culottes dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Les couches lavables ne sont pas forc\u00e9ment une meilleure solution que les couches jetables. Elles pr\u00e9sentent un int\u00e9r\u00eat en termes de r\u00e9duction des d\u00e9chets, mais g\u00e9n\u00e8rent des consommations d'eau et d'\u00e9nergie pour leur lavage. Si vous choisissez des couches lavables, utilisez des lessives portant un logo environnemental et respectez les doses conseill\u00e9es. Pour les couches jetables, pr\u00e9f\u00e9rez celles porteuses du logo \"Nordic Swan\", qui garantit une moindre production de d\u00e9chets au moment de la fabrication des couches.",
+  },
+  fiche_couverts: {
     nom: "Couverts",
-    matiere: ["Métal"],
     queFaire:
-      "Il n'existe pas de fillière de recyclage pour ce déchet. Jetez le déchet à la déchetterie",
-    commentEviter: null,
-    ouDeposer: null,
+      "Il n'existe pas de filli\u00e8re de recyclage pour ce d\u00e9chet. Jetez le d\u00e9chet \u00e0 la d\u00e9chetterie",
     collecte: null,
-  },
-  "Matériel scolaire en plastique": {
-    nom: "Matériel scolaire en plastique",
-    matiere: ["Plastique"],
-    queFaire: "Lorem ipsum",
-    commentEviter: null,
     ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
+    matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
   },
-  "Crayon à papier": {
-    nom: "Crayon à papier",
-    matiere: ["Bois"],
-    queFaire: "Lorem ipsum",
-    commentEviter: null,
+  fiche_crayon_a_papier: {
+    nom: "Crayon \u00e0 papier",
+    queFaire:
+      "Normalement, puisque votre crayon diminue de taille apr\u00e8s utilisation, il n'y a pas besoin de le jeter. Cependant, dans le cas o\u00f9 il serait cass\u00e9, jetez-le dans la poubelle usuelle",
+    collecte: null,
     ouDeposer: null,
-    collecte: ["recfH4zozLt2dY5Xc"],
+    matiere: ["705f7085-caab-4c34-bdbb-2ddcfc2c8c4e"],
+    commentEviter: "Utilisez un porte mine.",
+  },
+  fiche_dechets_verts: {
+    nom: "D\u00e9chets verts",
+    queFaire:
+      "Les d\u00e9chets verts peuvent servir \u00e0 pailler au pied de vos plantes dans le jardin. Vous pouvez aussi les int\u00e9grer \u00e0 votre compost. Sinon apportez-les en d\u00e9ch\u00e8terie ou faites-les enlever si une collecte des biod\u00e9chets en porte \u00e0 porte est propos\u00e9e par votre collectivit\u00e9.",
+    collecte: ["b5cd353b-f0f3-4633-9710-652c821ec94b"],
+    ouDeposer: ["f351252d-3d50-4ee7-b271-9ecc1d1b7f51"],
+    matiere: ["9a8e6648-8357-4b25-b749-ee4e3a650374"],
+    commentEviter:
+      "Planter des v\u00e9g\u00e9taux \u00e0 croissance lente (arbustes, gazon) limite fortement la production de r\u00e9sidus. La gestion diff\u00e9renci\u00e9e des espaces permet de r\u00e9server certaines zones \u00e0 un d\u00e9veloppement plus naturel g\u00e9n\u00e9rant moins de r\u00e9sidus (prairie fauch\u00e9e une fois l'an...). Laisser les r\u00e9sidus sur place (feuilles, tontes broy\u00e9es avec tondeuses mulcheuses).",
+  },
+  fiche_eau_de_javel__bouteille_: {
+    nom: "Eau de Javel (bouteille)",
+    queFaire:
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux d\u00e9chets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "1046405f-b101-4ffb-a810-1127502ea973",
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+    ],
+    ouDeposer: ["3c6b1856-6df9-472c-a55b-4c394b21da61"],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Optez pour des \u00e9co-recharges concentr\u00e9es. Veillez \u00e0 respecter les doses indiqu\u00e9es sur les consignes.",
+  },
+  fiche_essuie_tout: {
+    nom: "Essuie-tout",
+    queFaire:
+      "Compostez-le \u00e0 domicile ou jetez-le dans un bac de compostage partag\u00e9, si cette derni\u00e8re solution a \u00e9t\u00e9 mise en place \u00e0 proximit\u00e9 de votre domicile. Sinon, jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "b5cd353b-f0f3-4633-9710-652c821ec94b",
+    ],
+    ouDeposer: null,
+    matiere: ["062f5089-d66a-4e9d-88db-da291cec07c4"],
+    commentEviter:
+      "Pr\u00e9f\u00e9rez des produits portant l'\u00c9colabel Europ\u00e9en. Du papier essuie-tout portant cet \u00e9colabel est compos\u00e9 de fibres recycl\u00e9es ou issues de for\u00eats g\u00e9r\u00e9es durablement.",
+  },
+  fiche_film_plastique: {
+    nom: "Film plastique",
+    queFaire:
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: [],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+  },
+  fiche_filtre_a_cafe: {
+    nom: "Filtre \u00e0 caf\u00e9",
+    queFaire:
+      "Compostez-le \u00e0 domicile ou jetez-le dans un bac de compostage partag\u00e9, si cette derni\u00e8re solution a \u00e9t\u00e9 mise en place \u00e0 proximit\u00e9 de votre domicile. Sinon, jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "b5cd353b-f0f3-4633-9710-652c821ec94b",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: null,
+    matiere: ["062f5089-d66a-4e9d-88db-da291cec07c4"],
+    commentEviter:
+      "Comme beaucoup de r\u00e9sidus alimentaires, les filtres \u00e0 caf\u00e9 peuvent \u00eatre valoris\u00e9s par compostage. Faire votre compost vous permettra d'obtenir un amendement naturel pour votre jardin ou vos plantes en pots.",
+  },
+  fiche_flacon_en_plastique: {
+    nom: "Flacon en plastique",
+    queFaire:
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux d\u00e9chets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "1046405f-b101-4ffb-a810-1127502ea973",
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: ["3c6b1856-6df9-472c-a55b-4c394b21da61"],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Dans le cas des produits d'entretien, optez pour des produits concentr\u00e9s et utilisez des \u00e9co-recharges. S'il n'existe pas de produits concentr\u00e9s, pr\u00e9f\u00e9rez les produits en grand conditionnement. Ils vous permettront de produire moins de d\u00e9chets mais \u00e9galement de r\u00e9aliser des \u00e9conomies.<br/><br/>Pensez \u00e0 respecter les doses pr\u00e9conis\u00e9es.",
+  },
+  fiche_fruits_et_legumes_abimes: {
+    nom: "Fruits et l\u00e9gumes ab\u00eem\u00e9s",
+    queFaire:
+      "Compostez-les \u00e0 domicile ou jetez-les dans un bac de compostage partag\u00e9, si cette derni\u00e8re solution a \u00e9t\u00e9 mise en place \u00e0 proximit\u00e9 de votre domicile. Sinon, jetez-les dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "b5cd353b-f0f3-4633-9710-652c821ec94b",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: null,
+    matiere: ["9a8e6648-8357-4b25-b749-ee4e3a650374"],
+    commentEviter:
+      "Comme beaucoup de r\u00e9sidus alimentaires, les l\u00e9gumes ab\u00eem\u00e9s peuvent \u00eatre valoris\u00e9s par compostage. Faire votre compost vous permettra d'obtenir un amendement naturel pour votre jardin ou vos plantes en pots.",
+  },
+  fiche_gobelet_en_carton: {
+    nom: "Gobelet en carton",
+    queFaire:
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux d\u00e9chets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "1046405f-b101-4ffb-a810-1127502ea973",
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: ["ae0eba7d-5b65-4692-a728-c036a96336f6"],
+    matiere: ["5e184c02-a469-416a-8874-95f58b5c52d6"],
+    commentEviter:
+      "Si ce n'est pas trop compliqu\u00e9, privil\u00e9giez la vaisselle lavable et r\u00e9utilisable (mug, tasse, verre...)",
+  },
+  fiche_gobelet_en_plastique_jetable: {
+    nom: "Gobelet en plastique jetable",
+    queFaire:
+      "Jetez les gobelets en plastique dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+      "1046405f-b101-4ffb-a810-1127502ea973",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: ["3c6b1856-6df9-472c-a55b-4c394b21da61"],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Privil\u00e9giez la vaisselle lavable et r\u00e9utilisable (mug, tasse, verre...).",
+  },
+  fiche_gros_electromenager: {
+    nom: "Gros \u00e9lectrom\u00e9nager",
+    queFaire:
+      "Si votre appareil est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi ou revendez-le. Sinon, apportez-le en d\u00e9ch\u00e8terie.",
+    collecte: null,
+    ouDeposer: [
+      "3f4d86ca-6a95-49e0-bdd2-76c33978623b",
+      "0fa32e87-a392-4cc2-bd56-b8ad07caf859",
+    ],
+    matiere: [
+      "c38e5a97-410a-4a5b-b909-73002250735a",
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+    ],
+    commentEviter:
+      "Assurez-vous \u00e0 l'achat qu'il b\u00e9n\u00e9ficie d'une bonne garantie r\u00e9paration. Privil\u00e9giez les appareils qui sont d\u00e9montables pour faire face \u00e0 une \u00e9ventuelle panne apr\u00e8s expiration de la garantie et entretenez r\u00e9guli\u00e8rement vos \u00e9quipements \u00e9lectriques et \u00e9lectroniques afin de prolonger leur vie. Faites les r\u00e9parer lorsque c'est possible.",
+  },
+  fiche_huile_de_friture: {
+    nom: "Huile de friture",
+    queFaire:
+      "Il n'existe pas de fili\u00e8re de collecte d'huiles de fritures provenant des particuliers.",
+    collecte: null,
+    ouDeposer: null,
+    matiere: ["9a8e6648-8357-4b25-b749-ee4e3a650374"],
+  },
+  fiche_informatique: {
+    nom: "Informatique",
+    queFaire:
+      "Si l'appareil est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi ou revendez-le. Sinon, apportez-le en d\u00e9ch\u00e8terie.",
+    collecte: null,
+    ouDeposer: [
+      "50e7762f-4d97-439d-aad2-a224fe324cdb",
+      "823afac7-2197-4e80-b7b4-4058507a4677",
+    ],
+    matiere: [
+      "c38e5a97-410a-4a5b-b909-73002250735a",
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+    ],
+    commentEviter:
+      "Assurez-vous \u00e0 l'achat que l'\u00e9quipement b\u00e9n\u00e9ficie d'une bonne garantie r\u00e9paration et faites durer autant que possible votre \u00e9quipement.",
+  },
+  fiche_jeu_video__cassette_ou_cartouche_ds__ps3__xbox____: {
+    nom: "Jeu vid\u00e9o (cassette ou cartouche DS, PS3, Xbox...)",
+    queFaire:
+      "S'il est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi ou revendez-le. Sinon jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: null,
+    ouDeposer: ["b650416b-a955-4b0e-8476-a98bb52310c2"],
+    matiere: [
+      "c38e5a97-410a-4a5b-b909-73002250735a",
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+    ],
+  },
+  fiche_jouet: {
+    nom: "Jouet",
+    queFaire:
+      "S'il est encore en bonne \u00e9tat, donnez l'objet \u00e0 une association. Sinon, d\u00e9posez le en d\u00e9chetterie",
+    collecte: null,
+    ouDeposer: [
+      "3c6b1856-6df9-472c-a55b-4c394b21da61",
+      "b650416b-a955-4b0e-8476-a98bb52310c2",
+    ],
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+  },
+  fiche_journal: {
+    nom: "Journal",
+    queFaire:
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux d\u00e9chets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "1046405f-b101-4ffb-a810-1127502ea973",
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+    ],
+    ouDeposer: ["506107c0-a070-433f-9473-dd026c7e50bc"],
+    matiere: ["062f5089-d66a-4e9d-88db-da291cec07c4"],
+  },
+  fiche_livre: {
+    nom: "Livre",
+    queFaire:
+      "S'il est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi (association, recyclerie...) ou revendez-le. Sinon, jetez-le dans le bac ou le conteneur pr\u00e9vu pour le papier si votre commune le supporte.",
+    collecte: null,
+    ouDeposer: [
+      "db0fda56-8e36-48b7-a575-9f7a3558a67e",
+      "b650416b-a955-4b0e-8476-a98bb52310c2",
+    ],
+    matiere: ["062f5089-d66a-4e9d-88db-da291cec07c4"],
+  },
+  fiche_masque_a_usage_unique: {
+    nom: "Masque \u00e0 usage unique",
+    queFaire:
+      "Si vous n'\u00eates pas malade, jetez vos masques dans la poubelle des ordures m\u00e9nag\u00e8res. Si vous \u00eates malade jetez vos masques dans un sac poubelle d\u00e9di\u00e9 aux masques, mouchoirs en papier, lingettes d\u00e9sinfectantes et gants jetables, r\u00e9sistant, opaque et\u00a0disposant d'un syst\u00e8me de fermeture\u00a0fonctionnel. Lorsque le sac est rempli, refermez-le soigneusement, placez le dans un deuxi\u00e8me sac du m\u00eame type et conservez-le 24 heures. Puis jetez-le dans le sac poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: [
+      "499dcb84-b6dd-42bb-b45a-ee3ab02f8281",
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+    ],
+  },
+  fiche_matelas__en_mousse__a_ressorts____: {
+    nom: "Matelas (en mousse, \u00e0 ressorts...)",
+    queFaire:
+      "S'il est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi. Sinon rapportez-le en d\u00e9ch\u00e8terie.",
+    collecte: null,
+    ouDeposer: ["75bb2801-8b50-4283-be83-53fb83992566"],
+    matiere: [
+      "4c72350d-2112-4a20-a241-6e2f967d5d66",
+      "499dcb84-b6dd-42bb-b45a-ee3ab02f8281",
+    ],
+  },
+  fiche_materiaux_de_construction: {
+    nom: "Mat\u00e9riaux de construction",
+    queFaire:
+      "Faites enlever ces d\u00e9chets par l'entrepreneur qui r\u00e9alise vos travaux de r\u00e9novation. Il les \u00e9vacuera vers des plateformes d\u00e9di\u00e9es (en contrepartie d'une r\u00e9mun\u00e9ration fix\u00e9e lors du devis initial ou en fonction de la quantit\u00e9 \u00e9vacu\u00e9e). D\u00e9posez-les en d\u00e9ch\u00e8terie si vous r\u00e9alisez des travaux vous-m\u00eame et que la quantit\u00e9 de d\u00e9chets \u00e0 \u00e9liminer est limit\u00e9e. Si les quantit\u00e9s sont trop importantes, fa\u00eetes appel \u00e0 une entreprise sp\u00e9cialis\u00e9e.",
+    collecte: null,
+    ouDeposer: ["bf347e27-a6d4-4e15-ae6b-83c14594ff59"],
+    matiere: [],
+  },
+  fiche_materiel_scolaire_en_plastique: {
+    nom: "Mat\u00e9riel scolaire en plastique",
+    queFaire: "Lorem ipsum",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+  },
+  fiche_medicaments: {
+    nom: "M\u00e9dicaments",
+    queFaire: "D\u00e9posez-les dans une pharmacie.",
+    collecte: null,
+    ouDeposer: null,
+    matiere: ["a26297fa-7a1d-4b70-ab36-869470ed2625"],
+  },
+  fiche_megot_de_cigarette: {
+    nom: "M\u00e9got de cigarette",
+    queFaire:
+      "Jetez vos m\u00e9gots dans la poubelle des ordures m\u00e9nag\u00e8res ou dans les poubelles pr\u00e9sentes sur la voie publique.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: [
+      "9a8e6648-8357-4b25-b749-ee4e3a650374",
+      "062f5089-d66a-4e9d-88db-da291cec07c4",
+    ],
+  },
+  fiche_meuble: {
+    nom: "Meuble",
+    queFaire:
+      "Si le meuble est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi ou revendez-le. S'il n'est plus utilisable, rapportez-le en d\u00e9ch\u00e8terie.",
+    collecte: null,
+    ouDeposer: ["b650416b-a955-4b0e-8476-a98bb52310c2"],
+    matiere: ["705f7085-caab-4c34-bdbb-2ddcfc2c8c4e"],
+  },
+  fiche_mouchoir_en_papier: {
+    nom: "Mouchoir en papier",
+    queFaire: "Jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["062f5089-d66a-4e9d-88db-da291cec07c4"],
+  },
+  fiche_opercule_en_alu___metal: {
+    nom: "Opercule en alu / m\u00e9tal",
+    queFaire:
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
+    commentEviter:
+      "Dans la mesure du possible, pr\u00e9f\u00e9rez les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Ils vous permettront de produire moins de d\u00e9chets mais \u00e9galement de r\u00e9aliser des \u00e9conomies.",
+  },
+  fiche_opercule_en_plastique: {
+    nom: "Opercule en plastique",
+    queFaire:
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Dans la mesure du possible achetez les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
+  },
+  fiche_palette_en_bois: {
+    nom: "Palette en bois",
+    queFaire: "D\u00e9posez-la en d\u00e9ch\u00e8terie.",
+    collecte: null,
+    ouDeposer: ["75bb2801-8b50-4283-be83-53fb83992566"],
+    matiere: ["705f7085-caab-4c34-bdbb-2ddcfc2c8c4e"],
+  },
+  fiche_papier: {
+    nom: "Papier",
+    queFaire:
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux d\u00e9chets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "1046405f-b101-4ffb-a810-1127502ea973",
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+    ],
+    ouDeposer: ["506107c0-a070-433f-9473-dd026c7e50bc"],
+    matiere: ["062f5089-d66a-4e9d-88db-da291cec07c4"],
+    commentEviter:
+      "\u00c9vitez de tout imprimer : les courriels, les documents de travail en int\u00e9gralit\u00e9, les pr\u00e9sentations num\u00e9riques... S\u00e9lectionnez seulement ce qu'il est indispensable de conserver, ce qui n\u00e9cessite d'\u00eatre lu quand on n'est pas \u00e0 son poste de travail. Configurez vos photocopieurs et imprimantes en mode recto verso. Imprimez les documents en 2 pages par feuille. R\u00e9utilisez comme brouillon les versos blancs des documents imprim\u00e9s ou photocopi\u00e9s. Veillez \u00e0 choisir un produit \u00e9colabellis\u00e9 qui vous garantit l'utilisation de fibres recycl\u00e9es mais aussi un produit plus facilement recyclable en fin de vie.",
+  },
+  fiche_papier_aluminium: {
+    nom: "Papier aluminium",
+    queFaire:
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
+  },
+  fiche_petit_electromenager: {
+    nom: "Petit \u00e9lectrom\u00e9nager",
+    queFaire:
+      "Si l'appareil est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi ou revendez-le. Sinon, faites-le r\u00e9parer apportez-le en d\u00e9ch\u00e8terie.",
+    collecte: null,
+    ouDeposer: [
+      "b650416b-a955-4b0e-8476-a98bb52310c2",
+      "3f4d86ca-6a95-49e0-bdd2-76c33978623b",
+      "0fa32e87-a392-4cc2-bd56-b8ad07caf859",
+    ],
+    matiere: [
+      "c38e5a97-410a-4a5b-b909-73002250735a",
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+    ],
+    commentEviter:
+      "Assurez-vous \u00e0 l'achat de votre \u00e9quipement qu'il b\u00e9n\u00e9ficie d'une bonne garantie r\u00e9paration et entretenez-le r\u00e9guli\u00e8rement afin de prolonger sa vie. Faites enfin durer autant que possible votre \u00e9quipement.",
+  },
+  fiche_piece_automobile: {
+    nom: "Pi\u00e8ce automobile",
+    queFaire:
+      "Suivant la nature de l'objet, jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res ou apportez-le en d\u00e9ch\u00e8terie.\nSi la pi\u00e8ce fait suite \u00e0 une r\u00e9paration chez le garagiste, demandez-lui de conserver la pi\u00e8ce.",
+    collecte: null,
+    ouDeposer: ["e066ffc1-4626-47d0-aadb-6b3510c57a1a"],
+    matiere: [
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+    ],
+    commentEviter:
+      "Vous pouvez demander \u00e0 votre garagiste d'utiliser des pi\u00e8ces d'occasion plut\u00f4t que des pi\u00e8ces neuves",
+  },
+  fiche_pile_jetable: {
+    nom: "Pile jetable",
+    queFaire: "Rapportez vos piles dans un point de collecte.",
+    collecte: null,
+    ouDeposer: ["8f7c10fa-81b0-454e-af27-656b00ee1446"],
+    matiere: [
+      "20ed67a1-23fb-4b90-af94-9ffaec0a83d2",
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+    ],
+    commentEviter:
+      "Achetez des produits sans piles quand ils existent (calculatrices \u00e0 cellules solaires, jouets...) et limitez l'achat de \u00ab gadgets \u00e9lectroniques \u00bb non indispensables et dont la dur\u00e9e de vie est en g\u00e9n\u00e9ral faible. Optez en priorit\u00e9 pour les appareils qui se branchent sur secteur (radior\u00e9veils, radios...) ou qui sont m\u00e9caniques (montres et r\u00e9veils). Pour les appareils qui n\u00e9cessitent obligatoirement des piles, pr\u00e9f\u00e9rez les piles rechargeables. Pour les produits peu \u00e9nergivores (t\u00e9l\u00e9commande, horloge) pour lesquels les piles ne sont pas chang\u00e9es tr\u00e8s souvent, il est pr\u00e9f\u00e9rable d'utiliser des piles jetables.",
+  },
+  fiche_pile_rechargeable: {
+    nom: "Pile rechargeable",
+    queFaire: "Rapportez vos piles dans un point de collecte.",
+    collecte: null,
+    ouDeposer: ["8f7c10fa-81b0-454e-af27-656b00ee1446"],
+    matiere: [
+      "20ed67a1-23fb-4b90-af94-9ffaec0a83d2",
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+    ],
+    commentEviter:
+      "Optez en priorit\u00e9 pour les appareils qui se branchent sur secteur (radior\u00e9veil, radios...) ou qui sont m\u00e9caniques (montres et r\u00e9veils). Pour les produits peu \u00e9nergivores (t\u00e9l\u00e9commande, horloge...), pour lesquels les piles ne sont pas chang\u00e9es tr\u00e8s souvent, il est pr\u00e9f\u00e9rable d'utiliser des piles jetables.",
+  },
+  fiche_pneu: {
+    nom: "Pneu",
+    queFaire:
+      "Rapportez vos pneus prioritairement chez le distributeur, sinon en d\u00e9ch\u00e8terie.",
+    collecte: null,
+    ouDeposer: ["86c6ab9b-1114-4f8e-ab54-63d37151d137"],
+    matiere: ["ab9ec3bd-9cc9-40b9-bbad-082e7fce5760"],
+    commentEviter:
+      "Retardez leur changement en veillant \u00e0 limiter leur usure : bon gonflage des pneus, conduite souple, etc.",
+  },
+  fiche_pot_en_plastique: {
+    nom: "Pot en plastique",
+    queFaire:
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux d\u00e9chets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "1046405f-b101-4ffb-a810-1127502ea973",
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Dans la mesure du possible achetez les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
+  },
+  fiche_preservatif: {
+    nom: "Pr\u00e9servatif",
+    queFaire:
+      "Jetez-le nou\u00e9 dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["ab9ec3bd-9cc9-40b9-bbad-082e7fce5760"],
+  },
+  fiche_rasoir_jetable: {
+    nom: "Rasoir jetable",
+    queFaire: "Jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: [
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+    ],
+    commentEviter:
+      "Pr\u00e9f\u00e9rez les rasoirs \u00e0 lame jetable, ce qui vous dispensera de jeter le manche une fois la lame \u00e9mouss\u00e9e.",
+  },
+  fiche_rouge_a_levres: {
+    nom: "Rouge \u00e0 l\u00e8vres",
+    queFaire:
+      "Jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res. L'emballage est le plus souvent constitu\u00e9 d'un m\u00e9lange de plastiques et reste trop souill\u00e9 pour \u00eatre recycl\u00e9.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: [
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+      "4c72350d-2112-4a20-a241-6e2f967d5d66",
+    ],
+    commentEviter:
+      "Veillez \u00e0 choisir des produits portant un logo environnemental. Il atteste que le produit int\u00e8gre des composants naturels et issus de l'agriculture biologique. Certains vous garantissent \u00e9galement une gestion optimis\u00e9e des d\u00e9chets lors de la production.",
+  },
+  fiche_sac_de_course: {
+    nom: "Sac de course",
+    queFaire:
+      "\u00c9changez-le gratuitement dans votre grande surface lorsque cette derni\u00e8re propose cette solution. Sinon, jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: [
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+      "499dcb84-b6dd-42bb-b45a-ee3ab02f8281",
+    ],
+  },
+  fiche_sac_en_coton__tissu_: {
+    nom: "Sac en coton (tissu)",
+    queFaire:
+      "S'il est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi. Sinon, jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: ["b650416b-a955-4b0e-8476-a98bb52310c2"],
+    matiere: ["499dcb84-b6dd-42bb-b45a-ee3ab02f8281"],
+    commentEviter:
+      "R\u00e9utilisez votre sac autant de fois que possible avant de le jeter. Veillez \u00e0 choisir un produit portant un logo environnemental qui peut vous garantir l'utilisation de fibres recycl\u00e9es.",
+  },
+  fiche_sac_plastique_jetable: {
+    nom: "Sac plastique jetable",
+    queFaire:
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Utilisez de pr\u00e9f\u00e9rence des sacs r\u00e9utilisables plut\u00f4t que des sacs \u00e0 usage unique. R\u00e9utilisez votre sac autant de fois que possible avant de le jeter.",
+  },
+  fiche_sac_poubelle: {
+    nom: "Sac poubelle",
+    queFaire:
+      "Jetez-le dans la poubelle correspondant aux d\u00e9chets qu'il contient.",
+    collecte: null,
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+  },
+  fiche_sachet_de_the: {
+    nom: "Sachet de th\u00e9",
+    queFaire:
+      "Compostez vos sachets de th\u00e9 \u00e0 domicile ou jetez-les dans un bac de compostage partag\u00e9, si cette derni\u00e8re solution a \u00e9t\u00e9 mise en place \u00e0 proximit\u00e9 de votre domicile. Sinon, jetez-les dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "b5cd353b-f0f3-4633-9710-652c821ec94b",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: null,
+    matiere: ["062f5089-d66a-4e9d-88db-da291cec07c4"],
+    commentEviter:
+      "Beaucoup de r\u00e9sidus alimentaires peuvent \u00eatre valoris\u00e9s par compostage : \u00e9pluchures, coquilles d'oeufs, marc de caf\u00e9, filtres en papier, pain, laitages, cro\u00fbtes de fromages, fanes de l\u00e9gumes, fruits et l\u00e9gumes ab\u00eem\u00e9s, etc. Faire votre compost vous permettra d'obtenir un amendement naturel pour votre jardin ou vos plantes en pots.",
+  },
+  fiche_serviette_hygienique: {
+    nom: "Serviette hygi\u00e9nique",
+    queFaire: "Jetez-la dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Veillez \u00e0 choisir des produits \u00e9colabellis\u00e9s. Le logo \"Nordic Swan\" garantit ainsi une r\u00e9duction des d\u00e9chets g\u00e9n\u00e9r\u00e9s pendant la production et l'emballage ou l'utilisation de mati\u00e8res premi\u00e8res r\u00e9cup\u00e9r\u00e9es au fil du proc\u00e9d\u00e9 de production.",
+  },
+  fiche_stylo: {
+    nom: "Stylo",
+    queFaire: "Jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+    commentEviter:
+      "Pr\u00e9f\u00e9rez des produits portant un logo environnemental. Certains logos vous garantissent l'utilisation de mati\u00e8re recycl\u00e9e ou renouvelable dans le produit.",
+  },
+  fiche_telephone_mobile: {
+    nom: "T\u00e9l\u00e9phone mobile",
+    queFaire:
+      "S'il est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi ou revendez-le. Sinon, d\u00e9posez-le dans un point d'apport.",
+    collecte: null,
+    ouDeposer: ["5f60c22f-b7ed-437a-9af5-76a77c27c092"],
+    matiere: [
+      "c38e5a97-410a-4a5b-b909-73002250735a",
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+      "834ed2a2-2036-473f-933b-f0211eacc1bf",
+    ],
+    commentEviter:
+      "Assurez-vous \u00e0 l'achat qu'il b\u00e9n\u00e9ficie d'une bonne garantie r\u00e9paration et faites le\u00a0durer autant que possible.",
+  },
+  fiche_televiseur: {
+    nom: "T\u00e9l\u00e9viseur",
+    queFaire:
+      "Si l'appareil est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi ou revendez-le. Sinon apportez-le en d\u00e9ch\u00e8terie.",
+    collecte: null,
+    ouDeposer: ["e5af1ac2-ef1c-475c-a772-ee16f5657754"],
+    matiere: [
+      "c38e5a97-410a-4a5b-b909-73002250735a",
+      "d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd",
+    ],
+    commentEviter:
+      "Assurez-vous \u00e0 l'achat qu'il b\u00e9n\u00e9ficie d'une bonne garantie r\u00e9paration et faites le durer autant que possible. Choisissez un appareil portant l'\u00c9colabel Europ\u00e9en vous garantit ainsi un t\u00e9l\u00e9viseur pour lequel les \u00e9l\u00e9ments fixes sont plus facile \u00e0 d\u00e9sassembler, une fois l'appareil arriv\u00e9 en fin de vie, et dont les pi\u00e8ces en plastique sont recyclables.",
+  },
+  fiche_tube_de_dentifrice: {
+    nom: "Tube de dentifrice",
+    queFaire:
+      "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux d\u00e9chets recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
+    collecte: [
+      "1046405f-b101-4ffb-a810-1127502ea973",
+      "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+    ],
+    ouDeposer: null,
+    matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
+  },
+  fiche_vaisselle: {
+    nom: "Vaisselle",
+    queFaire:
+      "Si la vaisselle est encore en bon \u00e9tat, remettez-la \u00e0 une structure de r\u00e9emploi ou revendez-la. Sinon, jetez-la dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    ouDeposer: ["75bb2801-8b50-4283-be83-53fb83992566"],
+    matiere: ["158462a0-2cbb-4b23-a28d-7ce4b14364bc"],
+  },
+  fiche_velo: {
+    nom: "V\u00e9lo",
+    queFaire:
+      "S'il est encore en bon \u00e9tat, remettez-le \u00e0 une structure de r\u00e9emploi ou revendez-le. Vous pouvez le revendre \u00e0 un ferrailleur. D\u00e9posez-le en d\u00e9ch\u00e8terie dans la benne pr\u00e9vue pour le m\u00e9tal.",
+    collecte: null,
+    ouDeposer: ["e066ffc1-4626-47d0-aadb-6b3510c57a1a"],
+    matiere: [
+      "ab9ec3bd-9cc9-40b9-bbad-082e7fce5760",
+      "65f0c826-d3a4-418a-b7b6-010c6d27250b",
+    ],
+    commentEviter:
+      "Retardez le changement de votre v\u00e9lo en l'entretenant r\u00e9guli\u00e8rement.",
+  },
+  fiche_vetement: {
+    nom: "V\u00eatement",
+    queFaire:
+      "Si votre v\u00eatement est en bon \u00e9tat, donnez-le, revendez-le ou d\u00e9posez-le dans un point de collecte. Si votre v\u00eatement est souill\u00e9 par des produits chimiques ou ab\u00eem\u00e9, jetez-le dans la poubelle des ordures m\u00e9nag\u00e8res.",
+    collecte: null,
+    ouDeposer: ["dab61cc8-698c-4134-b459-df61da7b438a"],
+    matiere: ["499dcb84-b6dd-42bb-b45a-ee3ab02f8281"],
+    commentEviter:
+      "Privil\u00e9giez l'achat de textile porteur de l'\u00c9colabel europ\u00e9en. L'\u00c9colabel europ\u00e9en permet d'identifier des produits plus respectueux de l'environnement tout au long de leur cycle de vie. Privil\u00e9giez \u00e9galement l'achat d'occasion : c'est une solution int\u00e9ressante du point de vue environnemental puisqu'elle permet de limiter les objets mis au rebut et \u00e9vite l'utilisation de mati\u00e8res premi\u00e8res, d'\u00e9nergie, d'eau et de produits chimiques pour fabriquer des v\u00eatements neufs.",
+  },
+  fiche_voiture: {
+    nom: "Voiture",
+    queFaire:
+      "Confiez votre v\u00e9hicule \u00e0 un professionnel agr\u00e9\u00e9 pour traiter les v\u00e9hicules hors d'usage. Si votre v\u00e9hicule est encore en \u00e9tat, revendez-le",
+    collecte: null,
+    ouDeposer: ["63e27eca-8a32-442f-87ca-a4c45122f59d"],
+    matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
+    commentEviter:
+      "Retardez votre changement de v\u00e9hicule en l'entretenant r\u00e9guli\u00e8rement.",
   },
 };

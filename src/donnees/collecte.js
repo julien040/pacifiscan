@@ -1,58 +1,56 @@
 export default {
-  recfH4zozLt2dY5Xc: {
-    nom: "Poubelle d'ordures ménagères",
-    description:
-      "La poubelle usuelle où l'on jette ce qui ne peut être recyclé",
-    icone: "https://img.icons8.com/color/96/000000/plastic.png",
-    enSavoirPlus: "https://ademe.fr",
-    global: true,
-    communes: [],
-  },
-  recqaZuR2Sm80qY99: {
-    nom: "Bac jaune Mont-Dore",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Deserunt minim quis aliqua nostrud pariatur adipisicing nostrud qui ea laboris nulla quis proident voluptate esse.",
-    icone: "https://img.icons8.com/color/96/000000/plastic.png",
-    enSavoirPlus:
-      "https://www.mont-dore.nc/index.php?option=com_content&view=article&id=118&Itemid=989",
+  "1046405f-b101-4ffb-a810-1127502ea973": {
+    nom: "Bac jaune Dumb\u00e9a",
+    description: "lorem",
+    enSavoirPlus: "http://a.com",
     global: false,
-    communes: ["MONT-DORE"],
+    communes: ["dumbea"],
+    icone:
+      "https://cdn.sanity.io/images/3zpk9otr/production/4ff0a933d3862db137c975841c007fabd3d154e3-480x480.png",
   },
-  recfQpZkt563niDFF: {
-    nom: "Bac jaune Dumbéa",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Deserunt minim quis aliqua nostrud pariatur adipisicing nostrud qui ea laboris nulla quis proident voluptate esse.",
-    icone: "https://img.icons8.com/color/96/000000/plastic.png",
-    enSavoirPlus:
-      "https://www.ville-dumbea.nc/dumbea-pratique/gestion-des-dechets/",
+  "4a9d9452-e038-4340-b33c-15c9c7a2bf5b": {
+    nom: "Poubelle bleue SIVM nord",
+    description: "Lorem",
+    enSavoirPlus: "http://a.com",
     global: false,
-    communes: ["DUMBEA"],
+    communes: ["poum", "kaala_gomen", "koumac"],
+    icone:
+      "https://cdn.sanity.io/images/3zpk9otr/production/4ff0a933d3862db137c975841c007fabd3d154e3-480x480.png",
   },
-  recBjXU8eZXAAYhjT: {
-    nom: "Poubelle rouge SIVM Nord",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Deserunt minim quis aliqua nostrud pariatur adipisicing nostrud qui ea laboris nulla quis proident voluptate esse.",
-    icone: "https://img.icons8.com/color/96/000000/plastic.png",
-    enSavoirPlus: "https://www.sivmnord.nc/gestion-des-dechets",
-    global: false,
-    communes: ["POUM", "KAALA-GOMEN", "KOUMAC"],
-  },
-  reczTSgY28rX8v7yH: {
-    nom: "Poubelle bleue SIVM Nord copy",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Deserunt minim quis aliqua nostrud pariatur adipisicing nostrud qui ea laboris nulla quis proident voluptate esse.",
-    icone: "https://img.icons8.com/color/96/000000/plastic.png",
-    enSavoirPlus: "https://www.sivmnord.nc/gestion-des-dechets",
-    global: false,
-    communes: ["POUM", "KAALA-GOMEN", "KOUMAC"],
-  },
-  recTV8OnyMXgbNVY6: {
+  "b5cd353b-f0f3-4633-9710-652c821ec94b": {
     nom: "Compost",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Deserunt minim quis aliqua nostrud pariatur adipisicing nostrud qui ea laboris nulla quis proident voluptate esse.",
-    icone: "https://img.icons8.com/color/96/000000/plastic.png",
+    description: "lorm",
+    enSavoirPlus: "https://a.com",
+    global: true,
+    communes: null,
+    icone:
+      "https://cdn.sanity.io/images/3zpk9otr/production/444f097beb446b0c65d9d56502b153be70b004e5-480x480.png",
+  },
+  "cd476c41-d684-435f-a0aa-d24c97b07cc3": {
+    nom: "Bac jaune Mont-Dore",
+    description: " dolore minim deserunt nulla duis.",
+    enSavoirPlus: "https://a.com",
+    global: false,
+    communes: ["mont_dore"],
+    icone:
+      "https://cdn.sanity.io/images/3zpk9otr/production/4ff0a933d3862db137c975841c007fabd3d154e3-480x480.png",
+  },
+  "d59552f3-3290-4727-b114-acea0dd026a5": {
+    nom: "Poubelle rouge SIVM nord",
+    description: "Lorem",
+    enSavoirPlus: "http://a.com",
+    global: false,
+    communes: ["poum", "kaala_gomen", "koumac"],
+    icone:
+      "https://cdn.sanity.io/images/3zpk9otr/production/4ff0a933d3862db137c975841c007fabd3d154e3-480x480.png",
+  },
+  "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c": {
+    nom: "Poubelle usuelle",
+    description: "dolore minim deserunt nulla duis.",
     enSavoirPlus: "https://ademe.fr",
     global: true,
-    communes: [],
+    communes: null,
+    icone:
+      "https://cdn.sanity.io/images/3zpk9otr/production/4ff0a933d3862db137c975841c007fabd3d154e3-480x480.png",
   },
 };

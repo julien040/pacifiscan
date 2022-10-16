@@ -23,7 +23,11 @@ import { LargeHeading } from "../components/heading";
 const namesOfWastes = Object.keys(synonyme);
 const searchable = Object.values(synonyme);
 
-const fuse = new Fuzzy(searchable, { keys: ["nom", "synonyme"] });
+const toIndex = Object.keys(synonyme).map((key) => {
+  return { id: key, ...synonyme[key] };
+});
+
+const fuse = new Fuzzy(toIndex, { keys: ["nom", "synonyme"] });
 
 function Succe({ route, navigation }) {
   const [searchResult, setSearchResult] = useState([]);
@@ -36,6 +40,8 @@ function Succe({ route, navigation }) {
       result.map((item) => {
         return {
           nom: item.item.nom,
+          fiche: item.item.fiche,
+          id: item.item.id,
           icone: item.item.icone,
         };
       })
@@ -75,13 +81,12 @@ function Succe({ route, navigation }) {
               <SmallSucce
                 key={item}
                 title={item}
-                navigation={navigation}
+                name={synonyme[item].nom}
                 image={synonyme[item].icone}
               />
             )}
             ListEmptyComponent={() => <Spinner color="brand.iris80" />}
             initialNumToRender={1}
-            maxToRenderPerBatch={6}
             columnWrapperStyle={{ justifyContent: "space-between" }}
             numColumns={3}
             style={{ flex: 1 }}
@@ -90,13 +95,8 @@ function Succe({ route, navigation }) {
         {InputSearch.length > 0 && (
           <FlatList
             data={searchResult}
-            renderItem={({ item: { icone, nom } }) => (
-              <SmallSucce
-                key={nom}
-                title={nom}
-                navigation={nom}
-                image={icone}
-              />
+            renderItem={({ item: { icone, nom, id } }) => (
+              <SmallSucce key={nom} title={id} name={nom} image={icone} />
             )}
             ListEmptyComponent={() => (
               <Text fontFamily="Inter_600SemiBold" color="blueGray.700">

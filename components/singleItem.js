@@ -37,7 +37,7 @@ export const SmallItem = (props) => {
           source={{ uri: props.image }}
           marginBottom={2}
         />
-        <SimpleSubTitle600>{props.title}</SimpleSubTitle600>
+        <SimpleSubTitle600>{props.name}</SimpleSubTitle600>
       </Flex>
     </Pressable>
   );
@@ -61,7 +61,7 @@ export const Item = (props) => {
           alt="L'objet"
           source={{ uri: props.image }}
         />
-        <SimpleSubTitle600 centered>{props.title}</SimpleSubTitle600>
+        <SimpleSubTitle600 centered>{props.name}</SimpleSubTitle600>
       </Flex>
     </Pressable>
   );

@@ -14,7 +14,7 @@ Pacifiscan est une application qui aide à préserver la biodiversité marine
 
 ## Comment s'organise-t-elle ?
 
-Nous avons 3 principales fonctionnalités :
+Nous avons 2 principales fonctionnalités :
 
 - Scan
 - Stories

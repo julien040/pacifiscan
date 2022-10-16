@@ -56,7 +56,7 @@ function Item({ route, navigation }) {
   /** @type {Dechet["Vélo"]}
    */
   const data = synonymes[id];
-  const fiche = Dechet[data.fiche];
+
   const bottomSheetRef = useRef();
   if (!data) {
     //Dans le cas où l'api retournerait un item qui n'existe pas dans l'application
@@ -70,6 +70,7 @@ function Item({ route, navigation }) {
       </Flex>
     );
   }
+  const fiche = Dechet[data.fiche];
   // Button handler
   function handleBottomSheet() {
     setBottomSheetOpenedOnce(true);
