@@ -24,14 +24,13 @@ function StoriesPage({ route, navigation }) {
         flex={1}
         justify="space-between"
       >
-        <PacifiScanHeader />
+        <PacifiScanHeader variant="back" />
         <Heading marginBottom={4}>Stories</Heading>
         <FlatList
           horizontal={false}
-          numColumns={2}
-          columnWrapperStyle={{
+          /* columnWrapperStyle={{
             justifyContent: "space-between",
-          }}
+          }} */
           initialNumToRender={2}
           maxToRenderPerBatch={3}
           data={Stories}
@@ -39,7 +38,6 @@ function StoriesPage({ route, navigation }) {
             return <Story {...item} />;
           }}
         />
-        <PacifiScanFooter active="Story" />
       </Flex>
     </SafeAreaView>
   );
@@ -55,8 +53,8 @@ function Story({ header, id, title }) {
         })
       }
       style={{
-        aspectRatio: 9 / 16,
-        width: "48%",
+        aspectRatio: 1,
+        /* width: "48%", */
         height: "auto",
         marginTop: 2,
         marginBottom: 2,
@@ -73,13 +71,19 @@ function Story({ header, id, title }) {
           source={{ uri: header }}
         >
           <Flex
-            bgColor={"rgba(68, 66, 82, 0.6)"}
+            bgColor={"rgba(68, 66, 82, 0.7)"}
             flex={1}
             p={2}
             justify="center"
             align="center"
           >
-            <Text textAlign="center" color={"gray.100"}>
+            <Text
+              fontFamily="Inter_600SemiBold"
+              letterSpacing={-1}
+              textAlign="center"
+              fontSize={22}
+              color={"gray.100"}
+            >
               {title}
             </Text>
           </Flex>

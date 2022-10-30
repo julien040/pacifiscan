@@ -21,7 +21,7 @@ function Materiau({ route, navigation }) {
         <PacifiScanHeader variant="back" />
         <Flex flex={1}>
           <Spacer />
-          <LargeHeading>{id}</LargeHeading>
+          <LargeHeading>{data.nom}</LargeHeading>
           <Spacer />
           <Image
             source={{ uri: data.header }}

@@ -63,7 +63,7 @@ function ListItem({ title, header, id }) {
       <Flex
         bgColor={"black"}
         borderRadius={8}
-        style={{ aspectRatio: 9 / 16 }}
+        style={{ aspectRatio: 1 }}
         mx={1}
       >
         <ImageBackground

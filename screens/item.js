@@ -26,6 +26,7 @@ import {
   LargeHeading,
   SmallHeading,
 } from "../components/heading";
+import { RedirectionOletriPage } from "../components/oletri";
 
 import { PacifiScanHeader } from "../components/index";
 import BottomSheet from "@gorhom/bottom-sheet";
@@ -111,6 +112,11 @@ function Item({ route, navigation }) {
             />
             <LargeHeading centered>{data.nom}</LargeHeading>
             <Spacer />
+            {(data.fiche === "fiche_canette" ||
+              data.fiche === "fiche_bouteille_en_plastique" ||
+              data.fiche === "fiche_bouchons_en_plastique") && (
+              <RedirectionOletriPage />
+            )}
             <MediumHeading colored>Qu'en faire ?</MediumHeading>
             <SimpleText400>{fiche.queFaire}</SimpleText400>
             {fiche.commentEviter && (

@@ -201,4 +201,6 @@ const ItemPointApportComponent = ({ item }) => {
   );
 };
 
+export { getDirectionLink };
+
 export default PointApport;

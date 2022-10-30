@@ -34,6 +34,7 @@ import {
   Historique,
   Item,
   Materiau,
+  Oletri,
   Parametre,
   Scan,
   ScanSelecteur,
@@ -193,8 +194,16 @@ export default function App() {
                 presentation: "modal",
                 animation: "fade_from_bottom",
               }}
-              /* La fiche info d'un item. Doit être appelé avec des arguments */
             />
+            <Stack.Screen
+              name="Oletri"
+              component={Oletri}
+              options={{
+                presentation: "modal",
+                animation: "fade_from_bottom",
+              }}
+            />
+
             <Stack.Screen
               name="Parametre"
               component={Parametre}

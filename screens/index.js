@@ -2,6 +2,7 @@ import Accueil from "./accueil";
 import Historique from "./historique";
 import Item from "./item";
 import Materiau from "./materiau";
+import Oletri from "./oletri";
 import Parametre from "./parametre";
 import Scan from "./scan";
 import ScanSelecteur from "./scanSelecteur";
@@ -16,6 +17,7 @@ export {
   Historique,
   Item,
   Materiau,
+  Oletri,
   Parametre,
   Scan,
   ScanSelecteur,

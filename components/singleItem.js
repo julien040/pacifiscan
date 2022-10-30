@@ -67,6 +67,6 @@ export const Item = (props) => {
   );
 };
 
-const SmallSucce = React.memo((props) => <Item {...props} />);
+const SmallSucce = (props) => <Item {...props} />;
 
 export { SmallSucce };
