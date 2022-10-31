@@ -1,263 +1,369 @@
 export default {
-  "A photo of a camera": {
-    nom: "Appareil photo",
-    dechets: ["Caméra", "Appareil photo"],
+  "A photo of meat": {
+    nom: "Viande",
+    dechets: ["synonyme_viande"],
   },
-  "A photo of a CD": { nom: "CD/DVD", dechets: ["Album de musique", "CD/DVD"] },
-  "A photo of a deodorant": {
-    nom: "Aerosol",
-    dechets: ["Déodorant", "Bombe insecticide", "Aerosol"],
+  "A photo of a Q-tip": {
+    nom: "Coton-tige",
+    dechets: ["synonyme_coton_tige"],
   },
-  "A photo of a dish": {
-    nom: "Vaisselle",
-    dechets: ["Bol", "Assiette", "Tasse"],
-  },
-  "A photo of a light": { nom: "Ampoule", dechets: ["Ampoule", "Néon"] },
   "A photo of a tray": {
     nom: "Barquette",
-    dechets: ["Barquette en aluminium", "Barquette en plastique"],
-  },
-  "A photo of make up": {
-    nom: "Maquillage",
     dechets: [
-      "Eyeliner",
-      "Anti-cernes",
-      "Blush",
-      "Fond de teint",
-      "Fard à paupières",
-      "Mascara",
-      "Poudre",
-      "Rouge à lèvre",
+      "synonyme_barquette_en_aluminium",
+      "synonyme_barquette_en_plastique",
+    ],
+  },
+  "A photo of a loud speaker": {
+    nom: "Haut parleur",
+    dechets: ["synonyme_haut_parleur"],
+  },
+  "A photo of a milk carton": {
+    nom: "Brique",
+    dechets: [
+      "synonyme_brique_de_jus_de_fruit",
+      "synonyme_brique_de_lait",
+      "synonyme_tetra_pak",
+    ],
+  },
+  "A photo of a deodorant": {
+    nom: "Aerosol",
+    dechets: [
+      "synonyme_deodorant",
+      "synonyme_bombe_insecticide",
+      "synonyme_aerosol",
+    ],
+  },
+  "A photo of a boat": {
+    nom: "Bateau",
+    dechets: ["synonyme_bateau_a_moteur"],
+  },
+  "A photo of cutlery": {
+    nom: "Couverts",
+    dechets: ["synonyme_fourchette", "synonyme_couteau", "synonyme_cuillere"],
+  },
+  "A photo of a car": {
+    nom: "Voiture",
+    dechets: ["synonyme_voiture"],
+  },
+  "A photo of fruits or vegetables": {
+    nom: "Fruits et l\u00e9gumes",
+    dechets: ["synonyme_fruit_et_legume"],
+  },
+  "A photo of a battery": {
+    nom: "Batterie/Piles",
+    dechets: [
+      "synonyme_batterie",
+      "synonyme_batterie_automobile",
+      "synonyme_pile_jetable",
+      "synonyme_pile_rechargeable",
+    ],
+  },
+  "A photo of a copy book": {
+    nom: "Cahier",
+    dechets: [
+      "synonyme_cahier",
+      "synonyme_bloc_notes",
+      "synonyme_carnet",
+      "synonyme_calendrier",
+    ],
+  },
+  "A photo of an electronic cigarette": {
+    nom: "Cigarette \u00e9lectronique ",
+    dechets: ["synonyme_cigarette_electronique"],
+  },
+  "A photo of a tire": {
+    nom: "Pneu",
+    dechets: ["synonyme_pneu"],
+  },
+  "A photo of green waste": {
+    nom: "D\u00e9chets verts",
+    dechets: [
+      "synonyme_feuilles_vertes",
+      "synonyme_tonte_de_pelouse",
+      "synonyme_residus_de_debrousaillement",
+      "synonyme_taille_de_haies",
+      "synonyme_fleurs_fanees",
     ],
   },
   "A photo of a book": {
     nom: "Livre",
-    dechets: ["Bande-dessinée", "Livre", "Manga", "Journal", "Magazine"],
-  },
-  "A photo of a vacuum cleaner": { nom: "Aspirateur", dechets: ["Aspirateur"] },
-  "A photo of a boat": {
-    nom: "Bateau",
-    dechets: ["Voilier", "Bateau à moteur"],
-  },
-  "A photo of a battery": {
-    nom: "Batterie / Piles",
     dechets: [
-      "Batterie",
-      "Batterie automobile",
-      "Pile jetable",
-      "Pile rechargeable",
+      "synonyme_bande_dessinee",
+      "synonyme_livre",
+      "synonyme_manga",
+      "synonyme_journal",
+      "synonyme_magazine",
     ],
+  },
+  "A photo of a tissue": {
+    nom: "Papier absorbant",
+    dechets: ["synonyme_mouchoir_en_papier", "synonyme_essuie_tout"],
+  },
+  "A photo of a keyboard": {
+    nom: "Clavier",
+    dechets: ["synonyme_clavier"],
+  },
+  "A photo of a shoe": {
+    nom: "Chassure",
+    dechets: ["synonyme_chaussure"],
+  },
+  "A photo of an ink cartridge": {
+    nom: "Cartouche d'encre",
+    dechets: ["synonyme_cartouche_d_encre"],
+  },
+  "A photo of an egg box": {
+    nom: "Bo\u00eete d'oeufs",
+    dechets: [
+      "synonyme_boite_a_oeufs_en_carton",
+      "synonyme_boite_a_oeufs_en_carton",
+    ],
+  },
+  "A photo of a remote control": {
+    nom: "T\u00e9l\u00e9commande",
+    dechets: ["synonyme_telecommande"],
+  },
+  "A photo of a lighter": {
+    nom: "Briquet",
+    dechets: ["synonyme_briquet"],
+  },
+  "A photo of a mouse": {
+    nom: "Souris",
+    dechets: ["synonyme_souris_informatique"],
+  },
+  "A photo of a phone": {
+    nom: "T\u00e9l\u00e9phone",
+    dechets: ["synonyme_telephone"],
+  },
+  "A photo of a bicycle": {
+    nom: "V\u00e9lo",
+    dechets: ["synonyme_velo"],
+  },
+  "A photo of a television": {
+    nom: "T\u00e9l\u00e9vision",
+    dechets: ["synonyme_television", "synonyme_moniteur_pc"],
+  },
+  "A photo of a cup": {
+    nom: "Gobelet",
+    dechets: ["synonyme_gobelet_en_carton", "synonyme_gobelet_en_plastique"],
+  },
+  "A photo of small appliances": {
+    nom: "Petit \u00e9lectrom\u00e9nager",
+    dechets: [
+      "synonyme_cafetiere",
+      "synonyme_friteuse",
+      "synonyme_radio_reveil",
+      "synonyme_bouilloire",
+      "synonyme_ventilateur",
+      "synonyme_mixeur",
+      "synonyme_fer_a_repasser",
+      "synonyme_machine_a_coudre",
+      "synonyme_seche_cheveux",
+      "synonyme_grille_pain",
+      "synonyme_micro_ondes",
+    ],
+  },
+  "A photo of a computer": {
+    nom: "Ordinateur",
+    dechets: ["synonyme_ordinateur_fixe", "synonyme_ordinateur_portable"],
+  },
+  "A photo of headphones": {
+    nom: "Ecouteurs",
+    dechets: ["synonyme_ecouteurs"],
+  },
+  "A photo of a bottle": {
+    nom: "Bouteille",
+    dechets: [
+      "synonyme_biberon_en_plastique",
+      "synonyme_bouteille_en_plastique",
+      "synonyme_bidon_de_lessive",
+      "synonyme_bouteille_d_eau",
+    ],
+  },
+  "A photo of a dish": {
+    nom: "Vaisselle",
+    dechets: ["synonyme_bol", "synonyme_assiette", "synonyme_tasse"],
+  },
+  "A photo of make up": {
+    nom: "Maquillage",
+    dechets: [
+      "synonyme_eyeliner",
+      "synonyme_anti_cernes",
+      "synonyme_blush",
+      "synonyme_fond_de_teint",
+      "synonyme_fard_a_paupieres",
+      "synonyme_mascara",
+      "synonyme_poudre",
+      "synonyme_rouge_a_levre",
+    ],
+  },
+  "A photo of a pen": {
+    nom: "Instrument d'\u00e9criture",
+    dechets: [
+      "synonyme_stylo",
+      "synonyme_feutres",
+      "synonyme_crayon_a_papier",
+      "synonyme_porte_mines",
+    ],
+  },
+  "A photo of a plastic cap": {
+    nom: "Bouchon en plastique",
+    dechets: ["synonyme_bouchon_en_plastique"],
+  },
+  "A photo of a camera": {
+    nom: "Cam\u00e9ra",
+    dechets: ["synonyme_camera", "synonyme_appareil_photo"],
+  },
+  "A photo of a fish": {
+    nom: "Poisson",
+    dechets: ["synonyme_poisson"],
+  },
+  "A photo of a bag": {
+    nom: "Sac",
+    dechets: [
+      "synonyme_sac_cabas",
+      "synonyme_sac_en_tissu",
+      "synonyme_sac_plastique_jetable",
+    ],
+  },
+  "A photo of school supplies": {
+    nom: "Mat\u00e9riel scolaire",
+    dechets: [
+      "synonyme_ciseau",
+      "synonyme_regle__equerre",
+      "synonyme_ruban_adhesif",
+      "synonyme_gomme",
+      "synonyme_tube_de_colle",
+      "synonyme_taille_crayon",
+    ],
+  },
+  "A photo of a toothpaste": {
+    nom: "Dentifrice",
+    dechets: ["synonyme_tube_de_dentifrice"],
+  },
+  "A photo of a cigarette": {
+    nom: "Cigarette",
+    dechets: ["synonyme_megot_de_cigarette"],
+  },
+  "A photo of a razor": {
+    nom: "Rasoir",
+    dechets: ["synonyme_rasoir_jetable"],
+  },
+  "A photo of a plastic seal": {
+    nom: "Opercule",
+    dechets: ["synonyme_opercule_en_metal", "synonyme_opercule_en_plastique"],
+  },
+  "A photo of a condom": {
+    nom: "Pr\u00e9servatif",
+    dechets: ["synonyme_preservatif"],
+  },
+  "A photo of a surgical mask": {
+    nom: "Masque",
+    dechets: ["synonyme_masque_chirurgical"],
+  },
+  "A photo of a box": {
+    nom: "Bo\u00eete",
+    dechets: [
+      "synonyme_boite_en_carton",
+      "synonyme_boite_en_metal",
+      "synonyme_boite_en_plastique",
+    ],
+  },
+  "A photo of a light": {
+    nom: "Ampoule",
+    dechets: ["synonyme_ampoule", "synonyme_neon"],
+  },
+  "A photo of a CD": {
+    nom: "CD/DVD",
+    dechets: ["synonyme_album_de_musique", "synonyme_cd_dvd"],
+  },
+  "A photo of a vacuum cleaner": {
+    nom: "Aspirateur",
+    dechets: ["synonyme_aspirateur"],
+  },
+  "A photo of building materials": {
+    nom: "Mat\u00e9riaux de construction",
+    dechets: ["synonyme_brique"],
+  },
+  "A photo of a can": {
+    nom: "Conserve",
+    dechets: ["synonyme_boite_de_conserve", "synonyme_canette"],
+  },
+  "A photo of a big appliance": {
+    nom: "Gros \u00e9lectrom\u00e9nager",
+    dechets: [
+      "synonyme_lave_linge",
+      "synonyme_lave_vaisselle",
+      "synonyme_four",
+      "synonyme_seche_linge",
+      "synonyme_congelateur",
+      "synonyme_refrigerateur",
+      "synonyme_plaque_de_cuisson",
+    ],
+  },
+  "A photo of a plastic jar": {
+    nom: "Pot en plastique",
+    dechets: ["synonyme_pot_de_creme", "synonyme_pot_de_yahourt"],
   },
   "A photo of a furniture": {
     nom: "Meuble",
     dechets: [
-      "Bibliothèque",
-      "Armoire",
-      "Etagère",
-      "Banc",
-      "Canapé",
-      "Table",
-      "Table basse",
-      "Placard",
+      "synonyme_bibliotheque",
+      "synonyme_armoire",
+      "synonyme_etagere",
+      "synonyme_banc",
+      "synonyme_canape",
+      "synonyme_table",
+      "synonyme_table_basse",
+      "synonyme_placard",
     ],
   },
-  "A photo of a plastic bottle": {
-    nom: "Bouteille en plastique",
+  "A photo of a card": {
+    nom: "Carte",
     dechets: [
-      "Biberon en plastique",
-      "Bouteille en plastique",
-      "Bidon de lessive",
-      "Bouteille d'eau",
+      "synonyme_carte_bancaire",
+      "synonyme_carte_rfid",
+      "synonyme_carte_sim",
     ],
   },
-  "A photo of building materials": {
-    nom: "Matériaux de construction",
-    dechets: ["Béton", "Brique", "Parpaing"],
-  },
-  "A photo of a copy book": {
-    nom: "Cahier",
-    dechets: ["Cahier", "Bloc-notes", "Carnet", "Calendrier"],
+  "A photo of a cloth": {
+    nom: "V\u00eatements",
+    dechets: [
+      "synonyme_chemise",
+      "synonyme_maillot_de_bain",
+      "synonyme_t_shirt",
+      "synonyme_pantalon",
+      "synonyme_pull",
+      "synonyme_sous_vetement",
+      "synonyme_bonnet",
+      "synonyme_gilet",
+      "synonyme_vetement",
+    ],
   },
   "A photo of a glass jar": {
     nom: "Bocal en verre",
-    dechets: ["Bocal en verre"],
+    dechets: ["synonyme_bocal_en_verre"],
   },
-  "A photo of an egg box": {
-    nom: "Boîte d'œufs",
-    dechets: ["Boite à œufs en carton", "Boîte à œufs en plastique"],
+  "A photo of drugs": {
+    nom: "M\u00e9dicaments",
+    dechets: ["synonyme_medicaments"],
   },
-  "A photo of a can": {
-    nom: "Conserve",
-    dechets: ["Boîte de conserve", "Canette"],
+  "A photo of a motorcycle": {
+    nom: "Moto",
+    dechets: ["synonyme_moto"],
   },
-  "A photo of a box": {
-    nom: "Boîte",
-    dechets: ["Boîte en carton", "Boîte en métal", "Boîte en plastique"],
-  },
-  "A photo of a plastic cap": {
-    nom: "Bouchon en plastique",
-    dechets: ["Bouchon en plastique"],
+  "A photo of a USB key": {
+    nom: "Cl\u00e9 usb",
+    dechets: ["synonyme_cle_usb"],
   },
   "A photo of a jewel": {
     nom: "Bijou",
-    dechets: ["Collier", "Bracelet", "Boucles d'oreille", "Montre", "Piercing"],
-  },
-  "A photo of a milk carton": {
-    nom: "Brique",
-    dechets: ["Brique de jus de fruit", "Brique de lait", "Tetra pak"],
-  },
-  "A photo of a lighter": { nom: "Briquet", dechets: ["Briquet"] },
-  "A photo of a card": {
-    nom: "Carte",
-    dechets: ["Carte bancaire", "Carte RFID", "Carte SIM"],
-  },
-  "A photo of an ink cartridge": {
-    nom: "Cartouche d'encre",
-    dechets: ["Cartouche d'encre"],
-  },
-  "A photo of a shoe": { nom: "Chaussure", dechets: ["Chaussure"] },
-  "A photo of a cloth": {
-    nom: "Vêtements",
     dechets: [
-      "Chemise",
-      "Maillot de bain",
-      "T-shirt",
-      "Pantalon",
-      "Pull",
-      "Sous-vêtement",
-      "Bonnet",
-      "Gilet",
-      "Vêtement",
+      "synonyme_collier",
+      "synonyme_bracelet",
+      "synonyme_montre",
+      "synonyme_boucles_d_oreille",
+      "synonyme_piercing",
     ],
   },
-  "A photo of an electronic cigarette": {
-    nom: "Cigarette électronique",
-    dechets: ["Cigarette électronique"],
-  },
-  "A photo of school supplies": {
-    nom: "Matériel scolaire",
-    dechets: [
-      "Ciseau",
-      "Règle, Equerre",
-      "Ruban adhésif",
-      "Gomme",
-      "Tube de colle",
-      "Taille crayon",
-    ],
-  },
-  "A photo of a Q-tip": { nom: "Coton-tige", dechets: ["Coton-tige"] },
-  "A photo of a pen": {
-    nom: "Instrument d'écriture",
-    dechets: ["Stylo", "Feutres", "Crayon à papier", "Porte-mines"],
-  },
-  "An photo of a USB key": { nom: "Clé usb", dechets: ["Clé USB"] },
-  "A photo of a plastic jar": {
-    nom: "Pot en plastique",
-    dechets: ["Pot de crème", "Pot de yahourt"],
-  },
-  "A photo of headphones": { nom: "Ecouteurs", dechets: ["Ecouteurs"] },
-  "A photo of green waste": {
-    nom: "Déchets verts",
-    dechets: [
-      "Feuilles vertes",
-      "Tonte de pelouse",
-      "Résidus de débrousaillement",
-      "Taille de haies",
-      "Fleurs fanées",
-    ],
-  },
-  "A photo of cutlery": {
-    nom: "Couverts",
-    dechets: ["Fourchette", "Couteau", "Cuillère"],
-  },
-  "A photo of small appliances": {
-    nom: "Petit électroménager",
-    dechets: [
-      "Cafetière",
-      "Friteuse",
-      "Raclette",
-      "Radio-réveil",
-      "Bouilloire",
-      "Ventilateur",
-      "Mixeur",
-      "Robot",
-      "Fer à repasser",
-      "Machine à coudre",
-      "Sèche-cheveux",
-      "Grille-pain",
-      "Micro-ondes",
-    ],
-  },
-  "A photo of a toy": {
-    nom: "Jouet",
-    dechets: ["Figurine", "Peluche", "Jouet"],
-  },
-  "A photo of a cup": {
-    nom: "Gobelet",
-    dechets: ["Gobelet en carton", "Gobelet en plastique"],
-  },
-  "A photo of a paper sheet": { nom: "Papier", dechets: ["Papier"] },
-  "A photo of a big appliance": {
-    nom: "Gros electroménager",
-    dechets: [
-      "Réfrigérateur",
-      "Four",
-      "Lave-linge",
-      "Lave-vaisselle",
-      "Climatiseur",
-      "Sèche-linge",
-    ],
-  },
-  "A photo of drugs": { nom: "Médicaments", dechets: ["Médicaments"] },
-  "A photo of a surgical mask": {
-    nom: "Masque",
-    dechets: ["Masque chirurgical"],
-  },
-  "A photo of a cigarette": {
-    nom: "Cigarette",
-    dechets: ["Mégot de cigarette"],
-  },
-  "A photo of a television": {
-    nom: "Télévision",
-    dechets: ["Télévision", "Moniteur PC"],
-  },
-  "A photo of a motorcycle": { nom: "Moto", dechets: ["Moto"] },
-  "A photo of a tissue": {
-    nom: "Papier absorbant",
-    dechets: ["Mouchoir en papier", "Essuie-tout"],
-  },
-  "A photo of a computer": {
-    nom: "Ordinateur",
-    dechets: ["Ordinateur fixe", "Ordinateur portable"],
-  },
-  "A photo of a plastic seal": {
-    nom: "Opercule",
-    dechets: ["Opercule en métal", "Opercule en plastique"],
-  },
-  "A photo of a tire": { nom: "Pneu", dechets: ["Pneu"] },
-  "A photo of a bag": {
-    nom: "Sac",
-    dechets: ["Sac cabas", "Sac en tissu", "Sac plastique jetable"],
-  },
-  "A photo of a mouse": { nom: "Souris", dechets: ["Souris informatique"] },
-  "A photo of a keyboard": { nom: "Clavier", dechets: ["Clavier"] },
-  "A photo of a fish": { nom: "Poisson", dechets: ["Poisson"] },
-  "A photo of meat": { nom: "Viande", dechets: ["Viande"] },
-  "A photo of a condom": { nom: "Préservatif", dechets: ["Préservatif"] },
-  "A photo of a razor": { nom: "Rasoir", dechets: ["Rasoir jetable"] },
-  "A photo of a remote control": {
-    nom: "Télécommande",
-    dechets: ["Télécommande"],
-  },
-  "A photo of a loud speaker": {
-    nom: "Haut parleur",
-    dechets: ["Haut-parleur"],
-  },
-  "A photo of a phone": { nom: "Téléphone", dechets: ["Téléphone"] },
-  "A photo of a toothpaste": {
-    nom: "Tube",
-    dechets: ["Tube de dentifrice", "Tube de crème"],
-  },
-  "A photo of a bicycle": { nom: "Vélo", dechets: ["Vélo"] },
-  "A photo of a car": { nom: "Voiture", dechets: ["Voiture"] },
 };

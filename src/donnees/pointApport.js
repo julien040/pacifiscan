@@ -59,9 +59,9 @@ export default {
   },
   "0dcfea15-d300-4af9-be61-3166eb8b97f4": {
     nom: "Decheterie de Pa\u00efta",
-    latitude: -22.142,
-    longitude: 166.373,
-    categorie: "recyclage",
+    latitude: -22.1623553,
+    longitude: 166.3745009,
+    categorie: "enfouissement",
   },
   "0e6d27ac-d766-4a08-b2e4-6273cac82553": {
     nom: "Atelier Mairie de Touho",
@@ -77,8 +77,8 @@ export default {
   },
   "10a38781-7d77-4426-8e2e-9db75d83dcea": {
     nom: "Decheterie de Ducos",
-    latitude: -22.228,
-    longitude: 166.448,
+    latitude: -22.2304885,
+    longitude: 166.449671,
     categorie: "recyclage",
   },
   "11838f0e-ebe4-4a16-bb95-3b4a292d8eee": {
@@ -129,6 +129,12 @@ export default {
     longitude: 166.523,
     categorie: "recyclage",
   },
+  "196b0023-6a73-4edd-8320-a1d64d66fbd7": {
+    nom: "Casino Johnston",
+    latitude: -22.2722,
+    longitude: 166.4297,
+    categorie: "recyclage",
+  },
   "1a76e74c-359e-4787-a554-8ac7481682fb": {
     nom: "Atelier Municipal de Houailou",
     latitude: -21.279,
@@ -152,6 +158,12 @@ export default {
     latitude: -22.185,
     longitude: 166.438,
     categorie: "recyclage",
+  },
+  "1bac6d55-a989-46a4-b654-bdde8787bfe3": {
+    nom: "La bouquinerie du liseron",
+    latitude: -22.2771955,
+    longitude: 166.4448813,
+    categorie: "vente",
   },
   "1cfbc61d-ce7c-499d-a2c9-b5efcaece1ea": {
     nom: "Caserne Des Pompiers",
@@ -183,6 +195,18 @@ export default {
     longitude: 165.344,
     categorie: "recyclage",
   },
+  "1eda28b3-ca06-4eec-b2a9-3e875fb3e916": {
+    nom: "Sharp Center",
+    latitude: -22.275,
+    longitude: 166.438,
+    categorie: "recyclage",
+  },
+  "1f3c42a1-1942-4baf-84cf-b80f740cf5ff": {
+    nom: "Docteur Micro",
+    latitude: -22.248,
+    longitude: 166.441,
+    categorie: "recyclage",
+  },
   "1f5d83c2-ced6-48e6-bea9-59f503971ab7": {
     nom: "Station Shell Bourail",
     latitude: -21.569,
@@ -209,9 +233,9 @@ export default {
   },
   "219187b2-f8eb-40db-9a24-1e434337a2c7": {
     nom: "Decheterie de PK6",
-    latitude: -22.242,
-    longitude: 166.47,
-    categorie: "recyclage",
+    latitude: -22.242248,
+    longitude: 166.4696413,
+    categorie: "enfouissement",
   },
   "2275440f-54d2-4aa2-8b56-b2780a28611f": {
     nom: "Mageco",
@@ -335,9 +359,9 @@ export default {
   },
   "31c88825-c444-4c86-b0f5-547df23b9354": {
     nom: "Decheterie de Magenta",
-    latitude: -22.273,
-    longitude: 166.468,
-    categorie: "recyclage",
+    latitude: -22.2727977,
+    longitude: 166.4683983,
+    categorie: "enfouissement",
   },
   "324e1a3c-5a1e-4202-835b-b61d809b5cd0": {
     nom: "Caledonienne Des Eaux",
@@ -525,6 +549,12 @@ export default {
     longitude: 166.451,
     categorie: "recyclage",
   },
+  "4f885490-99e8-44af-82f6-2545e6300a83": {
+    nom: "Maison Commune de Bouirou",
+    latitude: -21.443,
+    longitude: 165.533,
+    categorie: "recyclage",
+  },
   "4fa1c746-e734-40fa-b453-b68f37c7ac2f": {
     nom: "Leader Price",
     latitude: -21.047,
@@ -609,6 +639,12 @@ export default {
     longitude: 165.158,
     categorie: "recyclage",
   },
+  "5b767d9f-4d87-40df-9735-a6dfddd87ba4": {
+    nom: "Mont-Dore Jeunesse multim\u00e9dia",
+    latitude: -22.2317082,
+    longitude: 166.5738797,
+    categorie: "recyclage",
+  },
   "5bbdcf18-8f0a-459f-abff-75b17e2d4c58": {
     nom: "Decheterie de Lifou",
     latitude: -21.038,
@@ -645,12 +681,6 @@ export default {
     longitude: 165.499,
     categorie: "recyclage",
   },
-  "637f309e-37ff-4779-bc07-8b338626f375": {
-    nom: "DECHETERIE DE BOURAIL (POLE REP)",
-    latitude: -21.479,
-    longitude: 165.42,
-    categorie: "recyclage",
-  },
   "63dd6175-3d69-4e0f-ba58-60379830070e": {
     nom: "Menard Automobiles Groupe Cfao",
     latitude: -22.246,
@@ -661,7 +691,7 @@ export default {
     nom: "Decheterie de Bourail (Pole Rep)",
     latitude: -21.514,
     longitude: 165.462,
-    categorie: "recyclage",
+    categorie: "enfouissement",
   },
   "645cf043-90b4-4e48-8914-49a18c5412f8": {
     nom: "Chambre Des Metiers ET de L\u2019Artisanat",
@@ -733,6 +763,12 @@ export default {
     nom: "As de Trefle Quartier Latin",
     latitude: -22.276,
     longitude: 166.446,
+    categorie: "recyclage",
+  },
+  "6bd23f96-165c-4273-8d13-54ab595eba57": {
+    nom: "Sopema",
+    latitude: -22.2398,
+    longitude: 166.4469,
     categorie: "recyclage",
   },
   "6c3130b2-7065-4149-a835-061b614d116b": {
@@ -999,6 +1035,12 @@ export default {
     longitude: 166.54,
     categorie: "recyclage",
   },
+  "8aa22951-0e8c-4fce-8629-3b57ade4524e": {
+    nom: "Recyclerie d'ordinateur",
+    latitude: -22.2391115,
+    longitude: 166.4200482,
+    categorie: "recyclage",
+  },
   "8ba53570-6bd5-4302-91ae-06d7927ccae4": {
     nom: "Decheterie Sivm Centre EST",
     latitude: -21.523,
@@ -1033,6 +1075,12 @@ export default {
     nom: "Garage Hmodrya",
     latitude: -20.65,
     longitude: 166.569,
+    categorie: "recyclage",
+  },
+  "91d57242-6d45-4161-94c0-0ee60a01700f": {
+    nom: "Station Shell de Koumac",
+    latitude: -20.5651,
+    longitude: 163.28239,
     categorie: "recyclage",
   },
   "9218128f-d878-477f-a504-04185f2f8191": {
@@ -1133,9 +1181,15 @@ export default {
   },
   "97fc846f-e5d4-473c-bdd2-b6431daf4004": {
     nom: "Decheterie du Mont-Dore",
-    latitude: -22.241,
-    longitude: 166.578,
+    latitude: -22.248901,
+    longitude: 166.5686442,
     categorie: "recyclage",
+  },
+  "983c3d43-53b7-438b-a2ef-cacfb450927f": {
+    nom: "Maison d'accueil hospitali\u00e8re",
+    latitude: -21.0557198,
+    longitude: 164.8565613,
+    categorie: "don",
   },
   "99d468c1-f52c-4098-852a-d3fe3a77b5cc": {
     nom: "Station Shell Kone",
@@ -1247,9 +1301,9 @@ export default {
   },
   "a72b9166-51ab-463b-aca8-5c2e701846b0": {
     nom: "La Ressourcerie",
-    latitude: -22.273,
-    longitude: 166.448,
-    categorie: "recyclage",
+    latitude: -22.2697519,
+    longitude: 166.4406663,
+    categorie: "reparation",
   },
   "a7a974fd-7afa-41de-8294-9931930b4286": {
     nom: "Sivu Tipeep",
@@ -1299,10 +1353,28 @@ export default {
     longitude: 166.447,
     categorie: "recyclage",
   },
+  "aa55c707-1c30-459b-bd28-7185f2637e49": {
+    nom: "Soci\u00e9t\u00e9 de St Vincent de Paul",
+    latitude: -22.261832,
+    longitude: 146.4464056,
+    categorie: "don",
+  },
   "aa804a71-1731-47f6-a97f-b731540e6693": {
     nom: "Digital Computer",
     latitude: -22.254,
     longitude: 166.447,
+    categorie: "recyclage",
+  },
+  "ab2bff3c-cbe7-4d03-ac9e-18371e9b309a": {
+    nom: "D\u00e9cheterie de Thio",
+    latitude: -21.626,
+    longitude: 165.2661,
+    categorie: "recyclage",
+  },
+  "ac04586e-811d-4704-9f58-67dd53966ba3": {
+    nom: "Royal Reci Boat",
+    latitude: -22.1311922,
+    longitude: 166.3579401,
     categorie: "recyclage",
   },
   "ac33eea7-def2-452c-bf27-f7a7e95f1f90": {
@@ -1334,6 +1406,12 @@ export default {
     latitude: -21.121,
     longitude: 164.901,
     categorie: "recyclage",
+  },
+  "aebdfbe9-c635-46e6-a9a5-5cf7dd548fa6": {
+    nom: "La bouquinerie du Nord",
+    latitude: -21.0557198,
+    longitude: 164.8565613,
+    categorie: "don",
   },
   "b081e1b3-bd6b-4156-9259-750aa14ef73a": {
     nom: "Leader Price la Foa",
@@ -1436,6 +1514,12 @@ export default {
     latitude: -22.273,
     longitude: 166.437,
     categorie: "recyclage",
+  },
+  "ba508e6f-c07f-4325-925f-1b830c295ed1": {
+    nom: "Decheterie de Boulouparis (Pole Rep)",
+    latitude: -21.86,
+    longitude: 166.057,
+    categorie: "enfouissement",
   },
   "ba6ea2e3-8e58-42de-b55f-6d3f96e97a46": {
     nom: "Garage Arrighi",
@@ -1589,8 +1673,8 @@ export default {
   },
   "cc5bfbf7-8d9f-4cf9-8777-fd227d0058c0": {
     nom: "Secours Catholique",
-    latitude: -22.261,
-    longitude: 166.446,
+    latitude: -22.2605196,
+    longitude: 166.4460122,
     categorie: "recyclage",
   },
   "cc912fdd-8dc5-4094-ae11-d069dbd3f162": {
@@ -1609,6 +1693,12 @@ export default {
     nom: "Micromedia SQL",
     latitude: -22.276,
     longitude: 166.445,
+    categorie: "recyclage",
+  },
+  "ce7a4b72-0874-4b05-8ee9-608fcbc313f1": {
+    nom: "Darty ducos",
+    latitude: -22.247,
+    longitude: 166.4406,
     categorie: "recyclage",
   },
   "cf16d5ec-8931-4ac9-9c73-14ccde107531": {
@@ -1685,9 +1775,9 @@ export default {
   },
   "d6bda7f2-a0d4-43b6-9267-b5d79fd4c93b": {
     nom: "Decheterie de Dumbea Nord",
-    latitude: -22.169,
-    longitude: 166.461,
-    categorie: "recyclage",
+    latitude: -22.168791,
+    longitude: 166.459246,
+    categorie: "enfouissement",
   },
   "d762d528-82d7-4142-b08b-edbec9a54704": {
     nom: "Jeanne D\u2019Arc",
@@ -1845,6 +1935,12 @@ export default {
     longitude: 164.289,
     categorie: "recyclage",
   },
+  "e582ad64-e48f-46b7-b635-8f5dd94cf774": {
+    nom: "Croix Rouge",
+    latitude: -22.2513688,
+    longitude: 149.4540088,
+    categorie: "don",
+  },
   "e5c3081a-f0b5-46d1-a6e3-bc39858c591b": {
     nom: "Cci ET Egc",
     latitude: -22.273,
@@ -1876,7 +1972,7 @@ export default {
     categorie: "recyclage",
   },
   "e8e0495e-7e7c-4ae9-912a-7d67f0e426c6": {
-    nom: "DECHETERIE DE POUM",
+    nom: "Decheterie de Poum",
     latitude: -20.232,
     longitude: 164.024,
     categorie: "recyclage",
@@ -1904,6 +2000,12 @@ export default {
     latitude: -21.569,
     longitude: 165.499,
     categorie: "recyclage",
+  },
+  "ea833f4c-53b8-4039-baa8-8954b57b53f9": {
+    nom: "Eco Recycle",
+    latitude: -22.2326951,
+    longitude: 148.4477648,
+    categorie: "reparation",
   },
   "ebe489ba-ebec-4461-94f3-118a40a4adfe": {
     nom: "Siap (Atelier Toyota)",

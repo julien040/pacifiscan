@@ -53,7 +53,10 @@ function Scan({ route, navigation }) {
       setLoadingContent("Envoi de l'image...");
       const beforeScan = Date.now() / 1000;
       const { label, uuid, confidence } = await DetectLabel(base64, id);
+      console.log("Detecté: " + label);
+      console.log("Confiance: " + confidence);
       const timeToScan = (Date.now() / 1000 - beforeScan).toFixed(2);
+      console.log("Temps pour scanner: " + timeToScan);
       const Item = association[label];
       setLoadingContent(`Image analysée !`);
       Vibration.vibrate(100);

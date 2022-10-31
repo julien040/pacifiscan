@@ -40,10 +40,11 @@ function Onboard({ route, navigation }) {
       nextLabel="Suivant"
       bottomBarColor="#dddafe"
       titleStyles={{
-        fontFamily: "Urbanist_700Bold",
+        fontFamily: "Inter_600SemiBold",
       }}
       subTitleStyles={{
         fontFamily: "Inter_500Medium",
+        letterSpacing: 0.8,
         fontSize: 14,
       }}
       pages={[

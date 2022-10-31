@@ -3,11 +3,11 @@ export default {
     nom: "Aliments compostables",
     queFaire:
       "Compostez votre d\u00e9chet \u00e0 domicile ou jetez-le dans un bac de compostage partag\u00e9, si cette derni\u00e8re solution a \u00e9t\u00e9 mise en place \u00e0 proximit\u00e9 de votre domicile. Vous pouvez aussi donner votre d\u00e9chet comme nourriture \u00e0 des animaux domestiques. Sinon, jetez votre d\u00e9chet dans la poubelle des ordures m\u00e9nag\u00e8res.",
-    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
-    ouDeposer: [
-      "492de2b2-123e-486b-a6e8-d442fe6fa25a",
-      "52213dbd-9a04-46de-a25a-4871f058e4d8",
+    collecte: [
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "b5cd353b-f0f3-4633-9710-652c821ec94b",
     ],
+    ouDeposer: [],
     matiere: ["9a8e6648-8357-4b25-b749-ee4e3a650374"],
     commentEviter:
       "Surveillez les dates de p\u00e9remption des denr\u00e9es alimentaires en mettant syst\u00e9matiquement les produits \u00e0 consommer le plus rapidement devant les autres, adaptez au mieux les quantit\u00e9s cuisin\u00e9es, conservez les restes utilisables et cuisinez-les. Composter vos aliments vous permettra d'obtenir un amendement naturel pour votre jardin ou vos plantes en pots. Tous les aliments ne sont cependant pas compostables et certains ne le sont qu'en quantit\u00e9s r\u00e9duites.",

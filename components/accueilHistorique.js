@@ -67,8 +67,7 @@ function AccueilHistorique() {
 }
 
 function ListItem({ date, type }) {
-  const navigation = useNavigation();
-  const name = association[type].nom;
+  const name = association[type]?.nom;
   const data = synonymes[name];
   return (
     <Pressable

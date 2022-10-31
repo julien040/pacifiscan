@@ -11,6 +11,9 @@ export const DetectLabel = async (base64, id) => {
       },
       body: JSON.stringify({ image: base64, id: id }),
     });
+    if (!response.ok) {
+      throw new Error("Une erreur est survenue côté serveur");
+    }
     const data = await response.json();
     return data;
   } catch (error) {
