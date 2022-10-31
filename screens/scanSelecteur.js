@@ -54,7 +54,7 @@ function ScanSelecteur({ route, navigation }) {
             data={Item.dechets}
             renderItem={({ item }) => {
               const { nom, icone } = synonymes[item];
-              return <SelectionItem nom={nom} icone={icone} />;
+              return <SelectionItem nom={nom} icone={icone} item={item} />;
             }}
             keyExtractor={(item) => item}
           />
@@ -64,12 +64,13 @@ function ScanSelecteur({ route, navigation }) {
   );
 }
 
-const SelectionItem = ({ nom, icone }) => {
+const SelectionItem = ({ nom, icone, item }) => {
   const navigation = useNavigation();
+  console.log(item);
   return (
     <Pressable
       onPress={() => {
-        navigation.navigate("Item", { id: nom });
+        navigation.navigate("Item", { id: item });
       }}
       my={2}
       borderRadius={8}

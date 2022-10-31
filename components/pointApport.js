@@ -180,7 +180,8 @@ const ItemPointApportComponent = ({ item }) => {
           fontFamily="Inter_500Medium"
           color="blueGray.500"
         >
-          {item.categorie}
+          {item.categorie.split("")[0].toUpperCase() +
+            item.categorie.slice(1).toLowerCase()}
         </Text>
         <Pressable
           onPress={() => {
