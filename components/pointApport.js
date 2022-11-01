@@ -106,8 +106,7 @@ function PointApport({ id }) {
           color="blueGray.500"
           letterSpacing={-0.5}
         >
-          Voici la liste des points de collecte de votre déchet triés par
-          distance par rapport à vous
+          Liste des points d'apport
         </Text>
       )}
       ListEmptyComponent={

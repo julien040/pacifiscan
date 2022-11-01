@@ -1,4 +1,4 @@
-import { Flex, Image } from "native-base";
+import { Flex, Image, ScrollView } from "native-base";
 import { LargeHeading } from "../components/heading";
 import { SimpleSubTitle500, SimpleText400 } from "../components/text";
 import { PacifiScanHeader } from "../components";
@@ -19,7 +19,7 @@ function Materiau({ route, navigation }) {
         justify="space-between"
       >
         <PacifiScanHeader variant="back" />
-        <Flex flex={1}>
+        <ScrollView flex={1}>
           <Spacer />
           <LargeHeading>{data.nom}</LargeHeading>
           <Spacer />
@@ -31,7 +31,7 @@ function Materiau({ route, navigation }) {
           />
           <Spacer />
           <SimpleText400>{data.description}</SimpleText400>
-        </Flex>
+        </ScrollView>
       </Flex>
     </SafeAreaView>
   );

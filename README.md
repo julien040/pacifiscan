@@ -10,6 +10,12 @@ L'ensemble du code est sous licence GNU sauf les fichiers présents dans le doss
 
 Pacifiscan est une application qui aide à préserver la biodiversité marine
 
+## Comment ça marche ?
+
+1. Vous prenez une photo de votre déchet
+2. L'application utilise une intelligence artificielle pour identifier le déchet
+3. Elle affiche les points d'apport les plus proches de vous
+
 ![L'application](https://pacifiscan.org/app.png)
 
 ## Comment s'organise-t-elle ?
@@ -19,7 +25,7 @@ Nous avons 2 principales fonctionnalités :
 - Scan
 - Stories
 
-Si vous souhaitez en savoir plus, nous vous invitons à consulter ce [pdf](https://oncle-stan.pacifiscan.org/documents/presentation.pdf)
+Si vous souhaitez en savoir plus, nous vous invitons à consulter ce [dossier](https://oncle-stan.pacifiscan.org/press-kit.zip).
 
 ## Technologies utilisées
 
