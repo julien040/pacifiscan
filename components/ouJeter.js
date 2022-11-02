@@ -10,8 +10,15 @@ function OuJeter({ id }) {
    */
   const data = dechets[id];
   // We check if wether the "collecte" or "point d'apport" is available with this waste.
-  const collecteAvailable = data.collecte !== null;
-  const apportAvailable = data.ouDeposer !== null;
+  const collecteAvailable =
+    data.collecte !== null &&
+    data.collecte !== undefined &&
+    data.collecte.length > 0;
+
+  const apportAvailable =
+    data.ouDeposer !== null &&
+    data.ouDeposer !== undefined &&
+    data.ouDeposer.length > 0;
 
   if (collecteAvailable && apportAvailable) {
     return (

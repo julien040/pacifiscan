@@ -208,7 +208,8 @@ export default function App() {
               name="Parametre"
               component={Parametre}
               options={{
-                presentation: "modal",
+                presentation: "fullScreenModal",
+                animation: "fade_from_bottom",
               }}
               /* Pour désactiver les outils de collection de données ainsi que voir l'id d'utilisateur */
             />

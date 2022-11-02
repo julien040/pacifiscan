@@ -148,7 +148,7 @@ function Item({ route, navigation }) {
           backgroundStyle={{ backgroundColor: "#EFF0FF" }}
           ref={bottomSheetRef}
           onChange={handleBottomSheetChange}
-          snapPoints={["60%", "100%"]}
+          snapPoints={["90%"]}
           enablePanDownToClose={true}
           index={-1}
         >
@@ -160,6 +160,7 @@ function Item({ route, navigation }) {
                 letterSpacing={-0.5}
                 marginBottom={2}
                 px={3}
+                textAlign="center"
                 fontFamily="Inter_600SemiBold"
               >
                 Où jeter votre déchet ?

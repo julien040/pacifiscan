@@ -11,7 +11,7 @@ const sanityClient = client({
 const urlBuilder = (ref) => urlBuild(sanityClient).image(ref);
 
 const URL =
-  'https://3zpk9otr.api.sanity.io/v2021-06-07/data/query/production?query=*[_type == "story"]';
+  'https://3zpk9otr.api.sanity.io/v2021-06-07/data/query/production?query=*[_type == "story"] | order(_createdAt desc) [0...52]';
 
 /**
  * Fetches the stories from the backend. Returns the last 100 stories.
@@ -28,10 +28,10 @@ async function fetchStories() {
       length: story.images.length,
       header: urlBuilder(story.images[0].asset._ref)
         .width(1080)
-        .height(1920)
+        .height(1080)
         .url(),
       images: story.images.map((image) =>
-        urlBuilder(image.asset._ref).width(1080).height(1920).url()
+        urlBuilder(image.asset._ref).width(1080).height(1080).url()
       ),
     }));
     return res;

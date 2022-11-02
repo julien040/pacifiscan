@@ -44,7 +44,7 @@ function AccueilHistorique() {
       keyExtractor={(item, index) => index}
       renderItem={({ item }) => <ListItem {...item} />}
       ListFooterComponent={() =>
-        Data.length > 0 ? (
+        Data.length > 4 ? (
           <Pressable
             onPress={() => {
               navigation.navigate("Infos");

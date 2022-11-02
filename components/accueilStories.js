@@ -70,8 +70,12 @@ function ListItem({ title, header, id }) {
           style={{
             flex: 1,
             borderRadius: 8,
+
             backgroundColor: "black",
             overflow: "hidden",
+          }}
+          imageStyle={{
+            resizeMode: "repeat",
           }}
           source={{ uri: header }}
         >
@@ -86,7 +90,9 @@ function ListItem({ title, header, id }) {
             <Heading
               fontWeight={"semibold"}
               textAlign={"center"}
-              fontSize={14}
+              fontSize={20}
+              fontFamily="Inter_600SemiBold"
+              letterSpacing={-0.7}
               color={"gray.200"}
             >
               {title}

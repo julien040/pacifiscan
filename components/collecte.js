@@ -34,19 +34,6 @@ function Collecte({ id }) {
   }
   return (
     <BottomSheetFlatList
-      ListHeaderComponent={
-        <Text
-          marginBottom={2}
-          fontFamily="Inter_500Medium"
-          fontSize={14}
-          color="blueGray.500"
-          letterSpacing={-0.5}
-        >
-          {Commune === null
-            ? "Aucune commune n'est sélectionnée."
-            : "Votre commune : " + communes[Commune]?.nom}
-        </Text>
-      }
       data={pointCollecte}
       renderItem={({ item }) => (
         <ItemCollecteComponent
@@ -66,6 +53,10 @@ function Collecte({ id }) {
           color="blueGray.500"
           letterSpacing={-0.5}
         >
+          {Commune === null
+            ? "Aucune commune n'est sélectionnée."
+            : "Votre commune : " + communes[Commune]?.nom}
+          {"\n"}
           Cliquez sur un point pour en savoir plus
         </Text>
       }

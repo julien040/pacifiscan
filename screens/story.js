@@ -63,8 +63,9 @@ const Story = ({ route, navigation }) => {
           <View key={index} style={{ flex: 1 }}>
             <Image
               style={{
-                aspectRatio: 1,
+                aspectRatio: 1 / 1,
                 overflow: "visible",
+                resizeMode: "contain",
                 marginTop: "auto",
                 marginBottom: "auto",
               }}
