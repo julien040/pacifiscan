@@ -44,7 +44,7 @@ export default {
     queFaire:
       "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
     collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
-    ouDeposer: null,
+    ouDeposer: ["e066ffc1-4626-47d0-aadb-6b3510c57a1a"],
     matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
     commentEviter:
       "Dans la mesure du possible, \u00e9vitez les produits vendus dans des emballages individuels ou en mini-doses. Pr\u00e9f\u00e9rez-leur les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
@@ -54,7 +54,7 @@ export default {
     queFaire:
       "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
     collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
-    ouDeposer: null,
+    ouDeposer: ["3c6b1856-6df9-472c-a55b-4c394b21da61"],
     matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
     commentEviter:
       "Dans la mesure du possible, \u00e9vitez les produits vendus dans des emballages individuels ou en mini-doses. Pr\u00e9f\u00e9rez-leur les produits en grand conditionnement mais restant adapt\u00e9s \u00e0 votre consommation pour \u00e9viter le gaspillage. Vous produirez moins de d\u00e9chets et vous ferez en plus des \u00e9conomies.",
@@ -62,7 +62,7 @@ export default {
   fiche_bateau: {
     nom: "Bateau",
     queFaire:
-      "Le bateau doit \u00eatre apport\u00e9 dans un centre agr\u00e9\u00e9 pour la d\u00e9construction des bateaux en fin de vie.",
+      "Le bateau doit \u00eatre apport\u00e9 dans un centre agr\u00e9\u00e9 pour la destruction des bateaux en fin de vie.",
     collecte: null,
     ouDeposer: ["b749f69c-1914-4bc8-ae70-f92503314266"],
     matiere: [
@@ -715,9 +715,10 @@ export default {
   },
   fiche_materiel_scolaire_en_plastique: {
     nom: "Mat\u00e9riel scolaire en plastique",
-    queFaire: "Lorem ipsum",
+    queFaire:
+      "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
     collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
-    ouDeposer: null,
+    ouDeposer: ["3c6b1856-6df9-472c-a55b-4c394b21da61"],
     matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
   },
   fiche_medicaments: {

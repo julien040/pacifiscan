@@ -4,7 +4,7 @@ Bievenue sur le GitHub de Pacifiscan !
 
 ## Licence
 
-L'ensemble du code est sous licence GNU sauf les fichiers présents dans le dossier `src/donnees` à cause de certains partenaires ne souhaitant pas partager publiquement leurs données. Bien que le code soit disponible publiquement, nous vous invitons à nous contacter au préalable sur [contact@pacifiscan.org](mailto:contact@pacifiscan.org) avant tout réutilisation.
+L'ensemble du code est sous licence GNU. Bien que le code soit disponible publiquement, nous vous invitons à nous contacter au préalable sur [contact@pacifiscan.org](mailto:contact@pacifiscan.org) avant toute réutilisation.
 
 ## Qu'est-ce que c'est ?
 
@@ -43,4 +43,4 @@ Si vous souhaitez contribuer, votre aide est bienvenue !
 
 ## Contact
 
-Envoyez nous un message à [contact@pacifiscan.org](mailto:contact@pacifiscan.org)
+Envoyez-nous un message à [contact@pacifiscan.org](mailto:contact@pacifiscan.org)

@@ -192,6 +192,9 @@ export default function App() {
               component={Materiau}
               options={{
                 presentation: "modal",
+                contentStyle: {
+                  backgroundColor: "#EFF0FF",
+                },
                 animation: "fade_from_bottom",
               }}
             />

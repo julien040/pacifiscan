@@ -1,8 +1,10 @@
-/**
- * ⚠️ Il est interdit de réutiliser ces données. Elles ne sont pas libres de droits.
- * @license Propriétaire Province SUD et l'Association PACIFISCAN
- */
 export default {
+  "009786bb-a28f-4459-84b8-d98a3bb94d65": {
+    nom: "Borne - Rond point de la Vierge",
+    latitude: -22.263685,
+    longitude: 166.451047,
+    categorie: "recyclage",
+  },
   "025c837a-b8d3-45cc-aabf-50dd49a85ce4": {
     nom: "Mission D\u2019Insertion Des Jeunes Thio",
     latitude: -21.607,
@@ -45,6 +47,18 @@ export default {
     longitude: 166.453,
     categorie: "recyclage",
   },
+  "0b32507f-1c6d-4bde-b9f3-c27946e64b42": {
+    nom: "Borne - Ecole les pervenches",
+    latitude: -22.2577038,
+    longitude: 166.4638776,
+    categorie: "recyclage",
+  },
+  "0c28abe5-6e4b-45b9-a159-4a64153df31a": {
+    nom: "Borne - Parking Form +",
+    latitude: -22.2209726,
+    longitude: 166.482064,
+    categorie: "recyclage",
+  },
   "0d560e57-e584-4585-a0fb-2174e821df6b": {
     nom: "Station Shell Voh",
     latitude: -20.95,
@@ -85,6 +99,12 @@ export default {
     nom: "Darty Ville (Ancien Connexion)",
     latitude: -22.271,
     longitude: 166.439,
+    categorie: "recyclage",
+  },
+  "119e0721-89eb-44f8-b711-ecf5730bd258": {
+    nom: "Borne - Gouvernement",
+    latitude: -22.278219,
+    longitude: 166.441139,
     categorie: "recyclage",
   },
   "11f72803-8dc1-46b9-a869-2969b6b997e5": {
@@ -225,6 +245,12 @@ export default {
     longitude: 166.448,
     categorie: "recyclage",
   },
+  "1faa7471-f69e-4016-a0e5-4f160d6eebb0": {
+    nom: "Borne - Ecole Petit Poucet",
+    latitude: -22.2642225,
+    longitude: 166.4455744,
+    categorie: "recyclage",
+  },
   "2185941f-321c-4d23-84d8-563afb6e4192": {
     nom: "Gite de Nataiwatch",
     latitude: -22.661,
@@ -277,6 +303,12 @@ export default {
     nom: "Cheval Distribution Apogoti",
     latitude: -22.197,
     longitude: 166.445,
+    categorie: "recyclage",
+  },
+  "253e91e5-f8a9-4149-83c7-aa758a473200": {
+    nom: "Borne - Dange",
+    latitude: -22.279344,
+    longitude: 166.448472,
     categorie: "recyclage",
   },
   "2657f4f3-f39c-4026-a78d-1f4f508cbcfb": {
@@ -399,6 +431,18 @@ export default {
     longitude: 166.457,
     categorie: "recyclage",
   },
+  "3957c7dc-54c3-4d9d-85fb-9cf183f78981": {
+    nom: "Borne - March\u00e9 port moselle",
+    latitude: -22.276288,
+    longitude: 166.4387208,
+    categorie: "recyclage",
+  },
+  "39ce9870-7462-4fa0-92cf-07430f001622": {
+    nom: "Borne - Ecole Les Frangipaniers",
+    latitude: -22.2936162,
+    longitude: 166.4420281,
+    categorie: "recyclage",
+  },
   "3a8a1ef7-e27f-4977-8e30-17a0e2bbc077": {
     nom: "Garage Petazig",
     latitude: -20.347,
@@ -487,6 +531,12 @@ export default {
     nom: "Cet de Poindimie",
     latitude: -20.939,
     longitude: 165.344,
+    categorie: "recyclage",
+  },
+  "43d25bc9-1fe1-45a4-be47-63522ac7de66": {
+    nom: "Borne - Magasin Trando Market",
+    latitude: -22.2343512,
+    longitude: 166.4791171,
     categorie: "recyclage",
   },
   "44161c3d-20c7-4066-a60f-400197ca6c6d": {
@@ -651,6 +701,12 @@ export default {
     longitude: 167.241,
     categorie: "recyclage",
   },
+  "5cb2e2b2-fc05-41c5-be5b-b79dce594a09": {
+    nom: "Borne - Quay ferry",
+    latitude: -22.2742146,
+    longitude: 166.4381414,
+    categorie: "recyclage",
+  },
   "5e588a4a-e800-41a5-9396-17391690ca3a": {
     nom: "Ramada H\u00f4tel",
     latitude: -22.229,
@@ -789,6 +845,12 @@ export default {
     longitude: 165.854,
     categorie: "recyclage",
   },
+  "6f25ceda-97e5-4d07-936f-d2ced41cd60e": {
+    nom: "Borne - CHT de Magenta",
+    latitude: -22.2757537,
+    longitude: 166.4660692,
+    categorie: "recyclage",
+  },
   "6fab6594-542c-464e-bd78-53832f2d59bf": {
     nom: "Superette Tieti",
     latitude: -20.929,
@@ -837,6 +899,12 @@ export default {
     longitude: 166.439,
     categorie: "recyclage",
   },
+  "755c235a-3d80-4136-b8cf-c68bc2c327df": {
+    nom: "Borne - Graine d'Asie",
+    latitude: -22.2618159,
+    longitude: 166.4671451,
+    categorie: "recyclage",
+  },
   "75b03f11-0e94-4c47-8a8b-aa47f59dbc2a": {
     nom: "Carrefour Market Orphelinat",
     latitude: -22.284,
@@ -865,6 +933,12 @@ export default {
     nom: "Atelier Mairie Poindimie",
     latitude: -20.938,
     longitude: 165.334,
+    categorie: "recyclage",
+  },
+  "776c2cd8-37a4-4d94-95ae-030f401b9110": {
+    nom: "Borne - Parking 4eme",
+    latitude: -22.242497,
+    longitude: 166.469949,
     categorie: "recyclage",
   },
   "7817940f-ee95-4355-a7a1-ead6ba2a744f": {
@@ -1025,8 +1099,8 @@ export default {
   },
   "8a26d2e1-0390-406e-8b48-9193746a7339": {
     nom: "Champion Robinson",
-    latitude: -20.904,
-    longitude: 165.618,
+    latitude: -22.2246269,
+    longitude: 166.5078748,
     categorie: "recyclage",
   },
   "8a8615c8-993c-44a6-b8d8-fdee0dd4a23a": {
@@ -1041,10 +1115,22 @@ export default {
     longitude: 166.4200482,
     categorie: "recyclage",
   },
+  "8ad0f6da-dd16-4093-8b47-0c33360a9e4d": {
+    nom: "Borne - Tour de Magenta N\u00b01",
+    latitude: -22.269421,
+    longitude: 166.46494,
+    categorie: "recyclage",
+  },
   "8ba53570-6bd5-4302-91ae-06d7927ccae4": {
     nom: "Decheterie Sivm Centre EST",
     latitude: -21.523,
     longitude: 165.961,
+    categorie: "recyclage",
+  },
+  "8c11c45f-d78e-4229-ade0-58435854e203": {
+    nom: "Borne - Stade de Magenta",
+    latitude: -22.2656542,
+    longitude: 166.4675151,
     categorie: "recyclage",
   },
   "8cfff170-3fb7-42e6-9439-54aa5c568655": {
@@ -1071,6 +1157,12 @@ export default {
     longitude: 166.444,
     categorie: "recyclage",
   },
+  "8f570866-1c86-4385-985f-efc8dba2ccd6": {
+    nom: "Borne - Mus\u00e9e maritime",
+    latitude: -22.268142,
+    longitude: 166.433232,
+    categorie: "recyclage",
+  },
   "908cbbd3-1025-4abe-84f3-4ec3f8368492": {
     nom: "Garage Hmodrya",
     latitude: -20.65,
@@ -1079,8 +1171,8 @@ export default {
   },
   "91d57242-6d45-4161-94c0-0ee60a01700f": {
     nom: "Station Shell de Koumac",
-    latitude: -20.5651,
-    longitude: 163.28239,
+    latitude: -20.5651438,
+    longitude: 164.2911497,
     categorie: "recyclage",
   },
   "9218128f-d878-477f-a504-04185f2f8191": {
@@ -1155,6 +1247,12 @@ export default {
     longitude: 166.463,
     categorie: "recyclage",
   },
+  "9674a2cf-cb22-4b2d-bdb1-d924d7138ed0": {
+    nom: "Borne - Casino port plaisance",
+    latitude: -22.2909162,
+    longitude: 166.4391375,
+    categorie: "recyclage",
+  },
   "972f89bb-0131-4d4a-ae6c-e20e09119442": {
     nom: "Sas Caledonie Sante",
     latitude: -22.156,
@@ -1190,6 +1288,12 @@ export default {
     latitude: -21.0557198,
     longitude: 164.8565613,
     categorie: "don",
+  },
+  "99234a1a-9b38-4017-8fdf-0fbcf400d452": {
+    nom: "Borne - Ecole Jean Mermoud",
+    latitude: -22.2958124,
+    longitude: 166.4550434,
+    categorie: "recyclage",
   },
   "99d468c1-f52c-4098-852a-d3fe3a77b5cc": {
     nom: "Station Shell Kone",
@@ -1227,11 +1331,17 @@ export default {
     longitude: 166.459,
     categorie: "recyclage",
   },
-  "9db12f91-e75e-4e80-b283-f6d0e971074a": {
-    nom: "Carrefour",
-    latitude: 25,
-    longitude: 52,
-    categorie: "enfouissement",
+  "9d03d4c5-0e44-4b9c-b246-dcaf584dea94": {
+    nom: "Borne - Rond point Papeete",
+    latitude: -22.2466048,
+    longitude: 166.4454884,
+    categorie: "recyclage",
+  },
+  "9d590372-9208-40da-81ae-4a1963786a94": {
+    nom: "Borne - Ecole Marie Courtot",
+    latitude: -22.2409836,
+    longitude: 166.4702697,
+    categorie: "recyclage",
   },
   "9f2b54fd-96f7-4aa4-886d-0d2a47214c25": {
     nom: "Station Mobil Poindimie",
@@ -1249,6 +1359,12 @@ export default {
     nom: "H\u00f4tel de Ville de Koutio",
     latitude: -22.209,
     longitude: 166.467,
+    categorie: "recyclage",
+  },
+  "a0c93d41-24dd-40b5-a5d1-b73523902ff5": {
+    nom: "Borne - Universit\u00e9",
+    latitude: -22.262581,
+    longitude: 166.4014363,
     categorie: "recyclage",
   },
   "a1458a8b-edaa-480c-b097-9bc118a360c1": {
@@ -1389,6 +1505,12 @@ export default {
     longitude: 166.464,
     categorie: "recyclage",
   },
+  "ae0852e4-d7e2-40f0-9c5c-261742323872": {
+    nom: "Borne - Salle des sports",
+    latitude: -22.2605196,
+    longitude: 166.4460122,
+    categorie: "recyclage",
+  },
   "aeabb06f-f69d-45b1-8cb9-c9b4a5ebe40e": {
     nom: "Fujitsu Climatisation",
     latitude: -22.261,
@@ -1447,6 +1569,18 @@ export default {
     nom: "Buropac",
     latitude: -22.288,
     longitude: 166.449,
+    categorie: "recyclage",
+  },
+  "b2114c51-256f-4c88-8fd0-d6eb34e9fc72": {
+    nom: "Borne - Coll\u00e8ge de Normandie",
+    latitude: -22.2307761,
+    longitude: 166.4916047,
+    categorie: "recyclage",
+  },
+  "b2150e6c-78e3-49dd-a143-33c271534b9c": {
+    nom: "Borne - Ecole Edmond Desbrosse",
+    latitude: -22.2321958,
+    longitude: 166.4352617,
     categorie: "recyclage",
   },
   "b228a289-6223-484a-ae1c-7db2a8681234": {
@@ -1531,6 +1665,12 @@ export default {
     nom: "Atelier Mairie de Ponerihouen",
     latitude: -21.071,
     longitude: 165.402,
+    categorie: "recyclage",
+  },
+  "bac9f307-2e87-4fcb-9e67-9163713ca0b1": {
+    nom: "Borne - Maison commune de Tuband",
+    latitude: -22.2893247,
+    longitude: 166.4532144,
     categorie: "recyclage",
   },
   "bace28df-5298-44c2-9cad-553f24f81218": {
@@ -1635,6 +1775,12 @@ export default {
     longitude: 166.937,
     categorie: "recyclage",
   },
+  "c63839e5-642a-4c8e-b839-e4caec85516b": {
+    nom: "Borne - Espace Montravel",
+    latitude: -22.2518092,
+    longitude: 166.4548626,
+    categorie: "recyclage",
+  },
   "c6912968-1999-44cf-9dce-9311c27c6895": {
     nom: "Mairie de la Foa",
     latitude: -21.709,
@@ -1719,6 +1865,12 @@ export default {
     longitude: 164.944,
     categorie: "recyclage",
   },
+  "d0862793-ae47-4fd2-adad-b7ef84cfcc13": {
+    nom: "Borne - N'GEA",
+    latitude: -22.286424,
+    longitude: 166.456958,
+    categorie: "recyclage",
+  },
   "d09a9887-c83a-42b7-b0f8-b7f1cefb4c46": {
     nom: "Mairie de Noumea",
     latitude: -22.272,
@@ -1785,6 +1937,12 @@ export default {
     longitude: 166.552,
     categorie: "recyclage",
   },
+  "d7e342c1-17f3-432f-a5f4-3cc448bac57c": {
+    nom: "Borne - Centre commercial",
+    latitude: -22.2341558,
+    longitude: 166.4628753,
+    categorie: "recyclage",
+  },
   "daeaed18-df04-47fc-8499-a676aa3a12a4": {
     nom: "Station Shell Victoire",
     latitude: -22.275,
@@ -1827,6 +1985,12 @@ export default {
     longitude: 165.676,
     categorie: "recyclage",
   },
+  "dd11386c-c464-49fc-9cf4-be809f8bc369": {
+    nom: "Borne - G\u00e9ant Sainte Marie",
+    latitude: -22.2753656,
+    longitude: 166.4587856,
+    categorie: "recyclage",
+  },
   "dd1ebf42-0e7c-43c7-9e5b-79a664a59b46": {
     nom: "Mairie de Bourail",
     latitude: -21.568,
@@ -1837,6 +2001,12 @@ export default {
     nom: "Bui Duyet Telephonie",
     latitude: -22.271,
     longitude: 166.44,
+    categorie: "recyclage",
+  },
+  "de55bb6c-d665-48a3-8f71-a53a1600a92e": {
+    nom: "Borne - Pierre Vernier",
+    latitude: -22.30463,
+    longitude: 166.4576125,
     categorie: "recyclage",
   },
   "de8e431d-37c5-4a71-b78f-2fa67d8e624c": {
@@ -1917,6 +2087,12 @@ export default {
     longitude: 166.443,
     categorie: "recyclage",
   },
+  "e3701e1d-ddd0-430d-a590-55a201e94984": {
+    nom: "Borne - Pierre Sauvan",
+    latitude: -22.2968767,
+    longitude: 166.4491298,
+    categorie: "recyclage",
+  },
   "e4381e27-3e5a-418b-adca-9352345d4851": {
     nom: "Korail Alimentation",
     latitude: -20.907,
@@ -1965,6 +2141,12 @@ export default {
     longitude: 166.374,
     categorie: "recyclage",
   },
+  "e8b3337e-6912-4a67-8c97-0a0af226fa2e": {
+    nom: "Borne - Route des trois baies",
+    latitude: -22.2253443,
+    longitude: 149.4309728,
+    categorie: "recyclage",
+  },
   "e8ba06b8-a4c6-4dc4-b697-805191a5ae95": {
     nom: "Le 6 a 7",
     latitude: -20.688,
@@ -1995,6 +2177,12 @@ export default {
     longitude: 164.861,
     categorie: "recyclage",
   },
+  "e9db9b98-5af8-459b-8a1a-7ce80bbec23e": {
+    nom: "Borne - Hippodrome",
+    latitude: -22.301374,
+    longitude: 166.4508859,
+    categorie: "recyclage",
+  },
   "ea60601a-41ba-4e25-a52e-bdb30d2b917a": {
     nom: "Station Shell Bourail",
     latitude: -21.569,
@@ -2007,6 +2195,12 @@ export default {
     longitude: 148.4477648,
     categorie: "reparation",
   },
+  "eb92b4ee-2fc9-49e8-b619-a73537219f58": {
+    nom: "Borne - Ecole Ernest Risbec",
+    latitude: -22.2847324,
+    longitude: 166.4517475,
+    categorie: "recyclage",
+  },
   "ebe489ba-ebec-4461-94f3-118a40a4adfe": {
     nom: "Siap (Atelier Toyota)",
     latitude: -22.246,
@@ -2017,6 +2211,12 @@ export default {
     nom: "Domaine de Deva",
     latitude: -21.602,
     longitude: 165.401,
+    categorie: "recyclage",
+  },
+  "ed1ee55d-f99b-45c2-aa55-2035308458dd": {
+    nom: "Borne - Tour de Magenta N\u00b02",
+    latitude: -22.270702,
+    longitude: 166.465702,
     categorie: "recyclage",
   },
   "f0a8f9e1-cfe8-4f23-8b61-811a34700355": {
