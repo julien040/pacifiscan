@@ -33,6 +33,7 @@ async function fetchStories() {
       images: story.images.map((image) =>
         urlBuilder(image.asset._ref).width(1080).height(1080).url()
       ),
+      publishedTime: story._createdAt,
     }));
     return res;
   } catch (error) {

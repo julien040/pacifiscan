@@ -46,7 +46,7 @@ function ScanSelecteur({ route, navigation }) {
             fontSize={14}
             letterSpacing={-0.5}
           >
-            Nous sommes sûrs du résultat à {confidence.toFixed(2) * 100} % !
+            Nous sommes sûrs du résultat à {(confidence * 100).toFixed()} % !
           </Text>
           <FlatList
             initialNumToRender={2}
@@ -66,7 +66,6 @@ function ScanSelecteur({ route, navigation }) {
 
 const SelectionItem = ({ nom, icone, item }) => {
   const navigation = useNavigation();
-  console.log(item);
   return (
     <Pressable
       onPress={() => {

@@ -5,7 +5,7 @@ import haversine from "haversine-distance";
 
 function getPointApport({ id, longitude, latitude }) {
   const points = getAllPointApport({ id });
-  return sortByDistance(longitude, latitude, points);
+  return sortByDistance(longitude, latitude, points).slice(0, 24);
 }
 
 function getAllPointApport({ id }) {
@@ -24,7 +24,7 @@ function getAllPointApport({ id }) {
       }
     }
   }
-  return res.slice(0, 12);
+  return res;
 }
 
 function sortByDistance(longitude, latitude, points) {
