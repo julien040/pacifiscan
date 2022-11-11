@@ -1,26 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { requestCameraPermissionsAsync } from "expo-camera";
 import AppLoading from "expo-app-loading";
-import {
-  Flex,
-  Heading,
-  Button,
-  View,
-  Text,
-  Checkbox,
-  ScrollView,
-} from "native-base";
+import { Flex, Text } from "native-base";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-function Permission({}) {
-  const [Location, setLocation] = useState(null);
+function Permission() {
   const [firstTime, setFirstTime] = useState(null);
-  const [Camera, setCamera] = useState(null);
-  async function askCamera() {
-    let cam = await requestCameraPermissionsAsync();
-    setCamera(cam.status);
-  }
   useEffect(() => {
     (async () => {
       let id = await AsyncStorage.getItem("id");
@@ -52,7 +37,6 @@ function Permission({}) {
           </Text>
         </SafeAreaView>
       );
-      break;
   }
 }
 

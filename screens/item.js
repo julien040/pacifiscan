@@ -21,11 +21,7 @@ import Dechet from "../src/donnees/dechets";
 import synonymes from "../src/donnees/synonymes";
 import materiaux from "../src/donnees/materiaux";
 import { SimpleText400 } from "../components/text";
-import {
-  MediumHeading,
-  LargeHeading,
-  SmallHeading,
-} from "../components/heading";
+import { MediumHeading, LargeHeading } from "../components/heading";
 import { RedirectionOletriPage } from "../components/oletri";
 
 import { PacifiScanHeader } from "../components/index";
@@ -158,7 +154,7 @@ function Item({ route, navigation }) {
             <>
               <Text
                 letterSpacing={-0.5}
-                marginBottom={2}
+                marginBottom={6}
                 px={3}
                 textAlign="center"
                 fontFamily="Inter_600SemiBold"

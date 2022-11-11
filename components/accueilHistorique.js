@@ -1,13 +1,10 @@
-import { FlatList, Text, Flex, Heading, Pressable } from "native-base";
+import { FlatList, Text, Flex, Pressable } from "native-base";
 import dayjs from "dayjs";
-import { Image } from "react-native";
 import { getArray } from "../src/database/array";
 import association from "../src/donnees/associationAnglaisFrancais";
-import dechets from "../src/donnees/dechets";
 import { useNavigation } from "@react-navigation/native";
 import { useState, useEffect } from "react";
 import { SimpleSubTitle600 } from "./text";
-import synonymes from "../src/donnees/synonymes";
 
 function AccueilHistorique() {
   const [Data, setData] = useState([]);
@@ -66,9 +63,8 @@ function AccueilHistorique() {
   );
 }
 
-function ListItem({ date, type }) {
+function ListItem({ type, timestamp }) {
   const name = association[type]?.nom;
-  const data = synonymes[name];
   return (
     <Pressable
       bgColor={"brand.p45"}
@@ -83,7 +79,7 @@ function ListItem({ date, type }) {
           <SimpleSubTitle600>{name}</SimpleSubTitle600>
 
           <Text letterSpacing={-0.5} color={"gray.500"} fontSize={12}>
-            {dayjs(date).format("DD/MM/YYYY")}
+            {dayjs(timestamp).format("DD/MM/YYYY")}
           </Text>
         </Flex>
       </Flex>

@@ -25,6 +25,7 @@ function Materiau({ route, navigation }) {
           <Spacer />
           <Image
             source={{ uri: data.header }}
+            defaultSource={require("../assets/placeholder/Materiau.png")}
             style={{ aspectRatio: 16 / 9 }}
             alt="Une image montrant le matériau"
             borderRadius={8}

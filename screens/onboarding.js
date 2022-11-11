@@ -2,7 +2,6 @@ import Onboarding from "react-native-onboarding-swiper";
 import { useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { Image, Flex, Spinner } from "native-base";
-import { SafeAreaView } from "react-native-safe-area-context";
 import CommuneSelect from "../components/communeSelector";
 import { useState } from "react";
 
@@ -41,10 +40,11 @@ function Onboard({ route, navigation }) {
       bottomBarColor="#dddafe"
       titleStyles={{
         fontFamily: "Inter_600SemiBold",
+        letterSpacing: 0.01,
       }}
       subTitleStyles={{
         fontFamily: "Inter_500Medium",
-        letterSpacing: 0.8,
+        letterSpacing: 0.09,
         fontSize: 14,
       }}
       pages={[
@@ -108,7 +108,7 @@ function Onboard({ route, navigation }) {
           ),
           title: "Condition d'utilisation",
           subtitle:
-            "En continuant, vous acceptez que les images que vous avez scannées soient sauvegardées sur nos serveurs afin d'améliorer des algorithmes de reconnaissance d'image",
+            "En continuant, vous acceptez notre politique de confidentialité: https://pacifiscan.org/politique-de-confidentialite",
         },
       ]}
     />

@@ -99,16 +99,6 @@ function PointApport({ id }) {
       data={Points}
       renderItem={({ item }) => <ItemPointApportComponent item={item} />}
       keyExtractor={(item, index) => index.toString()}
-      ListHeaderComponent={() => (
-        <Text
-          fontFamily="Inter_500Medium"
-          fontSize={13}
-          color="blueGray.500"
-          letterSpacing={-0.5}
-        >
-          Liste des points d'apport
-        </Text>
-      )}
       ListEmptyComponent={
         Loading ? (
           <Text

@@ -135,7 +135,7 @@ export default function App() {
           <Stack.Navigator
             screenOptions={{
               headerShown: false,
-              animation: Platform.OS === "android" ? "simple_push" : "fade",
+              animation: Platform.OS === "android" ? "default" : "fade",
             }}
             initialRouteName="Onboard"
           >

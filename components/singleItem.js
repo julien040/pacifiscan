@@ -34,6 +34,7 @@ export const SmallItem = (props) => {
           width="56px"
           height="56px"
           alt={"Une image de " + props.title}
+          defaultSource={require("../assets/placeholder/Dechet.png")}
           source={{ uri: props.image }}
           marginBottom={2}
         />
@@ -60,6 +61,7 @@ export const Item = (props) => {
           height="72px"
           alt="L'objet"
           source={{ uri: props.image }}
+          defaultSource={require("../assets/placeholder/Dechet.png")}
         />
         <SimpleSubTitle600 centered>{props.name}</SimpleSubTitle600>
       </Flex>

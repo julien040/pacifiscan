@@ -8,6 +8,8 @@ import PagerView from "react-native-pager-view";
 import { logEventWithPropertiesAsync } from "expo-analytics-amplitude";
 import { LargeHeading, MediumHeading } from "../components/heading";
 
+const StoryPlaceholder = require("../assets/placeholder/Story.png");
+
 const Story = ({ route, navigation }) => {
   const [Story, setStory] = useState(null);
   useEffect(() => {
@@ -69,6 +71,7 @@ const Story = ({ route, navigation }) => {
                 marginTop: "auto",
                 marginBottom: "auto",
               }}
+              defaultSource={StoryPlaceholder}
               source={{ uri: image }}
             ></Image>
           </View>

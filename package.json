@@ -5,7 +5,8 @@
     "start": "expo start --dev-client --tunnel",
     "dev-build": "eas build --platform ios --profile=development",
     "preview": "eas build --platform ios --profile=preview",
-    "production": "eas build -p all --profile=production"
+    "production": "eas build -p all --profile=production",
+    "submit": "eas submit -p ios"
   },
   "dependencies": {
     "@expo-google-fonts/inter": "^0.2.0",
@@ -58,7 +59,9 @@
     "styled-system": "^5.1.5"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@react-native-community/eslint-config": "^3.2.0",
+    "eslint-plugin-react": "^7.31.10"
   },
   "private": true
 }

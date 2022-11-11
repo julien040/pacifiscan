@@ -30,17 +30,10 @@ export default [
     lon: 166.4653462,
   },
   {
-    nom: "Tuband",
-    horaires: "Jeudi: 9h-12h",
-    lat: -22.2893247,
-    lon: 166.4532144,
-  },
-
-  {
-    nom: "Super U magéco",
-    horaires: "Jeudi: 13h-16h",
-    lat: -22.2593691,
-    lon: 166.4437542,
+    nom: "Kenu In",
+    horaires: "Jeudi: 8h-12h",
+    lat: -22.2223563,
+    lon: 166.4734271,
   },
   {
     nom: "Super U Kaméré",

@@ -32,7 +32,7 @@ const ScanInconnu = ({ route, navigation }) => {
             marginTop={2}
           >
             Nous sommes désolés, nous n'avons pas pu identifier votre déchet.{" "}
-            Nous n'étions sûr qu'à {confidence.toFixed(2) * 100} % donc nous
+            Nous n'étions sûr qu'à {(confidence * 100).toFixed()} % donc nous
             avons préféré ne pas montrer ce déchet. En dessous de 50% de
             confiance, les déchets ne sont pas considérés comme reconnus.
             {"\n \n"}
