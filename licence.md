@@ -1,3 +1,9 @@
+Copyright (c) 2022, Pacifiscan
+
+Everything in the folder `src/donnees` is proprietary and cannot be shared or reused without the permission of Pacifiscan.
+
+L'ensemble du contenu du dossier `src/donnees` est propriétaire et ne peut être partagé ou réutilisé sans l'autorisation de Pacifiscan.
+
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
@@ -70,7 +76,7 @@ modification follow.
 
                        TERMS AND CONDITIONS
 
-  0. Definitions.
+  1. Definitions.
 
   "This License" refers to version 3 of the GNU General Public License.
 
