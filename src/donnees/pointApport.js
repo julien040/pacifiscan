@@ -1472,7 +1472,7 @@ export default {
   "aa55c707-1c30-459b-bd28-7185f2637e49": {
     nom: "Soci\u00e9t\u00e9 de St Vincent de Paul",
     latitude: -22.261832,
-    longitude: 146.4464056,
+    longitude: 166.4464056,
     categorie: "don",
   },
   "aa804a71-1731-47f6-a97f-b731540e6693": {
@@ -2114,7 +2114,7 @@ export default {
   "e582ad64-e48f-46b7-b635-8f5dd94cf774": {
     nom: "Croix Rouge",
     latitude: -22.2513688,
-    longitude: 149.4540088,
+    longitude: 166.4540088,
     categorie: "don",
   },
   "e5c3081a-f0b5-46d1-a6e3-bc39858c591b": {
@@ -2143,8 +2143,8 @@ export default {
   },
   "e8b3337e-6912-4a67-8c97-0a0af226fa2e": {
     nom: "Borne - Route des trois baies",
-    latitude: -22.2253443,
-    longitude: 149.4309728,
+    latitude: -22.2248572,
+    longitude: 166.4309728,
     categorie: "recyclage",
   },
   "e8ba06b8-a4c6-4dc4-b697-805191a5ae95": {
@@ -2192,7 +2192,7 @@ export default {
   "ea833f4c-53b8-4039-baa8-8954b57b53f9": {
     nom: "Eco Recycle",
     latitude: -22.2326951,
-    longitude: 148.4477648,
+    longitude: 166.4477648,
     categorie: "reparation",
   },
   "eb92b4ee-2fc9-49e8-b619-a73537219f58": {

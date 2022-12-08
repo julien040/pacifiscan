@@ -61,7 +61,7 @@ export const Item = (props) => {
           height="72px"
           alt="L'objet"
           source={{ uri: props.image }}
-          defaultSource={require("../assets/placeholder/Dechet.png")}
+          /* defaultSource={require("../assets/placeholder/Dechet.png")} */
         />
         <SimpleSubTitle600 centered>{props.name}</SimpleSubTitle600>
       </Flex>

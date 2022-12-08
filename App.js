@@ -153,9 +153,6 @@ export default function App() {
               component={
                 ScanSelecteur
               } /* L'interface pour choisir quel objet a été scanné */
-              options={{
-                presentation: "modal",
-              }}
             />
             <Stack.Screen
               name="ScanInconnu"
@@ -182,7 +179,6 @@ export default function App() {
               name="Item"
               component={Item}
               options={{
-                presentation: "fullScreenModal",
                 animation: "fade_from_bottom",
               }}
               /* La fiche info d'un item. Doit être appelé avec des arguments */
@@ -211,7 +207,6 @@ export default function App() {
               name="Parametre"
               component={Parametre}
               options={{
-                presentation: "fullScreenModal",
                 animation: "fade_from_bottom",
               }}
               /* Pour désactiver les outils de collection de données ainsi que voir l'id d'utilisateur */

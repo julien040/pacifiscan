@@ -1,4 +1,5 @@
 import dechets from "./donnees/dechets";
+import communes from "./donnees/communes";
 import Collecte from "./donnees/collecte";
 import Storage from "@react-native-async-storage/async-storage";
 
@@ -8,7 +9,9 @@ import Storage from "@react-native-async-storage/async-storage";
  */
 async function getCollecte(id) {
   const pointCollecte = dechets[id].collecte;
-  const commune = await getCommune();
+  const communeCode = await getCommune();
+  const commune = communeCode ? communes[communeCode].id : null;
+
   const res = [];
   if (pointCollecte) {
     for (let i = 0; i < pointCollecte.length; i++) {

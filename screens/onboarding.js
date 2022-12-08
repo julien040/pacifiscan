@@ -17,6 +17,7 @@ function Onboard({ route, navigation }) {
       } else if (route?.params?.stay === true) {
         setLoading(false);
       } else {
+        setLoading(false);
         navigation.navigate("Accueil");
       }
     })();

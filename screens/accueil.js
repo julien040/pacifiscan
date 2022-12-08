@@ -21,10 +21,10 @@ function Accueil({ route, navigation }) {
     if (Platform.OS === "android") {
       setBackgroundColorAsync("#EFF0FF");
       setButtonStyleAsync("dark");
+      navigation.addListener("beforeRemove", (e) => {
+        e.preventDefault();
+      });
     }
-    navigation.addListener("beforeRemove", (e) => {
-      e.preventDefault();
-    });
   }, []);
 
   return (

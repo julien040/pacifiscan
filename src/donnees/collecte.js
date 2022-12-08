@@ -27,6 +27,16 @@ export default {
     icone:
       "https://cdn.sanity.io/images/3zpk9otr/production/74d9c1e625c66b7a7d55326e72360038a8574896-256x256.png",
   },
+  "b9a7b9be-4887-4bd9-a0c4-759147e30a6e": {
+    nom: "Ecodad",
+    description:
+      "PAYANT - Ecodad collecte vos d\u00e9chets recyclables \u00e0 domicile \u00e0 partir de 1666F/mois",
+    enSavoirPlus: "https://www.facebook.com/Ecodadnc",
+    global: false,
+    communes: ["noumea", "paita", "dumbea", "mont_dore"],
+    icone:
+      "https://cdn.sanity.io/images/3zpk9otr/production/2f8ba3b052be3178a1f30763034e4c182cc25845-256x256.png",
+  },
   "cd476c41-d684-435f-a0aa-d24c97b07cc3": {
     nom: "Bac jaune Mont-Dore",
     description: "Le bac d\u00e9di\u00e9 au recyclage au Mont-Dore",

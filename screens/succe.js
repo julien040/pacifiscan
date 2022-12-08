@@ -18,10 +18,10 @@ import {
 import { useNavigation } from "@react-navigation/native";
 import { PacifiScanFooter, PacifiScanHeader } from "../components/index";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useDebouncedCallback } from "use-debounce";
 import { LargeHeading } from "../components/heading";
 
 const namesOfWastes = Object.keys(synonyme);
-const searchable = Object.values(synonyme);
 
 const toIndex = Object.keys(synonyme).map((key) => {
   return { id: key, ...synonyme[key] };
@@ -32,6 +32,9 @@ const fuse = new Fuzzy(toIndex, { keys: ["nom", "synonyme"] });
 function Succe({ route, navigation }) {
   const [searchResult, setSearchResult] = useState([]);
   const [InputSearch, setInput] = useState("");
+  const debounced = useDebouncedCallback((text) => {
+    onChangeText(text);
+  }, 200);
 
   const onChangeText = (text) => {
     setInput(text);
@@ -61,18 +64,15 @@ function Succe({ route, navigation }) {
         <Input
           marginTop={2}
           bgColor={"brand.p45"}
-          InputLeftElement={
-            <Icon marginLeft={2} as={<SearchIcon />} size={5} />
-          }
           borderWidth={0}
           borderRadius={8}
           marginBottom={4}
+          padding={4}
           fontFamily="Inter_600SemiBold"
           placeholderTextColor="brand.iris50"
           _input={{ letterSpacing: -0.5 }}
           placeholder="Rechercher un déchet"
-          value={InputSearch}
-          onChangeText={onChangeText}
+          onChangeText={(e) => debounced(e)}
         />
         {InputSearch.length === 0 && (
           <FlatList
@@ -150,7 +150,6 @@ const SearchIcon = () => (
     width={22}
     height={22}
     viewBox="0 0 24 24"
-    translateX={6}
   >
     <Path
       stroke="#A5A6F6"

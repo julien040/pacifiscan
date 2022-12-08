@@ -16,7 +16,7 @@ export default {
     nom: "Ampoule",
     queFaire:
       "Si le symbole de la \"poubelle barr\u00e9e\" est appos\u00e9 sur le d\u00e9chet, cela signifie qu'il doit \u00eatre recycl\u00e9 et qu'il ne faut donc pas le jeter dans la poubelle classique. Le d\u00e9chet est alors \u00e0 d\u00e9poser dans les bacs de collecte d'ampoules. \nSi le symbole de la \"poubelle barr\u00e9e\" n'est pas appos\u00e9 sur le d\u00e9chet, jetez-le dans la poubelle d'ordure m\u00e9nag\u00e8re.",
-    collecte: null,
+    collecte: ["b9a7b9be-4887-4bd9-a0c4-759147e30a6e"],
     ouDeposer: ["320922eb-064d-48ea-aebb-f17ec38cc13d"],
     matiere: [
       "834ed2a2-2036-473f-933b-f0211eacc1bf",
@@ -53,7 +53,10 @@ export default {
     nom: "Barquette en plastique",
     queFaire:
       "Il n'existe pas de fili\u00e8re de recyclage pour ce d\u00e9chet. Jetez-le dans votre poubelle d'ordures m\u00e9nag\u00e8res.",
-    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    collecte: [
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "b9a7b9be-4887-4bd9-a0c4-759147e30a6e",
+    ],
     ouDeposer: ["3c6b1856-6df9-472c-a55b-4c394b21da61"],
     matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
     commentEviter:
@@ -115,7 +118,10 @@ export default {
     nom: "Bocal en verre",
     queFaire:
       "Jetez-le dans le conteneur r\u00e9serv\u00e9 aux emballages recyclables en verre, sans son couvercle.",
-    collecte: ["4a9d9452-e038-4340-b33c-15c9c7a2bf5b"],
+    collecte: [
+      "4a9d9452-e038-4340-b33c-15c9c7a2bf5b",
+      "b9a7b9be-4887-4bd9-a0c4-759147e30a6e",
+    ],
     ouDeposer: ["506107c0-a070-433f-9473-dd026c7e50bc"],
     matiere: ["834ed2a2-2036-473f-933b-f0211eacc1bf"],
     commentEviter:
@@ -170,6 +176,7 @@ export default {
       "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
       "cd476c41-d684-435f-a0aa-d24c97b07cc3",
       "1046405f-b101-4ffb-a810-1127502ea973",
+      "b9a7b9be-4887-4bd9-a0c4-759147e30a6e",
     ],
     ouDeposer: ["e066ffc1-4626-47d0-aadb-6b3510c57a1a"],
     matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
@@ -257,7 +264,10 @@ export default {
     nom: "Bouteille en plastique",
     queFaire:
       "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
-    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    collecte: [
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "b9a7b9be-4887-4bd9-a0c4-759147e30a6e",
+    ],
     ouDeposer: ["3c6b1856-6df9-472c-a55b-4c394b21da61"],
     matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
     commentEviter:
@@ -267,7 +277,10 @@ export default {
     nom: "Bouteille en verre",
     queFaire:
       "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux emballages recyclables si votre commune le supporte. Sinon, jetez-le dans la poubelle d'ordures m\u00e9nag\u00e8res.",
-    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    collecte: [
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "b9a7b9be-4887-4bd9-a0c4-759147e30a6e",
+    ],
     ouDeposer: ["506107c0-a070-433f-9473-dd026c7e50bc"],
     matiere: ["834ed2a2-2036-473f-933b-f0211eacc1bf"],
     commentEviter:
@@ -325,6 +338,7 @@ export default {
       "cd476c41-d684-435f-a0aa-d24c97b07cc3",
       "d59552f3-3290-4727-b114-acea0dd026a5",
       "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "b9a7b9be-4887-4bd9-a0c4-759147e30a6e",
     ],
     ouDeposer: [
       "e066ffc1-4626-47d0-aadb-6b3510c57a1a",
@@ -359,7 +373,10 @@ export default {
     nom: "Carton",
     queFaire:
       "Jetez le d\u00e9chet dans le sac ou le conteneur r\u00e9serv\u00e9 aux d\u00e9chets recyclables si votre commune le supporte. Dans le cas o\u00f9 le carton serait trop grand, d\u00e9posez-le en d\u00e9chetterie",
-    collecte: ["e5f4a6e8-d9d5-4c60-912e-aa284ef7911c"],
+    collecte: [
+      "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "b9a7b9be-4887-4bd9-a0c4-759147e30a6e",
+    ],
     ouDeposer: ["ae0eba7d-5b65-4692-a728-c036a96336f6"],
     matiere: ["5e184c02-a469-416a-8874-95f58b5c52d6"],
   },
@@ -381,7 +398,7 @@ export default {
     queFaire:
       "Il n'existe pas de filli\u00e8re de recyclage pour ce d\u00e9chet. Jetez le d\u00e9chet \u00e0 la d\u00e9chetterie",
     collecte: null,
-    ouDeposer: null,
+    ouDeposer: ["e066ffc1-4626-47d0-aadb-6b3510c57a1a"],
     matiere: ["65f0c826-d3a4-418a-b7b6-010c6d27250b"],
   },
   fiche_cd_dvd: {
@@ -551,11 +568,12 @@ export default {
       "1046405f-b101-4ffb-a810-1127502ea973",
       "cd476c41-d684-435f-a0aa-d24c97b07cc3",
       "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "b9a7b9be-4887-4bd9-a0c4-759147e30a6e",
     ],
     ouDeposer: ["3c6b1856-6df9-472c-a55b-4c394b21da61"],
     matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
     commentEviter:
-      "Dans le cas des produits d'entretien, optez pour des produits concentr\u00e9s et utilisez des \u00e9co-recharges. S'il n'existe pas de produits concentr\u00e9s, pr\u00e9f\u00e9rez les produits en grand conditionnement. Ils vous permettront de produire moins de d\u00e9chets mais \u00e9galement de r\u00e9aliser des \u00e9conomies.<br/><br/>Pensez \u00e0 respecter les doses pr\u00e9conis\u00e9es.",
+      "Dans le cas des produits d'entretien, optez pour des produits concentr\u00e9s et utilisez des \u00e9co-recharges. S'il n'existe pas de produits concentr\u00e9s, pr\u00e9f\u00e9rez les produits en grand conditionnement. Ils vous permettront de produire moins de d\u00e9chets mais \u00e9galement de r\u00e9aliser des \u00e9conomies.\nPensez \u00e0 respecter les doses pr\u00e9conis\u00e9es.",
   },
   fiche_fruits_et_legumes_abimes: {
     nom: "Fruits et l\u00e9gumes ab\u00eem\u00e9s",
@@ -789,6 +807,7 @@ export default {
       "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
       "1046405f-b101-4ffb-a810-1127502ea973",
       "cd476c41-d684-435f-a0aa-d24c97b07cc3",
+      "b9a7b9be-4887-4bd9-a0c4-759147e30a6e",
     ],
     ouDeposer: ["506107c0-a070-433f-9473-dd026c7e50bc"],
     matiere: ["062f5089-d66a-4e9d-88db-da291cec07c4"],
@@ -836,7 +855,7 @@ export default {
   fiche_pile_jetable: {
     nom: "Pile jetable",
     queFaire: "Rapportez vos piles dans un point de collecte.",
-    collecte: null,
+    collecte: ["b9a7b9be-4887-4bd9-a0c4-759147e30a6e"],
     ouDeposer: ["8f7c10fa-81b0-454e-af27-656b00ee1446"],
     matiere: [
       "20ed67a1-23fb-4b90-af94-9ffaec0a83d2",
@@ -875,6 +894,7 @@ export default {
       "1046405f-b101-4ffb-a810-1127502ea973",
       "cd476c41-d684-435f-a0aa-d24c97b07cc3",
       "e5f4a6e8-d9d5-4c60-912e-aa284ef7911c",
+      "b9a7b9be-4887-4bd9-a0c4-759147e30a6e",
     ],
     ouDeposer: null,
     matiere: ["d1d526b3-9455-4fc2-b5cd-a63dbb02a7bd"],
