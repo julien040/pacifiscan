@@ -3,7 +3,7 @@
     "name": "Pacifiscan",
     "slug": "pacifiscan",
     "description": "Découvrez que faire de vos déchets",
-    "version": "2.0.3",
+    "version": "2.1.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "backgroundColor": "#EFF0FF",
@@ -18,7 +18,7 @@
     "ios": {
       "bundleIdentifier": "app.pacifiscan.org",
       "supportsTablet": false,
-      "buildNumber": "9",
+      "buildNumber": "10",
       "infoPlist": {
         "NSCameraUsageDescription": "Cette application utilise la caméra pour scanner des déchets"
       }
@@ -28,7 +28,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
       },
-      "versionCode": 9,
+      "versionCode": 10,
       "package": "app.pacifiscan.org"
     },
     "web": {
