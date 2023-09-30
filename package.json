@@ -64,5 +64,8 @@
     "@react-native-community/eslint-config": "^3.2.0",
     "eslint-plugin-react": "^7.31.10"
   },
-  "private": true
+  "private": true,
+  "overrides": {
+    "@react-aria/interactions": "3.16.0"
+  }
 }
