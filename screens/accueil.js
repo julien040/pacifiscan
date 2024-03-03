@@ -16,15 +16,9 @@ import * as SystemUI from "expo-system-ui";
 
 function Accueil({ route, navigation }) {
   useEffect(() => {
-    SystemUI.setBackgroundColorAsync("#EFF0FF");
-    setStatusBarStyle("dark");
-    if (Platform.OS === "android") {
-      setBackgroundColorAsync("#EFF0FF");
-      setButtonStyleAsync("dark");
       navigation.addListener("beforeRemove", (e) => {
         e.preventDefault();
       });
-    }
   }, []);
 
   return (

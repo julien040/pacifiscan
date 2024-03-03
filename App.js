@@ -1,6 +1,5 @@
 import React from "react";
 import { loadAsync } from "expo-font";
-import { Platform } from "react-native";
 import { setStatusBarStyle } from "expo-status-bar";
 import {
   setBackgroundColorAsync,
@@ -47,6 +46,10 @@ import {
 import { useEffect, useState } from "react";
 import * as Sentry from "sentry-expo";
 import * as SystemUI from "expo-system-ui";
+// Due to a strange bug in Expo 50, we need to import Platform last
+import { Platform } from "react-native";
+
+
 
 const Stack = createNativeStackNavigator();
 
@@ -84,6 +87,13 @@ export default function App() {
       } catch (error) {
         console.error(error);
       } finally {
+        SystemUI.setBackgroundColorAsync("#EFF0FF");
+
+        setStatusBarStyle("dark");
+        if (Platform.OS === "android") {
+          setBackgroundColorAsync("#EFF0FF");
+          setButtonStyleAsync("dark");
+        }
         setTheme(pacifiScanTheme);
         setLoaded(true);
         await hideAsync();
@@ -120,13 +130,6 @@ export default function App() {
     );
   }
   const theme = extendTheme(Theme);
-  SystemUI.setBackgroundColorAsync("#EFF0FF");
-
-  setStatusBarStyle("dark");
-  if (Platform.OS === "android") {
-    setBackgroundColorAsync("#EFF0FF");
-    setButtonStyleAsync("dark");
-  }
 
   return (
     <NativeBaseProvider theme={theme}>
@@ -135,7 +138,8 @@ export default function App() {
           <Stack.Navigator
             screenOptions={{
               headerShown: false,
-              animation: Platform.OS === "android" ? "default" : "fade",
+              
+              animation: Platform.OS === "android" ? "default" : "default",
             }}
             initialRouteName="Onboard"
           >
