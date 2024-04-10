@@ -3,6 +3,7 @@
   "version": "2.0.0",
   "scripts": {
     "start": "expo start --dev-client --tunnel",
+    "ios-dev": "expo start --dev-client",
     "dev-build": "eas build --platform ios --profile=development",
     "preview": "eas build --platform ios --profile=preview",
     "production": "eas build -p all --profile=production",

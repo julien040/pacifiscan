@@ -2,7 +2,7 @@ import { Heading, Flex, IconButton, View } from "native-base";
 import React from "react";
 import { Pressable } from "native-base";
 import Svg, { Path } from "react-native-svg";
-import { SafeAreaView } from "react-native-safe-area-context";
+import {Logo} from "../config"
 import { useNavigation } from "@react-navigation/core";
 
 /* 
@@ -35,9 +35,7 @@ const PacifiScanHeader = ({ variant }) => {
             _icon={{ as: GoBack }}
             onPress={() => navigation.goBack()}
           />
-          <Heading fontSize={22} color="brand.logo" letterSpacing={-0.5}>
-            Pacifiscan
-          </Heading>
+          <Logo />
         </Flex>
       );
     case "home":
@@ -48,9 +46,7 @@ const PacifiScanHeader = ({ variant }) => {
           width="100%"
           align="center"
         >
-          <Heading fontSize={22} color="brand.logo" letterSpacing={-0.5}>
-            Pacifiscan
-          </Heading>
+          <Logo />
           <IconButton
             _icon={{
               as: Info,
@@ -68,9 +64,7 @@ const PacifiScanHeader = ({ variant }) => {
             justify="space-between" */
           align="center"
         >
-          <Heading fontSize={22} color="brand.logo" letterSpacing={-0.5}>
-            Pacifiscan
-          </Heading>
+          <Logo />
           {/*             <IconButton
               icon={Roue}
               onPress={() => navigation.navigate("Parametre")}

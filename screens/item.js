@@ -2,8 +2,6 @@ import React, { useRef, useState } from "react";
 import { Platform, ScrollView } from "react-native";
 import OuJeter from "../components/ouJeter";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { setBackgroundColorAsync } from "expo-navigation-bar";
-import { setStatusBarBackgroundColor } from "expo-status-bar";
 import {
   Flex,
   Text,
@@ -23,39 +21,35 @@ import materiaux from "../src/donnees/materiaux";
 import { SimpleText400 } from "../components/text";
 import { MediumHeading, LargeHeading } from "../components/heading";
 import { RedirectionOletriPage } from "../components/oletri";
+import { setStatusBar } from "../src/helper";
 
 import { PacifiScanHeader } from "../components/index";
 import BottomSheet from "@gorhom/bottom-sheet";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
+import { findFiche, findFicheID, findIconeURI, findMatiereData, findSynonymes } from "../src/donnees/findData";
+
+
+const showMaterial = true;
 
 function Item({ route, navigation }) {
   // this state is set to true when the bottom sheet is open
   // It avoids loading geolocation when not requested
   const [bottomSheetOpenedOnce, setBottomSheetOpenedOnce] = useState(false);
-  useEffect(() => {
-    if (Platform.OS === "android") {
-      const backgroundColorModal = pacifiScanTheme.colors.brand.pbackground;
-
-      setBackgroundColorAsync(backgroundColorModal);
-      setStatusBarBackgroundColor(backgroundColorModal);
-    }
-
-    return () => {
-      if (Platform.OS === "android") {
-        const backgroundColorApp = pacifiScanTheme.colors.brand.appColor;
-        setBackgroundColorAsync(backgroundColorApp);
-        setStatusBarBackgroundColor(backgroundColorApp);
-      }
-    };
-  }, []);
+  useEffect(setStatusBar, []);
   const { id } = route.params; //On récupère les arguments donnés par le composant qui a appelé cette page
-  /** @type {Dechet["Vélo"]}
-   */
-  const data = synonymes[id];
+  // Id is the id of the item
+  // not the fiche linked to the item
+  const data = findSynonymes(id);
+
+  const ficheID = findFicheID(id);
+
+  const fiche = findFiche(ficheID);
+
+  const iconeURI = findIconeURI(id);
 
   const bottomSheetRef = useRef();
-  if (!data) {
+  if (!data || !fiche || !ficheID) {
     //Dans le cas où l'api retournerait un item qui n'existe pas dans l'application
     return (
       <Flex backgroundColor="brand.pbackground" p={4} flex={1}>
@@ -67,7 +61,7 @@ function Item({ route, navigation }) {
       </Flex>
     );
   }
-  const fiche = Dechet[data.fiche];
+/*   const fiche = Dechet[ficheID]; */
   // Button handler
   function handleBottomSheet() {
     setBottomSheetOpenedOnce(true);
@@ -104,25 +98,20 @@ function Item({ route, navigation }) {
               size={136}
               margin="auto"
               alt="L'image"
-              source={{ uri: data.icone }}
+              source={{ uri: iconeURI }}
             />
             <LargeHeading centered>{data.nom}</LargeHeading>
             <Spacer />
-            {(data.fiche === "fiche_canette" ||
-              data.fiche === "fiche_bouteille_en_plastique" ||
-              data.fiche === "fiche_bouchons_en_plastique") && (
-              <RedirectionOletriPage />
-            )}
-            <MediumHeading colored>Qu'en faire ?</MediumHeading>
-            <SimpleText400>{fiche.queFaire}</SimpleText400>
-            {fiche.commentEviter && (
+            {fiche.texte.map((text, index) => (
               <>
                 <Spacer />
-                <MediumHeading colored>Comment l'éviter ?</MediumHeading>
-                <SimpleText400>{fiche.commentEviter}</SimpleText400>
+                <MediumHeading colored>{text.heading}</MediumHeading>
+                <SimpleText400>{text.texte}</SimpleText400>
               </>
-            )}
-            {Array.isArray(fiche.matiere) && fiche?.matiere?.length > 0 ? (
+            ))}
+            {showMaterial &&
+            Array.isArray(fiche.matiere) &&
+            fiche?.matiere?.length > 0 ? (
               <>
                 <Spacer />
                 <MediumHeading colored>Matériaux</MediumHeading>
@@ -161,7 +150,7 @@ function Item({ route, navigation }) {
               >
                 Où jeter votre déchet ?
               </Text>
-              <OuJeter id={data.fiche} />
+              <OuJeter id={ficheID} />
             </>
           )}
         </BottomSheet>
@@ -171,7 +160,7 @@ function Item({ route, navigation }) {
 }
 
 function MateriauItem({ materiau }) {
-  const data = materiaux[materiau];
+  const data = findMatiereData(materiau);
   const navigation = useNavigation();
   return (
     <Pressable

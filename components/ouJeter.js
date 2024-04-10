@@ -3,19 +3,25 @@ import Collecte from "./collecte";
 import PointApport from "./pointApport";
 import { useState } from "react";
 import dechets from "../src/donnees/dechets";
+import { findFiche } from "../src/donnees/findData";
+
+const collectEnabled = true;
+const apportEnabled = true;
 
 function OuJeter({ id }) {
   const [Tab, setTab] = useState("Point d'apport");
   /** @type {dechets["Ampoule"]}
    */
-  const data = dechets[id];
-  // We check if wether the "collecte" or "point d'apport" is available with this waste.
+  const data = findFiche(id);
+  // We check if whether the "collecte" or "point d'apport" is available with this waste.
   const collecteAvailable =
+    collectEnabled &&
     data.collecte !== null &&
     data.collecte !== undefined &&
     data.collecte.length > 0;
 
   const apportAvailable =
+    apportEnabled &&
     data.ouDeposer !== null &&
     data.ouDeposer !== undefined &&
     data.ouDeposer.length > 0;
